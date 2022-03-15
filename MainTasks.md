@@ -15,8 +15,8 @@
 |Miguel Cruz e Ruben Martins | Revisão e ultimos detalhes para a 1ª Entrega | 15/03/2022 | Completo |
 |Miguel Cruz| Criação do Modelo ER | 17/03/2022 | A decorrer |
 |Ruben Martins| Revisão do Modelo ER | 18/03/2022 | A decorrer
-|Ruben Martins e Miguel Cruz| Começo do desenvolvimento do design das 2 primeiras páginas (Introdutória e SignUp/Login) | 19/03/2022 | A começar
-|
+|Ruben Martins e Miguel Cruz| Começo do desenvolvimento do design das 2 primeiras páginas (Introdutória e SignUp/Login - com HTML, CSS e JavaScript) | 19/03/2022 | Por começar
+|Miguel Cruz e Ruben Martins| Inicio do desenvolvimento da BD em PostgreSQL | 20/03/2022 | Por começar
 
 
 
