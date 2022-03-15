@@ -9,7 +9,7 @@
 |Miguel Cruz e Ruben Martins| Ponto de situação do projeto; Enquadramento | 10/03/2022 | Completo |
 |Miguel Cruz | Criação dos Moodboard's; Revisão do enquadramento e palavras-chave; Definição de objetivos| 12/03/2022 | Completo |
 |Ruben Martins| Aprimoramento do modelo de estrutura do website; 1º e 2º Guião de Teste| 12/03/2022 | Completo |
-|Miguel Cruz | 3º Guião de Teste; Revisão da descrição dos objetivos | 14/03/2022 |
+|Miguel Cruz | 3º Guião de Teste; Revisão da descrição dos objetivos | 14/03/2022 | Completo |
 |Miguel Cruz e Ruben Martins | Criação de mockup's / sketches iniciais do projeto | 15/03/2022 | Completo |
 |Ruben Martins| Conclusão | 15/03/2022 | Completo |
 |Miguel Cruz e Ruben Martins | Revisão e ultimos detalhes para a 1ª Entrega | 15/03/2022 | Completo |
