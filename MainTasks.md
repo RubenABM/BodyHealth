@@ -21,7 +21,8 @@
 |Miguel Cruz| Definir os métodos de GET, POST, PUT & DELETE para a REST API | 6/04/2022 | Por começar
 |Miguel Cruz e Ruben Martins| Criação das páginas principal, perfil do utilizador, dashboard do PT e de Nutricionistas da app web. Mapa Interativo| 18/04/2022 | Por começar
 |Miguel Cruz e Ruben Martins| Construção da API funcional (1ª versão) | 17/04/2022 | Por começar
-|Miguel Cruz| Revisão de personas e User Journey's | 
+|Miguel Cruz| Revisão de personas, User Journey's e Documentação REST API| 19/04/2022 | Por começar
+|Ruben Martins| Revisão do Guia de Dados e Modelo ER | Por começar
 
 
 
