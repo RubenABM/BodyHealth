@@ -20,6 +20,6 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
 |Nº Passo| Passo | Resultado | Estado
 |---|---|---|---|
 |1| Na página de login, caso se quiser tornar num 'Fitter' (registo como utilizador normal), preencher os campos requisitados | Preenchimento dos dados para registo do utilizador | Não Funcional
-
+|1.1|Na pagina de login/registo, para se registar como PT, deverá selecionar o icone de PT que se encontra debaixo do formulário
 
 
