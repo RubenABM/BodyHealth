@@ -15,8 +15,13 @@
 |Miguel Cruz e Ruben Martins | Revisão e ultimos detalhes para a 1ª Entrega | 15/03/2022 | Completo |
 |Miguel Cruz| Criação do Modelo ER | 17/03/2022 | A decorrer |
 |Ruben Martins| Revisão do Modelo ER | 18/03/2022 | A decorrer
-|Ruben Martins e Miguel Cruz| Começo do desenvolvimento do design das 2 primeiras páginas (Introdutória e SignUp/Login - com HTML, CSS e JavaScript) | 19/03/2022 | Por começar
+|Ruben Martins e Miguel Cruz| Começo do desenvolvimento do design das 3 primeiras páginas (Introdutória, SignUp/Login e Sobre - com HTML, CSS e JavaScript) | 19/03/2022 | Por começar
 |Miguel Cruz e Ruben Martins| Inicio do desenvolvimento da BD em PostgreSQL | 20/03/2022 | Por começar
+|Miguel Cruz e Ruben Martins| Fim do desenvolvimento da BD em PostgreSQL | 5/04/2022 | Por começar
+|Miguel Cruz| Definir os métodos de GET, POST, PUT & DELETE para a REST API | 6/04/2022 | Por começar
+|Miguel Cruz e Ruben Martins| Criação das páginas principal, perfil do utilizador, dashboard do PT e de Nutricionistas da app web. Mapa Interativo| 18/04/2022 | Por começar
+|Miguel Cruz e Ruben Martins| Construção da API funcional (1ª versão) | 17/04/2022 | Por começar
+|Miguel Cruz| Revisão de personas e User Journey's | 
 
 
 
