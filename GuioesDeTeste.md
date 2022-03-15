@@ -1,6 +1,6 @@
 # BodyHealth: Guiões de Teste
 
-Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 guiões de teste. O primeiro guião inclui o 'Core' da aplicação web (Consulta e Criação de receitas). O segundo guião de teste, pretende abordar a utilização do Mapa Interativo e os Dashboard's existentes na 'BodyHealth', e, por fim, o terceiro guião de teste tem como objetivo demonstrar algumas funcionalidades secundárias. 
+Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 guiões de teste. O primeiro guião inclui o 'Core' da aplicação web (Consulta e Criação de receitas, exercicios, planos de treino, challenges e ementas). O segundo guião de teste, pretende abordar a utilização do Mapa Interativo e os Dashboard's existentes na 'BodyHealth', e, por fim, o terceiro guião de teste tem como objetivo demonstrar algumas funcionalidades secundárias. 
 
 *NOTA: Todas as interfaces exibidas nos guiões são interfaces-demo, sendo utilizadas somente para fins ilustrativos.
 
@@ -20,6 +20,12 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
 |Nº Passo| Passo | Resultado | Estado
 |---|---|---|---|
 |1| Na página de login, caso se quiser tornar num 'Fitter' (registo como utilizador normal), preencher os campos requisitados | Preenchimento dos dados para registo do utilizador | Não Funcional
-|1.1|Na pagina de login/registo, para se registar como PT, deverá selecionar o icone de PT que se encontra debaixo do formulário
+|1.1|Na pagina de login/registo, para se registar como PT, deverá selecionar o icone de PT que se encontra debaixo do formulário ! Redirecionamento para preenchimento dos dados para registo de um PT | Não Funcional
+|1.2|Na pagina de login/registo, para se registar como Nutricionista, deverá selecionar o icone de Nutricionista que se encontra debaixo do formulário ! Redirecionamento para preenchimento dos dados para registo de um Nutricionista | Não Funcional
+|2| Após preencher os dados corretamente, clicar no botão 'Registar' ou 'Login' | Redirecionamento para a página principal da plataforma | Não Funcional
+
+### Página Principal (HomePage)
+
+|
 
 
