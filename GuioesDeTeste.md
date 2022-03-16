@@ -30,16 +30,22 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
 |---|---|---|---|
 |1| Para um acesso rápido , na aba 'O que queres descobrir hoje?', o utilizador deverá selecionar um dos 'items'. | O utilizador deverá ser redirecionado para a página principal (consulta) respetiva do item selecionado | Não Funcional
 
+*Nota: As restantes funcionalidades da página principal serão abordadas noutro guião.
+
 ### Páginas de Consulta 
 
-#### 1 - Receitas e Ementas
+#### 1 - Consultar Receitas e Ementas
 
 |Nº Passo| Passo | Resultado | Estado
 |---|---|---|---|
-|1| Para filtrar as receitas, o utilizador deverá selecionar uma das opções relativas á 'base da receita'. | Filtragem das receitas pela base da receita ('Carne', 'Peixe', 'Vegatariano', etc.) | Não Funcional
-|1.1| Para filtrar as receitas por tipo, o utilizador deverá selecionar uma das opções relativas ao 'tipo de receita' | Filtragem das receitas pelo tipo da receita ('Não-Aprovada ou 'Aprovada) |
-
-*Nota: As restantes funcionalidades da página principal serão abordadas noutro guião. O tipo de receita 
+|1| Na página principal da plataforma, selecionar a opção 'Receitas e Ementas' | Redirecionamento do utilizador para a página de consulta de receitas | Não Funcional
+|2| Para filtrar as receitas, o utilizador deverá selecionar uma das opções relativas á 'base da receita'. | Filtragem das receitas pela base da receita ('Carne', 'Peixe', 'Vegatariano', etc.) | Não Funcional
+|3| Para filtrar as receitas por tipo, o utilizador deverá selecionar uma das opções relativas ao 'tipo de receita' | Filtragem das receitas pelo tipo da receita ('Não-Aprovada ou 'Aprovada) | Não Funcional
+|4| Para pesquisar uma receita especifica, o utilizador deverá digitar e inserir na barra de pesquisa o nome da receita | Exibição de todas as receitas que contêem uma das palavras inseridas na caixa de pesquisa | Não Funcional
+|5| Para ver mais informações sobre uma receita, o utilizador deverá selecionar um dos items da grelha de receitas | Exibição de informações especificas sobre uma receita selecionada. | Não Funcional
+||
+ 
+ *Nota: O tipo de receita ('Não-Aprovada' ou 'Aprovada'), identifica que receitas foram aprovadas (ou não), pelos nutricionistas. 
 
 
 
