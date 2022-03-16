@@ -2,7 +2,7 @@
 
 Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 guiões de teste. O primeiro guião inclui o 'Core' da aplicação web (Consulta e Criação de receitas, exercicios, planos de treino, challenges e ementas). O segundo guião de teste, pretende abordar a utilização do Mapa Interativo e os Dashboard's existentes na 'BodyHealth', e, por fim, o terceiro guião de teste tem como objetivo demonstrar algumas funcionalidades secundárias. 
 
-*NOTA: Todas as interfaces exibidas nos guiões são interfaces-demo, sendo utilizadas somente para fins ilustrativos.
+*NOTA: Todas as interfaces exibidas nos guiões são interfaces-demo, sendo utilizadas somente para fins ilustrativos. Os guiões ainda não se encontram funcionais, pois por enquanto, somente existe o conceito do projeto.
 
 ## Guião de Teste - Core
 
@@ -26,6 +26,19 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
 
 ### Página Principal (HomePage)
 
-|
+|Nº Passo| Passo | Resultado | Estado
+|---|---|---|---|
+|1| Para um acesso rápido , na aba 'O que queres descobrir hoje?', o utilizador deverá selecionar um dos 'items'. | O utilizador deverá ser redirecionado para a página principal (consulta) respetiva do item selecionado | Não Funcional
+
+### Páginas de Consulta 
+
+#### 1 - Receitas e Ementas
+
+|Nº Passo| Passo | Resultado | Estado
+|---|---|---|---|
+
+
+*Nota: As restantes funcionalidades da página principal serão abordadas noutro guião.
+
 
 
