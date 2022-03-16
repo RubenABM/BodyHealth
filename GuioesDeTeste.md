@@ -36,9 +36,10 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
 
 |Nº Passo| Passo | Resultado | Estado
 |---|---|---|---|
+|1| Para filtrar as receitas, o utilizador deverá selecionar uma das opções relativas á 'base da receita'. | Filtragem das receitas pela base da receita ('Carne', 'Peixe', 'Vegatariano', etc.) | Não Funcional
+|1.1| Para filtrar as receitas por tipo, o utilizador deverá selecionar uma das opções relativas ao 'tipo de receita' | Filtragem das receitas pelo tipo da receita ('Não-Aprovada ou 'Aprovada) |
 
-
-*Nota: As restantes funcionalidades da página principal serão abordadas noutro guião.
+*Nota: As restantes funcionalidades da página principal serão abordadas noutro guião. O tipo de receita 
 
 
 
