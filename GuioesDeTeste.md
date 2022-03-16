@@ -6,6 +6,12 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
 
 ## Guião de Teste - Core
 
+### Resumo dos passos:
+
+  Ao entrar no site irá ter uma aba com várias opções no canto superior direito. Irá clicar na opção "Mais” e entrar na aba “Criar ementa”. Nesta página poderá criar a ementa que desejar, escolhendo o título, descrição, categoria, e base da ementa. Depois disto poderá escolher a entrada, o prato principal, a sobremesa e a bebida que desejar.  
+
+   Para criar o treino irá dirigir-se de novo ao canto superior direito, aba “Mais” e escolher a opção “Criar treino”. Nesta página irá escolher o título, descrição e dificuldade do treino. Depois disto poderá selecionar os exercícios que deseja e criar o plano. 
+
 ### Página Introdutória
 
 |Nº Passo| Passo | Resultado | Estado
