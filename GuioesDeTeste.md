@@ -34,7 +34,7 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
 
 ### Páginas de Consulta 
 
-#### 1 - Consultar Receitas e Ementas
+#### 1 - Consultar e Criar (Receitas e Ementas)
 
 |Nº Passo| Passo | Resultado | Estado
 |---|---|---|---|
@@ -43,9 +43,15 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
 |3| Para filtrar as receitas por tipo, o utilizador deverá selecionar uma das opções relativas ao 'tipo de receita' | Filtragem das receitas pelo tipo da receita ('Não-Aprovada ou 'Aprovada) | Não Funcional
 |4| Para pesquisar uma receita especifica, o utilizador deverá digitar e inserir na barra de pesquisa o nome da receita | Exibição de todas as receitas que contêem uma das palavras inseridas na caixa de pesquisa | Não Funcional
 |5| Para ver mais informações sobre uma receita, o utilizador deverá selecionar um dos items da grelha de receitas | Exibição de informações especificas sobre uma receita selecionada. | Não Funcional
-||
+|5.1| Clicar no icone de um 'coração' que se encontra na tela de informações | Marcar uma receita como favorita | Não Funcional
+|6| No canto superior esquerdo da tela, o utilizador deve clicar no botão 'Criar Receita' | Redirecionamento do utilizador para a página de criação de uma receita. | Não Funcional
+|6.1| Na página de criação, o utilizador deverá inserir e selecionar os dados requisitados e submetê-los clicando no botão 'Criar Receita' | Criação de uma receita | Não Funcional
+|7| Na tela de consultas de receitas/ementas, o utilizador pode clicar no botão 'Criar Ementa' que se encontra no canto superior esquerdo da tela. | Redirecionamento do utilizador para a página de criação de uma Ementa | Não Funcional
+|8| |6.1| Na página de criação, o utilizador deverá inserir e selecionar os dados requisitados e submetê-los clicando no botão 'Criar Receita' | Criação de uma receita | Não Funcional
  
  *Nota: O tipo de receita ('Não-Aprovada' ou 'Aprovada'), identifica que receitas foram aprovadas (ou não), pelos nutricionistas. 
+ *Nota 2: Os dados a serem inseridos para criar uma nova receita são: título da receita, descrição, categoria (pequeno-almoço, almoço ou jantar), base da receita ('Carne', 'Peixe', 'Vegetariano', etc.) e a seleção de ingredientes que irão compor a receita. 
+ *Notoa: Por default, a ementa/receita é não-aprovada.
 
 
 
