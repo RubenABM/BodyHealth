@@ -48,7 +48,7 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
 |6.1| Na página de criação, o utilizador deverá inserir e selecionar os dados requisitados e submetê-los clicando no botão 'Criar Receita' (descritos na Nota 2)| Criação de uma receita | Não Funcional
 |7| Na tela de consultas de receitas/ementas, o utilizador pode clicar no botão 'Criar Ementa' que se encontra no canto superior esquerdo da tela. | Redirecionamento do utilizador para a página de criação de uma Ementa | Não Funcional
 |9| Na página de criação de uma ementa, o utilizador deverá inserir e selecionar os dados requisitados e submetê-los clicando no botão 'Criar Ementa' (descritos na Nota 3) | Criação de uma ementa | Não Funcional
-||
+
  
  *Nota: O tipo de receita ('Não-Aprovada' ou 'Aprovada'), identifica que receitas foram aprovadas (ou não), pelos nutricionistas. 
  
@@ -58,4 +58,5 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
  
 *Nota 4: Os dados a serem inseridos para criar uma noca ementa são: titulo, descrição, categoria (pequeno-almoço, almoço ou jantar), base da ementa ('Carne', 'Peixe', 'Vegetariana', etc.). Adicionalmente, devem ser selecionados para a ementa: Entrada, Prato Principal, Sobremesa e Bebida (receitas criadas na plataforma).
 
+#### 2 - Consultar e Criar (Exercícios e Planos de Treino)
 
