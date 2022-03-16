@@ -45,14 +45,17 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
 |5| Para ver mais informações sobre uma receita, o utilizador deverá selecionar um dos items da grelha de receitas | Exibição de informações especificas sobre uma receita selecionada. | Não Funcional
 |5.1| Clicar no icone de um 'coração' que se encontra na tela de informações | Marcar uma receita como favorita | Não Funcional
 |6| No canto superior esquerdo da tela, o utilizador deve clicar no botão 'Criar Receita' | Redirecionamento do utilizador para a página de criação de uma receita. | Não Funcional
-|6.1| Na página de criação, o utilizador deverá inserir e selecionar os dados requisitados e submetê-los clicando no botão 'Criar Receita' | Criação de uma receita | Não Funcional
+|6.1| Na página de criação, o utilizador deverá inserir e selecionar os dados requisitados e submetê-los clicando no botão 'Criar Receita' (descritos na Nota 2)| Criação de uma receita | Não Funcional
 |7| Na tela de consultas de receitas/ementas, o utilizador pode clicar no botão 'Criar Ementa' que se encontra no canto superior esquerdo da tela. | Redirecionamento do utilizador para a página de criação de uma Ementa | Não Funcional
-|9| Na página de criação de uma ementa, o utilizador deverá inserir e selecionar os dados requisitados e submetê-los clicando no botão 'Criar Ementa' | Criação de uma ementa | Não Funcional
+|9| Na página de criação de uma ementa, o utilizador deverá inserir e selecionar os dados requisitados e submetê-los clicando no botão 'Criar Ementa' (descritos na Nota 3) | Criação de uma ementa | Não Funcional
 ||
  
  *Nota: O tipo de receita ('Não-Aprovada' ou 'Aprovada'), identifica que receitas foram aprovadas (ou não), pelos nutricionistas. 
+ 
  *Nota 2: Os dados a serem inseridos para criar uma nova receita são: título da receita, descrição, categoria (pequeno-almoço, almoço ou jantar), base da receita ('Carne', 'Peixe', 'Vegetariano', etc.) e a seleção de ingredientes que irão compor a receita. 
- *Notoa: Por default, a ementa/receita é não-aprovada.
-*Nota 3: Os dados a serem inseridos para criar uma noca ementa são: 
+ 
+ *Noto 3: Por default, a ementa/receita é não-aprovada.
+ 
+*Nota 4: Os dados a serem inseridos para criar uma noca ementa são: titulo, descrição, categoria (pequeno-almoço, almoço ou jantar), base da ementa ('Carne', 'Peixe', 'Vegetariana', etc.). Adicionalmente, devem ser selecionados para a ementa: Entrada, Prato Principal, Sobremesa e Bebida (receitas criadas na plataforma).
 
 
