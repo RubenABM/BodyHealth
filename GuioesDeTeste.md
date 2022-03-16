@@ -72,11 +72,28 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
 |6.1| Na página de criação, o utilizador deverá inserir e selecionar os dados requisitados e submetê-los clicando no botão 'Criar Exercício' (descritos na Nota 5)| Criação de um novo exercicio do utilizador | Não Funcional
 |7| Na tela de consultas de exercicios/planos de treino , o utilizador pode clicar no botão 'Criar Plano de Treino' que se encontra no canto superior esquerdo da tela. | Redirecionamento do utilizador para a página de criação de um Plano de Treino. | Não Funcional
 |9| Na página de criação de uma Plano de Treino, o utilizador deverá inserir e selecionar os dados requisitados e submetê-los clicando no botão 'Criar Plano' (descritos na Nota 6) | Criação de uma ementa | Não Funcional
+|10| Na página de consulta de exercicios, o utilizador poderá aceder aos últimos challenges, que, trocados por pontos, este pode ganhar produtos na loja da plataforma | Não Funcional
 
  *Nota 5: Os dados a serem inseridos para criar um novo exercicio são: título do exercicio, descrição (numero de repetições do exercicio, etc.), dificuldade (Fácil, Médio, Dificil) e base do exercicio (Cardio, Braços, Perna, etc.). Adicionalmente poderá se adicionar uma imagem do exercicio.
  
  *Nota 6: Os dados a serem inseridos para criar um novo plano de treino são: título do plano de treino, descrição, dificuldade (Fácil, Médio, Dificil). Adicionalmente, devem ser selecionados para o plano de treino, vários exercicios criados na plataforma (de vários tipos e 'bases').
  
+ ## Guião de Teste - Mapa Interativo e Dashboard's
  
+ ### Mapa Interativo
+ 
+ *Nota: Esta parte do guião foi desenvolvida no 'point-of-view' do utilizador.
+ 
+ |Nº Passo| Passo | Resultado | Estado
+ |---|---|---|---|
+ |1| Após o utilizador se encontrar 'loggado' na plataforma, este deverá aceder á página do seu perfil (e dashboard), e, na aba 'Aulas Marcadas', clicar no botão 'Mapa', que se encontra em cada item dessa aba. | Redirecionamento do utilizador para o mapa interativo, onde a rota para essa aula previamente selecionada será automaticamente marcada no mapa. 
+ |1.1|Alternativamente, poderá aceder ao mapa interativo pela barra lateral de navegação do website, selecionando o item correspondente ao mesmo (identificado com um icone de um mapa). | Redirecionamento do utilizador para o mapa interativo.
+ |2| No mapa interativo, o utilizador poderá selecionar um dos 4 botões acima do mesmo ('Cafés', 'Bares', 'Restaurantes', 'Ginásios') | Filtragem e exibição de locais próximos do utilizador (cafés, bares, restaurantes e ginásios).
+ |3| Na aba 'Encontrar Eventos', o utilizador poderá selecionar um evento da lista, clicando no botão 'ROTA'. | A rota entre a localização atual do utilizador e o local do evento será marcada no mapa. Adicionalmente, este poderá aceder a mais informações sobre um determinado evento da lista (clicando no icone de 'I').
+ |4| Na aba 'Aulas Marcadas' (caso o utilizador tenha), este poderá selecionar uma aula | A rota entre a localização atual do utilizador e o local da aula será marcada no mapa. Adicionalmente, poderá aceder a mais detalhes sobre uma aula especifica (clicando no icone de 'I').
+ 
+ ### Dashboard do Utilizador (Perfil)
+ 
+ |Nº Passo| Passo | Resultado | Estado 
  
  
