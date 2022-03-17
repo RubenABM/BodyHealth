@@ -145,7 +145,18 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
  |1| Após o utilizador estar 'loggado' na sua conta, este deverá, na página principal, selecionar o item 'Personal Trainers' ou 'Nutricionistas'. |Redirecionamento do utilizador para a página de 'Encontrar PT' ou 'Encontrar Nutricionista'| Não Funcional
  |2| Numa dessas páginas, é exibida uma grelha com 20 PT's ou Nutricionistas. Para pesquisar um PT especifico, o utilizador poderá introduzir e inserir um nome nessa caixa de pesquisa | Exibição dos PT's com nome incluido no seu nome de utilizador | Não Funcional
  |3| Na página da grelha, o utilizador poderá filtrar os PT's ou Nutricionistas através da especialidade. (Opcional) | Não Funcional
+ |4| Para cada item da grelha, deverá ser selecionado o botão 'IR' | Exibição de uma página com os detalhes do PT/Nutricionista selecionado | Não Funcional
+ |5| Nesta página (detalhes do PT/Nutricionista), serão exibidas várias informações relevantes como o nome do PT/Nutricionista, especialidade, descrição e ementas ou treinos criados pelo mesmo (dependendo de se tratar do um PT ou de um Nutricionista). | Não Funcional
+ |5.1| Na parte inferior da página, de modo a oferecer uma melhor possibilidade de escolha, é exibida uma caixa de comentários (review's). | | Não Funcional
+ |6| Abaixo da lista de ementas ou treinos criados pelo PT/Nutricionista, encontra-se um botão 'Marcar Aula', que, ao ser selecionado, redirecionará o utilizador para a página de pedido de marcação de aula, que posteriormente poderá ser aceite ou recusado pelo PT/Nutricionista. | Não Funcional
  
+ ## Guião de Teste - Funcionalidades Secundárias
  
+### Jornal 'FIT' - Repositório de Artigos de leitura e notícias sobre 'Fitness'
+
+ |Nº Passo| Passo | Resultado | Estado
+ |---|---|---|---|
+ |1| Após o login realizado (ou não) pelo utilizador (normal, PT ou Nutricionista), este poderá aceder á aba do Jornal 'Fit', que deverá selecionar | Redirecionamento do utilizador para a página do Jornal 'FIT'.
+ |2| Na página do Jornal, 
  
  
