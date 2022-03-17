@@ -121,7 +121,22 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
  |4.2| Na zona central da página, estará exibida uma grelha com as turmas que o PT possui. Poderá então, selecionar a opção 'Entrar' | Redirecionamento do PT para a página de gestão da turma previamente selecionada. | Não Funcional
  |4.2.1| Na página de gestão da turma, o PT poderá adicionar novos alunos, criar ementas e planos de treino para a turma, marcar novas aulas e ver o TOP 10 alunos dessa mesma turma, de acordo com os pontos de cada um | Não Funcional
  |4.3| No lado lateral esquerdo, estão exibidas várias abas 'Aulas Marcadas', 'Turmas', 'Comunidades' e 'Pedidos Pendentes de Aulas' | 1 - Na aba 'Aulas Marcadas' estão exibidas as aulas marcadas pelo próprio PT para uma turma, bem como aulas aceites pelo mesmo por parte de utilizadores. 2 - Na aba 'Turmas', são exibidas as turmas que o PT gere. 3 - Na aba 'Comunidades' estão exibidas todas as comunidades de partilha de artigos, etc. onde o PT se encontra inserido. 4 - Na aba 'Pedidos Pendentes de Aulas', são exibidos os ultimos pedidos de aulas particulares por parte dos utilizadores. O PT poderá aceitar ou recusar pedidos de aulas.
- |4.4| Na parte inferior da página estão exibidos os seus planos de treino e ementas criados pelo PT, bem como os seus favoritos. |Exibição de planos de treino e ementas criados pelo PT|
+ |4.4| Na parte inferior da página estão exibidos os seus planos de treino e ementas criados pelo PT, bem como os seus favoritos. |Exibição de planos de treino e ementas criados pelo PT e os seus favoritos| Não Funcional
+ 
+ ### Dashboard do Nutricionista (BH Learn - Gestão de Clientes)
+ 
+  |Nº Passo| Passo | Resultado | Estado
+ |---|---|---|---|
+ |1| Na página introdutória do website, o utilizador deverá clicar no botão 'Começar' | Redirecionamento do utilizador para a página de SignUp e Login. | Funcional
+ |2| Na página 'default' de SignUp/Login, o utilizador deverá selecionar o icone de um Nutricionista | Exibição do 'form' de SignUp para um Nutricionista| Não Funcional
+ |3| Após se registar ou 'loggar' como Nutricionista (deverá ser enviado inclusive um certificado), na barra de navegação lateral, deverá ser selecionado o item 'O meu dashboard - Nutrição' | Redirecionamento do utilizador para o seu dashboard de Nutricionista  | Não Funcional
+ |4| No dashboard, o Nutricionista poderá selecionar o botão 'Aprovar Ementas' | Exibição de uma grelha com ementas e receitas criadas pela comunidade, onde o Nutricionista poderá aprovar ou não ementas e receitas | Não Funcional
+ |4.1| Ainda na parte superior do dashboard, poderá ser selecionado o botão 'Adicionar cliente' | Exibição de uma nova página para a adição de um novo cliente, sendo exibida uma grelha de utilizadores e uma barra de pesquisa. | Não Funcional
+ |4.2| Na zona central da página, estará exibida uma grelha com os clientes que um Nutricionista possui. Poderá então, selecionar a opção 'Ver mais' | Redirecionamento do Nutricionista para a página de gestão do cliente previamente selecionado. | Não Funcional
+ |4.2.1| Na página de gestão do cliente, o Nutricionista poderá aceder ás ementas que o aluno possui (criadas pelo Nutricionista), assim como a alguns dados físicos do mesmo (Peso, Altura, Último IMC calculado, Gordura visceral, Gordura subcutânea e Pressão arterial média). Adicionalmente, na zona inferior da página, é possivel visualizar uma lista do histórico de consultas. | | Não Funcional
+ |4.2.2| Do lado da lista de ementas, o utilizador deverá selecionar o botão 'Criar Ementa', caso queira criar uma nova ementa para o cliente selecionado. Do lado do histórico de consultas recentes, é possivel clicar no botão 'Criar Consulta', caso pretenda marcar uma nova consulta com o cliente selecionado. Após a marcação, será enviado um pedido de consulta para o cliente, e este poderá (ou não), aceitar a consulta.
+ |4.3| No lado lateral esquerdo, estão exibidas várias abas 'Consultas Marcadas', 'Pedidos de consultas' e 'Comunidades' | 1 - Na aba 'Consultas Marcadas' estão exibidas as consultas marcadas pelo próprio Nutricionista para um cliente, bem como consultas aceites pelo mesmo por parte de utilizadores.  2 - Na aba 'Comunidades' estão exibidas todas as comunidades de partilha de artigos, etc. onde o PT se encontra inserido. 3 - Na aba 'Pedidos Pendentes de Aulas', são exibidos os ultimos pedidos de aulas particulares por parte dos utilizadores. O PT poderá aceitar ou recusar pedidos de aulas.
+ |4.4| Na parte inferior da página estão exibidos os seus planos de treino e ementas criados pelo PT, bem como os seus favoritos. |Exibição de planos de treino e ementas criados pelo PT e os seus favoritos| Não Funcional
  
  
  
