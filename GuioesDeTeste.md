@@ -106,6 +106,14 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
  |1.1| No perfil, o utilizador poderá aceder a uma aba de aulas marcadas e selecionar uma aula | Redirecionamento do utilizador para o mapa interativo, onde uma rota entre a localização do utilizador e o local da aula selecionada é marcada automaticamente. | Não Funcional
  |1.2| O utilizador terá acesso á sua aba de turmas e comunidades onde se encontra inserido. Poderá então, selecionar uma turma ou uma comunidade. | Redirecionamento do utilizador para a página da turma ou da comunidade de utilizadores. | Não Funcional
  |1.3| O 'user' poderá também adicionar pontos ao seu  gráfico de evolução, através do seu IMC | Construção automática do gráfico de evolução do utilizador | Não Funcional
- |1.4| Abaixo da página de perfil, estão exibidos as suas ementas criadas, receitas, exercicios e planos de treino (bem como os seus(as) favorito(a)s)||Não Funcional
- |1.4.1| Através de uma caixa de pesquisa, o utilizador poderá inserir um nome nessa mesma caixa | Pesquisa de ementss,
+ |1.4| Abaixo da página de perfil, estão exibidas as suas ementas criadas, receitas, exercicios e planos de treino (bem como os seus(as) favorito(a)s)||Não Funcional
+ |1.4.1| Através de uma caixa de pesquisa, o utilizador poderá inserir um nome nessa mesma caixa | Pesquisa de ementas, receitas, exercicios e planos de treino criados pelo utilizador e favoritos.
+ 
+ ### Dashboard do PT (BH Learn - Gestão de Turmas e clientes)
+ 
+ |Nº Passo| Passo | Resultado | Estado
+ |---|---|---|---|
+ |1| Na página introdutória do website, o utilizador deverá clicar no botão 'Começar' | Redirecionamento do utilizador para a página de SignUp e Login. | Funcional
+ |2| Na página 'default' de SignUp/Login, o utilizador deverá selecionar o icone de um PT | Exibição do 'form' de SignUp para um Personal Trainer | Não Funcional
+ |3|
  
