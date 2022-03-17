@@ -92,11 +92,11 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
  
  |Nº Passo| Passo | Resultado | Estado
  |---|---|---|---|
- |1| Após o utilizador se encontrar 'loggado' na plataforma, este deverá aceder á página do seu perfil (e dashboard), e, na aba 'Aulas Marcadas', clicar no botão 'Mapa', que se encontra em cada item dessa aba. | Redirecionamento do utilizador para o mapa interativo, onde a rota para essa aula previamente selecionada será automaticamente marcada no mapa. 
- |1.1|Alternativamente, poderá aceder ao mapa interativo pela barra lateral de navegação do website, selecionando o item correspondente ao mesmo (identificado com um icone de um mapa). | Redirecionamento do utilizador para o mapa interativo.
- |2| No mapa interativo, o utilizador poderá selecionar um dos 4 botões acima do mesmo ('Cafés', 'Bares', 'Restaurantes', 'Ginásios') | Filtragem e exibição de locais próximos do utilizador (cafés, bares, restaurantes e ginásios).
- |3| Na aba 'Encontrar Eventos', o utilizador poderá selecionar um evento da lista, clicando no botão 'ROTA'. | A rota entre a localização atual do utilizador e o local do evento será marcada no mapa. Adicionalmente, este poderá aceder a mais informações sobre um determinado evento da lista (clicando no icone de 'I').
- |4| Na aba 'Aulas Marcadas' (caso o utilizador tenha), este poderá selecionar uma aula | A rota entre a localização atual do utilizador e o local da aula será marcada no mapa. Adicionalmente, poderá aceder a mais detalhes sobre uma aula especifica (clicando no icone de 'I').
+ |1| Após o utilizador se encontrar 'loggado' na plataforma, este deverá aceder á página do seu perfil (e dashboard), e, na aba 'Aulas Marcadas', clicar no botão 'Mapa', que se encontra em cada item dessa aba. | Redirecionamento do utilizador para o mapa interativo, onde a rota para essa aula previamente selecionada será automaticamente marcada no mapa. | Não Funcional
+ |1.1|Alternativamente, poderá aceder ao mapa interativo pela barra lateral de navegação do website, selecionando o item correspondente ao mesmo (identificado com um icone de um mapa). | Redirecionamento do utilizador para o mapa interativo. | Não Funcional
+ |2| No mapa interativo, o utilizador poderá selecionar um dos 4 botões acima do mesmo ('Cafés', 'Bares', 'Restaurantes', 'Ginásios') | Filtragem e exibição de locais próximos do utilizador (cafés, bares, restaurantes e ginásios). | Não Funcional
+ |3| Na aba 'Encontrar Eventos', o utilizador poderá selecionar um evento da lista, clicando no botão 'ROTA'. | A rota entre a localização atual do utilizador e o local do evento será marcada no mapa. Adicionalmente, este poderá aceder a mais informações sobre um determinado evento da lista (clicando no icone de 'I'). | Não Funcional
+ |4| Na aba 'Aulas Marcadas' (caso o utilizador tenha), este poderá selecionar uma aula | A rota entre a localização atual do utilizador e o local da aula será marcada no mapa. Adicionalmente, poderá aceder a mais detalhes sobre uma aula especifica (clicando no icone de 'I'). | Não Funcional
  
  ### Dashboard do Utilizador (Perfil)
  
@@ -137,6 +137,14 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
  |4.2.2| Do lado da lista de ementas, o utilizador deverá selecionar o botão 'Criar Ementa', caso queira criar uma nova ementa para o cliente selecionado. Do lado do histórico de consultas recentes, é possivel clicar no botão 'Criar Consulta', caso pretenda marcar uma nova consulta com o cliente selecionado. Após a marcação, será enviado um pedido de consulta para o cliente, e este poderá (ou não), aceitar a consulta.
  |4.3| No lado lateral esquerdo, estão exibidas várias abas 'Consultas Marcadas', 'Pedidos de consultas' e 'Comunidades' | 1 - Na aba 'Consultas Marcadas' estão exibidas as consultas marcadas pelo próprio Nutricionista para um cliente, bem como consultas aceites pelo mesmo por parte de utilizadores.  2 - Na aba 'Comunidades' estão exibidas todas as comunidades de partilha de artigos, etc. onde o Nutricionista se encontra inserido. 3 - Na aba 'Pedidos de Consultas', são exibidos os ultimos pedidos de consultar particulares por parte dos utilizadores. O Nutricionista poderá aceitar ou recusar pedidos de consultas.
  |4.4| Na parte inferior da página estão exibidos os seus planos de treino e ementas criados pelo PT, bem como os seus favoritos. |Exibição de planos de treino e ementas criados pelo PT e os seus favoritos| Não Funcional
+ 
+ ### Encontrar PT's e Nutricionistas
+ 
+ |Nº Passo| Passo | Resultado | Estado
+ |---|---|---|---|
+ |1| Após o utilizador estar 'loggado' na sua conta, este deverá, na página principal, selecionar o item 'Personal Trainers' ou 'Nutricionistas'. |Redirecionamento do utilizador para a página de 'Encontrar PT' ou 'Encontrar Nutricionista'| Não Funcional
+ |2| Numa dessas páginas, é exibida uma grelha com 20 PT's ou Nutricionistas. Para pesquisar um PT especifico, o utilizador poderá introduzir e inserir um nome nessa caixa de pesquisa | Exibição dos PT's com nome incluido no seu nome de utilizador | Não Funcional
+ |3| Na página da grelha, o utilizador poderá filtrar os PT's ou Nutricionistas através da especialidade. (Opcional) | Não Funcional
  
  
  
