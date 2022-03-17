@@ -156,7 +156,15 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
 
  |Nº Passo| Passo | Resultado | Estado
  |---|---|---|---|
- |1| Após o login realizado (ou não) pelo utilizador (normal, PT ou Nutricionista), este poderá aceder á aba do Jornal 'Fit', que deverá selecionar | Redirecionamento do utilizador para a página do Jornal 'FIT'.
- |2| Na página do Jornal, 
+ |1| Após o login realizado (ou não) pelo utilizador (normal, PT ou Nutricionista), este poderá aceder á aba do Jornal 'Fit' | Redirecionamento do utilizador para a página do Jornal 'FIT'.
+ |2| Na página do Jornal, o utilizador encontrará uma grelha com Artigos e Notícias. || Não Funcional
+ |2.1| Para os artigos, o utilizador poderá filtrar o artigo pelo seu tipo (Atividade fisica ou Nutrição) e pela sua aprovação. |Exibição dos artigos de acordo com as filtragens realizadas| Não Funcional
+ |2.2| Para as noticias, o utilizador poderá filtrar a notícia pelo tipo, ou pesquisar pelo titulo na barra de pesquisa de notícias. |Exibição das noticias de acordo com as filtragens ou pesquisas realizadas| Não Funcional
+ 
+ ### Loja 'FIT' - Loja com vários tipos de produtos que podem ser trocados por pontos (adquiridos nos planos de treino)
+ 
+ |Nº Passo| Passo | Resultado | Estado
+ |---|---|---|---|
+ |1| Após ter o login realizado na plataforma, o utilizador ( normal, PT ou Nutricionista), poderá aceder á aba da Loja 'FIT', clicando no item correspondente na  barra lateral do website | Redirecionamento do utilizador para a página da Loja 'FIT' | Não Funcional
  
  
