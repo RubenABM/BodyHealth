@@ -166,5 +166,8 @@ Para compreender o progresso do utilizador na plataforma, foram desenvolvidos 3 
  |Nº Passo| Passo | Resultado | Estado
  |---|---|---|---|
  |1| Após ter o login realizado na plataforma, o utilizador ( normal, PT ou Nutricionista), poderá aceder á aba da Loja 'FIT', clicando no item correspondente na  barra lateral do website | Redirecionamento do utilizador para a página da Loja 'FIT' | Não Funcional
+ |2| Na página da loja 'FIT', deverá ser selecionada a categoria de produtos a visualizar ('Calçado', 'Sportswear', 'Equipamento' e 'Suplementos') | Exibição da página da loja relacionada á categoria previamente selecionada. | Não Funcional
+ |3| Na página da categoria selecionada, o utilizador deverá selecionar um produto da grelha, permitindo-o trocar por pontos adquiridos ao completar planos de treino. | Após a aquisição do produto, serão descontados pontos e o produto será adicionado ao 'inventário' | Não Funcional 
+ 
  
  
