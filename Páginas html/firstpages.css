@@ -1,6 +1,55 @@
-.body{
+body{
 
-   background-image: url("https://wallpaperaccess.com/full/1244843.jpg");
+  background-image: url("https://img5.goodfon.com/wallpaper/nbig/f/15/back-fitness-gym-power-pose.jpg");
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-size: 1510px;
 
+}
+
+.separador1{
+
+   width: 1510px;
+   height: 10px;
+   background-color: white;
+   position: absolute;
+   bottom:-20px;
+   left: -1px;
+}
+
+.exerciciofisicosection{
+
+   background-color: rgb(255, 50, 50);
+   width: 1510px;
+   height: 600px;
+   position: absolute;
+   left: -1px;
+   bottom: -610px;
+   background-image: url("https://wallpaper.dog/large/10839843.jpg");
+   background-repeat: no-repeat;
+   background-size:1150px;
+   background-position: 820px;
+   background-position-x: 400px;
+
+}
+
+.exerciciofisicosubsection{
+
+    background-color: rgb(255, 50, 50);
+    width: 710px;
+    height: 600px;
+    bottom: -1px;
+    position: absolute;
+
+}
+
+.nutricaotitulo{
+
+    font-size: 44px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    bottom: 400px;
+    left: 65px;
 
 }
