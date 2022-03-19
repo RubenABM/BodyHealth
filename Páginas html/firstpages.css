@@ -7,6 +7,48 @@ body{
 
 }
 
+.logotipo{
+
+   position: absolute;
+   left: 500px;
+   bottom: 162px;
+
+}
+
+.buttonstart{
+
+   font-family: "Roboto", sans-serif;
+   font-size: 18px;
+   font-weight: bold;
+   background: #FFFFFFFF;
+   width: 120px;
+   height: 20px;
+   padding: 10px;
+   position: absolute;
+   left: 680px;
+   top: 470px;
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+   color: black;
+   border-radius: 5px;
+   cursor: pointer;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   -webkit-transition-duration: 0.3s;
+   transition-duration: 0.3s;
+   -webkit-transition-property: boxshadow, transform;
+   transition-property: boxshadow, transform;
+
+}
+
+.buttonstart:hover, .buttonstart:focus, .buttonstart:active{
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
 .separador1{
 
    width: 1510px;
@@ -16,6 +58,26 @@ body{
    bottom:-20px;
    left: -1px;
 }
+
+.separador2{
+
+    width: 1510px;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    bottom:-620px;
+    left: -1px;
+ }
+
+ .separador3{
+
+    width: 1510px;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    bottom:-1160px;
+    left: -1px;
+ }
 
 .exerciciofisicosection{
 
@@ -33,6 +95,38 @@ body{
 
 }
 
+.nutricaosection{
+
+    background-color: rgb(255, 50, 50);
+    width: 1514px;
+    height: 533px;
+    position: absolute;
+    left: -1px;
+    bottom: -1144px;
+    background-image: url("https://assets.bonappetit.com/photos/5e8cdb60a7a01c00083b08a9/4:3/w_1896,h_1422,c_limit/HMONG-Potluck-Chopped-Salad.jpg");
+    background-repeat: no-repeat;
+    background-size: 710px;
+    
+ 
+ }
+
+ .encontrarpts{
+
+    background-color: rgb(255, 50, 50);
+    width: 1514px;
+    height: 533px;
+    position: absolute;
+    left: -1px;
+    bottom: -1685px;
+    background-image: url("https://blog.ihavethepower.net/wp-content/uploads/2018/05/Personal-trainer.jpg");
+    background-repeat: no-repeat;
+    background-size: 760px;
+    background-position: 820px;
+    background-position-x: 744px;
+    
+ 
+ }
+
 .exerciciofisicosubsection{
 
     background-color: rgb(255, 50, 50);
@@ -43,13 +137,62 @@ body{
 
 }
 
+.exerciciofisicotitulo{
+
+    font-size: 44px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    bottom: 405px;
+    left: 65px;
+
+}
+
 .nutricaotitulo{
 
     font-size: 44px;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: absolute;
-    bottom: 400px;
-    left: 65px;
+    bottom: 336px;
+    left: 800px;
+
+}
+
+.encontrarptstitulo{
+
+    font-size: 44px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    bottom: 336px;
+    left:65px;
+
+}
+
+.paragraphexerciciofisico{
+
+    color: white;
+    position: absolute;
+    left: 67px;
+    bottom: 370px;
+
+}
+
+.paragraphnutricao{
+
+    color: white;
+    position: absolute;
+    left: 804px;
+    bottom: 300px;
+
+}
+
+.paragraphpt{
+
+    color: white;
+    position: absolute;
+    left: 67px;
+    bottom: 300px;
 
 }
