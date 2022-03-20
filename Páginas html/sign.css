@@ -156,3 +156,152 @@ button{
      margin-bottom: 10px;
 
 }
+
+.loginlinkword{
+
+      text-decoration: none;
+      color: aquamarine;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 12px;
+
+}
+
+#trylogin{
+
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: white;
+      font-size: 12px;
+      
+}
+
+.alreadyhaveaccount{
+
+      margin-left: 360px;
+
+}
+
+.registerpt{
+
+    height: 95px;
+    width: 95px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 76px;
+    position: absolute;
+    margin-left: 316px;
+
+}
+
+.registernutritionist{
+
+    height: 95px;
+    width: 95px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    margin-left: 490px;
+
+}
+
+#beingauser{
+
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    margin-left: 800px;
+    margin-top: -670px;
+
+}
+
+#icon1{
+
+     margin-left: 800px;
+     margin-top: -610px;
+
+
+}
+
+#icon2{
+
+    margin-left: 800px;
+    margin-top: -540px;
+
+
+}
+
+#icon3{
+
+    margin-left: 800px;
+    margin-top: -470px;
+
+
+}
+
+#icon4{
+
+    margin-left: 800px;
+    margin-top: -400px;
+
+
+}
+
+#icon5{
+
+    margin-left: 800px;
+    margin-top: -330px;
+
+}
+
+#discovernewrecipestext{
+
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    margin-left: 870px;
+    margin-top: -40px;
+
+}
+
+#practicenewexercisestext{
+
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 870px;
+    margin-top: -40px;
+    position: absolute;
+
+}
+
+#findpersonaltrainertext{
+
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    margin-left: 870px;
+    margin-top: -40px;
+
+}
+
+#descobrirnovoslocaistext{
+
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    margin-left: 870px;
+    margin-top: -40px;
+
+}
+
+#andmoretext{
+
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    margin-left: 870px;
+    margin-top: -40px;
+
+
+}
