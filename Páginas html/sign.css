@@ -1,0 +1,158 @@
+body{
+
+   background-color: #2D2E2D;
+
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #2d2e2d;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Arial;
+  }
+
+  .topnav img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    color: #e8bf5c;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    color: #e8bf5c;
+}
+
+hr{
+
+   margin-top: 380px;
+   width: 690px;
+   transform: rotate(90deg);
+
+
+}
+
+.registertitle{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin-left: 310px;
+    margin-top: -265px;
+    position: absolute;
+}
+
+.titleinput{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.field{
+
+   background-color:white;
+   width: 290px;
+   height: 40px;
+   border-radius: 10px;
+
+}
+
+.formsignupuser{
+
+    position: absolute;
+    margin-left: 310px;
+    margin-top: -190px;
+
+}
+
+.registerbutton{
+
+    /*color: #e8bf5c;*/
+
+    color: #2D2E2D;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+
+}
+
+button{
+
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 200px;
+    transform: translate(-50%, -50%);
+
+}
+
+button{
+
+    background-color: #e8bf5c;
+    color: #2D2E2D;
+    width: 140px;
+    height: 40px;
+    border: 1px solid #FFFFFFFF;
+    font-size: 18px;
+    border-radius: 6px;
+    overflow: hidden;
+
+}
+
+.ortitle{
+
+   color: white;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 18px;
+   margin-left: 433px;
+   margin-top: 250px;
+
+}
+
+.circleforicons{
+
+   height: 95px;
+   width: 95px;
+   background-color: #FFFFFFFF;
+   border-radius: 50%;
+   display: inline-block;
+   margin-left: 315px;
+
+}
+
+.circleforicons2{
+
+    height: 95px;
+    width: 95px;
+    background-color: #FFFFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 76px;
+
+}
+
+.iconpersonaltrainer{
+
+    margin-left: -86px;
+    margin-bottom: 10px;
+
+}
+
+.iconnutritionist{
+
+     margin-left: -250px;
+     margin-bottom: 10px;
+
+}
