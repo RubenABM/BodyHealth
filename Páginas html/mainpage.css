@@ -8,6 +8,7 @@ body{
  .topnav {
      background-color: #2d2e2d;
      overflow: hidden;
+     
    }
    
    /* Style the links inside the navigation bar */
@@ -27,6 +28,17 @@ body{
      border-radius: 50%;
      overflow: hidden;
      margin-top: -6px;
+   }
+
+   #topnav-img2{
+
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     overflow: hidden;
+     margin-top: -6px;
+     float: right;
+
    }
    
    /* Change the color of links on hover */
@@ -141,3 +153,117 @@ body{
 
  }
 
+ /* CSS DA BARRA LATERAL */
+
+ .sidebar{
+
+    position: fixed;
+    height: 100%;
+    width: 240px;
+    background: #f2f2f2;
+    top: 0;
+    left: 0;
+    padding: 6px 14px;
+
+ }
+
+ .sidebar .logo_content .logo{
+
+     color: black;
+     display: flex;
+     height: 50px;
+     width: 100%;
+     align-items: center;
+
+ }
+
+ .logo_content .logo i{
+
+    font-size: 28px;
+    margin-right: 5px;
+
+ }
+
+ .logo_content .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+ }
+
+ .sidebar #btn{
+
+    color: black;
+    position: absolute;
+    left: 90%;
+    top: -6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+
+ }
+
+ .sidebar ul{
+
+    margin-top: 20px;
+
+ }
+
+ .sidebar ul li{
+
+     list-style: none;
+     position: relative;
+     height: 50px;
+     width: 100%;
+     margin: 0 5px;
+     line-height: 50px;
+ }
+
+ .sidebar ul li a{
+
+     color: black;
+     display: flex;
+     align-items: center;
+     text-decoration: none;
+     transition: all 0.4s ease;
+     border-radius: 12px;
+
+ }
+
+ .sidebar ul li a:hover{
+
+    color: #FFF;
+    background: #2D2E2D;
+
+
+ }
+
+ .sidebar ul li a i{
+
+     height:  50px;
+     min-width: 50px;
+     border-radius: 12px;
+     line-height: 50px;
+     text-align: center;
+
+ }
+
+ /*BARRA DE PESQUISA DA BARRA LATERAL DE NAVEGAÇÃO*/
+
+ .sidebar ul li input{
+
+    position: absolute;
+    height:  100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid #2D2E2D;
+    background:white;
+    padding-left: 50px;
+    font-size: 18px;
+    color: #FFF;
+
+ }
