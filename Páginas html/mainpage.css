@@ -37,7 +37,7 @@ body{
      border-radius: 50%;
      overflow: hidden;
      margin-top: -6px;
-     float: right;
+     /*float: right;*/
 
    }
    
@@ -108,6 +108,26 @@ body{
      
  
  }
+
+ #receitaseementasbtn{
+
+    width: 250px;
+    position: absolute;
+    margin-left: 243px;
+    margin-top: 410px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+ }
+
+ #receitaseementasbtn:hover{
+
+    background: #2D2E2D;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.5s ease;
+
+ }
  
  button{
  
@@ -157,13 +177,15 @@ body{
 
  .sidebar{
 
-    position: fixed;
+    position: absolute;
     height: 100%;
     width: 240px;
     background: #f2f2f2;
     top: 0;
     left: 0;
     padding: 6px 14px;
+    margin-left: 1220px;
+    transition: all 0.4s ease;
 
  }
 
@@ -206,7 +228,10 @@ body{
 
  .sidebar ul{
 
-    margin-top: 20px;
+    margin-top: 10px;
+    position: absolute;
+    margin-left: -30px;
+    
 
  }
 
@@ -239,7 +264,7 @@ body{
 
  }
 
- .sidebar ul li a i{
+ .sidebar ul li i{
 
      height:  50px;
      min-width: 50px;
@@ -264,6 +289,181 @@ body{
     background:white;
     padding-left: 50px;
     font-size: 18px;
-    color: #FFF;
+    color: #2D2E2D;
+    margin-left: -10px;
 
+ }
+
+ .sidebar ul li .bx-search-alt-2{
+
+    position: absolute;
+    z-index: 99;
+    color: #2D2E2D;
+    font-size: 22px;
+    margin-left: -15px;
+
+ }
+
+ .sidebar .profile_content{
+
+   position: absolute;
+   color: #2D2E2D;
+   bottom: 0;
+   left: 0;
+
+ }
+
+ .sidebar .profile_content .profile{
+
+   position: relative;
+   padding: 10px 6px;
+   height: 60px;
+
+ }
+
+ .profile_content .profile .profile_details{
+
+   display: flex;
+   align-items: center;
+
+ }
+
+ .profile .profile_details img{
+
+   height: 45px;
+   width: 45px;
+   object-fit: cover;
+   border-radius: 12px;
+   
+ }
+
+ .profile .profile_details .name_job{
+    margin-left: -30px;
+ }
+.profile .profile_details .name{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.profile .profile_details .job{
+    font-size: 12px;
+}
+
+.profile #log_out{
+
+    position: absolute;
+    left: 88%;
+    bottom: 5px;
+    transform: translateX(-50%);
+
+}
+
+.btnlogout{
+
+    position: absolute;
+    background: #f2f2f2;
+    border: 1px solid #2D2E2D;
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 647px;
+
+
+}
+
+.btnlogout:hover{
+
+    background: #2D2E2D;
+    color: white;
+    transition: all 0.4s ease;
+
+}
+
+.selectbox1, .selectbox2, .selectbox3, .selectbox4{
+
+   height: 429px;
+   width: 340px;
+   background-color: transparent;
+   border: 1px solid white;
+   margin-top: -20px;
+   border-radius: 10px;
+
+} 
+
+.selectbox1{
+
+   position: absolute;
+   margin-left: 1165px;
+   filter: brightness(70%);
+
+}
+
+.selectbox2{
+
+   position: absolute;
+   margin-left: 801px;
+
+}
+
+.selectbox3{
+
+   position: absolute;
+   margin-left: 439px;
+
+}
+
+.selectbox4{
+
+   position: absolute;
+   margin-left: 70px;
+
+}
+
+#whatdoyouwanttodiscovertitle{
+
+   color: white;
+   position: absolute;
+   margin-left: 24px;
+   font-size: 32px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#fast-acess-menu{
+
+   position: absolute;
+   margin-top: 120px;
+   margin-left: -53px;
+
+}
+
+#recipeseementasphoto{
+
+   width: 342px;
+   height: 430px;
+   position: absolute;
+   border-radius: 10px;
+   margin-left: 70px;
+   margin-top: -19px;
+
+
+}
+
+#recipesementasphoto:hover{
+
+   filter: blur(1%);
+
+}
+
+
+#exercicioseplanosphoto{
+
+    width: 342px;
+    height: 430px;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 440px;
+    margin-top: -19px;
+    size: 10px;
+ 
  }
