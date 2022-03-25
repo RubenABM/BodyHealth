@@ -467,3 +467,87 @@ body{
     size: 10px;
  
  }
+
+ #exercicioseplanosbtn{
+
+   width: 250px;
+   position: absolute;
+   margin-left: 613px;
+   margin-top: 410px;
+   cursor: pointer;
+   transition: all 0.5s ease;
+
+}
+
+#exercicioseplanosbtn:hover{
+
+   background: #2D2E2D;
+   color: white;
+   border: 1px solid white;
+   transition: all 0.5s ease;
+
+}
+
+#findpersonaltrainerphoto{
+
+   width: 340px;
+   height: 429;
+   position: absolute;
+   border-radius: 10px;
+   margin-left: 802.2px;
+   margin-top: -19px;
+   size: 10px;
+
+}
+
+#findnutricionistphoto{
+
+   width: 340px;
+   height: 429;
+   position: absolute;
+   border-radius: 10px;
+   margin-left: 1166.2px;
+   margin-top: -19px;
+   size: 10px;
+
+}
+
+#findpersonaltrainersbtn{
+
+   width: 250px;
+   position: absolute;
+   margin-left: 973px;
+   margin-top: 410px;
+   cursor: pointer;
+   transition: all 0.5s ease;
+
+}
+
+#findpersonaltrainersbtn:hover{
+
+   background: #2D2E2D;
+   color: white;
+   border: 1px solid white;
+   transition: all 0.5s ease;
+
+}
+
+#findnutricionistbtn{
+
+   width: 250px;
+   position: absolute;
+   margin-left: 1340px;
+   margin-top: 410px;
+   cursor: pointer;
+   transition: all 0.5s ease;
+
+}
+
+#findnutricionistbtn:hover{
+
+   background: #2D2E2D;
+   color: white;
+   border: 1px solid white;
+   transition: all 0.5s ease;
+
+}
