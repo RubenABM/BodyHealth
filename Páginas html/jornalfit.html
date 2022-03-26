@@ -3,24 +3,223 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jornal 'FIT'</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="icon" type="img/x-icon" href="https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png">
+    <title> Jornal FIT</title>
+    <link rel="stylesheet" href="jornalfit.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+   <!--- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
     <script src="xxxxxx"></script> <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
 </head>
 
+
 <nav>
   <div class="topnav">
-    <img src="/Imagens/My_project__21_-removebg-preview.png" class="img-fluid"> 
+    <img src="/Imagens/LOGOWHITE-removebg-preview (1).png" class="img-fluid">
+    <a onclick="openSidebar()" style="cursor: pointer;">More</a>
+    <a href="profile.html">Profile</a>
     <a href="about.html">Sobre Nós</a>
-    <a href="jornalfit.html">Jornal FIT</a>
-    <a href="paginaintrodutoria.html">Introdução</a>
+    <a class="active" href="jornalfit.html">Jornal FIT</a>
+    <a href="mainpage.html">Main Page</a>
   </div>
+
+
+<div class="sidebar" id="sidebarr" style="visibility: hidden;">
+
+  <div class="logo_content">
+
+    <div class="logo">
+
+      <i class='bx bxs-navigation' ></i>
+       <div class="menu_name">Menu</div>
+
+    </div>
+    <i class='bx bx-x' id="btn" onclick="function2()"></i>
+  </div>
+
+  <!--LISTA DE ELEMENTOS DA BARRA-->
+
+  <ul class="navlist">
+
+    <li style="list-style-type: none;">
+
+        <i class='bx bx-search-alt-2' ></i>
+        <input type="text" placeholder="Pesquisar...">
+      
+     <!-- <span class="tooltip">Home</span> -->
+
+    </li>
+    <li style="list-style-type: none;">
+
+      <a href="paginaintrodutoria.html">
+
+        <i class='bx bx-home' ></i>
+        <span class="links_name">Home</span>
+
+      </a>
+
+     <!-- <span class="tooltip">Home</span> -->
+
+    </li>
+    <li style="list-style-type: none;">
+
+      <a href="#">
+
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Dashboard</span>
+
+      </a>
+
+     <!-- <span class="tooltip">Home</span> -->
+
+    </li>
+    <li style="list-style-type: none;">
+
+      <a href="#">
+
+        <i class='bx bx-dish' ></i>
+        <span class="links_name">Receitas</span>
+
+      </a>
+
+     <!-- <span class="tooltip">Home</span> -->
+
+    </li>
+    <li style="list-style-type: none;">
+
+      <a href="#">
+
+        <i class='bx bx-food-menu' ></i>
+        <span class="links_name">Ementas</span>
+
+      </a>
+
+     <!-- <span class="tooltip">Home</span> -->
+
+    </li>
+    <li style="list-style-type: none;">
+
+      <a href="#">
+
+        <i class='bx bx-heart'></i>
+        <span class="links_name">Exercícios</span>
+
+      </a>
+
+     <!-- <span class="tooltip">Home</span> -->
+
+    </li>
+    <li style="list-style-type: none;">
+
+      <a href="#">
+
+        <i class='bx bx-dumbbell' ></i>
+        <span class="links_name">Planos de Treino</span>
+
+      </a>
+
+     <!-- <span class="tooltip">Home</span> -->
+
+    </li>
+
+    <li style="list-style-type: none;">
+
+      <a href="#">
+
+        <i class='bx bx-user-circle'></i>
+        <span class="links_name">Encontrar Profissionais</span>
+
+      </a>
+
+     <!-- <span class="tooltip">Home</span> -->
+
+    </li>
+    <li style="list-style-type: none;">
+
+      <a href="#">
+
+        <i class='bx bx-map' ></i>
+        <span class="links_name">Mapa Interativo</span>
+
+      </a>
+
+     <!-- <span class="tooltip">Home</span> -->
+
+    </li>
+
+    <li style="list-style-type: none;">
+
+      <a href="#">
+
+        <i class='bx bx-store' ></i>
+        <span class="links_name">Loja</span>
+
+      </a>
+
+     <!-- <span class="tooltip">Home</span> -->
+
+    </li>
+    <li style="list-style-type: none;">
+
+      <a href="jornalfit.html">
+
+        <i class='bx bx-news' ></i>
+        <span class="links_name">Jornal 'FIT'</span>
+
+      </a>
+
+     <!-- <span class="tooltip">Home</span> -->
+
+    </li>
+    <li style="list-style-type: none;">
+
+      <a href="about.html">
+
+        <i class='bx bx-info-circle' ></i>
+        <span class="links_name">Sobre Nós</span>
+
+      </a>
+
+     <!-- <span class="tooltip">Home</span> -->
+
+    </li>
+    
+  </ul>
+
+    <button class="btnlogout">LOGOUT</button>
+   
+    </div>
+
+  </div>
+</div>
 
 </nav>
 <body>
 
-  
+  <h1> Jornal </h1>
+
+  <script>
+
+    function function2(){
+
+      document.getElementById("sidebarr").style.visibility="hidden";
+      document.getElementById("sidebarr").style.transition= "all 0.4s ease";
+
+    }
+
+  </script>
+
+  <script>
+
+    function openSidebar(){
+
+       document.getElementById("sidebarr").style.visibility="visible";
+       document.getElementById("sidebarr").style.transition="all 0.4s ease"
+
+    }
+
+  </script>
 
 </body>
 </html>
