@@ -839,3 +839,39 @@ cursor: pointer;
    margin-top:1470px;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+#rectangletotitle{
+
+   height: 498px;
+   width: 210px;
+   background-color: transparent;
+   border: 1px solid #e8bf5c;
+   position: absolute;
+   margin-top: 600px;
+   border-radius: 10px;
+   margin-left: 1235px;
+
+}
+
+#rectangletotitle2{
+
+   height: 619px;
+   width: 210px;
+   background-color: transparent;
+   border: 1px solid #e8bf5c;
+   position: absolute;
+   margin-top: 1150px;
+   border-radius: 10px;
+   margin-left: 1235px;
+
+}
+
+.listofusersleaderboard{
+
+    position: absolute;
+    z-index: 1;
+    margin-left: 1230px;
+    font-size: 12px;
+    margin-top: 700px;
+
+}
