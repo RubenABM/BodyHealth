@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Jornal FIT</title>
+    <title> Receitas e ementas</title>
     <link rel="stylesheet" href="receitaseementas.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
    <!--- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -196,15 +196,11 @@
 <body>
 
     <!--Caixas receitas e ementas-->
-
-    <section class="fitstorelastproducts">
-
-
+    <section class="space">
+     <section class="boxes">
         <button id="createButton"><b> Criar receita </b></button>
    
         <hr id="divisorBoxes">
-   
-        <section class="selectboxesproducts">
    
         <a href="productdetails.html">
    
@@ -215,15 +211,23 @@
            <div id="selectxbox3"></div>
    
            <div id="selectxbox4"></div>
+
+           <div id="selectxbox5"></div>
+   
+           <div id="selectxbox6"></div>
+   
+           <div id="selectxbox7"></div>
+   
+           <div id="selectxbox8"></div>
+
+           <div id="selectxbox9"></div>
+   
+           <div id="selectxbox10"></div>
     
         </a>
-   
-        <i class='bx bxs-right-arrow-circle' style="color: white; position: absolute; font-size: 80px; margin-top: 220px; margin-left: 1083px; cursor: pointer;" onclick="loadMore()"></i>
-        </section>
-   
-       </section>
+     </section>
 
-       <section class="dropButton"> 
+      <section class="dropButton"> 
         <div class="dropdown">
             <button class="dropbtn"> Base da receita ↓ </button>
             <div class="dropdown-content">
@@ -240,14 +244,16 @@
               <a href="#">Tipo 3</a>
             </div>
           </div>
-       </section>
+      </section>
 
-       <form id="form" role="search">
+      <form id="Search" role="search">
         <input type="search" id="query" name="q"
-         placeholder="Search..."
+         placeholder="Pesquisar receita"
          aria-label="Search through site content">
         <button>Search</button>
-        </form>
+      </form>
+
+    </section>
 
     <script>
 

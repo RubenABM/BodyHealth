@@ -454,7 +454,7 @@ p{
     margin-top: 108px;
     background: transparent;
     border: 2px solid white;
-    width: 250px;
+    width: 265px;
     height: 60px;
     color: white;
     cursor: pointer;
@@ -494,7 +494,7 @@ p{
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
   .dropbtn2 {
-    margin-left: 550px;
+    margin-left: 570px;
     font-size: 25px;
     margin-top: 108px;
     background: transparent;
@@ -516,7 +516,7 @@ p{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    margin-left: 550px;
+    margin-left: 570px;
     margin-top: 168px;
   }
 
@@ -542,4 +542,90 @@ p{
     margin-left: 900px;
     margin-top: 120px;
   }
+
+  #desafios{
+    color: white;
+    margin-top: 600px;
+    margin-left: 580px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration-line: underline;
+    text-decoration-color: white; 
+    text-decoration-style: solid; ;
+  }
+
+  #frasePontos{
+    color: white;
+    margin-top: 330px;
+    margin-left: 220px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  #selectxbox11{
+
+    height: 229px;
+    width: 240px;
+    background-color: transparent;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 24px;
+    margin-top: 20px;
+ 
+ }
+ 
+ #selectxbox12{
+ 
+    height: 229px;
+    width: 240px;
+    background-color: transparent;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 284px;
+    margin-top: 20px;
+ 
+ }
+ 
+ 
+ #selectxbox13{
+ 
+    height: 229px;
+    width: 240px;
+    background-color: transparent;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 544px;
+    margin-top: 20px;
+ 
+ }
+ 
+ 
+ #selectxbox14{
+ 
+    height: 229px;
+    width: 240px;
+    background-color: transparent;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 804px;
+    margin-top: 20px;
+ 
+ }
+
+ #selectxbox15{
+ 
+  height: 229px;
+  width: 240px;
+  background-color: transparent;
+  border: 1px solid white;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 1064px;
+  margin-top: 20px;
+
+}
  
