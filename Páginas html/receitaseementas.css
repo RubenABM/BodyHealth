@@ -273,7 +273,9 @@ p{
  
 }
 .space{
-  margin-left: 200px;
+  margin-left: 20px;
+  margin-top: -50px;
+  position: absolute;
 }
 
 
