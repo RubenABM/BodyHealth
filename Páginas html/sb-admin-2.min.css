@@ -10484,6 +10484,8 @@
     background-color: #2d2e2d;
   }
   
+  /*QUADRADO DA 'BODYHEALTH DASHBOARD'*/
+
   .sidebar .sidebar-brand {
     height: 4.375rem;
     text-decoration: none;
@@ -10494,12 +10496,11 @@
     text-transform: uppercase;
     letter-spacing: 0.05rem;
     z-index: 1;
-    border: 1px solid #e8bf5c;
+    
   }
   
   .sidebar .sidebar-brand .sidebar-brand-icon i {
     font-size: 2rem;
-    background-color: #2d2e2d;
   }
   
   .sidebar .sidebar-brand .sidebar-brand-text {
@@ -10517,7 +10518,7 @@
     padding: 0 1rem;
     font-weight: 800;
     font-size: 0.65rem;
-    background-color: #2d2d2d;
+    background-color:red;
   }
   
   .sidebar .sidebar-card {
@@ -10542,13 +10543,13 @@
   
   .sidebar .sidebar-card .sidebar-card-title {
     font-weight: bold;
-    background-color: #2d2e2d;
+    background-color: red;
   }
   
   .sidebar .sidebar-card p {
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.5);
-    background-color: #2d2e2d;
+    background-color: red;
   }
   
   @media (min-width: 768px) {
@@ -11546,3 +11547,79 @@
   transition: all 0.4s ease;
 
 }
+
+.rectangleitem10{
+
+  height: 21px;
+  width: 226px;
+  background-color: #2d2e2d;
+  border:  2px solid #2d2e2d;
+  border-radius: 7px;
+  margin-top: -1700px;
+  position: absolute;
+
+}
+
+
+.rectangleitem11{
+
+  height: 21px;
+  width: 226px;
+  background-color: #2d2e2d;
+  border:  2px solid #2d2e2d;
+  border-radius: 7px;
+  margin-top: -1555px;
+  position: absolute;
+
+}
+
+.rectangleitem12{
+
+  height: 21px;
+  width: 226px;
+  background-color: #2d2e2d;
+  border:  2px solid #2d2e2d;
+  border-radius: 7px;
+  margin-top: -1410px;
+  position: absolute;
+
+}
+
+.rectangleitem13{
+
+  height: 21px;
+  width: 226px;
+  background-color: #2d2e2d;
+  border:  2px solid #2d2e2d;
+  border-radius: 7px;
+  margin-top: -1209px;
+  position: absolute;
+
+}
+
+.rectangleitem14{
+
+  height: 987px;
+  width: 226px;
+  background-color: #2d2e2d;
+  border:  2px solid #2d2e2d;
+  border-radius: 7px;
+  margin-top: -1064px;
+  position: absolute;
+
+}
+
+/*.rectangleitem15{
+
+  height: 1763px;
+  width: 226px;
+  margin-left: -3px;
+  background-color: transparent;
+  border:  2px solid #e8bf5c;
+  border-radius: 7px;
+  margin-top: -1764px;
+  position: absolute;
+  z-index: 0;
+
+}*/
+

@@ -198,7 +198,7 @@
     <!--Caixas receitas e ementas-->
     <section class="space">
      <section class="boxes">
-        <button id="createButton"><b> Criar Receita </b></button>
+        <button id="createButton" style="border-radius: 16px;"><b> Criar Receita </b></button>
    
         <hr id="divisorBoxes">
    
@@ -229,31 +229,37 @@
 
       <section class="dropButton"> 
         <div class="dropdown">
-            <button class="dropbtn"> Base da receita ↓ </button>
+            <button class="dropbtn" style="border-radius: 16px; color: #2d2e2d; background-color: white; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 102px;"> <b>BASE DA RECEITA </b></button>
             <div class="dropdown-content">
-              <a href="#">Todos</a>
-              <a href="#">Aprovados</a>
-              <a href="#">Verificados</a>
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos</a>
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Aprovados</a>
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Verificados</a>
             </div>
         </div>
         <div class="dropdown2">
-            <button class="dropbtn2"> Tipo da receita ↓ </button>
+            <button class="dropbtn2" style="border-radius: 16px; color: #2d2e2d; background-color: white; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-left: 660px; margin-top: 102px;"> <b>TIPO DE RECEITA</b> </button>
             <div class="dropdown-content2">
-              <a href="#">Carne</a>
-              <a href="#">Peixe</a>
-              <a href="#">Vegan</a>
-              <a href="#">Snacks</a>
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Carne</a>
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Peixe</a>
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Vegan</a>
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Snacks</a>
             </div>
           </div>
       </section>
 
-      <form id="Search" role="search">
-        <input type="search" id="query" name="q"
-         placeholder="Pesquisar receita"
-         aria-label="Search through site content">
-        <button>Search</button>
-      </form>
-
+      <!-- Topbar Search -->
+      <form
+      class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+      <div class="input-group" style="margin-left: 1050px; margin-top: 108px;">
+          <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar..."
+              aria-label="Search" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+              <button class="btn btn-primary" type="button">
+                  <i class='bx bx-search-alt-2' style="font-size: 18px; position: absolute; margin-top: -7px; margin-left: -8px; color: white ;"></i>
+              </button>
+          </div>
+      </div>
+  </form>
     </section>
 
     <script>
