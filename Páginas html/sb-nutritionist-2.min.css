@@ -11678,11 +11678,57 @@
 
 .boxrequestconsulta3{
 
-  margin-top: 150px;
+  /*margin-top: 150px;*/
+  margin-top: 50px;
 
 }
 
 .boxrequestconsulta4{
   margin-left: 190px;
   margin-top: -270px;
+}
+
+.boxrequestconsulta5{
+
+   margin-left: 190px;
+   margin-top: -110px;
+
+}
+
+.boxrequestconsulta6{
+
+   margin-left: 190px;
+   margin-top: 50px;
+
+}
+
+.circleaccept, .circlerefuse{
+
+   height: 50px;
+   width: 50px;
+   border-radius: 50px;
+   display: inline-block;
+   margin-left: 7px;
+   margin-top: 80px;
+   cursor: pointer;
+
+}
+
+.circleaccept{
+
+   background-color: lime;
+
+
+}
+
+.circlerefuse{
+
+  background-color: red;
+  margin-left: 35px;
+}
+
+.titlerequest{
+
+  color: black;
+
 }
