@@ -65,13 +65,11 @@ p{
      color: #e8bf5c;
     }
 
-
-.space{
-  margin-left: 12%;
-  margin-top: -2%;
-  position: absolute;
-}
-
+    .space{
+      margin-left: 12%;
+      margin-top: -2%;
+      position: absolute;
+    }
 
 /*Boxes*/
 

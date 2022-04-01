@@ -84,6 +84,13 @@ p{
       font-family: Arial;
       padding: 1px 600px;
   }
+
+  .space{
+    margin-left: 12%;
+    margin-top: -2%;
+    position: absolute;
+  }
+  
    
    /* Add a black background color to the top navigation */
    .topnav {
