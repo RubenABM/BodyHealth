@@ -67,8 +67,8 @@ p{
 
 
 .space{
-  margin-left: 20px;
-  margin-top: -50px;
+  margin-left: 12%;
+  margin-top: -2%;
   position: absolute;
 }
 
@@ -247,12 +247,12 @@ p{
 }
 
  .dropbtn {
-    margin-left: 300px;
+    margin-left: 310px;
     font-size: 25px;
-    margin-top: 108px;
+    margin-top: 106px;
     background: transparent;
     border: 2px solid white;
-    width: 250px;
+    width: 340px;
     height: 60px;
     color: white;
     cursor: pointer;
@@ -274,7 +274,7 @@ p{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    margin-left: 300px;
+    margin-left: 310px;
     margin-top: 164px;
     border-radius: 10px;
   }
@@ -293,12 +293,12 @@ p{
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
   .dropbtn2 {
-    margin-left: 550px;
+    margin-left: 660px;
     font-size: 25px;
-    margin-top: 108px;
+    margin-top: 106px;
     background: transparent;
     border: 2px solid white;
-    width: 250px;
+    width: 340px;
     height: 60px;
     color: white;
     cursor: pointer;
@@ -338,7 +338,275 @@ p{
   
   .dropdown2:hover .dropbtn2 {background-color: #3e8e41;}
 
+  .boxes2{
+
+    position: absolute;
+    margin-top: 70px;
+}
+
+#createButton2{
+    
+    margin-left: 24px;
+    font-size: 25px;
+    margin-top: 700px;
+    background: transparent;
+    border: 2px solid #e8bf5c;
+    width: 230px;
+    height: 60px;
+    color: #e8bf5c;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    z-index:1;
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 6px;
+ }
+ 
+#divisorBoxes2{
+ 
+     color: white;
+     transform: rotate(180deg);   
+     background: white;
+     position: absolute;
+     margin-top: 770px;
+     margin-left: 26px;
+     width: 1275px;
+ 
+}
+
+
+
+ #selectxbox11{
+
+    height: 229px;
+    width: 240px;
+    background-color: transparent;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 24px;
+    margin-top: 800px;
+    
+ 
+ }
+ 
+ #selectxbox12{
+ 
+    height: 229px;
+    width: 240px;
+    background-color: transparent;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 284px;
+    margin-top: 800px;
+ 
+ }
+ 
+ 
+ #selectxbox13{
+ 
+    height: 229px;
+    width: 240px;
+    background-color: transparent;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 544px;
+    margin-top: 800px;
+ 
+ }
+ 
+ 
+ #selectxbox14{
+ 
+    height: 229px;
+    width: 240px;
+    background-color: transparent;
+    border: 1px solid white;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 804px;
+    margin-top: 800px;
+ 
+ }
+
+ #selectxbox15{
+ 
+  height: 229px;
+  width: 240px;
+  background-color: transparent;
+  border: 1px solid white;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 1064px;
+  margin-top: 800px;
+
+}
+
+#selectxbox16{
+ 
+  height: 229px;
+  width: 240px;
+  background-color: transparent;
+  border: 1px solid white;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 24px;
+  margin-top: 1050px;
+
+}
+
+#selectxbox17{
+ 
+  height: 229px;
+  width: 240px;
+  background-color: transparent;
+  border: 1px solid white;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 284px;
+  margin-top: 1050px;
+
+}
+
+#selectxbox18{
+ 
+  height: 229px;
+  width: 240px;
+  background-color: transparent;
+  border: 1px solid white;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 544px;
+  margin-top: 1050px;
+
+}
+
+#selectxbox19{
+ 
+  height: 229px;
+  width: 240px;
+  background-color: transparent;
+  border: 1px solid white;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 804px;
+  margin-top: 1050px;
+
+}
+
+#selectxbox20{
+ 
+  height: 229px;
+  width: 240px;
+  background-color: transparent;
+  border: 1px solid white;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 1064px;
+  margin-top: 1050px;
+
+}
+
+ .dropbtn3 {
+    margin-left: 310px;
+    font-size: 25px;
+    margin-top: 755px;
+    background: transparent;
+    border: 2px solid white;
+    width: 340px;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    z-index:1;
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .dropdown3 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content3 {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: 310px;
+    margin-top: 813px;
+    border-radius: 10px;
+  }
+  
+  .dropdown-content3 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content3 a:hover {background-color: #ddd; border-radius: 10px;}
+  
+  .dropdown3:hover .dropdown-content3 {display: block;}
+  
+  .dropdown3:hover .dropbtn3 {background-color: #3e8e41;}
+
+  .dropbtn4 {
+    margin-left: 660px;
+    font-size: 25px;
+    margin-top: 755px;
+    background: transparent;
+    border: 2px solid white;
+    width: 340px;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    z-index:1;
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .dropdown-content4 {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: 660px;
+    margin-top: 813px;
+    border-radius: 10px;
+  }
+
+  .dropdown4 {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content4 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content4 a:hover {background-color: #ddd; border-radius: 10px;}
+  
+  .dropdown4:hover .dropdown-content4 {display: block;}
+  
+  .dropdown4:hover .dropbtn4 {background-color: #3e8e41;}
+
   #search{
-    margin-left: 900px;
-    margin-top: 120px;
+    margin-left: 1090px;
+    margin-top: 108px;
+  }
+
+  #search2{
+    margin-left: 1090px;
+    margin-top: 635px;
   }

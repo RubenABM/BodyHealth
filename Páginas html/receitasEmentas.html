@@ -27,6 +27,8 @@
 
     <!--Caixas receitas e ementas-->
     <section class="space">
+
+      <!--Caixas receitas-->
      <section class="boxes">
         <button id="createButton" style="border-radius: 16px;"><b> Criar Receita </b></button>
    
@@ -59,28 +61,78 @@
 
       <section class="dropButton"> 
         <div class="dropdown">
-            <button class="dropbtn" style="border-radius: 16px; color: #2d2e2d; background-color: white; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 102px;"> <b>BASE DA RECEITA </b></button>
+            <button class="dropbtn" style="border-radius: 16px; color: #2d2e2d; background-color: white;"> <b>BASE DA RECEITA </b></button>
             <div class="dropdown-content">
-              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos</a>
-              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Aprovados</a>
-              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Verificados</a>
-            </div>
-        </div>
-        <div class="dropdown2">
-            <button class="dropbtn2" style="border-radius: 16px; color: #2d2e2d; background-color: white; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-left: 660px; margin-top: 102px;"> <b>TIPO DE RECEITA</b> </button>
-            <div class="dropdown-content2">
               <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Carne</a>
               <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Peixe</a>
               <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Vegan</a>
               <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Snacks</a>
             </div>
+        </div>
+        <div class="dropdown2">
+            <button class="dropbtn2" style="border-radius: 16px; color: #2d2e2d; background-color: white;"> <b>TIPO DE RECEITA</b> </button>
+            <div class="dropdown-content2">
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos</a>
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Aprovados</a>
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Verificados</a>
+            </div>
           </div>
       </section>
 
+    <!--Caixas ementas-->
+    <section class="boxes2">
+    <button id="createButton2" style="border-radius: 16px;"><b> Criar Ementa </b></button>
+ 
+      <hr id="divisorBoxes2">
+ 
+      <a href="itemdetails.html">
+ 
+         <div id="selectxbox11"></div>
+ 
+         <div id="selectxbox12"></div>
+ 
+         <div id="selectxbox13"></div>
+ 
+         <div id="selectxbox14"></div>
+
+         <div id="selectxbox15"></div>
+ 
+         <div id="selectxbox16"></div>
+ 
+         <div id="selectxbox17"></div>
+ 
+         <div id="selectxbox18"></div>
+
+         <div id="selectxbox19"></div>
+ 
+         <div id="selectxbox20"></div>
+  
+      </a>
+   </section>
+
+    <section class="dropButton2"> 
+      <div class="dropdown3">
+        <button class="dropbtn3" style="border-radius: 16px; color: #2d2e2d; background-color: white;"> <b>BASE DA EMENTA </b></button>
+          <div class="dropdown-content3">
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Carne</a>
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Peixe</a>
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Vegan</a>
+              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Snacks</a>
+          </div>
+      </div>
+      <div class="dropdown4">
+        <button class="dropbtn4" style="border-radius: 16px; color: #2d2e2d; background-color: white;"> <b>TIPO DE EMENTA</b> </button>
+          <div class="dropdown-content4">
+            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos</a>
+            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Aprovados</a>
+            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Verificados</a>
+          </div>
+        </div>
+    </section>
+
       <!-- Topbar Search -->
-      <form
-      class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="z-index: 1;">
-      <div class="input-group" style="margin-left: 1050px; margin-top: 108px;">
+      <form id ="search" style="z-index: 1;">
+      <div class="input-group">
           <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar..."
               aria-label="Search" aria-describedby="basic-addon2">
           <div class="input-group-append">
@@ -90,8 +142,17 @@
           </div>
       </div>
       </form>
+      <form id ="search2" style="z-index: 1;">
+        <div class="input-group2">
+            <input type="text" class="form-control bg-light border-0 small2" placeholder="Pesquisar..."
+                aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append2">
+                <button class="btn btn-primary2" type="button" style="z-index: 0;">
+                    <i class='bx bx-search-alt-22' style="font-size: 18px; position: absolute; margin-top: -7px; margin-left: -8px; color: white ;"></i>
+                </button>
+            </div>
+        </div>
+        </form>
   </section>
-
-
 </body>
 </html>
