@@ -11856,3 +11856,50 @@
   background-color: #2d2d2d;
 
 }
+
+.rectangledivider, .rectangledivider2, .rectangledivider3, .rectangledivider4{
+
+  width: 223px;
+  height: 17px;
+  background-color: #2d2d2d;
+  position: absolute;
+  z-index: 1;
+
+}
+
+.rectangledivider{
+
+  margin-top: 127px;
+
+}
+
+.rectangledivider2{
+
+  margin-top: 272px;
+
+}
+
+.rectangledivider3{
+
+  margin-top: 416px;
+
+}
+
+.rectangledivider4{
+
+  width: 223px;
+  height: 19px;
+  margin-top: 616px;
+
+}
+
+.rectangledivider5{
+
+   width: 223px;
+   height: 1520px;
+   background-color: #2d2e2d;
+   position: absolute;
+   z-index: 1;
+   margin-top: 873px;
+
+}
