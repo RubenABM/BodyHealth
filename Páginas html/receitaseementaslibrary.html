@@ -15,16 +15,16 @@
 <nav> <!--Barra de navegação-->
     <div class="topnav">
         <img src="/Imagens/LOGOWHITE-removebg-preview (1).png" class="img-fluid">
-        <a onclick="openSidebar()" style="cursor: pointer;">More</a>
+        <a onclick="openSidebar()" style="cursor: pointer; color: white;">More</a>
         <a href="profile.html">Profile</a>
         <a href="about.html">Sobre Nós</a>
         <a href="jornalfit.html">Jornal FIT</a>
         <a href="mainpage.html">Main Page</a>
     </div>
 
-    <div class="sidebar" id="sidebarr" style="visibility: hidden;">
+    <div class="sidebar" id="sidebarr" style="visibility: hidden; background-color: white; width: 400px;">
 
-        <div class="logo_content">
+        <div class="logo_content" style="width: 400px;">
       
           <div class="logo">
       
@@ -37,7 +37,7 @@
       
         <!--LISTA DE ELEMENTOS DA BARRA-->
       
-        <ul class="navlist">
+        <ul class="navlist" style="width: 400px;">
       
           <li style="list-style-type: none;">
       
@@ -249,12 +249,12 @@
 
       <!-- Topbar Search -->
       <form
-      class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+      class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="z-index: 1;">
       <div class="input-group" style="margin-left: 1050px; margin-top: 108px;">
           <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar..."
               aria-label="Search" aria-describedby="basic-addon2">
           <div class="input-group-append">
-              <button class="btn btn-primary" type="button">
+              <button class="btn btn-primary" type="button" style="z-index: 0;">
                   <i class='bx bx-search-alt-2' style="font-size: 18px; position: absolute; margin-top: -7px; margin-left: -8px; color: white ;"></i>
               </button>
           </div>

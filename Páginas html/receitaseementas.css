@@ -72,7 +72,7 @@ p{
     position: absolute;
     height: 100%;
     width: 240px;
-    background: #f2f2f2;
+    background-color: #f2f2f2;
     top: 0;
     left: 0;
     padding: 6px 14px;
@@ -85,6 +85,7 @@ p{
 
  .sidebar .logo_content .logo{
 
+     background-color: white;
      color: black;
      display: flex;
      height: 50px;
@@ -125,6 +126,7 @@ p{
     margin-top: 10px;
     position: absolute;
     margin-left: -30px;
+    background-color: white;
     
 
  }
@@ -10897,7 +10899,7 @@ a:focus {
 .sidebar {
   width: 6.5rem;
   min-height: 100vh;
-  background-color: #2d2e2d;
+  background-color: white;
   border: 1px solid white;
 }
 
