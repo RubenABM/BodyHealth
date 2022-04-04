@@ -5,17 +5,50 @@ body{
 
 h1{
     color: #f2f2f2;
-    font-family: Arial;
-    padding: 200px 500px;
-    text-decoration-line: underline;
-    text-decoration-color: white; 
-    text-decoration-style: solid;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 5%;
+    margin-left: 15%;
+    font-size: 32px;
 }
 
 p{
     color: #f2f2f2;
-    font-family: Arial;
-    padding: 1px 600px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-indent: 2ch;
+    text-align: justify;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 20px;
+}
+
+#divisor{
+   
+  color: white;
+  transform: rotate(180deg);   
+  background: white;
+  position: absolute;
+  margin-top: -15px;
+  margin-left: 15%;
+  width: 64.8%;
+
+}
+
+#divisor2{
+   
+  color: white;
+  transform: rotate(180deg);   
+  background: white;
+  position: absolute;
+  margin-top: -15px;
+  margin-left: 15%;
+  width: 64.8%;
+}
+
+.space{
+  margin-left: 12%;
+  margin-right: 6%;
+  margin-top: 1%;
+  position: absolute;
 }
 
 /* Add a black background color to the top navigation */
