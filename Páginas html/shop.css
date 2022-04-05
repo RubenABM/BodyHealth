@@ -2,21 +2,85 @@ body{
 
     background-color: #2d2e2d; 
 }
-
-h1{
+#calcado{
     color: #f2f2f2;
-    font-family: Arial;
-    padding: 200px 500px;
-    text-decoration-line: underline;
-    text-decoration-color: white; 
-    text-decoration-style: solid;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 3%;
+    margin-left: 15%;
+    font-size: 32px;
 }
 
-p{
+#sportswear{
     color: #f2f2f2;
-    font-family: Arial;
-    padding: 1px 600px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 28%;
+    margin-left: 15%;
+    font-size: 32px;
 }
+
+#equipamento{
+    color: #f2f2f2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 28%;
+    margin-left: 15%;
+    font-size: 32px;
+}
+
+#suplementos{
+    color: #f2f2f2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 28%;
+    margin-left: 15%;
+    font-size: 32px;
+}
+
+#divisor{
+   
+    color: white;
+    transform: rotate(180deg);   
+    background: white;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 15%;
+    width: 64.4%;
+  
+  }
+
+  #divisor2{
+   
+    color: white;
+    transform: rotate(180deg);   
+    background: white;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 15%;
+    width: 64.4%;
+  
+  }
+
+  #divisor3{
+   
+    color: white;
+    transform: rotate(180deg);   
+    background: white;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 15%;
+    width: 64.4%;
+  
+  }
+
+  #divisor4{
+   
+    color: white;
+    transform: rotate(180deg);   
+    background: white;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 15%;
+    width: 64.4%;
+  
+  }
  
  /* Add a black background color to the top navigation */
  .topnav {
@@ -69,4 +133,542 @@ p{
       margin-left: 12%;
       margin-top: -2%;
       position: absolute;
+    }
+
+    #selectxbox1{
+
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 15%;
+        margin-top: 0%;
+        
+     
+     }
+     
+     #selectxbox2{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 28%;
+        margin-top: 0%;
+     
+     }
+     
+     
+     #selectxbox3{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 41%;
+        margin-top: 0%;
+     
+     }
+     
+     
+     #selectxbox4{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 54%;
+        margin-top: 0%;
+     
+     }
+    
+     #selectxbox5{
+     
+      height: 24.5%;
+      width: 12.5%;
+      background-color: transparent;
+      border: 1px solid white;
+      position: absolute;
+      border-radius: 10px;
+      margin-left: 67%;
+      margin-top: 0%;
+    }
+
+    #selectxbox6{
+
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 15%;
+        margin-top: 12.5%;
+        
+     
+     }
+     
+     #selectxbox7{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 28%;
+        margin-top: 12.5%;
+     
+     }
+     
+     
+     #selectxbox8{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 41%;
+        margin-top: 12.5%;
+     
+     }
+     
+     
+     #selectxbox9{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 54%;
+        margin-top: 12.5%;
+     
+     }
+    
+     #selectxbox10{
+     
+      height: 24.5%;
+      width: 12.5%;
+      background-color: transparent;
+      border: 1px solid white;
+      position: absolute;
+      border-radius: 10px;
+      margin-left: 67%;
+      margin-top: 12.5%;
+    }
+    
+    
+    #selectxbox11{
+
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 15%;
+        margin-top: 0%;
+        
+     
+     }
+     
+     #selectxbox12{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 28%;
+        margin-top: 0%;
+     
+     }
+     
+     
+     #selectxbox13{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 41%;
+        margin-top: 0%;
+     
+     }
+     
+     
+     #selectxbox14{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 54%;
+        margin-top: 0%;
+     
+     }
+    
+     #selectxbox15{
+     
+      height: 24.5%;
+      width: 12.5%;
+      background-color: transparent;
+      border: 1px solid white;
+      position: absolute;
+      border-radius: 10px;
+      margin-left: 67%;
+      margin-top: 0%;
+    }
+
+    #selectxbox16{
+
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 15%;
+        margin-top: 12.5%;
+        
+     
+     }
+     
+     #selectxbox17{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 28%;
+        margin-top: 12.5%;
+     
+     }
+     
+     
+     #selectxbox18{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 41%;
+        margin-top: 12.5%;
+     
+     }
+     
+     
+     #selectxbox19{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 54%;
+        margin-top: 12.5%;
+     
+     }
+    
+     #selectxbox20{
+     
+      height: 24.5%;
+      width: 12.5%;
+      background-color: transparent;
+      border: 1px solid white;
+      position: absolute;
+      border-radius: 10px;
+      margin-left: 67%;
+      margin-top: 12.5%;
+    }
+
+    #selectxbox21{
+
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 15%;
+        margin-top: 0%;
+        
+     
+     }
+     
+     #selectxbox22{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 28%;
+        margin-top: 0%;
+     
+     }
+     
+     
+     #selectxbox23{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 41%;
+        margin-top: 0%;
+     
+     }
+     
+     
+     #selectxbox24{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 54%;
+        margin-top: 0%;
+     
+     }
+    
+     #selectxbox25{
+     
+      height: 24.5%;
+      width: 12.5%;
+      background-color: transparent;
+      border: 1px solid white;
+      position: absolute;
+      border-radius: 10px;
+      margin-left: 67%;
+      margin-top: 0%;
+    }
+
+    #selectxbox26{
+
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 15%;
+        margin-top: 12.5%;
+        
+     
+     }
+     
+     #selectxbox27{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 28%;
+        margin-top: 12.5%;
+     
+     }
+     
+     
+     #selectxbox28{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 41%;
+        margin-top: 12.5%;
+     
+     }
+     
+     
+     #selectxbox29{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 54%;
+        margin-top: 12.5%;
+     
+     }
+    
+     #selectxbox30{
+     
+      height: 24.5%;
+      width: 12.5%;
+      background-color: transparent;
+      border: 1px solid white;
+      position: absolute;
+      border-radius: 10px;
+      margin-left: 67%;
+      margin-top: 12.5%;
+    }
+    
+    
+    #selectxbox31{
+
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 15%;
+        margin-top: 0%;
+        
+     
+     }
+     
+     #selectxbox32{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 28%;
+        margin-top: 0%;
+     
+     }
+     
+     
+     #selectxbox33{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 41%;
+        margin-top: 0%;
+     
+     }
+     
+     
+     #selectxbox34{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 54%;
+        margin-top: 0%;
+     
+     }
+    
+     #selectxbox35{
+     
+      height: 24.5%;
+      width: 12.5%;
+      background-color: transparent;
+      border: 1px solid white;
+      position: absolute;
+      border-radius: 10px;
+      margin-left: 67%;
+      margin-top: 0%;
+    }
+
+    #selectxbox36{
+
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 15%;
+        margin-top: 12.5%;
+        
+     
+     }
+     
+     #selectxbox37{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 28%;
+        margin-top: 12.5%;
+     
+     }
+     
+     
+     #selectxbox38{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 41%;
+        margin-top: 12.5%;
+     
+     }
+     
+     
+     #selectxbox39{
+     
+        height: 24.5%;
+        width: 12.5%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 54%;
+        margin-top: 12.5%;
+     
+     }
+    
+     #selectxbox40{
+     
+      height: 24.5%;
+      width: 12.5%;
+      background-color: transparent;
+      border: 1px solid white;
+      position: absolute;
+      border-radius: 10px;
+      margin-left: 67%;
+      margin-top: 12.5%;
     }
