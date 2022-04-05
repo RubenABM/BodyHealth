@@ -291,7 +291,7 @@ body{
 
 }
 
-#findpersonaltrainerphoto{
+#eventosPhoto{
 
    width: 340px;
    height: 429;
@@ -303,7 +303,7 @@ body{
 
 }
 
-#findnutricionistphoto{
+#lojaPhoto{
 
    width: 340px;
    height: 429;
@@ -315,7 +315,7 @@ body{
 
 }
 
-#findpersonaltrainersbtn{
+#eventosBtn{
 
    width: 250px;
    position: absolute;
@@ -326,7 +326,7 @@ body{
 
 }
 
-#findpersonaltrainersbtn:hover{
+#eventosBtn:hover{
 
    background: #2D2E2D;
    color: white;
@@ -335,7 +335,7 @@ body{
 
 }
 
-#findnutricionistbtn{
+#lojaBtn{
 
    width: 250px;
    position: absolute;
@@ -346,7 +346,7 @@ body{
 
 }
 
-#findnutricionistbtn:hover{
+#lojaBtn:hover{
 
    background: #2D2E2D;
    color: white;
