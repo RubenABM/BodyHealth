@@ -45,42 +45,6 @@ body{
     width: 64.4%;
   
   }
-
-  #divisor2{
-   
-    color: white;
-    transform: rotate(180deg);   
-    background: white;
-    position: absolute;
-    margin-top: -15px;
-    margin-left: 15%;
-    width: 64.4%;
-  
-  }
-
-  #divisor3{
-   
-    color: white;
-    transform: rotate(180deg);   
-    background: white;
-    position: absolute;
-    margin-top: -15px;
-    margin-left: 15%;
-    width: 64.4%;
-  
-  }
-
-  #divisor4{
-   
-    color: white;
-    transform: rotate(180deg);   
-    background: white;
-    position: absolute;
-    margin-top: -15px;
-    margin-left: 15%;
-    width: 64.4%;
-  
-  }
  
  /* Add a black background color to the top navigation */
  .topnav {
@@ -135,7 +99,7 @@ body{
       position: absolute;
     }
 
-    #selectxbox1{
+    #selectxbox1, #selectxbox11, #selectxbox21, #selectxbox31{
 
         height: 24.5%;
         width: 12.5%;
@@ -149,7 +113,7 @@ body{
      
      }
      
-     #selectxbox2{
+     #selectxbox2, #selectxbox12, #selectxbox22, #selectxbox32{
      
         height: 24.5%;
         width: 12.5%;
@@ -163,7 +127,7 @@ body{
      }
      
      
-     #selectxbox3{
+     #selectxbox3, #selectxbox13, #selectxbox23, #selectxbox33{
      
         height: 24.5%;
         width: 12.5%;
@@ -177,7 +141,7 @@ body{
      }
      
      
-     #selectxbox4{
+     #selectxbox4, #selectxbox14, #selectxbox24, #selectxbox34{
      
         height: 24.5%;
         width: 12.5%;
@@ -190,7 +154,7 @@ body{
      
      }
     
-     #selectxbox5{
+     #selectxbox5, #selectxbox15, #selectxbox25, #selectxbox35{
      
       height: 24.5%;
       width: 12.5%;
@@ -202,7 +166,7 @@ body{
       margin-top: 0%;
     }
 
-    #selectxbox6{
+    #selectxbox6, #selectxbox16, #selectxbox26, #selectxbox36{
 
         height: 24.5%;
         width: 12.5%;
@@ -216,7 +180,7 @@ body{
      
      }
      
-     #selectxbox7{
+     #selectxbox7, #selectxbox17, #selectxbox27, #selectxbox37{
      
         height: 24.5%;
         width: 12.5%;
@@ -230,7 +194,7 @@ body{
      }
      
      
-     #selectxbox8{
+     #selectxbox8, #selectxbox18, #selectxbox28, #selectxbox38{
      
         height: 24.5%;
         width: 12.5%;
@@ -244,7 +208,7 @@ body{
      }
      
      
-     #selectxbox9{
+     #selectxbox9, #selectxbox19, #selectxbox29, #selectxbox39{
      
         height: 24.5%;
         width: 12.5%;
@@ -257,7 +221,7 @@ body{
      
      }
     
-     #selectxbox10{
+     #selectxbox10, #selectxbox20, #selectxbox30, #selectxbox40{
      
       height: 24.5%;
       width: 12.5%;
@@ -269,406 +233,3 @@ body{
       margin-top: 12.5%;
     }
     
-    
-    #selectxbox11{
-
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 15%;
-        margin-top: 0%;
-        
-     
-     }
-     
-     #selectxbox12{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 28%;
-        margin-top: 0%;
-     
-     }
-     
-     
-     #selectxbox13{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 41%;
-        margin-top: 0%;
-     
-     }
-     
-     
-     #selectxbox14{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 54%;
-        margin-top: 0%;
-     
-     }
-    
-     #selectxbox15{
-     
-      height: 24.5%;
-      width: 12.5%;
-      background-color: transparent;
-      border: 1px solid white;
-      position: absolute;
-      border-radius: 10px;
-      margin-left: 67%;
-      margin-top: 0%;
-    }
-
-    #selectxbox16{
-
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 15%;
-        margin-top: 12.5%;
-        
-     
-     }
-     
-     #selectxbox17{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 28%;
-        margin-top: 12.5%;
-     
-     }
-     
-     
-     #selectxbox18{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 41%;
-        margin-top: 12.5%;
-     
-     }
-     
-     
-     #selectxbox19{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 54%;
-        margin-top: 12.5%;
-     
-     }
-    
-     #selectxbox20{
-     
-      height: 24.5%;
-      width: 12.5%;
-      background-color: transparent;
-      border: 1px solid white;
-      position: absolute;
-      border-radius: 10px;
-      margin-left: 67%;
-      margin-top: 12.5%;
-    }
-
-    #selectxbox21{
-
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 15%;
-        margin-top: 0%;
-        
-     
-     }
-     
-     #selectxbox22{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 28%;
-        margin-top: 0%;
-     
-     }
-     
-     
-     #selectxbox23{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 41%;
-        margin-top: 0%;
-     
-     }
-     
-     
-     #selectxbox24{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 54%;
-        margin-top: 0%;
-     
-     }
-    
-     #selectxbox25{
-     
-      height: 24.5%;
-      width: 12.5%;
-      background-color: transparent;
-      border: 1px solid white;
-      position: absolute;
-      border-radius: 10px;
-      margin-left: 67%;
-      margin-top: 0%;
-    }
-
-    #selectxbox26{
-
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 15%;
-        margin-top: 12.5%;
-        
-     
-     }
-     
-     #selectxbox27{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 28%;
-        margin-top: 12.5%;
-     
-     }
-     
-     
-     #selectxbox28{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 41%;
-        margin-top: 12.5%;
-     
-     }
-     
-     
-     #selectxbox29{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 54%;
-        margin-top: 12.5%;
-     
-     }
-    
-     #selectxbox30{
-     
-      height: 24.5%;
-      width: 12.5%;
-      background-color: transparent;
-      border: 1px solid white;
-      position: absolute;
-      border-radius: 10px;
-      margin-left: 67%;
-      margin-top: 12.5%;
-    }
-    
-    
-    #selectxbox31{
-
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 15%;
-        margin-top: 0%;
-        
-     
-     }
-     
-     #selectxbox32{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 28%;
-        margin-top: 0%;
-     
-     }
-     
-     
-     #selectxbox33{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 41%;
-        margin-top: 0%;
-     
-     }
-     
-     
-     #selectxbox34{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 54%;
-        margin-top: 0%;
-     
-     }
-    
-     #selectxbox35{
-     
-      height: 24.5%;
-      width: 12.5%;
-      background-color: transparent;
-      border: 1px solid white;
-      position: absolute;
-      border-radius: 10px;
-      margin-left: 67%;
-      margin-top: 0%;
-    }
-
-    #selectxbox36{
-
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 15%;
-        margin-top: 12.5%;
-        
-     
-     }
-     
-     #selectxbox37{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 28%;
-        margin-top: 12.5%;
-     
-     }
-     
-     
-     #selectxbox38{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 41%;
-        margin-top: 12.5%;
-     
-     }
-     
-     
-     #selectxbox39{
-     
-        height: 24.5%;
-        width: 12.5%;
-        background-color: transparent;
-        border: 1px solid white;
-        position: absolute;
-        border-radius: 10px;
-        margin-left: 54%;
-        margin-top: 12.5%;
-     
-     }
-    
-     #selectxbox40{
-     
-      height: 24.5%;
-      width: 12.5%;
-      background-color: transparent;
-      border: 1px solid white;
-      position: absolute;
-      border-radius: 10px;
-      margin-left: 67%;
-      margin-top: 12.5%;
-    }
