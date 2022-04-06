@@ -11985,3 +11985,49 @@
   transition: all 0.4s ease;
 
 }
+
+/*CSS DO POP-UP (o conteudo poderá variar de página para página)*/
+.bg-modal{
+
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.7);
+   opacity: 1;
+   position: absolute;
+   top: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   display: none;
+
+}
+
+/*QUANDO O POPUP FOR ABERTO, O BOTÃO DROPDOWN 'SELECIONAR CATEGORIA', FICA COM visibility="hidden"*/
+
+.modal-content{
+
+   width: 800px;
+   height: 600px;
+   background-color: white;
+   border-radius: 4px;
+   position: absolute;
+   margin-top: -570px;
+   
+
+}
+
+.inputvaluescreaterecipe{
+
+   width: 50%;
+
+}
+
+.close{
+
+   position: absolute;
+   top: 0;
+   right: 14px;
+   font-size: 42px;
+  
+
+}

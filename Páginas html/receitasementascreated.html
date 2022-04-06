@@ -323,7 +323,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <button style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 152px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>CRIAR RECEITA</b></button>
+                    <button id="buttoncreaterecipe" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 152px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>CRIAR RECEITA</b></button>
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -541,6 +541,37 @@
     <div class="rectangleitem14"></div>
     <div class="rectangleitem15"></div>
 
+    <!--ESTRUTURA DO POP-UP-->
+
+    <div class="bg-modal">
+
+        <!--CONTEUDO DO POP-UP-->
+        <div class="modal-content" style="position: relative;">
+
+            <div class="close" id="closepopuppp" style="position: absolute; cursor: pointer;">x</div>
+
+            <!--O TITULO VAI ALTERAR DE ACORDO COM O ITEM A SER CRIADO (receita, ementa, exercicio, plano de treino)-->
+           <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 267px; margin-top: 30px;"><b>CRIAR RECEITA</b></h3> 
+
+           <div class="rectangledividercreaterecipe" style="width: 550px; height: 1px; background-color: #2d2e2d; margin-left: 110px;"></div>
+
+            <form>
+
+                <input class="inputvaluescreaterecipe" style="border: 1px solid black; border-radius: 7px; margin-left: 40px; margin-top: 30px;" type="text" placeholder="Título">
+
+            </form>
+
+            
+
+            <textarea style="border:1px solid #2d2e2d; border-radius: 7px; width: 400px; height: 130px; margin-left: 39px; margin-top: 153px; position: absolute;" placeholder="Descrição"></textarea>
+
+            <button style="width: 150px; height: 40px; z-index: 1; margin-left: 608px; margin-top: 400px; border-radius: 10px; background-color: #e8bf5c; border: 1px solid gray;"><b>CRIAR</b></button>
+           
+            
+        </div>
+
+    </div>
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -557,6 +588,24 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+
+    <script>
+
+      document.getElementById('buttoncreaterecipe').addEventListener('click', 
+      function() {
+
+         document.querySelector('.bg-modal').style.display = 'flex';
+
+      });
+
+      document.getElementById('closepopuppp').addEventListener('click', 
+      function() {
+
+          document.querySelector('.bg-modal').style.display = 'none';
+
+      });
+
+    </script>
 
 </body>
 
