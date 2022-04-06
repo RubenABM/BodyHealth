@@ -2,20 +2,19 @@ body{
 
     background-color: #2d2e2d; 
 }
-
 h1{
-    color: #f2f2f2;
-    font-family: Arial;
-    padding: 200px 500px;
-    text-decoration-line: underline;
-    text-decoration-color: white; 
-    text-decoration-style: solid;
+  color: #f2f2f2;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  margin-top: 5%;
+  font-size: 32px;
 }
 
-p{
-    color: #f2f2f2;
-    font-family: Arial;
-    padding: 1px 600px;
+.space{
+  margin-left: 15%;
+  margin-right: 6%;
+  margin-top: 1%;
+  position: absolute;
 }
  
  /* Add a black background color to the top navigation */

@@ -7,7 +7,7 @@ h1{
     color: #f2f2f2;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 5%;
-    margin-left: 15%;
+    margin-left: 5%;
     font-size: 32px;
 }
 
@@ -16,8 +16,8 @@ p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-indent: 2ch;
     text-align: justify;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 5%;
+    margin-right: 30%;
     font-size: 20px;
 }
 
@@ -28,7 +28,7 @@ p{
   background: white;
   position: absolute;
   margin-top: -15px;
-  margin-left: 15%;
+  margin-left: 5%;
   width: 64.8%;
 
 }
@@ -40,7 +40,7 @@ p{
   background: white;
   position: absolute;
   margin-top: -15px;
-  margin-left: 15%;
+  margin-left: 5%;
   width: 64.8%;
 }
 
