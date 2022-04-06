@@ -132,3 +132,32 @@ consulta_pedido_id int,
 )
 
 SELECT * from nutricionista
+
+
+--------------------------------------------------------------CODIGO PARA ADICIONAR NO POSTGRESQL-------------------------------------------------------------------
+
+
+
+--ADICIONAR CAMPOS DE NUMERO DE PEDIDO E ESTADO DO PEDID
+CREATE TABLE consulta(
+
+consulta_id SERIAL primary key,
+consulta_titulo varchar(50) NOT NULL,
+consulta_desc varchar(300) NOT NULL,
+consulta_local_id int,
+consulta_pedido_id int,
+consulta_nutritionist_identifier int,
+consulta_utilizador_identifier int
+consulta_terminada bit, --AS CONSULTAS TERMINADAS SÃO EXIBIDAS NA LISTA DE 'ULTIMAS CONSULTAS',
+consulta_data date DEFAULT CURRENT_DATE
+	
+)
+
+CREATE TABLE pedido(
+
+pedido_id SERIAL primary key,
+pedido_aceite bit DEFAULT false
+	
+)
+
+SELECT * from nutricionista
