@@ -9,3 +9,16 @@ router.get('/', function(req, res, next) {
  
 
 module.exports = router;
+
+//Pode estar ou não correto:
+const db = require("./models/connection")
+router.get('/teste', function(req, res, next) {
+      db.any("SELECT * FROM utilizador")
+      .then(rows => {
+        console.log(rows);
+        res.json(rows)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+ });
