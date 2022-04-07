@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
  
 
 module.exports = router;
-
+/*
 //Pode estar ou não correto:
 const db = require("./models/connection")
 router.get('/teste', function(req, res, next) {
@@ -21,4 +21,4 @@ router.get('/teste', function(req, res, next) {
       .catch(error => {
         console.log(error)
       })
- });
+ });*/
