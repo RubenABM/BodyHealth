@@ -19,8 +19,4 @@ app.use('/api/users', usersRouter);
 
 module.exports = app;
 
-//Pode estar ou não correto:
-const pool = require("./models/connection")
-
-
 

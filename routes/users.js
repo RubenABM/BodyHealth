@@ -9,10 +9,3 @@ router.get('/estaticos', function(req, res, next) {
  
 
 module.exports = router;
-
-//Pode estar ou não correto:
-const pool = require("./models/connection")
-router.get('/teste', function(req, res, next) {
-      pool.any("SELECT * FROM utilizador")
-      res.send(users);
- });
