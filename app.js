@@ -20,7 +20,7 @@ app.use('/api/users', usersRouter);
 module.exports = app;
 
 //Pode estar ou não correto:
-const db = require("./models/connection")
+const pool = require("./models/connection")
 
 
 

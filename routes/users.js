@@ -11,8 +11,8 @@ router.get('/estaticos', function(req, res, next) {
 module.exports = router;
 
 //Pode estar ou não correto:
-const db = require("./models/connection")
+const pool = require("./models/connection")
 router.get('/teste', function(req, res, next) {
-      db.any("SELECT * FROM utilizador")
+      pool.any("SELECT * FROM utilizador")
       res.send(users);
  });
