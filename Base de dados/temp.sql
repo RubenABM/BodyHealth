@@ -1,6 +1,14 @@
+CREATE TABLE utilizador(
 
-xd
+user_id SERIAL primary key,
+user_name varchar(30) NOT NULL,
+user_password varchar(45) NOT NULL,
+user_morada varchar(180),
+user_email varchar(100),
+user_points int DEFAULT 0,
+user_user_dados_id int
 
+<<<<<<< HEAD
 ola a todos
 
 
@@ -18,6 +26,8 @@ user_email varchar(100),
 user_points int DEFAULT 0,
 user_user_dados_id int
 
+=======
+>>>>>>> be0dd0d21fddae30f634ccfffc76247aec530018
 
 );
 
@@ -25,8 +35,11 @@ user_user_dados_id int
 ALTER TABLE utilizador
 ADD CONSTRAINT fk_user_user_dados_id FOREIGN KEY(user_user_dados_id) REFERENCES dados_utilizador (user_dados_id);
 
+<<<<<<< HEAD
 --CRIAÇÃO DA TABELA DE DADOS DO UTILIZADOR
 
+=======
+>>>>>>> be0dd0d21fddae30f634ccfffc76247aec530018
 CREATE TABLE dados_utilizador(
 
 user_dados_id SERIAL primary key,
@@ -39,8 +52,11 @@ user_pressao_arterial_media real DEFAULT 0.0
 
 );
 
+<<<<<<< HEAD
 --CRIAÇÃO DA TABELA DE COMUNIDADE
 
+=======
+>>>>>>> be0dd0d21fddae30f634ccfffc76247aec530018
 CREATE TABLE comunidade(
 
 comunidade_id SERIAL primary key,
@@ -49,8 +65,11 @@ comunidade_desc varchar(500)
 
 );
 
+<<<<<<< HEAD
 --CRIAÇÃO DA TABELA DE PARTICIPANTE DE UMA COMUNIDADE
 
+=======
+>>>>>>> be0dd0d21fddae30f634ccfffc76247aec530018
 CREATE TABLE comunidade_utilizador(
 
 comunidade_user_id SERIAL primary key,
@@ -129,6 +148,7 @@ ALTER TABLE productsgetlist
 ADD CONSTRAINT fk_utilizador_id FOREIGN KEY(utilizador_id) REFERENCES utilizador (user_id);
 
 
+<<<<<<< HEAD
 CREATE TABLE consulta(
 
 consulta_id SERIAL primary key,
@@ -401,3 +421,53 @@ plano_utilizador_id int,
 
 );
 
+=======
+CREATE TABLE nutricionista(
+
+nutricionista_id SERIAL primary key
+
+) inherits (utilizador);
+
+--ADICIONAR CAMPOS DE NUMERO DE PEDIDO E ESTADO DO PEDID
+CREATE TABLE consulta(
+
+consulta_id SERIAL primary key,
+consulta_titulo varchar(50) NOT NULL,
+consulta_desc varchar(300) NOT NULL,
+consulta_local_id int,
+consulta_pedido_id int,
+
+
+)
+
+SELECT * from nutricionista
+
+
+--------------------------------------------------------------CODIGO PARA ADICIONAR NO POSTGRESQL-------------------------------------------------------------------
+
+
+
+--ADICIONAR CAMPOS DE NUMERO DE PEDIDO E ESTADO DO PEDID
+CREATE TABLE consulta(
+
+consulta_id SERIAL primary key,
+consulta_titulo varchar(50) NOT NULL,
+consulta_desc varchar(300) NOT NULL,
+consulta_local_id int,
+consulta_pedido_id int,
+consulta_nutritionist_identifier int,
+consulta_utilizador_identifier int
+consulta_terminada bit, --AS CONSULTAS TERMINADAS SÃO EXIBIDAS NA LISTA DE 'ULTIMAS CONSULTAS',
+consulta_data date DEFAULT CURRENT_DATE
+	
+)
+
+CREATE TABLE pedido(
+
+pedido_id SERIAL primary key,
+pedido_aceite bit DEFAULT false
+	
+)
+
+SELECT * from nutricionista
+>>>>>>> be0dd0d21fddae30f634ccfffc76247aec530018
