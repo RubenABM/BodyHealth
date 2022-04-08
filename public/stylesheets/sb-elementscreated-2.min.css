@@ -11998,6 +11998,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   /*ALTERAR AO TERMINAR*/
    display: none;
 
 }
@@ -12029,5 +12030,188 @@
    right: 14px;
    font-size: 42px;
   
+}
+
+
+.radio-section{
+
+   display: flex;
+   align-items: center;
+   margin-top: 180px;
+   height: 100vh;
+   margin-left: 42px;
+
+}
+
+.radio-item [type="radio"]{
+
+   display: none;
+
+}
+
+/*ESPAÇAMENTO DE ELEMENTOS 'RADIO'*/
+
+.radio-item + .radio-item{
+
+   margin-top: 15px;
+
+}
+
+.radio-item label{
+
+   display: block;
+   padding: 1px 26px;
+   background: #fff;
+   border: 1px solid #2d2e2d;
+   border-radius: 8px;
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: 300;
+   color: #2d2e2d;
+   min-width: 95%;
+   white-space: nowrap;
+   position: relative;
+   transition: .4s ease-in-out 0s;
+
+}
+
+.radio-item label::after,
+.radio-item label::before{
+
+   content: "";
+   position: absolute;
+   border-radius: 50%;
+
+}
+
+.radio-item label::after{
+
+   height: 16px;
+   width: 16px;
+   border: 2px solid #e8bf5c;
+   left: 5px;
+   top: calc(50% - 8px);
+
+}
+
+.radio-item label::before{
+
+   background: #e8bf5c;
+   height: 8px;
+   width: 8px;
+   left: 9px;
+   top: calc(50% - 4px);
+   transform: scale(5);
+   opacity: 0;
+   visibility: hidden;
+   transition: .4s ease-in-out 0s;
+
+}
+
+.radio-item [type="radio"]:checked ~ label{
+  border-color: #e8bf5c;
+}
+
+.radio-item [type="radio"]:checked ~ label:before{
+
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+
+}
+
+.radio-section2{
+
+  display: flex;
+  align-items: center;
+  margin-top: 180px;
+  height: 100vh;
+  margin-left: 142px;
+
+}
+
+.radio-item2 [type="radio"]{
+
+  display: none;
+
+}
+
+/*ESPAÇAMENTO DE ELEMENTOS 'RADIO'*/
+
+.radio-item2 + .radio-item2{
+
+  margin-top: 15px;
+
+}
+
+.radio-item2 label{
+
+  display: block;
+  padding: 1px 26px;
+  background: #fff;
+  border: 1px solid #2d2e2d;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+  color: #2d2e2d;
+  min-width: 95%;
+  white-space: nowrap;
+  position: relative;
+  transition: .4s ease-in-out 0s;
+
+}
+
+.radio-item2 label::after,
+.radio-item2 label::before{
+
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+
+}
+
+.radio-item2 label::after{
+
+  height: 16px;
+  width: 16px;
+  border: 2px solid #e8bf5c;
+  left: 5px;
+  top: calc(50% - 8px);
+
+}
+
+.radio-item2 label::before{
+
+  background: #e8bf5c;
+  height: 8px;
+  width: 8px;
+  left: 9px;
+  top: calc(50% - 4px);
+  transform: scale(5);
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s ease-in-out 0s;
+
+}
+
+.radio-item2 [type="radio"]:checked ~ label{
+ border-color: #e8bf5c;
+}
+
+.radio-item2 [type="radio"]:checked ~ label:before{
+
+ opacity: 1;
+ visibility: visible;
+ transform: scale(1);
+
+}
+
+/*BOTÃO PARAR CRIAR*/
+
+.buttontocreateeee:hover{
+
+   background-color: #2d2e2d;
+   color: white;
 
 }
