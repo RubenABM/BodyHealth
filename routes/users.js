@@ -10,7 +10,7 @@ router.get('/estaticos', function(req, res, next) {
 
 module.exports = router;
 
-/*
+
 router.get('/teste', function(req, res, next) {
   pool.query('SELECT * FROM utilizador', (error, results) => {
     if (error) {
@@ -18,4 +18,4 @@ router.get('/teste', function(req, res, next) {
     }
     response.status(200).json(results.rows)
   })
-});*/
+});
