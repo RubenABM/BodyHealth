@@ -12000,6 +12000,7 @@
    align-items: center;
    /*ALTERAR AO TERMINAR*/
    display: none;
+   
 
 }
 
@@ -12124,9 +12125,9 @@
 
   display: flex;
   align-items: center;
-  margin-top: 180px;
+  margin-top: -288px;
   height: 100vh;
-  margin-left: 142px;
+  margin-left: 290px;
 
 }
 
@@ -12213,5 +12214,19 @@
 
    background-color: #2d2e2d;
    color: white;
+   transition: all 0.4s ease;
+
+}
+
+.rectanglebox, .rectanglebox2, .rectanglebox3, .rectanglebox4, .rectanglebox5, .rectanglebox6{
+
+  width: 176px;
+  height: 170px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 3px solid #2d2e2d;
+  border-radius: 15px;
+  display: inline-block;
+  margin-left: 0.9%;
 
 }

@@ -455,12 +455,18 @@
                                             <a class="dropdown-item" href="#">Something else here</a>
                                         </div>
                                     </div>
+
                                 </div>
                                 
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
+                                        <div class="rectanglebox" id="rb1"></div>
+                                        <div class="rectanglebox2" id="rb2"></div>
+                                        <div class="rectanglebox3" id="rb3"></div>
+                                        <div class="rectanglebox4" id="rb4"></div>
+                                        <div class="rectanglebox5" id="rb5"></div>
+                                        <div class="rectanglebox6" id="rb6"></div>
                                     </div>
                                 </div>
                             </div>
@@ -553,7 +559,9 @@
             <!--O TITULO VAI ALTERAR DE ACORDO COM O ITEM A SER CRIADO (receita, ementa, exercicio, plano de treino)-->
            <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 267px; margin-top: 30px;"><b>CRIAR RECEITA</b></h3> 
 
-           <div class="rectangledividercreaterecipe" style="width: 490px; height: 1px; background-color: #2d2e2d; margin-left: 110px;"></div>
+           <div class="rectangledividercreaterecipe" style="width: 490px; height: 1px; background-color: #2d2e2d; margin-left: 150px;"></div>
+
+           <div class="rectangledividercreaterecipe" style="width: 200px; height: 1px; background-color: #2d2e2d; margin-left: 145px; transform: rotate(90deg); margin-top: 455px; position: absolute;"></div>
 
 
             <form>
@@ -568,25 +576,25 @@
                 
                   <section>
 
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px;"></div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px;"></div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px;"></div>
+                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;"></div>
+                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;"></div>
+                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;"></div>
 
                   </section>
 
                   <section style="margin-top: 20px">
 
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px;"></div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px;"></div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px;"></div>
+                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;"></div>
+                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;"></div>
+                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;"></div>
 
                   </section>
 
                   <section style="margin-top: 20px">
 
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px;"></div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px;"></div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px;"></div>
+                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;"></div>
+                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;"></div>
+                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;"></div>
 
                   </section>
                 
@@ -598,6 +606,8 @@
 
 
             <textarea style="border:1px solid #2d2e2d; border-radius: 7px; width: 350px; height: 130px; margin-left: 39px; margin-top: 153px; position: absolute;" placeholder="Descrição"></textarea>
+
+            <h2 style="position: absolute; font-size: 16px; margin-top: 320px; margin-left: 40px;"><b>Categoria</b></h2>
 
             <section class="radio-section">
 
@@ -614,15 +624,17 @@
 
             </section>
 
+            <h2 style="position: absolute; font-size: 16px; margin-top: 320px; margin-left: 290px;"><b>Base</b></h2>
+
             <section class="radio-section2">
 
                 <div class="radio-list2">
  
-                   <div class="radio-item2"><input name="radio" id="radio6" type="radio"><label for="radio1">Pequeno Almoço</label></div>
-                   <div class="radio-item2"><input name="radio" id="radio7" type="radio"><label for="radio2">Lanche</label></div>
-                   <div class="radio-item2"><input name="radio" id="radio8" type="radio"><label for="radio3">Almoço</label></div>
-                   <div class="radio-item2"><input name="radio" id="radio9" type="radio"><label for="radio4">Jantar</label></div>
-                   <div class="radio-item2"><input name="radio" id="radio10" type="radio"><label for="radio5">Outros</label></div>
+                   <div class="radio-item2"><input name="radio2" id="radio6" type="radio"><label for="radio6">Carne</label></div>
+                   <div class="radio-item2"><input name="radio2" id="radio7" type="radio"><label for="radio7">Peixe</label></div>
+                   <div class="radio-item2"><input name="radio2" id="radio8" type="radio"><label for="radio8">Vegan</label></div>
+                   <div class="radio-item2"><input name="radio2" id="radio9" type="radio"><label for="radio9">Frutas</label></div>
+                   <div class="radio-item2"><input name="radio2" id="radio10" type="radio"><label for="radio10">Outros</label></div>
  
                 </div>
  
