@@ -392,3 +392,19 @@ ADD CONSTRAINT fk_receita_categoriaa_id FOREIGN KEY(receita_categoriaa_id) REFER
 ALTER TABLE receita
 ADD CONSTRAINT fk_receita_utilizador_id FOREIGN KEY(receita_utilizador_id) REFERENCES utilizador (user_id);
 
+
+insert into dados_utilizador(
+user_peso,
+user_altura,
+user_imc,
+user_gordura_visceral,
+user_gordura_subcutanea,
+user_pressao_arterial_media) values (70,170,55,20,20,20);
+
+insert into utilizador(
+user_name ,
+user_password,
+user_morada,
+user_email,
+user_points,
+user_user_dados_id) values ('Admin', 'AdminFixe', 'Rua Fixe', 'AdminFixe@gmail.com', '2000',1);
