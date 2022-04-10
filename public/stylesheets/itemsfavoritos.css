@@ -12341,5 +12341,63 @@
   margin-left: 21px;
   margin-top: 26px;
 
+}
+
+.sidebardivider{
+
+
+  width: 224px;
+  height: 18px;
+  background-color: #2d2d2d;
+  position: absolute;
+  z-index: 1;
+  margin-top: 128px;
+  margin-left: 0.5px;
+
+}
+
+#sidebardivider1{
+
+  position: absolute;
+  z-index: 1;
+  margin-top: 128px;
+  margin-left: 0.5px;
+
+}
+
+#sidebardivider2{
+
+  position: absolute;
+  z-index: 1;
+  margin-top: 272px;
+  
+
+}
+
+#sidebardivider3{
+
+  position: absolute;
+  z-index: 1;
+  margin-top: 416px;
+  
+}
+
+#sidebardivider4{
+
+   position: absolute;
+   z-index: 1;
+   margin-top: 617px;
+
+}
+
+.sidebardivider5{
+
+  width: 224px;
+  height: 850px;
+  background-color: #2d2d2d;
+  position: absolute;
+  z-index: 1;
+  margin-top: 758px;
+  margin-left: 0.5px;
 
 }

@@ -32,6 +32,14 @@ A PÁGINA DE FAVORITOS TEM EXATAMENTE A MESMA ESTRUTURA, ALTERANDO SOMENTE OS DA
 
 <body id="page-top">
 
+    <!--5 DIVIDERS PARA A SIDE-BAR-->
+
+    <div class="sidebardivider" id="sidebardivider1"></div>
+    <div class="sidebardivider" id="sidebardivider2"></div>
+    <div class="sidebardivider" id="sidebardivider3"></div>
+    <div class="sidebardivider" id="sidebardivider4"></div>
+    <div class="sidebardivider5" id="sidebardivider5"></div>
+
     <!-- Page Wrapper -->
     <div id="wrapper">
 
@@ -331,10 +339,10 @@ A PÁGINA DE FAVORITOS TEM EXATAMENTE A MESMA ESTRUTURA, ALTERANDO SOMENTE OS DA
                 <div class="container-fluid">
 
                     <a href="#atualizardadoscomreceitas">
-                    <button id="buttoncreaterecipe" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 92px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>DESCOBRIR MAIS RECEITAS</b></button>
+                    <button id="buttoncreaterecipe" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 92px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>DESCOBRIR MAIS EXERCICIOS</b></button>
                     </a>
                     <a href="#atualizardadoscomeementas"> <!--LINK PARA A PAGINA DE EXIBICAO DE RECEITAS/EMENTAS, ONDE A INFORMAÇÃO SERÁ ADAPTADA DEPENDENDO DO BOTÃO 'DESCOBRIR NOVAS x' CLICADO-->
-                    <button id="buttoncreateementa" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 814px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>DESCOBRIR MAIS EMENTAS</b></button>
+                    <button id="buttoncreateementa" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 814px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>DESCOBRIR MAIS PLANOS</b></button>
                     </a>
 
                     <!-- Page Heading -->
@@ -434,7 +442,20 @@ A PÁGINA DE FAVORITOS TEM EXATAMENTE A MESMA ESTRUTURA, ALTERANDO SOMENTE OS DA
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">RECEITAS</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">EXERCICIOS</h6>
+                                    <!-- Topbar Search -->
+                    <form
+                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="margin-left: 310px;">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar Exercício..."
+                            aria-label="Search" aria-describedby="basic-addon2" style="width: 250px;">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                                <i class='bx bx-search-alt-2' style="font-size: 18px; position: absolute; margin-top: -7px; margin-left: -8px; color: white ;"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
 
                                     <section class="dropButton" style="position: absolute; z-index: 1; margin-left: 694px; margin-top: -230px;"> 
                                         <div class="dropdown">
@@ -520,7 +541,20 @@ A PÁGINA DE FAVORITOS TEM EXATAMENTE A MESMA ESTRUTURA, ALTERANDO SOMENTE OS DA
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">EMENTAS</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">PLANOS DE TREINO</h6>
+
+                                    <form
+                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="margin-left: 310px;">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar Plano..."
+                            aria-label="Search" aria-describedby="basic-addon2" style="width: 250px;">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                                <i class='bx bx-search-alt-2' style="font-size: 18px; position: absolute; margin-top: -7px; margin-left: -8px; color: white ;"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
 
                                     <section class="dropButton" style="position: absolute; z-index: 1; margin-left: 694px; margin-top: -230px;"> 
                                         <div class="dropdown">
