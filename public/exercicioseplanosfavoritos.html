@@ -1,3 +1,10 @@
+<!--QUANDO DINAMIZADA, ESTA PÁGINA ADAPTARÁ A INFORMAÇÃO ACERCA DE EXERCICIOS E PLANOS
+
+A PÁGINA DE FAVORITOS TEM EXATAMENTE A MESMA ESTRUTURA, ALTERANDO SOMENTE OS DADOS NELA CONTIDOS (ESCONDER ALGUNS ELEMENTOS, ETC)
+
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +26,7 @@
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Custom styles for this template-->
-    <link href="stylesheets/sb-elementscreated-2.min.css" rel="stylesheet">
+    <link href="stylesheets/itemsfavoritos.css" rel="stylesheet">
 
 </head>
 
@@ -323,13 +330,16 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <button id="buttoncreaterecipe" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 92px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>CRIAR RECEITA</b></button>
-
-                    <button id="buttoncreateementa" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 814px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>CRIAR EMENTA</b></button>
+                    <a href="#atualizardadoscomreceitas">
+                    <button id="buttoncreaterecipe" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 92px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>DESCOBRIR MAIS RECEITAS</b></button>
+                    </a>
+                    <a href="#atualizardadoscomeementas"> <!--LINK PARA A PAGINA DE EXIBICAO DE RECEITAS/EMENTAS, ONDE A INFORMAÇÃO SERÁ ADAPTADA DEPENDENDO DO BOTÃO 'DESCOBRIR NOVAS x' CLICADO-->
+                    <button id="buttoncreateementa" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 814px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>DESCOBRIR MAIS EMENTAS</b></button>
+                    </a>
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800" style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: white; letter-spacing: 1px;"><b>MINHAS RECEITAS E EMENTAS</b></h1>
+                        <h1 class="h3 mb-0 text-gray-800" style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: white; letter-spacing: 1px;"><b>MEUS FAVORITOS</b></h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> <b>ATUALIZAR</b></a>
                     </div>
@@ -428,7 +438,6 @@
 
                                     <section class="dropButton" style="position: absolute; z-index: 1; margin-left: 694px; margin-top: -230px;"> 
                                         <div class="dropdown">
-                                            <button class="dropbtn" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 102px; font-size: 13px; height: 30px; width: 260px; margin-left: -90px; "> <b>SELECIONAR CATEGORIA</b></button>
                                            
                                             <button type="submit" onclick="gotoMain()" class="buttonvermais4" style="z-index: 1;"><b>VER MAIS</b></button>
                                             
@@ -515,7 +524,6 @@
 
                                     <section class="dropButton" style="position: absolute; z-index: 1; margin-left: 694px; margin-top: -230px;"> 
                                         <div class="dropdown">
-                                            <button class="dropbtn2" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 102px; font-size: 13px; height: 30px; width: 260px; margin-left: -90px; "> <b>SELECIONAR CATEGORIA</b></button>
                                            
                                             <button type="submit" onclick="gotoMain()" class="buttonvermais4" style="z-index: 1;"><b>VER MAIS</b></button>
                                             
@@ -649,287 +657,7 @@
     <div class="rectangleitem14"></div>
     <div class="rectangleitem15"></div>
 
-    <!--ESTRUTURA DO POP-UP PARA CRIAR RECEITAS-->
-
-    <div class="bg-modal">
-
-        <!--CONTEUDO DO POP-UP-->
-        <div class="modal-content" style="position: relative;">
-
-            <div class="close" id="closepopuppp" style="position: absolute; cursor: pointer;">x</div>
-
-            <!--O TITULO VAI ALTERAR DE ACORDO COM O ITEM A SER CRIADO (receita, ementa, exercicio, plano de treino)-->
-           <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 267px; margin-top: 30px;"><b>CRIAR RECEITA</b></h3> 
-
-           <div class="rectangledividercreaterecipe" style="width: 490px; height: 1px; background-color: #2d2e2d; margin-left: 150px;"></div>
-
-           <div class="rectangledividercreaterecipe" style="width: 200px; height: 1px; background-color: #2d2e2d; margin-left: 145px; transform: rotate(90deg); margin-top: 455px; position: absolute;"></div>
-
-
-            <form>
-
-                <input class="inputvaluescreaterecipe" style="border: 1px solid black; border-radius: 7px; margin-left: 40px; margin-top: 30px; width: 350px;" type="text" placeholder="Título">
-
-                <div class="rectanglenewdivider" style="width: 55%; height: 0.5%; background: #2d2e2d; position: absolute; transform: rotate(90deg); margin-left: 228px; margin-top: 190px;"></div>
-
-                <h3 style="font-size: 15px; color: #2d2e2d; margin-left: 525px; margin-top: -26px;">SELECIONAR INGREDIENTES</h3>
-
-                <div class="clsScroll2">
-
-                <section style="border: 1px solid #2d2e2d; width: 310px; height: 360px; position: absolute; z-index: 1; margin-left: 470px; border-radius: 9px;">
-                
-                  <section>
-
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
-                    
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-
-                  </section>
-
-                  <section style="margin-top: 20px">
-
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-
-                  </section>
-
-                  <section style="margin-top: 20px">
-
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-
-                  </section>
-                
-                </section>
-
-                </div>
-
-            </form>
-
-            <button class="buttontocreateeee" style="width: 150px; height: 40px; z-index: 2; margin-left: 608px; margin-top: 530px; border-radius: 10px; background-color: #e8bf5c; border: 1px solid gray; position: absolute;"><b>CRIAR</b></button>
-
-
-            <textarea style="border:1px solid #2d2e2d; border-radius: 7px; width: 350px; height: 130px; margin-left: 39px; margin-top: 153px; position: absolute;" placeholder="Descrição"></textarea>
-
-            <h2 style="position: absolute; font-size: 16px; margin-top: 320px; margin-left: 40px;"><b>Categoria</b></h2>
-
-            <section class="radio-section">
-
-               <div class="radio-list">
-
-                  <div class="radio-item"><input name="radio" id="radio1" type="radio"><label for="radio1">Entrada</label></div>
-                  <div class="radio-item"><input name="radio" id="radio2" type="radio"><label for="radio2">Prato Principal</label></div>
-                  <div class="radio-item"><input name="radio" id="radio3" type="radio"><label for="radio3">Sobremesa</label></div>
-                  <div class="radio-item"><input name="radio" id="radio4" type="radio"><label for="radio4">Bebida</label></div>
-                  <div class="radio-item"><input name="radio" id="radio5" type="radio"><label for="radio5">Outros</label></div>
-
-               </div>
-
-
-            </section>
-
-            <h2 style="position: absolute; font-size: 16px; margin-top: 320px; margin-left: 290px;"><b>Base</b></h2>
-
-            <section class="radio-section2">
-
-                <div class="radio-list2">
- 
-                   <div class="radio-item2"><input name="radio2" id="radio6" type="radio"><label for="radio6">Carne</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio7" type="radio"><label for="radio7">Peixe</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio8" type="radio"><label for="radio8">Vegan</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio9" type="radio"><label for="radio9">Frutas</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio10" type="radio"><label for="radio10">Outros</label></div>
- 
-                </div>
- 
- 
-             </section>
-
-            
-        </div>
-
-    </div>
-
-      <!--ESTRUTURA DO POP-UP PARA CRIAR EMENTAS-->
-
-      <div class="bg-modal2">
-
-        <!--CONTEUDO DO POP-UP-->
-        <div class="modal-content2" style="position: relative;">
-
-            <div class="close" id="closepopuppp2" style="position: absolute; cursor: pointer;">x</div>
-
-            <!--O TITULO VAI ALTERAR DE ACORDO COM O ITEM A SER CRIADO (receita, ementa, exercicio, plano de treino)-->
-           <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 267px; margin-top: 30px;"><b>CRIAR EMENTA</b></h3> 
-
-           <div class="rectangledividercreaterecipe" style="width: 490px; height: 1px; background-color: #2d2e2d; margin-left: 150px;"></div>
-
-           <div class="rectangledividercreaterecipe" style="width: 200px; height: 1px; background-color: #2d2e2d; margin-left: 145px; transform: rotate(90deg); margin-top: 455px; position: absolute;"></div>
-
-
-            <form>
-
-                <input class="inputvaluescreaterecipe" style="border: 1px solid black; border-radius: 7px; margin-left: 40px; margin-top: 30px; width: 350px;" type="text" placeholder="Título">
-
-                <div class="rectanglenewdivider" style="width: 55%; height: 0.5%; background: #2d2e2d; position: absolute; transform: rotate(90deg); margin-left: 228px; margin-top: 190px;"></div>
-
-                <h3 style="font-size: 15px; color: #2d2e2d; margin-left: 545px; margin-top: -26px;">SELECIONAR RECEITAS</h3>
-
-                <div class="clsScroll2">
-
-                <section style="border: 1px solid #2d2e2d; width: 310px; height: 360px; position: absolute; z-index: 1; margin-left: 470px; border-radius: 9px;">
-                
-                  <section>
-
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
-                    
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-
-                  </section>
-
-                  <section style="margin-top: 20px">
-
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-
-                  </section>
-
-                  <section style="margin-top: 20px">
-
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-
-                  </section>
-                
-                </section>
-
-                </div>
-
-            </form>
-
-            <button class="buttontocreateeee" style="width: 150px; height: 40px; z-index: 2; margin-left: 608px; margin-top: 530px; border-radius: 10px; background-color: #e8bf5c; border: 1px solid gray; position: absolute;"><b>CRIAR</b></button>
-
-
-            <textarea style="border:1px solid #2d2e2d; border-radius: 7px; width: 350px; height: 130px; margin-left: 39px; margin-top: 153px; position: absolute;" placeholder="Descrição"></textarea>
-
-            <h2 style="position: absolute; font-size: 16px; margin-top: 320px; margin-left: 40px;"><b>Categoria</b></h2>
-
-            <section class="radio-section">
-
-               <div class="radio-list">
-
-                  <div class="radio-item"><input name="radio" id="radio1" type="radio"><label for="radio1">Pequeno-Almoço</label></div>
-                  <div class="radio-item"><input name="radio" id="radio2" type="radio"><label for="radio2">Lanche</label></div>
-                  <div class="radio-item"><input name="radio" id="radio3" type="radio"><label for="radio3">Almoço</label></div>
-                  <div class="radio-item"><input name="radio" id="radio4" type="radio"><label for="radio4">Jantar</label></div>
-                  <div class="radio-item"><input name="radio" id="radio5" type="radio"><label for="radio5">Outros</label></div>
-
-               </div>
-
-
-            </section>
-
-            <h2 style="position: absolute; font-size: 16px; margin-top: 320px; margin-left: 290px;"><b>Base</b></h2>
-
-            <section class="radio-section2">
-
-                <div class="radio-list2">
- 
-                   <div class="radio-item2"><input name="radio2" id="radio6" type="radio"><label for="radio6">Carne</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio7" type="radio"><label for="radio7">Peixe</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio8" type="radio"><label for="radio8">Vegan</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio9" type="radio"><label for="radio9">Frutas</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio10" type="radio"><label for="radio10">Outros</label></div>
- 
-                </div>
- 
- 
-             </section>
-
-            
-        </div>
-
-    </div>
+    
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
