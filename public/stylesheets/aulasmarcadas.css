@@ -12278,26 +12278,26 @@
 
 .rectanglebox, .rectanglebox2, .rectanglebox3, .rectanglebox4, .rectanglebox5, .rectanglebox6{
 
-  width: 176px;
-  height: 170px;
+  width: 1076px;
+  height: 90px;
   cursor: pointer;
   background-color: transparent;
   border: 3px solid #2d2e2d;
   border-radius: 15px;
-  display: inline-block;
+  display: list-item;
   margin-left: 0.9%;
 
 }
 
 .rectanglebox7, .rectanglebox8, .rectanglebox9, .rectanglebox10, .rectanglebox11, .rectanglebox12{
 
-  width: 176px;
-  height: 170px;
+  width: 1076px;
+  height: 90px;
   cursor: pointer;
   background-color: transparent;
   border: 3px solid #2d2e2d;
   border-radius: 15px;
-  display: inline-block;
+  display: list-item;
   margin-left: 0.9%;
   margin-top: 10px;
 
@@ -12321,7 +12321,7 @@
 .clsScroll{
 
   width: 1149px; 
-  height: 688px;
+  height: 608px;
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -12400,5 +12400,24 @@
   z-index: 1;
   margin-top: 758px;
   margin-left: 0.5px;
+
+}
+
+.titulodaconsultaouaula{
+
+   text-decoration: solid;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 27px;
+   margin-top: 10px;
+   margin-left: 10px;
+
+}
+
+.ptounutricionistadaconsultaouaula{
+
+   font-size: 16px;
+   text-decoration: solid;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   margin-left: 12px;
 
 }

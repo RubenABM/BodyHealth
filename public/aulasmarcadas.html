@@ -19,7 +19,7 @@
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Custom styles for this template-->
-    <link href="stylesheets/sb-elementscreated-2.min.css" rel="stylesheet">
+    <link href="stylesheets/aulasmarcadas.css" rel="stylesheet">
 
 </head>
 
@@ -331,13 +331,13 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <button id="buttoncreaterecipe" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 92px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>CRIAR RECEITA</b></button>
+                    <button id="buttoncreaterecipe" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 92px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>CRIAR EXERCICIO</b></button>
 
-                    <button id="buttoncreateementa" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 814px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>CRIAR EMENTA</b></button>
+                    <button id="buttoncreateementa" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 814px; font-size: 13px; height: 30px; width: 260px; margin-left: 915px; border: 1px solid white; z-index: 1;"><b>CRIAR PLANO DE TREINO</b></button>
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800" style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: white; letter-spacing: 1px;"><b>MINHAS RECEITAS E EMENTAS</b></h1>
+                        <h1 class="h3 mb-0 text-gray-800" style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: white; letter-spacing: 1px;"><b>AULAS MARCADAS</b></h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> <b>ATUALIZAR</b></a>
                     </div>
@@ -432,7 +432,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">RECEITAS</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">EXERCICIOS</h6>
 
                                     <section class="dropButton" style="position: absolute; z-index: 1; margin-left: 694px; margin-top: -230px;"> 
                                         <div class="dropdown">
@@ -441,11 +441,17 @@
                                             <button type="submit" onclick="gotoMain()" class="buttonvermais4" style="z-index: 1;"><b>VER MAIS</b></button>
                                             
                                             <div class="dropdown-content2">
-                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos</a>
-                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Entrada</a>
-                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Prato Principal</a>
-                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Sobremesa</a>
-                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Bebida</a>
+                                                <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos</a>
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Costas</a>
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Cardio</a>
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Peito</a>
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Antebraço</a>
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Braço</a>
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Ombros</a>
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Pescoço</a>
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Cintura</a>
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Coxa</a>
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Perna</a>
                                             </div>
                                         </div>
 
@@ -468,123 +474,66 @@
 
                                 </div>
                                 
+                                <!--CADA ITEM TERÁ O NOME DA CONSULTA OU AULA, O NOME DO NUTRICIONISTA OU PT E A OPÇÃO DE IR PARA O MAPA | também as horas e a data-->
+
+                                <!--SE FOR NUTRICIONISTA, TERÁ 'Dr. + primeiro e ultimo nome'. SE FOR PT, apenas terá o seu primeiro e ultimo nome-->
+
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
                                         <div class="clsScroll">
                                            <div>
-                                           <div class="rectanglebox" id="rb1"></div>
-                                           <div class="rectanglebox2" id="rb2"></div>
-                                           <div class="rectanglebox3" id="rb3"></div>
-                                           <div class="rectanglebox4" id="rb4"></div>
-                                           <div class="rectanglebox5" id="rb5"></div>
-                                           <div class="rectanglebox6" id="rb6"></div>
-                                        </div>
+                                           <div class="rectanglebox" id="rb1">
 
-                                            <div>
-                                            <div class="rectanglebox7" id="rb7"></div>
-                                            <div class="rectanglebox8" id="rb8"></div>
-                                            <div class="rectanglebox9" id="rb9"></div>
-                                            <div class="rectanglebox10" id="rb10"></div>
-                                            <div class="rectanglebox11" id="rb11"></div>
-                                            <div class="rectanglebox12" id="rb12"></div>
+                                              <h2 class="titulodaconsultaouaula">Titulo da Consulta/Aula</h2>
+                                              <h3 class="ptounutricionistadaconsultaouaula">Dr. António Felizardo |</h3>
+                                              <h3 class="horasedataconsultaouaula"></h3>
+
+                                           </div>
+                                           <div class="rectanglebox7" id="rb7">
+
+                                            <h2 class="titulodaconsultaouaula">Titulo da Consulta/Aula</h2>
+                                            <h3 class="ptounutricionistadaconsultaouaula">João Faria |</h3>
+                                            <h3 class="horasedataconsultaouaula"></h3>
+
+                                           </div>
+                                            <div class="rectanglebox8" id="rb8">
+
+                                                <h2 class="titulodaconsultaouaula">Titulo da Consulta/Aula</h2>
+                                                <h3 class="ptounutricionistadaconsultaouaula">Dr. Mariana Marques |</h3>
+                                                <h3 class="horasedataconsultaouaula"></h3>
+
+                                            </div>
+                                            <div class="rectanglebox9" id="rb9">
+
+                                                <h2 class="titulodaconsultaouaula">Titulo da Consulta/Aula</h2>
+                                                <h3 class="ptounutricionistadaconsultaouaula">Carla Jacinto |</h3>
+                                                <h3 class="horasedataconsultaouaula"></h3>
+
+                                            </div>
+                                            <div class="rectanglebox10" id="rb10">
+
+                                                <h2 class="titulodaconsultaouaula">Titulo da Consulta/Aula</h2>
+                                                <h3 class="ptounutricionistadaconsultaouaula">Bernardo Soares |</h3>
+                                                <h3 class="horasedataconsultaouaula"></h3>
+
+                                            </div>
+                                            <div class="rectanglebox11" id="rb11">
+
+                                                <h2 class="titulodaconsultaouaula">Titulo da Consulta/Aula</h2>
+                                                <h3 class="ptounutricionistadaconsultaouaula">Dr. Paulo Borges |</h3>
+                                                <h3 class="horasedataconsultaouaula"></h3>
+
+                                            </div>
+                                            <div class="rectanglebox12" id="rb12">
+
+                                                <h2 class="titulodaconsultaouaula">Titulo da Consulta/Aula</h2>
+                                                <h3 class="ptounutricionistadaconsultaouaula">Félix Barbosa |</h3>
+                                                <h3 class="horasedataconsultaouaula"></h3>
+
                                             </div>
 
-                                            <div>
-                                                <div class="rectanglebox13" id="rb13"></div>
-                                                <div class="rectanglebox14" id="rb14"></div>
-                                                <div class="rectanglebox15" id="rb15"></div>
-                                                <div class="rectanglebox16" id="rb16"></div>
-                                                <div class="rectanglebox17" id="rb17"></div>
-                                                <div class="rectanglebox18" id="rb18"></div>
-                                                </div>
-
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                       
-
-                    </div>
-
-                     <!-- Content Row | EMENTAS -->
-
-                     <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4" style="width: 1199px; height: 688px; margin-top: 10px; ">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">EMENTAS</h6>
-
-                                    <section class="dropButton" style="position: absolute; z-index: 1; margin-left: 694px; margin-top: -230px;"> 
-                                        <div class="dropdown">
-                                            <button class="dropbtn2" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 102px; font-size: 13px; height: 30px; width: 260px; margin-left: -90px; "> <b>SELECIONAR CATEGORIA</b></button>
-                                           
-                                            <button type="submit" onclick="gotoMain()" class="buttonvermais4" style="z-index: 1;"><b>VER MAIS</b></button>
-                                            
-                                            <div class="dropdown-content2">
-                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos</a>
-                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Pequeno-Almoço</a>
-                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Lanche</a>
-                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Almoço</a>
-                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Jantar</a>
-                                            </div>
-                                        </div>
-
-                                    
-
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <div class="clsScroll">
-                                           <div>
-                                           <div class="rectanglebox" id="rb1"></div>
-                                           <div class="rectanglebox2" id="rb2"></div>
-                                           <div class="rectanglebox3" id="rb3"></div>
-                                           <div class="rectanglebox4" id="rb4"></div>
-                                           <div class="rectanglebox5" id="rb5"></div>
-                                           <div class="rectanglebox6" id="rb6"></div>
-                                        </div>
-
-                                            <div>
-                                            <div class="rectanglebox7" id="rb7"></div>
-                                            <div class="rectanglebox8" id="rb8"></div>
-                                            <div class="rectanglebox9" id="rb9"></div>
-                                            <div class="rectanglebox10" id="rb10"></div>
-                                            <div class="rectanglebox11" id="rb11"></div>
-                                            <div class="rectanglebox12" id="rb12"></div>
-                                            </div>
-
-                                            <div>
-                                                <div class="rectanglebox13" id="rb13"></div>
-                                                <div class="rectanglebox14" id="rb14"></div>
-                                                <div class="rectanglebox15" id="rb15"></div>
-                                                <div class="rectanglebox16" id="rb16"></div>
-                                                <div class="rectanglebox17" id="rb17"></div>
-                                                <div class="rectanglebox18" id="rb18"></div>
-                                                </div>
 
                                         </div>
                                     </div>
@@ -600,23 +549,14 @@
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer-->
-        <footer class="footer py-4" style="background-color: black;">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start" style="color: white;">Copyright &copy; BodyHealth 2022</div>
-                    <div class="col-lg-4 my-3 my-lg-0" style="background-color: black;">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class='bx bxl-facebook-circle' style="color: #e8bf5c;"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class='bx bxl-twitter' style="color: #e8bf5c;"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class='bx bxl-linkedin' style="color: #e8bf5c;"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!" style="color: white;">Politicas de privacidade</a>
-                        <a class="link-dark text-decoration-none" href="#!" style="color: white;">Termos de uso</a>
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white" style="margin-top: 400px; width: 1400px; margin-left: -120px; position: relative; z-index: 1;">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2021</span>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
             <!-- End of Footer -->
 
         </div>
@@ -667,7 +607,7 @@
             <div class="close" id="closepopuppp" style="position: absolute; cursor: pointer;">x</div>
 
             <!--O TITULO VAI ALTERAR DE ACORDO COM O ITEM A SER CRIADO (receita, ementa, exercicio, plano de treino)-->
-           <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 267px; margin-top: 30px;"><b>CRIAR RECEITA</b></h3> 
+           <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 267px; margin-top: 30px;"><b>CRIAR EXERCICIO</b></h3> 
 
            <div class="rectangledividercreaterecipe" style="width: 490px; height: 1px; background-color: #2d2e2d; margin-left: 150px;"></div>
 
@@ -808,7 +748,7 @@
             <div class="close" id="closepopuppp2" style="position: absolute; cursor: pointer;">x</div>
 
             <!--O TITULO VAI ALTERAR DE ACORDO COM O ITEM A SER CRIADO (receita, ementa, exercicio, plano de treino)-->
-           <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 267px; margin-top: 30px;"><b>CRIAR EMENTA</b></h3> 
+           <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 267px; margin-top: 30px;"><b>CRIAR PLANO DE TREINO</b></h3> 
 
            <div class="rectangledividercreaterecipe" style="width: 490px; height: 1px; background-color: #2d2e2d; margin-left: 150px;"></div>
 
