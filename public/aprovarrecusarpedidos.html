@@ -19,7 +19,7 @@
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Custom styles for this template-->
-    <link href="stylesheets/aulasmarcadas.css" rel="stylesheet">
+    <link href="stylesheets/pedidospendentes.css" rel="stylesheet">
 
 </head>
 
@@ -333,7 +333,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800" style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: white; letter-spacing: 1px;"><b>EVENTOS MARCADOS</b></h1>
+                        <h1 class="h3 mb-0 text-gray-800" style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: white; letter-spacing: 1px;"><b>PEDIDOS PENDENTES</b></h1>
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> <b>ATUALIZAR</b></a>
                     </div>
@@ -429,21 +429,22 @@
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
 
-                                    <h6 class="m-0 font-weight-bold text-primary">Eventos Marcados</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Aprovar Pedidos</h6>
 
                                      <!-- Topbar Search -->
  <form
  class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" style="width: 350px;">
  <div class="input-group">
-     <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar Evento..."
+     <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar Pedido..."
          aria-label="Search" aria-describedby="basic-addon2">
      <div class="input-group-append">
-         <button class="btn btn-primary" type="button">
+         <button class="btn btn-primary" type="button" id="searchbtn">
              <i class='bx bx-search-alt-2' style="font-size: 18px; position: absolute; margin-top: -7px; margin-left: -8px; color: white ;"></i>
          </button>
      </div>
  </div>
 </form>
+
 
                                     <section class="dropButton" style="position: absolute; z-index: 1; margin-left: 914px; margin-top: -230px;"> 
                                         <div class="dropdown">
@@ -452,9 +453,10 @@
                                             <button type="submit" onclick="gotoMain()" class="buttonvermais4" style="z-index: 1;"><b>VER MAIS</b></button>
                                             
                                             <div class="dropdown-content2">
+                                                <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Pendentes</a>
+                                                <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Aceites</a>
+                                                <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Recusados</a>
                                                 <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos</a>
-                                                <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Aulas</a>
-                                                <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Consultas</a>
                                             </div>
                                         </div>
 
@@ -487,75 +489,98 @@
                                         <div class="clsScroll">
                                            <div>
                                            <div class="rectanglebox" id="rb1">
-                                           
 
-                                            <a href="map.html">
-                                            <button class="gotomap"><b>IR PARA O MAPA</b></button>
-                                            </a>
+                                            <div class="circlerefuse" style="margin-left: 1000px; margin-top: 21px;">
 
-                                              <h2 class="titulodaconsultaouaula" id="tit" onclick="openPopup()">Titulo da Consulta/Aula</h2>
-                                            
-                                              <h3 class="ptounutricionistadaconsultaouaula">Dr. António Felizardo |</h3>
+                                                <i class='bx bxs-dislike' style="color: white; font-size: 36px; margin-top: 7px; margin-left: 7px;"></i>
+    
+                                            </div> 
+
+                                            <i class='bx bxs-buildings' style="margin-left: 560px;"></i>
+                                        
+                                              <h2 class="titulodaconsultaouaula">Titulo do Pedido</h2>
+                                              <h3 class="ptounutricionistadaconsultaouaula">nome_do_utilizador |</h3>
                                               <h3 class="horasedataconsultaouaula">17:13 - 23/05/2022</h3>
+
+                                          <!---    <div class="circleaccept" style="position: absolute; margin-left: 920px; margin-top: -60px;">
+
+                                                <i class='bx bxs-like' style="position: absolute; color: white; font-size: 36px; margin-left: 7px; margin-top: 6px;"></i>
+    
+                                            </div>-->
                                              
 
                                            </div>
                                            <div class="rectanglebox7" id="rb7">
 
-                                            <a href="map.html">
-                                                <button class="gotomap"><b>IR PARA O MAPA</b></button>
-                                                </a>
-                                            <h2 class="titulodaconsultaouaula">Titulo da Consulta/Aula</h2>
+                                            <div class="circlerefuse" style="margin-left: 1000px; margin-top: 21px;">
+
+                                                <i class='bx bxs-dislike' style="color: white; font-size: 36px; margin-top: 7px; margin-left: 7px;"></i>
+    
+                                            </div> 
+                                            <div class="circlelocal" style="margin-top: -14px;">
+                                            <i class='bx bxs-buildings' style="margin-left: 560px;"></i>
+                                            </div>
+                                            <h2 class="titulodaconsultaouaula">Titulo do Pedido</h2>
                                             <h3 class="ptounutricionistadaconsultaouaula">João Faria |</h3>
                                             <h3 class="horasedataconsultaouaula" id="horasedataconsultaouaula2">18:00 - 25/04/2022</h3>
 
                                            </div>
                                             <div class="rectanglebox8" id="rb8">
 
-                                                <a href="map.html">
-                                                    <button class="gotomap"><b>IR PARA O MAPA</b></button>
-                                                    </a>
-                                                <h2 class="titulodaconsultaouaula">Titulo da Consulta/Aula</h2>
-                                                <h3 class="ptounutricionistadaconsultaouaula">Dr. Mariana Marques |</h3>
+                                                <div class="circlerefuse" style="margin-left: 1000px; margin-top: 21px;">
+
+                                                    <i class='bx bxs-dislike' style="color: white; font-size: 36px; margin-top: 7px; margin-left: 7px;"></i>
+        
+                                                </div> 
+                                                <h2 class="titulodaconsultaouaula">Titulo do Pedido</h2>
+                                                <h3 class="ptounutricionistadaconsultaouaula">nome_do_utilizador |</h3>
                                                 <h3 class="horasedataconsultaouaula" id="horasedataconsultaouaula3">13:15 - 12/04/2022</h3>
 
                                             </div>
                                             <div class="rectanglebox9" id="rb9">
 
-                                                <a href="map.html">
-                                                    <button class="gotomap"><b>IR PARA O MAPA</b></button>
-                                                    </a>
-                                                <h2 class="titulodaconsultaouaula">Titulo da Consulta/Aula</h2>
+                                                <div class="circlerefuse" style="margin-left: 1000px; margin-top: 21px;">
+
+                                                    <i class='bx bxs-dislike' style="color: white; font-size: 36px; margin-top: 7px; margin-left: 7px;"></i>
+        
+                                                </div> 
+                                                <h2 class="titulodaconsultaouaula">Titulo do Pedido</h2>
                                                 <h3 class="ptounutricionistadaconsultaouaula">Carla Jacinto |</h3>
                                                 <h3 class="horasedataconsultaouaula" id="horasedataconsultaouaula4">17:13 - 02/06/2022</h3>
 
                                             </div>
                                             <div class="rectanglebox10" id="rb10">
 
-                                                <a href="map.html">
-                                                    <button class="gotomap"><b>IR PARA O MAPA</b></button>
-                                                    </a>
-                                                <h2 class="titulodaconsultaouaula">Titulo da Consulta/Aula</h2>
-                                                <h3 class="ptounutricionistadaconsultaouaula">Bernardo Soares |</h3>
+                                                <div class="circlerefuse" style="margin-left: 1000px; margin-top: 21px;">
+
+                                                    <i class='bx bxs-dislike' style="color: white; font-size: 36px; margin-top: 7px; margin-left: 7px;"></i>
+        
+                                                </div> 
+                                                <h2 class="titulodaconsultaouaula">Titulo do Pedido</h2>
+                                                <h3 class="ptounutricionistadaconsultaouaula">nome_utilizador |</h3>
                                                 <h3 class="horasedataconsultaouaula" id="horasedataconsultaouaula5">19:00 - 15/04/2022</h3>
 
                                             </div>
                                             <div class="rectanglebox11" id="rb11">
 
-                                                <a href="map.html">
-                                                    <button class="gotomap"><b>IR PARA O MAPA</b></button>
-                                                    </a>
-                                                <h2 class="titulodaconsultaouaula">Titulo da Consulta/Aula</h2>
-                                                <h3 class="ptounutricionistadaconsultaouaula">Dr. Paulo Borges |</h3>
+                                                <div class="circlerefuse" style="margin-left: 1000px; margin-top: 21px;">
+
+                                                    <i class='bx bxs-dislike' style="color: white; font-size: 36px; margin-top: 7px; margin-left: 7px;"></i>
+        
+                                                </div> 
+                                                <h2 class="titulodaconsultaouaula">Titulo do Pedido</h2>
+                                                <h3 class="ptounutricionistadaconsultaouaula">nome_utilizador |</h3>
                                                 <h3 class="horasedataconsultaouaula" id="horasedataconsultaouaula6">18:25 - 18/05/2022</h3>
 
                                             </div>
                                             <div class="rectanglebox12" id="rb12">
 
-                                                <a href="map.html">
-                                                    <button class="gotomap"><b>IR PARA O MAPA</b></button>
-                                                    </a>
-                                                <h2 class="titulodaconsultaouaula">Titulo da Consulta/Aula</h2>
+                                                <div class="circlerefuse" style="margin-left: 1000px; margin-top: 21px;">
+
+                                                    <i class='bx bxs-dislike' style="color: white; font-size: 36px; margin-top: 7px; margin-left: 7px;"></i>
+        
+                                                </div> 
+                                                <h2 class="titulodaconsultaouaula">Titulo do Pedido</h2>
                                                 <h3 class="ptounutricionistadaconsultaouaula">Félix Barbosa |</h3>
                                                 <h3 class="horasedataconsultaouaula" id="horasedataconsultaouaula7">16:30 - 19/06/2022</h3>
 
@@ -578,7 +603,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white" style="margin-top: 400px; width: 1400px; margin-left: -120px; position: relative; z-index: 1;">
+            <footer class="sticky-footer bg-white" style="margin-top: 20px; width: 1400px; margin-left: -20px; position: relative; z-index: 1;">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Your Website 2021</span>
@@ -727,6 +752,8 @@
 
             <textarea style="border:1px solid #2d2e2d; border-radius: 7px; width: 350px; height: 130px; margin-left: 39px; margin-top: 153px; position: absolute;" placeholder="Descrição"></textarea>
 
+
+
             <h2 style="position: absolute; font-size: 16px; margin-top: 320px; margin-left: 40px;"><b>Categoria</b></h2>
 
             <section class="radio-section">
@@ -865,8 +892,8 @@
 
             <button class="buttontocreateeee" style="width: 150px; height: 40px; z-index: 2; margin-left: 608px; margin-top: 530px; border-radius: 10px; background-color: #e8bf5c; border: 1px solid gray; position: absolute;"><b>CRIAR</b></button>
 
-
             <textarea style="border:1px solid #2d2e2d; border-radius: 7px; width: 350px; height: 130px; margin-left: 39px; margin-top: 153px; position: absolute;" placeholder="Descrição"></textarea>
+
 
             <h2 style="position: absolute; font-size: 16px; margin-top: 320px; margin-left: 40px;"><b>Categoria</b></h2>
 
@@ -907,173 +934,104 @@
 
     </div>
 
-     <!--ESTRUTURA DO POP-UP PARA CRIAR EMENTAS-->
+    <div class="bg-modal4">
 
-      <div class="bg-modal2">
+        <div class="modal-content4">
 
-        <!--CONTEUDO DO POP-UP-->
-        <div class="modal-content2" style="position: relative;">
+            <h1 style="color: #2d2e2d; font-size: 25px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-top: 30px;"><b>CRIAR PEDIDO</b></h1>
 
-            <div class="close" id="closepopuppp2" style="position: absolute; cursor: pointer;">x</div>
+            <hr style="width: 830px;">
 
-            <!--O TITULO VAI ALTERAR DE ACORDO COM O ITEM A SER CRIADO (receita, ementa, exercicio, plano de treino)-->
-           <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 267px; margin-top: 30px;"><b>CRIAR PLANO DE TREINO</b></h3> 
-
-           <div class="rectangledividercreaterecipe" style="width: 490px; height: 1px; background-color: #2d2e2d; margin-left: 150px;"></div>
-
-           <div class="rectangledividercreaterecipe" style="width: 200px; height: 1px; background-color: #2d2e2d; margin-left: 145px; transform: rotate(90deg); margin-top: 455px; position: absolute;"></div>
-
+            <div id="closepppp" style="transform: rotate(90deg); margin-top: -100px; position: absolute; font-size: 40px; width: 6%; margin-left: 850px; cursor: pointer; height: 10%; color: #2d2e2d;" onclick="closePopupRequestPedido()">x</div>
 
             <form>
 
-                <input class="inputvaluescreaterecipe" style="border: 1px solid black; border-radius: 7px; margin-left: 40px; margin-top: 30px; width: 350px;" type="text" placeholder="Título">
+                <input class="inputvaluescreatepedido" style="border: 1px solid black; border-radius: 7px; margin-left: -410px; margin-top: 20px; width: 385px; height: 40px; position: absolute;" type="text" placeholder="Título" required>
 
-                <div class="rectanglenewdivider" style="width: 55%; height: 0.5%; background: #2d2e2d; position: absolute; transform: rotate(90deg); margin-left: 228px; margin-top: 190px;"></div>
+                <textarea style="border:1px solid #2d2e2d; border-radius: 7px; width: 385px; height: 130px; margin-left: -410px; margin-top: 80px; position: absolute;" placeholder="Descrição"></textarea>
 
-                <h3 style="font-size: 15px; color: #2d2e2d; margin-left: 545px; margin-top: -26px;">SELECIONAR RECEITAS</h3>
+                <input class="inputvaluescreatepedido2" style="border: 1px solid black; border-radius: 7px; margin-left: -410px; margin-top: 230px; width: 385px; height: 40px; position: absolute;" type="text" placeholder="Rua" required>
 
-                <div class="clsScroll2">
+                <h3 style="font-size: 18px; position: absolute; margin-left: 40px; margin-top: 290px;">Data</h3>
 
-                <section style="border: 1px solid #2d2e2d; width: 310px; height: 360px; position: absolute; z-index: 1; margin-left: 470px; border-radius: 9px;">
-                
-                  <section>
+                <!--INPUT DA DATA (HORAS, DIA e MÊS E ANO)-->
 
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
-                    
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
+                <input type="date" style="position: absolute;" required>
 
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
+                <!--INPUT DA DATA (HORAS E MINUTOS)-->
 
-                  </section>
-
-                  <section style="margin-top: 20px">
-
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-
-                  </section>
-
-                  <section style="margin-top: 20px">
-
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-
-                  </section>
-                
-                </section>
-
-                </div>
+                <input type="time" min="07:30" max="23:59" style="position: absolute; width: 300px; margin-left: -410px; border-radius: 10px; border: 1px solid #2d2e2d; margin-top: 360px;" required>
 
             </form>
 
-            <button class="buttontocreateeee" style="width: 150px; height: 40px; z-index: 2; margin-left: 608px; margin-top: 530px; border-radius: 10px; background-color: #e8bf5c; border: 1px solid gray; position: absolute;"><b>CRIAR</b></button>
+            <div class="rectangleformdivider1" style="width: 50%; height: 0.3%; background-color: #2d2e2d; margin-left: 232px; transform: rotate(90deg); margin-top: 244px; position: absolute;"></div>
 
+            <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 458px; font-size: 17px; margin-top: 34px;">SELECIONAR PROFISSIONAL</h3>
 
-            <textarea style="border:1px solid #2d2e2d; border-radius: 7px; width: 350px; height: 130px; margin-left: 39px; margin-top: 153px; position: absolute;" placeholder="Descrição"></textarea>
+            <button class="createrequestbutton" style="position: absolute; border: 1px solid white; border-radius: 10px; font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: #e8bf5c; margin-left: -410px; margin-top: 390px;"><b>CRIAR PEDIDO</b></button>
+            
 
-            <h2 style="position: absolute; font-size: 16px; margin-top: 320px; margin-left: 40px;"><b>Categoria</b></h2>
+            <div style="width: 40%; height: 70%; background-color: transparent; border: 2px solid #2d2e2d; margin-left: 500px; margin-top: 10px; border-radius: 10px;">
+            
+                <div class="clsScroll3">
 
-            <section class="radio-section">
+              <div class="selectprofessionalitem">
 
-               <div class="radio-list">
+                <h3 class="nomedonutrioupt">Nome do Nutri/PT</h3>
+                <h3 class="roleperson">Nutricion/PT</h3>
+                <button style="border-radius: 10px; font-size: 11px; height: 38%; background-color: lime; color: white; margin-left: 150px; margin-top: 30px; border: 1px solid white;"><b>SELECIONAR</b></button>
 
-                  <div class="radio-item"><input name="radio" id="radio1" type="radio"><label for="radio1">Pequeno-Almoço</label></div>
-                  <div class="radio-item"><input name="radio" id="radio2" type="radio"><label for="radio2">Lanche</label></div>
-                  <div class="radio-item"><input name="radio" id="radio3" type="radio"><label for="radio3">Almoço</label></div>
-                  <div class="radio-item"><input name="radio" id="radio4" type="radio"><label for="radio4">Jantar</label></div>
-                  <div class="radio-item"><input name="radio" id="radio5" type="radio"><label for="radio5">Outros</label></div>
-
-               </div>
-
-
-            </section>
-
-            <h2 style="position: absolute; font-size: 16px; margin-top: 320px; margin-left: 290px;"><b>Base</b></h2>
-
-            <section class="radio-section2">
-
-                <div class="radio-list2">
+              </div>
+              <div class="selectprofessionalitem">
  
-                   <div class="radio-item2"><input name="radio2" id="radio6" type="radio"><label for="radio6">Carne</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio7" type="radio"><label for="radio7">Peixe</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio8" type="radio"><label for="radio8">Vegan</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio9" type="radio"><label for="radio9">Frutas</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio10" type="radio"><label for="radio10">Outros</label></div>
- 
+                <h3 class="nomedonutrioupt">Nome do Nutri/PT</h3>
+                <h3 class="roleperson">Nutricion/PT</h3>
+                <button style="border-radius: 10px; font-size: 11px; height: 38%; background-color: lime; color: white; margin-left: 150px; margin-top: 30px; border: 1px solid white;"><b>SELECIONAR</b></button>
+
+              </div>
+              <div class="selectprofessionalitem">
+
+                <h3 class="nomedonutrioupt">Nome do Nutri/PT</h3>
+                <h3 class="roleperson">Nutricion/PT</h3>
+                <button style="border-radius: 10px; font-size: 11px; height: 38%; background-color: lime; color: white; margin-left: 150px; margin-top: 30px; border: 1px solid white;"><b>SELECIONAR</b></button>
+
+              </div>
+              <div class="selectprofessionalitem">
+
+                <h3 class="nomedonutrioupt">Nome do Nutri/PT</h3>
+                <h3 class="roleperson">Nutricion/PT</h3>
+                <button style="border-radius: 10px; font-size: 11px; height: 38%; background-color: lime; color: white; margin-left: 150px; margin-top: 30px; border: 1px solid white;"><b>SELECIONAR</b></button>
+
+              </div>
+              <div class="selectprofessionalitem">
+
+                <h3 class="nomedonutrioupt">Nome do Nutri/PT</h3>
+                <h3 class="roleperson">Nutricion/PT</h3>
+                <button style="border-radius: 10px; font-size: 11px; height: 38%; background-color: lime; color: white; margin-left: 150px; margin-top: 30px; border: 1px solid white;"><b>SELECIONAR</b></button>
+
+              </div>
+              <div class="selectprofessionalitem">
+
+                <h3 class="nomedonutrioupt">Nome do Nutri/PT</h3>
+                <h3 class="roleperson">Nutricion/PT</h3>
+                <button style="border-radius: 10px; font-size: 11px; height: 38%; background-color: lime; color: white; margin-left: 150px; margin-top: 30px; border: 1px solid white;"><b>SELECIONAR</b></button>
+
+              </div>
+              <div class="selectprofessionalitem">
+
+                <h3 class="nomedonutrioupt">Nome do Nutri/PT</h3>
+                <h3 class="roleperson">Nutricion/PT</h3>
+                <button style="border-radius: 10px; font-size: 11px; height: 38%; background-color: lime; color: white; margin-left: 150px; margin-top: 30px; border: 1px solid white;"><b>SELECIONAR</b></button>
+
+              </div>
+
                 </div>
- 
- 
-             </section>
 
-            
-        </div>
-
-    </div>
-
-    <div class="bg-modal3">
-
-        <div class="modal-content3">
-
-            <div class="close">x</div>
-
-            <h2 style="color: #2d2e2d; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 25px; margin-top: 23px;"><b>TITULO DA CONSULTA/AULA</b></h2>
-
-            <div class="rectanglezone1" style="width: 67%; height: 60%; background-color: transparent; border: 2px solid #2d2e2d; border-radius: 15px; margin-left: 85px; margin-top: 20px;">
-            
-                <h3 style="color: #2d2e2d; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 17px; margin-top: 15px;">DETALHES ADICIONAIS</h3>
-
-                <hr style="color: #2d2e2d; width: 260px;">
-
-                <i class='bx bxs-buildings' style="font-size: 35px; margin-left: -270px; margin-top: -1px;"></i>
-                <h4 style="color: #2d2e2d; font-size: 13px; margin-left: 27px; margin-top: -20px;">Rua Fernandes Pinheiro, Amoreiras, Lisboa</h4>
-
-                <i class='bx bxs-user' style="font-size: 35px; margin-left: -270px; margin-top: 12px;"></i>
-                <h4 style="color: #2d2e2d; font-size: 13px; margin-left: -97px; margin-top: -22px;">Dr. António Felizardo</h4>
-
-                <i class='bx bxs-time-five' style="font-size: 35px; margin-left: -270px; margin-top: 15px;"></i>
-                <h4 style="color: #2d2e2d; font-size: 13px; margin-left: -97px; margin-top: -25px;">17:13 - 23/05/2022</h4>
-            
             </div>
 
-          <button style="width: 40%; height: 10%; border: 1px solid white; border-radius: 10px; background-color: salmon; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-top: 20px;" class="cancelaraula"><b>CANCELAR AULA</b></button>
+            
+        
+            
 
         </div>
 
@@ -1134,18 +1092,23 @@
 
       });
 
-      document.getElementById('rb1').addEventListener('click', 
-      function(){
+      function openPopupEnviarPedido(){
 
-          document.querySelector('.titulodaconsultaouaula').style.visibility='hidden';
+         document.querySelector('.bg-modal4').style.display = 'flex';
+         document.querySelector('.dropbtn').style.visibility='hidden';
+         document.querySelector('#searchbtn').style.visibility ='hidden';
 
-      });
-
-      function openPopup(){
-
-         document.getElementById("tit").style.display='flex';
 
       }
+
+      function closePopupRequestPedido(){
+
+        document.querySelector('.bg-modal4').style.display = 'none';
+         document.querySelector('.dropbtn').style.visibility='visible';
+         document.querySelector('#searchbtn').style.visibility ='visible';
+
+      }
+
 
     </script>
 

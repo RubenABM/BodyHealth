@@ -148,7 +148,7 @@
               <a class="nav-link collapsed" href="aulasmarcadas.html" data-toggle="collapse" data-target="#collapsePages"
                   aria-expanded="true" aria-controls="collapsePages">
                   <i class='bx bxs-graduation'></i>
-                  <span>Consultas Marcadas</span>
+                  <span>Aulas Marcadas</span>
               </a>
               <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                   <div class="bg-white py-2 collapse-inner rounded">
@@ -166,10 +166,10 @@
 
              <!-- Nav Item - Pages Collapse Menu -->
              <li class="nav-item">
-              <a class="nav-link collapsed" href="turmasinserido.html" data-toggle="collapse" data-target="#collapsePages"
+              <a class="nav-link collapsed" href="turmasofpt.html" data-toggle="collapse" data-target="#collapsePages"
                   aria-expanded="true" aria-controls="collapsePages">
                   <i class='bx bx-chalkboard' ></i>
-                  <span>Eventos Recentes</span>
+                  <span>Turmas</span>
               </a>
               <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                   <div class="bg-white py-2 collapse-inner rounded">
@@ -187,7 +187,7 @@
 
            <!-- Nav Item - Pages Collapse Menu -->
            <li class="nav-item">
-            <a class="nav-link collapsed" href="pedidospendentes.html" data-toggle="collapse" data-target="#collapsePages"
+            <a class="nav-link collapsed" href="aprovarrecusarpedidos.html" data-toggle="collapse" data-target="#collapsePages"
                 aria-expanded="true" aria-controls="collapsePages">
                 <i class='bx bx-bookmark'></i>
                 <span>Pedidos Pendentes</span>
@@ -218,7 +218,7 @@
 
          <!-- Nav Item - Pages Collapse Menu -->
          <li class="nav-item">
-          <a class="nav-link collapsed" href="profile.html" data-toggle="collapse" data-target="#collapsePages"
+          <a class="nav-link collapsed" href="ptdashboard.html" data-toggle="collapse" data-target="#collapsePages"
               aria-expanded="true" aria-controls="collapsePages">
               <i class='bx bx-user-circle' ></i>
               <span>Perfil</span>
@@ -531,7 +531,7 @@
 
                                       </div>
 
-                                      <a href="seeallclients.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style="position: absolute; margin-left: 261px; border-radius: 12px; width: 250px; margin-top: 420px; height: 50px;"><i
+                                      <a href="turmasofpt.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style="position: absolute; margin-left: 261px; border-radius: 12px; width: 250px; margin-top: 420px; height: 50px;"><i
                                         class="fas fa-download fa-sm text-white-50" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 23px;"></i> <b>VER TODAS AS TURMAS</b></a>
                                       
                                     </section>
@@ -566,6 +566,9 @@
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Novos Pedidos</h6>
+                                    <a href="aprovarrecusarpedidos.html">
+                                    <button id="vertodos" style="border-radius: 10px; background-color: #e8bf5c; border: 1px solid white;"><b>VER TODOS</b></button>
+                                    </a>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -715,9 +718,12 @@
                         </div>
                     </div>
 
+
+                    </div>
+
                      <!-- Content Row -->
 
-                     <div class="row" style="position: absolute;">
+                     <div class="row" style="position: absolute; margin-left: 10px;">
 
                         <!-- Area Chart -->
                         <div class="col-xl-8 col-lg-7">
@@ -725,7 +731,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 c-lass="m-0 font-weight-bold text-primary">Consultas marcadas</h6>
+                                    <h6 c-lass="m-0 font-weight-bold text-primary">Aulas Marcadas</h6>
 
                                     <section class="dropButton" style="position: absolute; z-index: 1; margin-left: 914px; margin-top: -230px;"> 
                                         <div class="dropdown">
@@ -758,7 +764,7 @@
                                     
                                    <div class="boxconsultamarcada1">
 
-                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 13px; margin-top: 13px;"><b>Título da Consulta</b></h3>
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
                                     <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
                                     <a href="map.html">
                                     <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
@@ -767,63 +773,63 @@
                                    </div>
                                    <div class="boxconsultamarcada2">
 
-                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 13px; margin-top: 13px;"><b>Título da Consulta</b></h3>
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
                                     <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
                                     <a href="map.html">
                                       <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
                                    </a>
                                    </div>
                                    <div class="boxconsultamarcada3">
-                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 13px; margin-top: 13px;"><b>Título da Consulta</b></h3>
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
                                     <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
                                     <a href="map.html">
                                       <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
                                     </a>
                                     </div>
                                    <div class="boxconsultamarcada4">
-                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 13px; margin-top: 13px;"><b>Título da Consulta</b></h3>
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
                                     <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
                                     <a href="map.html">
                                     <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
                                     </a>
                                 </div>
                                    <div class="boxconsultamarcada5">
-                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 13px; margin-top: 13px;"><b>Título da Consulta</b></h3>
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
                                     <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
                                     <a href="map.html">
                                     <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
                                     </a>
                                 </div>
                                    <div class="boxconsultamarcada6">
-                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 13px; margin-top: 13px;"><b>Título da Consulta</b></h3>
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
                                     <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
                                     <a href="map.html">
                                     <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
                                     </a>
                                 </div>
                                    <div class="boxconsultamarcada7">
-                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 13px; margin-top: 13px;"><b>Título da Consulta</b></h3>
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
                                     <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
                                     <a href="map.html">
                                     <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
                                     </a>
                                 </div>
                                    <div class="boxconsultamarcada8">
-                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 13px; margin-top: 13px;"><b>Título da Consulta</b></h3>
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
                                     <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
                                     <a href="map.html">
                                     <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
                                     </a>
                                 </div>
                                    <div class="boxconsultamarcada9">
-                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 13px; margin-top: 13px;"><b>Título da Consulta</b></h3>
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
                                     <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
                                     <a href="map.html">
                                     <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
                                     </a>   
                                 </div>
                                    <div class="boxconsultamarcada10">
-                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 13px; margin-top: 13px;"><b>Título da Consulta</b></h3>
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
                                     <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
                                     <a href="map.html">
                                     <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
@@ -836,8 +842,9 @@
                             </div>
                         </div>
 
-                        
+                    
                     <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1;"><b>VER MAIS</b></button>
+                        
 
                     <button type="submit" onclick="gotoMain()" class="buttonvermais2" style="z-index: 1;"><b>VER MAIS</b></button>
                         
@@ -909,7 +916,7 @@
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white" style="margin-top: 1500px; width: 1387px; margin-left: -120px; position: relative; z-index: 1;">
-                <div class="container my-auto"">
+                <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; BodyHealth 2022</span>
                     </div>
