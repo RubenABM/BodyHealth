@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-//const pool = require("https://github.com/RubenABM/BodyHealth/blob/main/models/connection.js");
+const pool = require("https://github.com/RubenABM/BodyHealth/blob/main/models/connection.js");
 
 /* GET users listing. */
 router.get('/estaticos', function(req, res, next) {
