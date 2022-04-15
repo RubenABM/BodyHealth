@@ -6,9 +6,7 @@ router.get('/estaticos', function(req, res, next) {
   let users=[{name:"John Doe", birthDate:"19/02/1999"}];
   res.send(users);
  });
- 
 
-module.exports = router;
 
 
 router.get('/teste', function(req, res, next) {
@@ -19,3 +17,5 @@ router.get('/teste', function(req, res, next) {
     response.status(200).json(results.rows)
   })
 });
+
+module.exports = router;
