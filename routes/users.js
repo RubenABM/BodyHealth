@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const pool = require("\models\connection.js");
+//const pool = require("\models\connection.js");
 
 /* GET users listing. */
 router.get('/estaticos', function(req, res, next) {
@@ -8,7 +8,7 @@ router.get('/estaticos', function(req, res, next) {
   res.send(users);
  });
 
-pool.connect();
+/*pool.connect();
 
 router.get('/teste', function(req, res, next) {
   pool.query('SELECT * FROM utilizador', (error, results) => {
@@ -18,6 +18,6 @@ router.get('/teste', function(req, res, next) {
     response.status(200).json(results.rows)
     pool.end();
   })
-});
+});*/
 
 module.exports = router;
