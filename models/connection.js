@@ -19,4 +19,4 @@ pool.query('SELECT * FROM utilizador', (err,res)=>{
     pool.end()
 })*/
 
-module.exports = pool
+module.exports = pool;
