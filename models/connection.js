@@ -19,4 +19,19 @@ pool.query('SELECT * FROM utilizador', (err,res)=>{
     pool.end()
 })
 
+var express = require('express');
+var router = express.Router();
+
+router.get('/teste', function(req, res, next) {
+    pool.query('SELECT * FROM utilizador', (error, results) => {
+      if (error) {
+        throw error
+      }
+      response.status(200).json(results.rows)
+      pool.end();
+    })
+  });
+  
+module.exports = router;
+
 module.exports = pool;

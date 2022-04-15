@@ -9,9 +9,9 @@ router.get('/estaticos', function(req, res, next) {
  });
 
 
- pool.connect();
+//pool.connect();
 
-router.get('/teste', function(req, res, next) {
+router.get('/testee', function(req, res, next) {
   pool.query('SELECT * FROM utilizador', (error, results) => {
     if (error) {
       throw error
