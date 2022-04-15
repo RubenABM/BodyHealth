@@ -8,7 +8,8 @@ router.get('/estaticos', function(req, res, next) {
   res.send(users);
  });
 
-//pool.connect();
+
+ pool.connect();
 
 router.get('/teste', function(req, res, next) {
   pool.query('SELECT * FROM utilizador', (error, results) => {
