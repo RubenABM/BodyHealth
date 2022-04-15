@@ -13,4 +13,11 @@ const pool = new Pool({
  }
 })
 
+//teste
+/*pool.connect()
+pool.query('SELECT * FROM utilizador', (err,res)=>{
+    console.log(err,res)
+    pool.end()
+})*/
+
 module.exports = pool;
