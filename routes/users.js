@@ -6,7 +6,7 @@ var router = express.Router();
 router.get('/estaticos', function(req, res, next) {
   let users=[{name:"John Doe", birthDate:"19/02/1999"}];
   res.send(users);
- });
+});
 
 
 //pool.connect();
