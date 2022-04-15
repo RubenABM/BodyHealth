@@ -12,7 +12,7 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
 app.get('/users', (req, res)=>{
-    client.query(`Select * from utilizadore`, (err, result)=>{
+    client.query(`Select * from utilizador`, (err, result)=>{
         if(!err){
             res.send(result.rows);
         }
