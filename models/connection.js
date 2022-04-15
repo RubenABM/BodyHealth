@@ -34,4 +34,3 @@ router.get('/teste', function(req, res, next) {
   
 module.exports = router;
 
-module.exports = pool;
