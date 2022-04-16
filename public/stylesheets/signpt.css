@@ -327,7 +327,10 @@ body{
 
  #custom-button:hover{
 
-    background-color: #FFFFFFFF;
+    background-color: #2D2E2D;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.4s ease;
 
  }
 
