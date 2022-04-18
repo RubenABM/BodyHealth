@@ -1,8 +1,6 @@
 
 -- CODE SQL
 
---CRIAÇÃO DA TABELA UTILIZADOR
-
 CREATE TABLE utilizador(
 
 user_id SERIAL primary key,
@@ -16,11 +14,7 @@ user_user_dados_id int
 
 );
 
-
-
---CRIAÇÃO DA TABELA DE DADOS DO UTILIZADOR
-
-
+--O IMC DARÁ VARIOS UPDATES (POR CADA PONTO CALCULADO | OS RESTANTES DADOS DEVERÃO SER INSERIDOS PELO UTILIZADOR NO SEU DASHBOARD OU PELO PT)
 
 CREATE TABLE dados_utilizador(
 
@@ -34,8 +28,6 @@ user_pressao_arterial_media real DEFAULT 0.0
 
 );
 
---CRIAÇÃO DA TABELA DE COMUNIDADE
-
 CREATE TABLE comunidade(
 
 comunidade_id SERIAL primary key,
@@ -43,8 +35,6 @@ comunidade_titulo varchar(30) NOT NULL,
 comunidade_desc varchar(500)
 
 );
-
---CRIAÇÃO DA TABELA DE PARTICIPANTE DE UMA COMUNIDADE
 
 CREATE TABLE comunidade_utilizador(
 
@@ -64,7 +54,7 @@ CREATE TABLE artigo(
 
 artigo_leitura_id SERIAL primary key,
 artigo_leitura_titulo varchar(60) NOT NULL,
-artigo_leitura_corpo varchar(10000) NOT NULL,
+artigo_leitura_corpo varchar(25000) NOT NULL,
 artigo_leitura_data date DEFAULT current_date,
 artigo_read_type_id int,
 artigo_category_id int,
@@ -72,6 +62,14 @@ comunidade_utilizador_id int
 
 );
 
+ALTER TABLE artigo
+ADD CONSTRAINT fk_comunidade_utilizador_id FOREIGN KEY(comunidade_utilizador_id) REFERENCES comunidade_utilizador (comunidade_user_id);
+
+ALTER TABLE artigo
+ADD CONSTRAINT fk_artigo_read_type_id FOREIGN KEY(artigo_read_type_id) REFERENCES artigo_read_type (artigo_reader_type_id);
+
+ALTER TABLE artigo
+ADD CONSTRAINT fk_artigo_category_id FOREIGN KEY(artigo_category_id) REFERENCES artigo_category (artigo_category_id);
 
 CREATE TABLE artigo_read_type(
 
@@ -106,7 +104,6 @@ product_id int,
 utilizador_id int
 
 );
-
 
 ALTER TABLE productsgetlist
 ADD CONSTRAINT fk_product_id FOREIGN KEY(product_id) REFERENCES produto (produto_id);
@@ -144,7 +141,7 @@ ADD CONSTRAINT fk_evento_local_id FOREIGN KEY(evento_local_id) REFERENCES place(
 ALTER TABLE evento
 ADD CONSTRAINT fk_evento_criador_id FOREIGN KEY(evento_criador_id) REFERENCES utilizador(user_id);
 
---REMOVER O receita_ingrediente_id
+
 CREATE TABLE receita(
 
 receita_id SERIAL primary key,
@@ -158,6 +155,18 @@ receita_ingrediente_id int,
 aprovacao_nutricionista bit
 
 );
+
+ALTER TABLE receita
+ADD CONSTRAINT fk_receita_tipo_aprovacao_id FOREIGN KEY(receita_tipo_aprovacao_id) REFERENCES item_aprovacao (aprovacao_tipo_id);
+
+ALTER TABLE receita
+ADD CONSTRAINT fk_receita_base_id FOREIGN KEY(receita_base_id) REFERENCES item_base (basee_id);
+
+ALTER TABLE receita
+ADD CONSTRAINT fk_receita_categoriaa_id FOREIGN KEY(receita_categoriaa_id) REFERENCES receita_categoria (receita_categoria_id);
+
+ALTER TABLE receita
+ADD CONSTRAINT fk_receita_utilizador_id FOREIGN KEY(receita_utilizador_id) REFERENCES utilizador (user_id);
 
 
 CREATE TABLE ingrediente(
@@ -181,11 +190,13 @@ ingrediente_qnt real NOT NULL
 
 );
 
+
 ALTER TABLE receita_ingrediente
 ADD CONSTRAINT fk_recipe_id FOREIGN KEY(recipe_id) REFERENCES receita(receita_id);
 
 ALTER TABLE receita_ingrediente
 ADD CONSTRAINT fk_ingredient_id FOREIGN KEY(ingredient_id) REFERENCES ingrediente(ingrediente_id);
+
 
 CREATE TABLE item_aprovacao(
 
@@ -197,13 +208,14 @@ tipoaprovacao_nome varchar(35) NOT NULL
 INSERT INTO item_aprovacao(tipoaprovacao_nome) VALUES ('Verificado');
 INSERT INTO item_aprovacao(tipoaprovacao_nome) VALUES ('Não Verificado');
 
+--ALTERAR AS RELACOES COM O item_aprovacao
+
 CREATE TABLE item_base(
 
 basee_id SERIAL primary key,
 basee_nome varchar(35)
 	
 );
-
 
 INSERT INTO item_base(basee_nome) VALUES ('Carne'), ('Peixe'), ('Vegan'), ('Snack'), ('Frutas'), ('Outros');
 
@@ -227,6 +239,8 @@ ementa_categoria_nome varchar(45)
 
 INSERT INTO ementa_categoria(ementa_categoria_nome) 
 VALUES ('Pequeno-Almoço'), ('Lanche'), ('Almoço'), ('Jantar'), ('Outro');
+
+
 CREATE TABLE ementa(
 
 ementa_id SERIAL primary key,
@@ -241,6 +255,18 @@ aprovacao_nutricionista bit
 
 );
 
+ALTER TABLE ementa
+ADD CONSTRAINT fk_ementa_tipo_aprovacao_id FOREIGN KEY(ementa_tipo_aprovacao_id) REFERENCES item_aprovacao (aprovacao_tipo_id);
+
+ALTER TABLE ementa
+ADD CONSTRAINT fk_ementa_base_id FOREIGN KEY(ementa_base_id) REFERENCES item_base (basee_id);
+
+ALTER TABLE ementa
+ADD CONSTRAINT fk_ementa_categoriaa_id FOREIGN KEY(ementa_categoriaa_id) REFERENCES ementa_categoria (ementa_categoria_id);
+
+ALTER TABLE ementa
+ADD CONSTRAINT fk_ementa_utilizador_id FOREIGN KEY(ementa_utilizador_id) REFERENCES utilizador (user_id);
+
 
 CREATE TABLE ementa_receita(
 
@@ -249,6 +275,14 @@ receita_id int,
 ementa_id int
 
 );
+
+ALTER TABLE ementa_receita
+ADD CONSTRAINT fk_receita_id FOREIGN KEY(receita_id) REFERENCES receita (receita_id);
+
+ALTER TABLE ementa_receita
+ADD CONSTRAINT fk_ementa_id FOREIGN KEY(ementa_id) REFERENCES ementa (ementa_id);
+
+
 
 CREATE TABLE exercicio(
 
@@ -280,10 +314,6 @@ exercicio_tipo_titulo varchar(45) NOT NULL
 );
 
 
-
---------------------------------------------APLICAR SOMENTE APÓS ATUALIZAÇÃO DO MODELO ER (EXERCICIOS E PLANOS)---------------------------------------------------------
-
-
 CREATE TABLE exercicio_plano(
 
 exercicio_plano_id SERIAL primary key,
@@ -298,7 +328,9 @@ CREATE TABLE plano(
 plano_treino_id SERIAL primary key,
 plano_titulo varchar(80) NOT NULL,
 plano_treino_desc varchar(600) NOT NULL,
-plano_utilizador_id int
+plano_utilizador_id int,
+plano_treino_aprovacao_pt bit DEFAULT '0',
+plano_treino_tipo_aprovacao_id int
 
 );
 
@@ -308,39 +340,90 @@ nutricionista_id SERIAL primary key
 
 ) inherits (utilizador);
 
---ADICIONAR CAMPOS DE NUMERO DE PEDIDO E ESTADO DO PEDIDO--
-CREATE TABLE consulta(
+CREATE TABLE personal_trainer(
 
-consulta_id SERIAL primary key,
-consulta_titulo varchar(50) NOT NULL,
-consulta_desc varchar(300) NOT NULL,
-consulta_local_id int,
-consulta_pedido_id int,
-consulta_nutricionista_id int,
-consulta_utilizador_id int,
-consulta_terminada bit, --AS CONSULTAS TERMINADAS SÃO EXIBIDAS NA LISTA DE 'ULTIMAS CONSULTAS',
-consulta_data date DEFAULT CURRENT_DATE
-	
-);
+personal_trainer_id SERIAL primary key
+
+) inherits (utilizador);
+
 
 CREATE TABLE pedido(
 
 pedido_id SERIAL primary key,
-pedido_aceite bit
+pedido_titulo varchar(50) NOT NULL,
+pedido_desc varchar(300) NOT NULL,
+pedido_local_id int,
+pedido_utilizador_id int,
+pedido_terminada bit, --AS CONSULTAS TERMINADAS SÃO EXIBIDAS NA LISTA DE 'ULTIMAS CONSULTAS',
+pedido_data date DEFAULT CURRENT_DATE,
+pedido_tipo_id int,
+pedido_encontro_data date DEFAULT CURRENT_DATE,
+pedido_estado_id int
 	
 );
+
+ALTER TABLE pedido
+ADD CONSTRAINT fk_pedido_local_id FOREIGN KEY(pedido_local_id) REFERENCES place(local_id);
+
+ALTER TABLE pedido
+ADD CONSTRAINT fk_pedido_utilizador_id FOREIGN KEY(pedido_utilizador_id) REFERENCES utilizador(user_id);
+
+ALTER TABLE pedido
+ADD CONSTRAINT fk_pedido_tipo_id FOREIGN KEY(pedido_tipo_id) REFERENCES pedido_tipo(pedido_type_id);
+
+ALTER TABLE pedido
+ADD CONSTRAINT fk_pedido_estado_id FOREIGN KEY(pedido_estado_id) REFERENCES pedido_estado(pedido_estado_id);
+
+CREATE TABLE pedido_tipo(
+
+pedido_type_id SERIAL primary key,
+pedido_type varchar(30) NOT NULL
+
+);
+
+CREATE TABLE pedido_estado(
+
+pedido_estado_id SERIAL primary key,
+pedido_estado varchar(50) NOT NULL
+
+);
+
+CREATE TABLE turma(
+
+turma_id SERIAL primary key,
+turma_titulo varchar(45) NOT NULL,
+turma_desc varchar(350) DEFAULT 'Esta turma não possui descrição.'
+
+);
+
+CREATE TABLE utilizador_turma(
+
+aluno_id SERIAL primary key,
+utilizador_id int,
+turma_identifier int
+
+);
+
+ALTER TABLE utilizador_turma
+ADD CONSTRAINT fk_utilizador_id FOREIGN KEY(utilizador_id) REFERENCES utilizador(user_id);
+
+ALTER TABLE utilizador_turma
+ADD CONSTRAINT fk_turma_identifier FOREIGN KEY(turma_identifier) REFERENCES turma(turma_id);
+
+ALTER TABLE turma ADD COLUMN criador_id int
+
+ALTER TABLE turma
+ADD CONSTRAINT fk_criador_id FOREIGN KEY(criador_id) REFERENCES utilizador(user_id)
+
 
 ALTER TABLE utilizador
 ADD CONSTRAINT fk_user_user_dados_id FOREIGN KEY(user_user_dados_id) REFERENCES dados_utilizador (user_dados_id);
 
-ALTER TABLE consulta
-ADD CONSTRAINT fk_consulta_nutricionista_id FOREIGN KEY(consulta_nutricionista_id) REFERENCES nutricionista(nutricionista_id);
 
-ALTER TABLE consulta
-ADD CONSTRAINT fk_consulta_utilizador_id FOREIGN KEY(consulta_utilizador_id) REFERENCES utilizador(user_id);
 
-ALTER TABLE consulta
-ADD CONSTRAINT fk_consulta_pedido_id FOREIGN KEY(consulta_pedido_id) REFERENCES pedido(pedido_id);
+
+
+
 
 ALTER TABLE ementa
 ADD CONSTRAINT fk_ementa_tipo_aprovacao_id FOREIGN KEY(ementa_tipo_aprovacao_id) REFERENCES item_aprovacao (aprovacao_tipo_id);
@@ -354,43 +437,71 @@ ADD CONSTRAINT fk_ementa_categoriaa_id FOREIGN KEY(ementa_categoriaa_id) REFEREN
 ALTER TABLE ementa
 ADD CONSTRAINT fk_ementa_utilizador_id FOREIGN KEY(ementa_utilizador_id) REFERENCES utilizador (user_id);
 
-ALTER TABLE ementa_receita
-ADD CONSTRAINT fk_receita_id FOREIGN KEY(receita_id) REFERENCES receita (receita_id);
 
-ALTER TABLE ementa_receita
+DROP TABLE pedido_estado
+
+CREATE TABLE marcacao_favorito_ementa(
+
+favorito_ementa_id SERIAL primary key,
+utilizador_id int,
+ementa_id int,
+is_ementa_favorito bit DEFAULT '1'
+
+);
+
+
+ALTER TABLE marcacao_favorito_ementa
+ADD CONSTRAINT fk_utilizador_id FOREIGN KEY(utilizador_id) REFERENCES utilizador (user_id);
+
+ALTER TABLE marcacao_favorito_ementa
 ADD CONSTRAINT fk_ementa_id FOREIGN KEY(ementa_id) REFERENCES ementa (ementa_id);
 
---CORRIGIR RELAÇÃO ENTRE exercicio e exercicio_plano NO MODELO ER
+CREATE TABLE marcacao_favorito_receita(
 
-ALTER TABLE exercicio
-ADD CONSTRAINT fk_exercicio_dificuldade_id FOREIGN KEY(exercicio_dificuldade_id) REFERENCES exercicio_dificuldade (exercicio_dificuldade_id);
+favorito_receita_id SERIAL primary key,
+utilizador_id int,
+receita_id int,
+is_receita_favorito bit DEFAULT '1'
 
-ALTER TABLE exercicio
-ADD CONSTRAINT fk_exercicio_tipo_id FOREIGN KEY(exercicio_tipo_id) REFERENCES exercicio_tipo (exercicio_tipo_id);
+);
 
-ALTER TABLE exercicio
-ADD CONSTRAINT fk_exercicio_utilizador_id FOREIGN KEY(exercicio_utilizador_id) REFERENCES utilizador (user_id);
+ALTER TABLE marcacao_favorito_receita
+ADD CONSTRAINT fk_utilizador_id FOREIGN KEY(utilizador_id) REFERENCES utilizador (user_id);
 
-ALTER TABLE artigo
-ADD CONSTRAINT fk_comunidade_utilizador_id FOREIGN KEY(comunidade_utilizador_id) REFERENCES comunidade_utilizador (comunidade_user_id);
+ALTER TABLE marcacao_favorito_receita
+ADD CONSTRAINT fk_receita_id FOREIGN KEY(receita_id) REFERENCES receita (receita_id);
 
-ALTER TABLE artigo
-ADD CONSTRAINT fk_artigo_read_type_id FOREIGN KEY(artigo_read_type_id) REFERENCES artigo_read_type (artigo_reader_type_id);
 
-ALTER TABLE artigo
-ADD CONSTRAINT fk_artigo_category_id FOREIGN KEY(artigo_category_id) REFERENCES artigo_category (artigo_category_id);
+CREATE TABLE marcacao_favorito_plano(
 
-ALTER TABLE receita
-ADD CONSTRAINT fk_receita_tipo_aprovacao_id FOREIGN KEY(receita_tipo_aprovacao_id) REFERENCES item_aprovacao (aprovacao_tipo_id);
+favorito_plano_id SERIAL primary key,
+utilizador_id int,
+plano_treino_id int,
+is_plano_favorito bit DEFAULT '1'
 
-ALTER TABLE receita
-ADD CONSTRAINT fk_receita_base_id FOREIGN KEY(receita_base_id) REFERENCES item_base (basee_id);
+);
 
-ALTER TABLE receita
-ADD CONSTRAINT fk_receita_categoriaa_id FOREIGN KEY(receita_categoriaa_id) REFERENCES receita_categoria (receita_categoria_id);
+ALTER TABLE marcacao_favorito_plano
+ADD CONSTRAINT fk_utilizador_id FOREIGN KEY(utilizador_id) REFERENCES utilizador (user_id);
 
-ALTER TABLE receita
-ADD CONSTRAINT fk_receita_utilizador_id FOREIGN KEY(receita_utilizador_id) REFERENCES utilizador (user_id);
+ALTER TABLE marcacao_favorito_plano
+ADD CONSTRAINT fk_plano_treino_id FOREIGN KEY(plano_treino_id) REFERENCES plano (plano_treino_id);~
+
+
+CREATE TABLE marcacao_favorito_exercicio(
+
+favorito_exercicio_id SERIAL primary key,
+utilizador_id int,
+exercicio_id int,
+is_exercicio_favorito bit DEFAULT '1'
+
+);
+
+ALTER TABLE marcacao_favorito_exercicio
+ADD CONSTRAINT fk_utilizador_id FOREIGN KEY(utilizador_id) REFERENCES utilizador (user_id);
+
+ALTER TABLE marcacao_favorito_exercicio
+ADD CONSTRAINT fk_exercicio_id FOREIGN KEY(exercicio_id) REFERENCES exercicio (exercicio_id);
 
 
 insert into dados_utilizador(
