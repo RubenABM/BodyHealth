@@ -788,3 +788,21 @@ cursor: pointer;
    margin-left: 1340px;
 
 }
+
+.map{
+
+   width: 100%;
+   height: 500px;
+   border-radius: 10px;
+   border: 1px solid #e8bf5c;
+
+}
+
+.container{
+
+   margin-left: 110px;
+   height: 500px;
+   width: 40%;
+   position: absolute;
+
+}

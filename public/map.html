@@ -6,6 +6,8 @@
     <title>Mapa Interativo</title>
     <link rel="stylesheet" href="stylesheets/mainpage.css">
     <link rel="icon" type="img/x-icon" href="https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+
     <script src="xxxxxx"></script> <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
 </head>
 
@@ -36,7 +38,13 @@
 
     </section>
 
-    <p><iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.461309133146!2d-9.15462138472065!3d38.707216579600434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1934838cfa1033%3A0x36de966c91888246!2sIADE%20-%20Creative%20University!5e0!3m2!1spt-PT!2spt!4v1648256962661!5m2!1spt-PT!2spt" width="900" height="550" style="border:0; position: absolute; margin-left: 290px; margin-top: 50px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe></p>
+   <div class="container">
+
+    <div id='map' style='width: 782px; height: 500px; border: 1px solid #e8bf5c; margin-left: 240px; margin-top: 70px;'></div>
+
+   </div>
+
+   <!--- <p><iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.461309133146!2d-9.15462138472065!3d38.707216579600434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1934838cfa1033%3A0x36de966c91888246!2sIADE%20-%20Creative%20University!5e0!3m2!1spt-PT!2spt!4v1648256962661!5m2!1spt-PT!2spt" width="900" height="550" style="border:0; position: absolute; margin-left: 290px; margin-top: 50px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe></p> -->
 
     <section class="eventospublicos">
 
@@ -57,6 +65,43 @@
       <button id="seemorebtn2"><b>VER MAIS</b></button>
 
     </section>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+
+    <!---
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoibWlndWVsY3J1eiIsImEiOiJjbDI1djBzdmcwODhwM2RudTlleGRlZ2tpIn0.u31STaJqnZkr5QFGTgVD8w';
+      var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11'
+      });
+      </script>
+
+    -->
+
+    <script>
+
+      mapboxgl.accessToken = 'pk.eyJ1IjoibWlndWVsY3J1eiIsImEiOiJjbDI1djBzdmcwODhwM2RudTlleGRlZ2tpIn0.u31STaJqnZkr5QFGTgVD8w';
+
+      const bounds = [
+
+      [-122.66336, 37.492987], // Southwest coordinates
+      [-122.250481, 37.871651] //Northeast coordinates
+
+      ]
+
+      var map = new mapboxgl.Map({
+
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-122.433247, 37.742646],
+        zoom: 12, 
+        maxBounds: bounds
+
+      });
+
+
+    </script>
 
 </body>
 </html>
