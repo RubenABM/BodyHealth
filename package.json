@@ -11,5 +11,18 @@
     "express": "~4.16.1",
     "morgan": "~1.9.1",
     "pg": "^8.7.3"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RubenABM/BodyHealth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RubenABM/BodyHealth/issues"
+  },
+  "homepage": "https://github.com/RubenABM/BodyHealth#readme",
+  "description": ""
 }

@@ -1,8 +1,8 @@
-const client = require('./connection.js')
+/*const client = require('./connection.js')
 const express = require('express');
 const app = express();
 
-app.listen(3300, ()=>{
+app.listen(3000, ()=>{
     console.log("Sever is now listening at port 3000");
 })
 
@@ -12,10 +12,11 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
 app.get('/users', (req, res)=>{
-    client.query(`Select * from utilizador`, (err, result)=>{
+    client.query(`select * from utilizador`, (err, result)=>{
         if(!err){
             res.send(result.rows);
         }
     });
     client.end;
 })
+*/
