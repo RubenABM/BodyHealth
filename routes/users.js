@@ -1,8 +1,6 @@
-
-
 var express = require('express');
 var router = express.Router();
-const pool = require('./models/connection.js')
+const pool = require('../models/connection.js')
 
 /* GET users listing. */
 router.get('/estaticos', function(req, res, next) {
@@ -22,12 +20,6 @@ router.get('/teste', function(req, res, next) {
     pool.end();
   })
 });
-
-router.get('/homepagetext', (req, res) => {
-
-  res.send('GET HOMEPAGE')
-
-})
 
 module.exports = router;
 
