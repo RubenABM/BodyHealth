@@ -21,7 +21,7 @@ user_dados_altura real DEFAULT 0.0,
 user_dados_imc real DEFAULT 0.0,
 user_dados_gordura_visceral real DEFAULT 0.0,
 user_dados_gordura_subcutanea real DEFAULT 0.0,
-use_dadosr_pressao_arterial_media real DEFAULT 0.0,
+user_dados_pressao_arterial_media real DEFAULT 0.0,
 user_utilizador_id int
 
 );
@@ -479,3 +479,20 @@ ADD CONSTRAINT fk_pedido_tipo_id FOREIGN KEY(pedido_tipo_id) REFERENCES pedido_t
 
 ALTER TABLE pedido
 ADD CONSTRAINT fk_pedido_estado_id FOREIGN KEY(pedido_estado_id) REFERENCES pedido_estado(pedido_estado_id);
+
+
+insert into dados_utilizador(
+user_dados_peso,
+user_dados_altura,
+user_dados_imc,
+user_dados_gordura_visceral,
+user_dados_gordura_subcutanea,
+user_dados_pressao_arterial_media,
+user_utilizador_id) values (70,170,55,20,20,20,1);
+
+insert into utilizador(
+user_name ,
+user_password,
+user_morada,
+user_email,
+user_points) values ('Admin', 'AdminFixe', 'Rua Fixe', 'AdminFixe@gmail.com', '2000');
