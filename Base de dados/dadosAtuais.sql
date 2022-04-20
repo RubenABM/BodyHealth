@@ -540,3 +540,15 @@ user_points,
 user_admin,
 user_pt,
 user_nutri) values ('Ana Sousa', 'anasousa', 'Rua do Porto', 'anasousa@gmail.com', '0', '0', '0', '0');
+
+INSERT INTO item_aprovacao(tipoaprovacao_nome) VALUES ('Verificado');
+INSERT INTO item_aprovacao(tipoaprovacao_nome) VALUES ('Não Verificado');
+INSERT INTO item_aprovacao(tipoaprovacao_nome) VALUES ('Todos');
+
+INSERT INTO item_base(basee_nome) VALUES ('Carne'), ('Peixe'), ('Vegan'), ('Snack'), ('Frutas'), ('Outros'), ('Todos');
+
+INSERT INTO receita_categoria(receita_categoria_nome) 
+VALUES ('Entrada'), ('Prato Principal'), ('Sobremesa'), ('Bebida'), ('Outros'), ('Todos');
+
+INSERT INTO ementa_categoria(ementa_categoria_nome) 
+VALUES ('Pequeno-Almoço'), ('Lanche'), ('Almoço'), ('Jantar'), ('Outro');
