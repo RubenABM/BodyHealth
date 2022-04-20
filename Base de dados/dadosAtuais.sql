@@ -552,3 +552,8 @@ VALUES ('Entrada'), ('Prato Principal'), ('Sobremesa'), ('Bebida'), ('Outros'), 
 
 INSERT INTO ementa_categoria(ementa_categoria_nome) 
 VALUES ('Pequeno-Almoço'), ('Lanche'), ('Almoço'), ('Jantar'), ('Outro');
+
+INSERT INTO exercicio_dificuldade(exercicio_dificuldade) VALUES ('Fácil'), ('Médio'), ('Díficil');
+
+INSERT INTO exercicio_tipo(exercicio_tipo_titulo) VALUES ('Costas'), ('Cardio'), ('Peito'), ('Antebraço'), ('Braço'),
+('Ombros'), ('Pescoço'), ('Cintura'), ('Coxa'), ('Perna'), ('Outros'), ('Todos');
