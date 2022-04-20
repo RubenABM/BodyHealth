@@ -7,8 +7,11 @@ user_name varchar(30) NOT NULL,
 user_password varchar(45) NOT NULL,
 user_morada varchar(180),
 user_email varchar(100),
-user_points int DEFAULT 0
-
+user_points int DEFAULT 0,
+user_admin bit,
+user_pt bit,
+user_nutri bit
+	
 );
 
 --O IMC DARÁ VARIOS UPDATES (POR CADA PONTO CALCULADO | OS RESTANTES DADOS DEVERÃO SER INSERIDOS PELO UTILIZADOR NO SEU DASHBOARD OU PELO PT)
@@ -496,3 +499,54 @@ user_password,
 user_morada,
 user_email,
 user_points) values ('Admin', 'AdminFixe', 'Rua Fixe', 'AdminFixe@gmail.com', '2000');
+
+insert into utilizador(
+user_name ,
+user_password,
+user_morada,
+user_email,
+user_points,
+user_admin,
+user_pt,
+user_nutri) values ('Admin', 'AdminTeste', 'Rua Admin', 'AdminTeste@gmail.com', '9999', '1', '0', '0');
+
+insert into utilizador(
+user_name ,
+user_password,
+user_morada,
+user_email,
+user_points,
+user_admin,
+user_pt,
+user_nutri) values ('PT', 'PTTeste', 'Rua PT', 'PTTeste@gmail.com', '9999', '0', '1', '0');
+
+insert into utilizador(
+user_name ,
+user_password,
+user_morada,
+user_email,
+user_points,
+user_admin,
+user_pt,
+user_nutri) values ('Nutricionista', 'NutricionistaTeste', 'Rua Nutricionista', 'NutricionistaTeste@gmail.com', '9999', '0', '0', '1');
+
+insert into utilizador(
+user_name ,
+user_password,
+user_morada,
+user_email,
+user_points,
+user_admin,
+user_pt,
+user_nutri) values ('André Santos', 'andresantos', 'Rua de Lisboa', 'andresantos@gmail.com', '0', '0', '0', '0');
+
+insert into utilizador(
+user_name ,
+user_password,
+user_morada,
+user_email,
+user_points,
+user_admin,
+user_pt,
+user_nutri) values ('Ana Sousa', 'anasousa', 'Rua do Porto', 'anasousa@gmail.com', '0', '0', '0', '0');
+
