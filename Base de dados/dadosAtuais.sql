@@ -475,6 +475,13 @@ ALTER TABLE pedido
 ADD CONSTRAINT fk_pedido_estado_id FOREIGN KEY(pedido_estado_id) REFERENCES pedido_estado(pedido_estado_id);
 
 
+insert into utilizador(
+user_name ,
+user_password,
+user_morada,
+user_email,
+user_points) values ('Admin', 'AdminFixe', 'Rua Fixe', 'AdminFixe@gmail.com', '2000');
+
 insert into dados_utilizador(
 user_dados_peso,
 user_dados_altura,
@@ -483,13 +490,6 @@ user_dados_gordura_visceral,
 user_dados_gordura_subcutanea,
 user_dados_pressao_arterial_media,
 user_utilizador_id) values (70,170,55,20,20,20,1);
-
-insert into utilizador(
-user_name ,
-user_password,
-user_morada,
-user_email,
-user_points) values ('Admin', 'AdminFixe', 'Rua Fixe', 'AdminFixe@gmail.com', '2000');
 
 insert into utilizador(
 user_name ,
@@ -540,4 +540,3 @@ user_points,
 user_admin,
 user_pt,
 user_nutri) values ('Ana Sousa', 'anasousa', 'Rua do Porto', 'anasousa@gmail.com', '0', '0', '0', '0');
-
