@@ -560,4 +560,4 @@ INSERT INTO exercicio_tipo(exercicio_tipo_titulo) VALUES ('Costas'), ('Cardio'),
 
 INSERT INTO pedido_estado(pedido_estado) VALUES ('Todos'), ('Aceite'), ('Recusado'), ('Pendentes');
 
-
+INSERT INTO artigo_category(artigo_category) VALUES ('Alimentação'), ('Fitness'), ('Todos'), ('Outro');
