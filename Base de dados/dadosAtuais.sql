@@ -557,3 +557,5 @@ INSERT INTO exercicio_dificuldade(exercicio_dificuldade) VALUES ('Fácil'), ('M�
 
 INSERT INTO exercicio_tipo(exercicio_tipo_titulo) VALUES ('Costas'), ('Cardio'), ('Peito'), ('Antebraço'), ('Braço'),
 ('Ombros'), ('Pescoço'), ('Cintura'), ('Coxa'), ('Perna'), ('Outros'), ('Todos');
+
+INSERT INTO pedido_estado(pedido_estado) VALUES ('Todos'), ('Aceite'), ('Recusado'), ('Pendentes');
