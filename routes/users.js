@@ -16,8 +16,8 @@ router.get('/teste', function(req, res, next) {
     if (error) {
       throw error
     }
-    response.status(200).json(results.rows)
-    pool.end();
+    res.status(200).json(results.rows)
+    //pool.end();
   })
 });
 
