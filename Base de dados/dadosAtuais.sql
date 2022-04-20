@@ -196,9 +196,6 @@ tipoaprovacao_nome varchar(35) NOT NULL
 
 );
 
-INSERT INTO item_aprovacao(tipoaprovacao_nome) VALUES ('Verificado');
-INSERT INTO item_aprovacao(tipoaprovacao_nome) VALUES ('Não Verificado');
-
 --ALTERAR AS RELACOES COM O item_aprovacao
 
 CREATE TABLE item_base(
@@ -208,8 +205,6 @@ basee_nome varchar(35)
 	
 );
 
-INSERT INTO item_base(basee_nome) VALUES ('Carne'), ('Peixe'), ('Vegan'), ('Snack'), ('Frutas'), ('Outros');
-
 
 CREATE TABLE receita_categoria(
 
@@ -218,8 +213,6 @@ receita_categoria_nome varchar(45)
 
 );
 
-INSERT INTO receita_categoria(receita_categoria_nome) 
-VALUES ('Entrada'), ('Prato Principal'), ('Sobremesa'), ('Bebida'), ('Outros');
 
 CREATE TABLE ementa_categoria(
 
@@ -228,8 +221,6 @@ ementa_categoria_nome varchar(45)
 
 );
 
-INSERT INTO ementa_categoria(ementa_categoria_nome) 
-VALUES ('Pequeno-Almoço'), ('Lanche'), ('Almoço'), ('Jantar'), ('Outro');
 
 
 CREATE TABLE ementa(
