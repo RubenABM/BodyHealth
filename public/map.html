@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="stylesheets/mainpage.css">
   <link rel="icon" type="img/x-icon" href="https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png">
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
-  <script src="js/map.js"></script>
   <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
 
 </head>
@@ -37,12 +36,13 @@
 
     <button id="filterplacesbtn2"><b>BARES</b></button>
 
-    <button id="filterplacesbtn3"><b>RESTAURANTES</b></button>
+    <button href="mainpage.html" id="filterplacesbtn3"><b>RESTAURANTES</b></button>
 
-    <button onclick="change()" id="filterplacesbtn4"><b>GINÁSIOS</b></button>
+    <button type="button" onclick="change()" id="filterplacesbtn4"><b>GINÁSIOS</b></button>
 
   </section>
 
+  
   <div class="container">
 
     <div id='map' style='width: 782px; height: 500px; border: 1px solid #e8bf5c; margin-left: 240px; margin-top: 70px;'>
@@ -83,6 +83,7 @@
   </section>
 
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+  <script src="js/map.js"></script>
 
   <script>
 
@@ -139,6 +140,7 @@
     }
 
   </script>
+
 
 </body>
 
