@@ -36,5 +36,4 @@ client.connect(function(err) {
   console.log('Database is connected successfully !')
 });
 
-console.log("ligação");
 module.exports = client;

@@ -39,7 +39,7 @@ $(document).ready(function() {
    function getUsersList() {
        
        $.ajax({
-           url: "http://localhost:3000/users",
+           url: "http://localhost:8080/users",
            type: "GET",
            dataType: 'json',
            success: function(result) {

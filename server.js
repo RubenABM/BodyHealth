@@ -51,7 +51,7 @@ app.post('/user-details', function(req, res) {
   });
 });
 
-app.listen(3000, function() {
+app.listen(8080, function() {
     console.log('Node app is running on port 8080');
 });
 module.exports = app;
