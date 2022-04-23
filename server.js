@@ -30,8 +30,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 const corsOpts = { origin: '*', methods: ['GET', 'POST'], allowedHeaders: ['Content-Type']};
 app.use(cors(corsOpts));
 
-app.get('/api/users', function(req, res) {
-  db.query('SELECT * FROM users ORDER BY id desc', function(err, rows) {
+app.get('/api/userss', function(req, res) {
+  db.query('SELECT * FROM utilizador', function(err, rows) {
     if (err) {
       res.json({ msg: 'error'});
     } else {

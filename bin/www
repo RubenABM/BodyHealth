@@ -89,6 +89,7 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
+/*
 var pool = require("../models/connection");
 process.once('SIGTERM', end);
 process.once('SIGINT', end);
@@ -101,5 +102,5 @@ function end() {
  process.exit();
  });
  });
-}
+}*/
 

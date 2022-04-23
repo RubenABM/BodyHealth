@@ -21,8 +21,9 @@ pool.query('SELECT * FROM utilizador', (err,res)=>{
 
 module.exports = ool;*/
 
-var pg = require('pg');
-var conn = pg.createConnection({
+const {Client} = require('pg');
+
+const client = new Client({
     host: "ec2-52-212-228-71.eu-west-1.compute.amazonaws.com",
     user: "zrznopdgddhzpb",
     password: "c25ef89e544d07ff6382509ce1ec20a4535bffede8a2d96367c35ec1910e88b2",
@@ -30,8 +31,17 @@ var conn = pg.createConnection({
     port: '5432'
 }); 
  
-conn.connect(function(err) {
+client.connect(function(err) {
   if (err) throw err;
   console.log('Database is connected successfully !');
 });
-module.exports = conn;
+
+  client.query('SELECT * FROM utilizador', function(err, rows) {
+    if (err) {
+      res.json({ msg: 'error'});
+    } else {
+      res.json({ msg: 'success', users: rows });
+    }
+  });
+
+module.exports = client;
