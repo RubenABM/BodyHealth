@@ -12,12 +12,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 const corsOpts = { origin: '*', methods: ['GET', 'POST'], allowedHeaders: ['Content-Type']};
 app.use(cors(corsOpts));
 
-app.get('/users', function(req, res) {
-  db.query('SELECT * FROM utilizador', function(err, rows) {
+app.get('/users', function(req, results) {
+  db.query('SELECT * FROM students', function(err, rows) {
     if (err) {
-      res.json({ msg: 'error'});
+      results.json({ msg: 'error'});
     } else {
-      res.json({ msg: 'success', users: rows });
+      results.json({ msg: 'success', users: rows });
     }
   });
 });
