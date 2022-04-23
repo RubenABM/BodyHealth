@@ -1,20 +1,3 @@
-/*const express = require('express');
-const app = express();
-const port = 3000;
-//const pool = require('./models/connection.js')
-
-app.get("/", (req, res) => {
-
-    res.send("Hello World")
-
-});
-
-//pool.connect();
-
-app.listen(port, () => console.log('App is online in ${port}'));
-
-*/
-
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -51,7 +34,7 @@ app.post('/user-details', function(req, res) {
   });
 });
 
-app.listen(8080, function() {
+app.listen(3000, function() {
     console.log('Node app is running on port 8080');
 });
 module.exports = app;
