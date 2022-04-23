@@ -1,8 +1,8 @@
-var express = require('express');
+/*var express = require('express');
 var router = express.Router();
 const pool = require('../models/connection.js')
 
-/* GET users listing. */
+/* GET users listing. 
 router.get('/estaticos', function(req, res, next) {
   let users=[{name:"John Doe", birthDate:"19/02/1999"}];
   res.send(users);
@@ -22,6 +22,6 @@ router.get('/teste', function(req, res, next) {
 });
 
 module.exports = router;
-
+*/
 
 
