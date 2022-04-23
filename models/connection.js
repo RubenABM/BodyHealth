@@ -24,7 +24,7 @@ module.exports = ool;*/
 const {Client} = require('pg');
 
 const client = new Client({
-    host: "ec2-52-212-228-71.eu-west-1.compute.amazonaws.com",
+    host: "localhost",
     user: "zrznopdgddhzpb",
     password: "c25ef89e544d07ff6382509ce1ec20a4535bffede8a2d96367c35ec1910e88b2",
     database : 'd8sb04nd3dc7fk',
@@ -33,15 +33,8 @@ const client = new Client({
  
 client.connect(function(err) {
   if (err) throw err;
-  console.log('Database is connected successfully !');
+  console.log('Database is connected successfully !')
 });
 
-  client.query('SELECT * FROM utilizador', function(err, rows) {
-    if (err) {
-      res.json({ msg: 'error'});
-    } else {
-      res.json({ msg: 'success', users: rows });
-    }
-  });
-
+console.log("ligação");
 module.exports = client;

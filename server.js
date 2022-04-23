@@ -21,7 +21,6 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var db = require('./models/connection');
 var cors = require('cors');
- 
 var app = express();
 
 app.use(bodyParser.json());
@@ -30,7 +29,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 const corsOpts = { origin: '*', methods: ['GET', 'POST'], allowedHeaders: ['Content-Type']};
 app.use(cors(corsOpts));
 
-app.get('/api/userss', function(req, res) {
+app.get('/users', function(req, res) {
   db.query('SELECT * FROM utilizador', function(err, rows) {
     if (err) {
       res.json({ msg: 'error'});
