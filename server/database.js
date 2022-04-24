@@ -17,12 +17,12 @@ const pool = new Pool({
 })
 
 //Ao correr o ficheiro a query funciona
-pool.query('SELECT * FROM utilizador', (error, results) => {
+/*pool.query('SELECT * FROM utilizador', (error, results) => {
   if (error) {
     throw error
   }
   console.log(results)
-});
+});*/
 
 pool.connect(function(err) {
   if (err) throw err;
