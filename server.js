@@ -22,6 +22,17 @@ app.get('/users', function(req, results) {
   });
 });
 
+/*
+app.get('/users', function(req, results) {
+  db.query('SELECT * FROM students', function(err, result) {
+    if (err) {
+      results.json({ msg: 'error'});
+    } else {
+      results.json({ msg: 'success', users: result.rows });
+    }
+  });
+});*/
+
 app.post('/user-details', function(req, res) {
   db.query('SELECT * FROM users WHERE email = "' + req.body.email + '" AND password = "' + req.body.password + '"',
     function(err, rows, fields) {
