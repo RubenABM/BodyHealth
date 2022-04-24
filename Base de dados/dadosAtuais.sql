@@ -563,3 +563,41 @@ INSERT INTO pedido_estado(pedido_estado) VALUES ('Todos'), ('Aceite'), ('Recusad
 INSERT INTO artigo_category(artigo_category) VALUES ('Alimentação'), ('Fitness'), ('Todos'), ('Outro');
 
 INSERT INTO artigo_read_type(artigo_reader_type) VALUES ('Artigo'), ('Noticia'), ('Todos');
+
+
+
+--CODIGO NÃO TERMINADO DE GEOMETRIA PRA LOCAIS
+
+SELECT * FROM spatial_ref_sys
+
+
+SELECT * FROM place
+
+ALTER TABLE place
+ADD COLUMN local_nome varchar(50) NOT NULL
+
+
+ALTER TABLE place
+ADD COLUMN local_nome varchar(50) NOT NULL
+
+ALTER TABLE place
+ADD COLUMN geometry_info_point geometry
+
+ALTER TABLE place
+ADD COLUMN ref_system_id int NOT NULL
+
+ALTER TABLE place
+ADD CONSTRAINT fk_ref_system_id FOREIGN KEY (ref_system_id) REFERENCES spatial_ref_sys(srid)
+
+ALTER TABLE place
+ADD CONSTRAINT fk_local_category_id FOREIGN KEY (local_category_id) REFERENCES place_category(local_category_id)
+
+INSERT INTO place_category (local_category_name) VALUES ('Cafés')
+INSERT INTO place_category (local_category_name) VALUES ('Bares')
+INSERT INTO place_category (local_category_name) VALUES ('Restaurantes')
+INSERT INTO place_category (local_category_name) VALUES ('Ginásios')
+
+ALTER TABLE public.spatial_ref_sys OWNER TO rds_superuser;
+GRANT SELECT, INSERT ON TABLE public.spatial_ref_sys TO public;
+
+GRANT SELECT ON public.geography_columns TO PUBLIC ; 
