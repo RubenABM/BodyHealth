@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BodyHealth - Personal Trainer Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Custom styles for this template-->
+    <link href="stylesheets/sb-personaltrainer-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style=" background-color: #2d2e2d; color: #2d2e2d;">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="nutricionistdasboard.html" style="border: 1px solid white; background-color:#e8bf5c;">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">BodyHealth <sup>Dashboard</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0" style="background-color: #2d2e2d;">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="nutricionistdasboard.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span> Meu Dashboard</span></a>
+            </li>
+
+            <div class="rectangledivider"></div>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider" style="background-color: #2d2e2d; color: #2d2e2d;">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Favoritos
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="receitaseementasfavoritos.html" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class='bx bx-bowl-rice'></i>
+                    <span>Receitas e Ementas</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="cards.html">Cards</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="exercicioseplanosfavoritos.html" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class='bx bx-dumbbell'></i>
+                    <span>Exercicios</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Colors</a>
+                        <a class="collapse-item" href="utilities-border.html">Borders</a>
+                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
+                </div>
+            </li>
+
+            <div class="rectangledivider2"></div>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Minhas Criações
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="receitasementascreated.html" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class='bx bx-food-menu' ></i>
+                    <span>Receitas</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="login.html">Login</a>
+                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Other Pages:</h6>
+                        <a class="collapse-item" href="404.html">404 Page</a>
+                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="exercicioseplanoscriados.html">
+                    <i class='bx bx-heart'></i>
+                    <span>Ementas</span></a>
+            </li>
+
+            <div class="rectangledivider3"></div>
+
+             <!-- Divider -->
+             <hr class="sidebar-divider">
+
+             <!-- Heading -->
+             <div class="sidebar-heading">
+                 Eventos e Consultas
+             </div>
+
+               <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+              <a class="nav-link collapsed" href="aulasmarcadas.html" data-toggle="collapse" data-target="#collapsePages"
+                  aria-expanded="true" aria-controls="collapsePages">
+                  <i class='bx bxs-graduation'></i>
+                  <span>Aulas Marcadas</span>
+              </a>
+              <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                  <div class="bg-white py-2 collapse-inner rounded">
+                      <h6 class="collapse-header">Login Screens:</h6>
+                      <a class="collapse-item" href="login.html">Login</a>
+                      <a class="collapse-item" href="register.html">Register</a>
+                      <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                      <div class="collapse-divider"></div>
+                      <h6 class="collapse-header">Other Pages:</h6>
+                      <a class="collapse-item" href="404.html">404 Page</a>
+                      <a class="collapse-item" href="blank.html">Blank Page</a>
+                  </div>
+              </div>
+          </li>
+
+             <!-- Nav Item - Pages Collapse Menu -->
+             <li class="nav-item">
+              <a class="nav-link collapsed" href="turmasofpt.html" data-toggle="collapse" data-target="#collapsePages"
+                  aria-expanded="true" aria-controls="collapsePages">
+                  <i class='bx bx-chalkboard' ></i>
+                  <span>Turmas</span>
+              </a>
+              <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                  <div class="bg-white py-2 collapse-inner rounded">
+                      <h6 class="collapse-header">Login Screens:</h6>
+                      <a class="collapse-item" href="login.html">Login</a>
+                      <a class="collapse-item" href="register.html">Register</a>
+                      <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                      <div class="collapse-divider"></div>
+                      <h6 class="collapse-header">Other Pages:</h6>
+                      <a class="collapse-item" href="404.html">404 Page</a>
+                      <a class="collapse-item" href="blank.html">Blank Page</a>
+                  </div>
+              </div>
+          </li>
+
+           <!-- Nav Item - Pages Collapse Menu -->
+           <li class="nav-item">
+            <a class="nav-link collapsed" href="aprovarrecusarpedidos.html" data-toggle="collapse" data-target="#collapsePages"
+                aria-expanded="true" aria-controls="collapsePages">
+                <i class='bx bx-bookmark'></i>
+                <span>Pedidos Pendentes</span>
+            </a>
+            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Login Screens:</h6>
+                    <a class="collapse-item" href="login.html">Login</a>
+                    <a class="collapse-item" href="register.html">Register</a>
+                    <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                    <div class="collapse-divider"></div>
+                    <h6 class="collapse-header">Other Pages:</h6>
+                    <a class="collapse-item" href="404.html">404 Page</a>
+                    <a class="collapse-item" href="blank.html">Blank Page</a>
+                </div>
+            </div>
+        </li>
+
+        <div class="rectangledivider4"></div>
+
+         <!-- Divider -->
+         <hr class="sidebar-divider">
+
+         <!-- Heading -->
+         <div class="sidebar-heading">
+             Sobre Mim
+         </div>
+
+         <!-- Nav Item - Pages Collapse Menu -->
+         <li class="nav-item">
+          <a class="nav-link collapsed" href="ptdashboard.html" data-toggle="collapse" data-target="#collapsePages"
+              aria-expanded="true" aria-controls="collapsePages">
+              <i class='bx bx-user-circle' ></i>
+              <span>Perfil</span>
+          </a>
+          <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                  <h6 class="collapse-header">Login Screens:</h6>
+                  <a class="collapse-item" href="login.html">Login</a>
+                  <a class="collapse-item" href="register.html">Register</a>
+                  <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                  <div class="collapse-divider"></div>
+                  <h6 class="collapse-header">Other Pages:</h6>
+                  <a class="collapse-item" href="404.html">404 Page</a>
+                  <a class="collapse-item" href="blank.html">Blank Page</a>
+              </div>
+          </div>
+      </li>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="profile.html" data-toggle="collapse" data-target="#collapsePages"
+            aria-expanded="true" aria-controls="collapsePages">
+            <i class='bx bxs-chat'></i>
+            <span>Comunidades</span>
+        </a>
+       
+    </li>
+
+     <!-- Nav Item - Pages Collapse Menu -->
+     <li class="nav-item">
+        <a class="nav-link collapsed" href="profile.html" data-toggle="collapse" data-target="#collapsePages"
+            aria-expanded="true" aria-controls="collapsePages">
+            <i class='bx bxs-user-check' ></i>
+            <span>Os meus clientes</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Login Screens:</h6>
+                <a class="collapse-item" href="login.html">Login</a>
+                <a class="collapse-item" href="register.html">Register</a>
+                <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Other Pages:</h6>
+                <a class="collapse-item" href="404.html">404 Page</a>
+                <a class="collapse-item" href="blank.html">Blank Page</a>
+            </div>
+        </div>
+
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+            aria-expanded="true" aria-controls="collapsePages">
+            <i class='bx bx-power-off' ></i>
+            <span>Logout</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Login Screens:</h6>
+                <a class="collapse-item" href="login.html">Login</a>
+                <a class="collapse-item" href="register.html">Register</a>
+                <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                <div class="collapse-divider"></div>
+                <h6 class="collapse-header">Other Pages:</h6>
+                <a class="collapse-item" href="404.html">404 Page</a>
+                <a class="collapse-item" href="blank.html">Blank Page</a>
+            </div>
+        </div>
+    </li>
+
+    <div class="rectangledivider5"></div>
+        
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" style="width: 1290px;">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class='bx bx-search-alt-2' style="font-size: 18px; position: absolute; margin-top: -7px; margin-left: -8px; color: white ;"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                      
+
+                       
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800" style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: white; letter-spacing: 1px; text-transform: uppercase;"><b>olá, joséribeiro22 !</b></h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style="position: absolute; margin-left: 1110px; border-radius: 12px;"><i
+                                class="fas fa-download fa-sm text-white-50"></i> <b>ATUALIZAR</b></a>
+                                <a href="aprovaritems.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style="position: absolute; margin-left: 933px; border-radius: 12px;"><i
+                                    class="fas fa-download fa-sm text-white-50"></i> <b>APROVAR TREINOS</b></a>
+                                  <!---  <class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style="position: absolute; margin-left: 783px; border-radius: 12px;"><i
+                                        class="fas fa-download fa-sm text-white-50"></i> <b>CRIAR TURMA</b></a> -->
+
+                                        <div>
+                                        <button class="createbtn2" id="createbtn22" style="margin-left: -425px; border-radius: 12px; border: 1px solid white; background-color: #e8bf5c; font-size: 15px; height: 30px;" onclick="createturmaButton"><b>CRIAR TURMA</b></button>
+                                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2" style="border: 3px solid #e8bf5c; ">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Nº de Turmas</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-1000">6</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2" style="border: 3px solid #e8bf5c;">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Aulas Realizadas</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-1000">123</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2" style="border: 3px solid #e8bf5c;">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Pedidos Pendentes</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-1000">12</div>
+                                            
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending Requests Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2" style="border: 3px solid #e8bf5c;">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Posição no Ranking | Pontos</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-1000" style="font-size: 16px;">#682817 - 1748 pontos</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="card shadow mb-4" style="width: 809px; height: 588px;">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="color: white;">As minhas turmas</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    
+                                    <section class="newcustomers">
+
+                                      <div class="item1">
+
+                                        <h2 class="namecustomer" style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-top: 25px; margin-left: 12px; font-size: 24px;"><b>CROSSFIT CLASS</b></h2>
+                                        
+                                        <a href="turmaselecionada.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style=" border-radius: 12px; margin-top: -29px; margin-left: 450px; width: 140px;"><i
+                                            class="fas fa-download fa-sm text-white-50"></i> <b>ENTRAR</b></a>
+
+                                            <!--MÉTODO DELETE-->
+                                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style=" border-radius: 12px; margin-top: -17px; margin-left: 10px; width: 140px; position: absolute; z-index: 1; background-color: salmon;"><i
+                                                class="fas fa-download fa-sm text-white-50"></i> <b>ELIMINAR</b></a>
+
+                                      </div>
+                                      <div class="item2">
+
+                                        
+                                        <h2 class="namecustomer" style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-top: 25px; margin-left: 12px; font-size: 24px;"><b>CLASS X</b></h2>
+                                        
+                                        <a href="turmaselecionada.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style=" border-radius: 12px; margin-top: -29px; margin-left: 450px; width: 140px;"><i
+                                            class="fas fa-download fa-sm text-white-50"></i> <b>ENTRAR</b></a>
+
+                                            <!--MÉTODO DELETE-->
+                                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style=" border-radius: 12px; margin-top: -17px; margin-left: 10px; width: 140px; position: absolute; z-index: 1; background-color: salmon;"><i
+                                                class="fas fa-download fa-sm text-white-50"></i> <b>ELIMINAR</b></a>
+
+                                      </div>
+                                      <div class="item3">
+
+                                        <h2 class="namecustomer" style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-top: 25px; margin-left: 12px; font-size: 24px;"><b>CLASS Y</b></h2>
+                                        
+                                        <a href="turmaselecionada.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style=" border-radius: 12px; margin-top: -29px; margin-left: 450px; width: 140px;"><i
+                                            class="fas fa-download fa-sm text-white-50"></i> <b>ENTRAR</b></a>
+
+                                            <!--MÉTODO DELETE-->
+                                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style=" border-radius: 12px; margin-top: -17px; margin-left: 10px; width: 140px; position: absolute; z-index: 1; background-color: salmon;"><i
+                                                class="fas fa-download fa-sm text-white-50"></i> <b>ELIMINAR</b></a>
+
+                                      </div>
+                                      <div class="item4">
+
+                                        <h2 class="namecustomer" style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-top: 25px; margin-left: 12px; font-size: 24px;"><b>CLASS Y</b></h2>
+                                        
+                                        <a href="turmaselecionada.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style=" border-radius: 12px; margin-top: -29px; margin-left: 450px; width: 140px;"><i
+                                            class="fas fa-download fa-sm text-white-50"></i> <b>ENTRAR</b></a>
+
+                                            <!--MÉTODO DELETE-->
+                                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style=" border-radius: 12px; margin-top: -17px; margin-left: 10px; width: 140px; position: absolute; z-index: 1; background-color: salmon;"><i
+                                                class="fas fa-download fa-sm text-white-50"></i> <b>ELIMINAR</b></a>
+
+                                      </div>
+
+                                      <a href="turmasofpt.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style="position: absolute; margin-left: 261px; border-radius: 12px; width: 250px; margin-top: 420px; height: 50px;"><i
+                                        class="fas fa-download fa-sm text-white-50" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 23px;"></i> <b>VER TODAS AS TURMAS</b></a>
+                                      
+                                    </section>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <form class="formsignupuser">
+
+        <label for="fusername" class="titleinput">Username</label><br>
+        <input type="text" id="fusername" name="fusername" class="field" placeholder="Username"><br>
+        <br>
+        <br>
+        <label for="fpassword" class="titleinput">Password</label><br>
+        <input type="text" id="fpassword" name="fpassword" class="field" placeholder="Password"><br>
+        <br>
+        <br>
+        <label for="femail" class="titleinput">Email</label><br>
+        <input type="email" id="femail" name="femail" class="field" placeholder="Email"><br>
+        <br>
+        <br>
+        <label for="fmorada" class="titleinput">Morada (Rua, Cidade)</label><br>
+        <input type="text" id="fmorada" name="fmorada" class="field" placeholder="Morada"><br>
+
+      </form> -->
+
+                        <!-- Pie Chart -->
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Novos Pedidos</h6>
+                                    <a href="aprovarrecusarpedidos.html">
+                                    <button id="vertodos" style="border-radius: 10px; background-color: #e8bf5c; border: 1px solid white;"><b>VER TODOS</b></button>
+                                    </a>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body" style="height: 533px;">
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="myPieChart"></canvas>
+                                    </div>
+
+                                    <div class="boxrequestconsulta">
+
+                                        <h3 class="titlerequest" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; position: absolute; margin-left: 18px; margin-top: 5px;"><b>Título do Pedido</b></h3>
+
+                                        <h4 class="fromuser" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; position: absolute; margin-left: 35px; margin-top: 19px;">de miguel12</h4>
+
+                                        <h4 class="dateconsulta" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 11px; position: absolute; margin-left: 25px; margin-top: 52px;"><b>Data: </b> 29/05/2022</h4>
+
+                                        <div class="circleaccept">
+
+                                            <i class='bx bxs-like' style="position: absolute; color: white; font-size: 36px; margin-left: 7px; margin-top: 6px;"></i>
+
+                                        </div>
+
+                                        <div class="circlerefuse">
+
+                                            <i class='bx bxs-dislike' style="position: absolute; color: white; font-size: 36px; margin-top: 7px; margin-left: 7px;"></i>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="boxrequestconsulta2">
+
+                                        <h3 class="titlerequest" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; position: absolute; margin-left: 18px; margin-top: 5px;"><b>Título do Pedido</b></h3>
+
+                                        <h4 class="fromuser" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; position: absolute; margin-left: 35px; margin-top: 19px;">de miguel12</h4>
+
+                                        <h4 class="dateconsulta" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 11px; position: absolute; margin-left: 25px; margin-top: 52px;"><b>Data: </b> 29/05/2022</h4>
+
+                                        <div class="circleaccept">
+
+                                            <i class='bx bxs-like' style="position: absolute; color: white; font-size: 36px; margin-left: 7px; margin-top: 6px;"></i>
+
+                                        </div>
+
+                                        <div class="circlerefuse">
+
+                                            <i class='bx bxs-dislike' style="position: absolute; color: white; font-size: 36px; margin-top: 7px; margin-left: 7px;"></i>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="boxrequestconsulta3">
+
+                                        <h3 class="titlerequest" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; position: absolute; margin-left: 18px; margin-top: 5px;"><b>Título do Pedido</b></h3>
+
+                                        <h4 class="fromuser" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; position: absolute; margin-left: 35px; margin-top: 19px;">de miguel12</h4>
+
+                                        <h4 class="dateconsulta" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 11px; position: absolute; margin-left: 25px; margin-top: 52px;"><b>Data: </b> 29/05/2022</h4>
+                                        <div class="circleaccept">
+
+                                            <i class='bx bxs-like' style="position: absolute; color: white; font-size: 36px; margin-left: 7px; margin-top: 6px;"></i>
+
+                                        </div>
+
+                                        <div class="circlerefuse">
+
+                                            <i class='bx bxs-dislike' style="position: absolute; color: white; font-size: 36px; margin-top: 7px; margin-left: 7px;"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="boxrequestconsulta4">
+
+                                        <h3 class="titlerequest" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; position: absolute; margin-left: 18px; margin-top: 5px;"><b>Título do Pedido</b></h3>
+
+                                        <h4 class="fromuser" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; position: absolute; margin-left: 35px; margin-top: 19px;">de miguel12</h4>
+
+                                        <h4 class="dateconsulta" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 11px; position: absolute; margin-left: 25px; margin-top: 52px;"><b>Data: </b> 29/05/2022</h4>
+
+                                        <div class="circleaccept">
+
+                                            <i class='bx bxs-like' style="position: absolute; color: white; font-size: 36px; margin-left: 7px; margin-top: 6px;"></i>
+
+                                        </div>
+
+                                        <div class="circlerefuse">
+
+                                            <i class='bx bxs-dislike' style="position: absolute; color: white; font-size: 36px; margin-top: 7px; margin-left: 7px;"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="boxrequestconsulta5">
+
+                                        <h3 class="titlerequest" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; position: absolute; margin-left: 18px; margin-top: 5px;"><b>Título do Pedido</b></h3>
+
+                                        <h4 class="fromuser" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; position: absolute; margin-left: 35px; margin-top: 19px;">de miguel12</h4>
+
+                                        <h4 class="dateconsulta" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 11px; position: absolute; margin-left: 25px; margin-top: 52px;"><b>Data: </b> 29/05/2022</h4>
+
+                                        <div class="circleaccept">
+
+                                            <i class='bx bxs-like' style="position: absolute; color: white; font-size: 36px; margin-left: 7px; margin-top: 6px;"></i>
+
+                                        </div>
+
+                                        <div class="circlerefuse">
+
+                                            <i class='bx bxs-dislike' style="position: absolute; color: white; font-size: 36px; margin-top: 7px; margin-left: 7px;"></i>
+
+                                        </div>
+                                    </div>
+                                    <div class="boxrequestconsulta6">
+
+                                        <h3 class="titlerequest" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; position: absolute; margin-left: 18px; margin-top: 5px;"><b>Título do Pedido</b></h3>
+
+                                        <h4 class="fromuser" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; position: absolute; margin-left: 35px; margin-top: 19px;">de miguel12</h4>
+
+                                        <h4 class="dateconsulta" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 11px; position: absolute; margin-left: 25px; margin-top: 52px;"><b>Data: </b> 29/05/2022</h4>
+
+                                        <div class="circleaccept">
+
+                                            <i class='bx bxs-like' style="position: absolute; color: white; font-size: 36px; margin-left: 7px; margin-top: 6px;"></i>
+
+                                        </div>
+
+                                        <div class="circlerefuse">
+
+                                            <i class='bx bxs-dislike' style="position: absolute; color: white; font-size: 36px; margin-top: 7px; margin-left: 7px;"></i>
+
+                                        </div>
+                                    </div>
+
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    </div>
+
+                     <!-- Content Row -->
+
+                     <div class="row" style="position: absolute; margin-left: 10px;">
+
+                        <!-- Area Chart -->
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="card shadow mb-4" style="width: 1209px; height: 588px;">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 c-lass="m-0 font-weight-bold text-primary">Aulas Marcadas</h6>
+
+                                    <button class="vertodos" onclick="gotoVerTodos" style="position: absolute; border: 2px solid white; border-radius: 15px; width: 140px; margin-left: 980px;  color: #2d2e2d; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px; height: 32px; background-color: #e8bf5c; margin-top: 5px;"><b>VER TODOS</b></button>
+
+                                    <section class="dropButton" style="position: absolute; z-index: 1; margin-left: 744px; margin-top: -230px;"> 
+                                        <div class="dropdown">
+                                            <button class="dropbtn" style="border-radius: 16px; color: #2d2e2d; background-color: #e8bf5c; width: 340px; font-family: Verdana, Geneva, Tahoma, sans-serif; position: absolute; margin-top: 102px; font-size: 13px; height: 30px; width: 200px;"> <b>SELECIONAR TRIMESTRE</b></button>
+                                            <div class="dropdown-content">
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Janeiro - Março</a>
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Abril - Junho</a>
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Julho - Setembro</a>
+                                              <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Outubro - Dezembro</a>
+                                            </div>
+                                        </div>
+
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    
+                                   <div class="boxconsultamarcada1">
+
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
+                                    <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
+                                    <div style="position: absolute;">
+                                    <h3 class="dataaula">19:24 - 23/06/2022</h3>
+                                    </div>
+                                    <a href="map.html">
+                                    <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
+                                    </a>
+                                     
+                                   </div>
+                                   <div class="boxconsultamarcada2">
+
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
+                                    <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
+                                    <div style="position: absolute;">
+                                        <h3 class="dataaula">19:24 - 23/06/2022</h3>
+                                        </div>
+                                    <a href="map.html">
+                                      <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
+                                   </a>
+                                   </div>
+                                   <div class="boxconsultamarcada3">
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
+                                    <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
+                                    <div style="position: absolute;">
+                                        <h3 class="dataaula">19:24 - 23/06/2022</h3>
+                                        </div>
+                                    <a href="map.html">
+                                      <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
+                                    </a>
+                                    </div>
+                                   <div class="boxconsultamarcada4">
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
+                                    <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
+                                    <div style="position: absolute;">
+                                        <h3 class="dataaula">19:24 - 23/06/2022</h3>
+                                        </div>
+                                    <a href="map.html">
+                                    <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
+                                    </a>
+                                </div>
+                                   <div class="boxconsultamarcada5">
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
+                                    <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
+                                    <div style="position: absolute;">
+                                        <h3 class="dataaula">19:24 - 23/06/2022</h3>
+                                        </div>
+                                    <a href="map.html">
+                                    <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
+                                    </a>
+                                </div>
+                                   <div class="boxconsultamarcada6">
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
+                                    <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
+                                    <div style="position: absolute;">
+                                        <h3 class="dataaula">19:24 - 23/06/2022</h3>
+                                        </div>
+                                    <a href="map.html">
+                                    <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
+                                    </a>
+                                </div>
+                                   <div class="boxconsultamarcada7">
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
+                                    <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
+                                    <div style="position: absolute;">
+                                        <h3 class="dataaula">19:24 - 23/06/2022</h3>
+                                        </div>
+                                    <a href="map.html">
+                                    <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
+                                    </a>
+                                </div>
+                                   <div class="boxconsultamarcada8">
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
+                                    <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
+                                    <div style="position: absolute;">
+                                        <h3 class="dataaula">19:24 - 23/06/2022</h3>
+                                        </div>
+                                    <a href="map.html">
+                                    <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
+                                    </a>
+                                </div>
+                                   <div class="boxconsultamarcada9">
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
+                                    <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
+                                    <div style="position: absolute;">
+                                        <h3 class="dataaula">19:24 - 23/06/2022</h3>
+                                        </div>
+                                    <a href="map.html">
+                                    <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
+                                    </a>   
+                                </div>
+                                   <div class="boxconsultamarcada10">
+                                    <h3 class="titleconsulta" style="color:black; font-size: 21px; margin-left: 31px; margin-top: 13px;"><b>Título da Aula</b></h3>
+                                    <h4 class="fromutilizador" style="color: black; font-size: 13px; margin-top: -6px; margin-left: 61px; position: absolute;">com dinis112</h4>
+                                    <div style="position: absolute;">
+                                        <h3 class="dataaula">19:24 - 23/06/2022</h3>
+                                        </div>
+                                    <a href="map.html">
+                                    <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1; width: 100px; position: absolute; margin-top: 100px; margin-left: 10px;"><b>MAPA</b></button>
+                                    </a>
+                                </div>
+
+                            
+
+                                </div>
+                            </div>
+                        </div>
+
+                    
+                    <button type="submit" onclick="gotoMain()" class="buttonvermais" style="z-index: 1;"><b>VER MAIS</b></button>
+                        
+
+                    <button type="submit" onclick="gotoMain()" class="buttonvermais2" style="z-index: 1;"><b>VER MAIS</b></button>
+                        
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4">
+
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4" style="height: 405px; width: 1209px; margin-left: 11px;">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">AS MINHAS RECEITAS</h6>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="rectangleitem"></div>
+                                    <div class="rectangleitem2"></div>
+                                    <div class="rectangleitem3"></div>
+                                    <div class="rectangleitem4"></div>
+                                    <div class="rectangleitem5"></div>
+
+                                   
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                       <img src="/Imagens/387-3870377_transparent-white-arrow-png-transparent-right-arrow-in-removebg-preview.png" style="position: absolute; width: 140px; height: 110px; margin-left: 1055px; margin-top: 170px; cursor: pointer; " onclick="loadMoreItems()" >
+
+                       <img src="/Imagens/387-3870377_transparent-white-arrow-png-transparent-right-arrow-in-removebg-preview.png" style="position: absolute; width: 140px; height: 110px; margin-left: 1055px; margin-top:610px; cursor: pointer; z-index: 1;" onclick="loadMoreItems()">
+
+                        <div class="col-lg-6 mb-4">
+
+                            
+
+                            <!-- Approach -->
+                            <div class="card shadow mb-4" style="position: absolute; margin-top: 427px; margin-left: -623px; width: 1209px; height: 405px;">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">OS MEUS PLANOS DE TREINO</h6>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="rectangleitem6"></div>
+                                    <div class="rectangleitem7"></div>
+                                    <div class="rectangleitem8"></div>
+                                    <div class="rectangleitem9"></div>
+                                   
+                                   
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+
+            <section style="cursor: pointer; position: absolute; margin-left: -16px;">
+            <a href="#" style="position: absolute; color: white; z-index: 1; margin-left: -143px; margin-top: 1530px; text-decoration: none;">VOLTAR AO TOPO</a>
+            <i class='bx bxs-up-arrow-circle' style="color: white; position: absolute; z-index: 1; margin-left: -187px; margin-top: 1520px; font-size: 40px; cursor: pointer;"></i>
+           
+            </section>
+            <!-- End of Main Content -->
+
+              <!--POPUP PARA CRIAR TURMA-------------------------------------------------------------------------------------------------------------->
+
+              <div class="bg-modal7" id="bg-modal77">
+
+                <div class="modal-content7">
+
+                   <div style="position: absolute; top: 0; right: 14px; font-size: 30px; cursor: pointer; color: #2d2e2d;" id="close22" class="close33">x</div>
+
+                   <h2 style="font-family:Verdana, Geneva, Tahoma, sans-serif; margin-left: 170px; margin-top: 30px;"><b>CRIAR TURMA</b></h2>
+
+                   <hr style="width: 90%;">
+
+                   <form>
+
+                  <!---  <input class="inputvaluescreaterecipe" style="border: 1px solid black; border-radius: 7px; margin-left: 40px; margin-top: 30px; width: 350px;" type="text" placeholder="Título"> -->
+                     
+                     <input type="text" placeholder="Título" style="border: 1px solid black; border-radius: 7px; width: 86%; margin-left: 40px; margin-top: 10px; height: 37px;" required>
+
+                   <!---  <textarea style="border:1px solid #2d2e2d; border-radius: 7px; width: 350px; height: 130px; margin-left: 39px; margin-top: 153px; position: absolute;" placeholder="Descrição"></textarea> -->
+ 
+                     <textarea placeholder="Descrição" style="border-radius: 7px; border: 1px solid black; width: 86%; height: 170px; margin-left: 40px; margin-top: 15px;" required></textarea>
+
+                   </form>
+
+                   <button id="createturmabtn" class="createturmabutton" style="background-color: #e8bf5c; border-radius: 11px; width: 20%; letter-spacing: 0.5px; border: 1px solid #2d2e2d; margin-left: 230px; margin-top: 8px;"><b>CRIAR</b></button>
+
+                </div>
+
+              </div>
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white" style="margin-top: 1500px; width: 1387px; margin-left: -120px; position: relative; z-index: 1;">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; BodyHealth 2022</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rectangleitem10"></div>
+    <div class="rectangleitem11"></div>
+    <div class="rectangleitem12"></div>
+    <div class="rectangleitem13"></div>
+    <div class="rectangleitem14"></div>
+    <div class="rectangleitem15"></div>
+
+    <script>
+
+         function gotoVerTodos(){
+
+            location.href='/aulasmarcadas.html';
+
+         }
+
+         document.getElementById('createbtn22').addEventListener('click', 
+         function(){
+
+           document.querySelector('.bg-modal7').style.display='flex';
+
+         });
+
+         document.getElementById('createturmabtn').addEventListener('click', 
+         function(){
+
+           document.querySelector('.bg-modal7').style.display='none';
+
+         });
+
+
+         document.querySelector('.close33').addEventListener('click', 
+         function(){
+
+            document.querySelector('.bg-modal7').style.display='none';
+
+
+         });
+
+
+    </script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>
