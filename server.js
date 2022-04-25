@@ -14,10 +14,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 const corsOpts = { origin: '*', methods: ['GET', 'POST'], allowedHeaders: ['Content-Type']};
 app.use(cors(corsOpts));
 
-/*app.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});*/
-
 app.get('/users', function(req, res) {
   db.query('SELECT * FROM utilizador', function(err, rows) {
     if (err) {

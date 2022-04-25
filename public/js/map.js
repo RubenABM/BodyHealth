@@ -2,6 +2,7 @@
 
     function change() {
       var x = document.getElementsByClassName("marker");
+      console.log(x);
       if (x.style.visibility ==  "visible") {
           x.style.visibility = "hidden";
       } else {
