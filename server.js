@@ -6,6 +6,7 @@ var db = require('./database');
 var cors = require('cors');
  
 var app = express();
+const port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -146,8 +147,6 @@ app.post('/user-details', function(req, res) {
 });
 
 
-
-app.listen(8080, function() {
-    console.log('Node app is running on port 8080');
+app.listen(port, () => {
+  console.log("App is running on port " + port);
 });
-module.exports = app;
