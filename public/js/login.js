@@ -25,6 +25,7 @@
                  $("#output").text(data);
                  $("#btnSubmit").prop("disabled", false);
                  alert("Hello! I am an alert box 1");
+                 
              },
              error: function (e) {
                  console.log("ERROR : ", e);
