@@ -73,7 +73,7 @@ $(document).ready(function() {
                 console.log("SUCCESS : ", result);
                 $("#output").text(JSON.stringify(result.user[0]));
                 $("#btnSubmit").prop("disabled", false);
-                alert("Hello! I am an alert box 2");
+                //alert("Hello! I am an alert box 2");
             }
         });
 
