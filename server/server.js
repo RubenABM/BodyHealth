@@ -58,7 +58,7 @@ request.get({
 
 */
 
-
+/*
 app.post('/sendplano', function(req, res){
   var titulo = produto_titulo;
   var descricao = produto_desc;
@@ -69,7 +69,55 @@ app.post('/sendplano', function(req, res){
   db.query('SELECT * FROM users WHERE produto_titulo = "' + req.body.titulo + '" AND  = "' + req.body.password + '"')
 
 
-});
+});*/
+
+
+async function addPlaceCategory(){
+ 
+  let res = document.getElementById("result") //????
+
+  let data = {
+
+       local_category_name: document.getElementById("fusername").value, //o ID deve ser o ID do input
+
+      
+  }
+
+  console.log("[addPlaceCategory data = " + JSON.stringify(data));  //CONFIRMAR O ENVIO DA INFORMAÇÃO
+
+  //ENVIAR A INFORMAÇÃO (data) PARA A BD
+  try{
+
+    let newPlaceCategory = await $.ajax({ 
+
+       url: "/add/newplacecategory",
+       method: "post",
+       data: JSON.stringify(data),
+       contentType: "application/json",
+       dataType: "json"
+
+    });
+
+    //ATUALIZAR MENSAGEM QUANDO O ENVIO DE DADOS É BEM SUCEDIDO
+    res.innerHTML = "Inserida nova categoria: " + newPlaceCategory.local_category_id;
+
+
+    //CASO OCORRA UM ERRO....
+  } catch (err){
+
+     console.log(err);
+
+     if(err.responseJSON){
+       res.innerHTML = err.responseJSON.msg;
+     } else {
+       res.innerHTML = "Não foi possivel adicionar uma nova categoria."
+     }
+
+
+  }
+
+
+}
 
 app.post('/sendcategory', function(req, res) {
   var nomecat = local_category_name;
