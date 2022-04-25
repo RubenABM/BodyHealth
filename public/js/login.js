@@ -53,6 +53,20 @@ $(document).ready(function() {
 
     getUsersList();
 
+    function getUsersList2() {
+        
+        $.ajax({
+            url: "https://bodyhealthweb.herokuapp.com/users",
+            type: "GET",
+            dataType: 'json',
+            success: function(result) {
+                console.log(result);
+            }
+        });
+    }
+
+    getUsersList2();
+
     $('#btnSubmit').on('click', function(event) {
         
         // prevent form default behaviour
