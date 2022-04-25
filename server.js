@@ -146,9 +146,9 @@ app.post('/user-details', function(req, res) {
   });
 });
 
-app.get('/', function(req, res) {
+/*app.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
-});
+});*/
 
 app.listen(port, () => {
   console.log("App is running on port " + port);
