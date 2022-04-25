@@ -6,7 +6,8 @@
     <title>Registo de Utilizador</title>
     <link rel="stylesheet" href="stylesheets/sign.css">
     <link rel="icon" type="img/x-icon" href="https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png">
-    <script src="xxxxxx"></script> <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+    <script type="text/javascript" src="js/registo.js"></script>
 </head>
 
 <nav>
@@ -31,27 +32,29 @@
       <form class="formsignupuser">
 
         <label for="fusername" class="titleinput">Username</label><br>
-        <input type="text" id="fusername" name="fusername" class="field" placeholder="Username"><br>
+        <input type="text" id="fusername" name="fusername" class="field" placeholder="Username" required><br>
         <br>
         <br>
         <label for="fpassword" class="titleinput">Password</label><br>
-        <input type="text" id="fpassword" name="fpassword" class="field" placeholder="Password"><br>
+        <input type="password" id="fpassword" name="fpassword" class="field" placeholder="Password" required><br>
         <br>
         <br>
         <label for="femail" class="titleinput">Email</label><br>
-        <input type="email" id="femail" name="femail" class="field" placeholder="Email"><br>
+        <input type="email" id="femail" name="femail" class="field" placeholder="Email" required><br>
         <br>
         <br>
         <label for="fmorada" class="titleinput">Morada (Rua, Cidade)</label><br>
-        <input type="text" id="fmorada" name="fmorada" class="field" placeholder="Morada"><br>
+        <input type="text" id="fmorada" name="fmorada" class="field" placeholder="Morada" required><br>
 
+        <input type="submit" value="Submit" id="btnSubmit"/>
+        
       </form> 
 
       <div class="wrapper">
 
          <div class="btn">
 
-            <button type="submit"><b>REGISTAR</b></button>
+            <button type="submit" value="Submit" id="btnSubmit"><b>REGISTAR</b></button>
 
          </div>
 
@@ -75,7 +78,7 @@
 
       <section class="alreadyhaveaccount">
 
-        <h3 id="trylogin">Já possui uma conta? <a href="login.html" class="loginlinkword">Login</a></h3>
+        <h3 id="trylogin">Já possui uma conta? <a href="login.php" class="loginlinkword">Login</a></h3>
 
       </section>
 

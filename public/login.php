@@ -6,7 +6,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="stylesheets/login.css">
     <link rel="icon" type="img/x-icon" href="https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png">
-    <script src="xxxxxx"></script> <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
+    <script src="js/login.js"></script> <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
 </head>
 
 <nav>
@@ -35,6 +35,7 @@
       <br>
       <label for="fpassword" class="titleinput">Password</label><br>
       <input type="text" id="fpassword" name="fpassword" class="field" placeholder="Password"><br>
+      <input type="submit" value="Submit" id="btnSubmit"/>
       <br>
       <br>
       
@@ -73,6 +74,6 @@
 
 
     </script>
-
+  <span id="output"></span>
 </body>
 </html>
