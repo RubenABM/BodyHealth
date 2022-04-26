@@ -6,16 +6,13 @@ var db = require('./database');
 var cors = require('cors');
  
 var app = express();
+const port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 const corsOpts = { origin: '*', methods: ['GET', 'POST'], allowedHeaders: ['Content-Type']};
 app.use(cors(corsOpts));
-
-/*app.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});*/
 
 app.get('/users', function(req, res) {
   db.query('SELECT * FROM utilizador', function(err, rows) {
@@ -145,9 +142,10 @@ app.post('/user-details', function(req, res) {
   });
 });
 
-
-
-app.listen(8080, function() {
-    console.log('Node app is running on port 8080');
+app.get('/', function(req, res) {
+  res.render('index', { title: 'Express' });
 });
-module.exports = app;
+
+app.listen(port, () => {
+  console.log("App is running on port " + port);
+});
