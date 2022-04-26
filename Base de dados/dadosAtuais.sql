@@ -601,3 +601,196 @@ ALTER TABLE public.spatial_ref_sys OWNER TO rds_superuser;
 GRANT SELECT, INSERT ON TABLE public.spatial_ref_sys TO public;
 
 GRANT SELECT ON public.geography_columns TO PUBLIC ; 
+
+
+
+
+
+-------------------NOVO CODIGO ---------------------
+
+INSERT INTO dados_utilizador (user_dados_peso, user_dados_altura, user_dados_imc, user_dados_gordura_visceral, user_dados_gordura_subcutanea, user_dados_pressao_arterial_media, user_utilizador_id)
+VALUES (67, 183, 43.41, 31.2, 12.1, 20, 2)
+
+INSERT INTO dados_utilizador (user_dados_peso, user_dados_altura, user_dados_imc, user_dados_gordura_visceral, user_dados_gordura_subcutanea, user_dados_pressao_arterial_media, user_utilizador_id)
+VALUES (58, 162, 33.42, 41.2, 22.3, 20, 4)
+
+INSERT INTO dados_utilizador (user_dados_peso, user_dados_altura, user_dados_imc, user_dados_gordura_visceral, user_dados_gordura_subcutanea, user_dados_pressao_arterial_media, user_utilizador_id)
+VALUES (58, 162, 33.42, 41.2, 22.3, 20, 4)
+
+INSERT INTO dados_utilizador (user_dados_peso, user_dados_altura, user_dados_imc, user_dados_gordura_visceral, user_dados_gordura_subcutanea, user_dados_pressao_arterial_media, user_utilizador_id)
+VALUES (88, 180, 33.42, 41.2, 22.3, 20, 3)
+
+-- OS PRODUTOS SERÃO SUBSTITUIDOS POR UMA API --
+
+INSERT INTO produto (produto_titulo, produto_desc, produto_preco, produto_points, produto_categoria_id) 
+VALUES ('Pesos 3kg', 'Pesos de 3kg para braços', 10.12, 350, 1)
+
+INSERT INTO produto (produto_titulo, produto_desc, produto_preco, produto_points, produto_categoria_id) 
+VALUES ('Fit Cereals', 'Cereais Fitness', 9.55, 250, 3)
+
+INSERT INTO produto (produto_titulo, produto_desc, produto_preco, produto_points, produto_categoria_id) 
+VALUES ('Fit Cereals', 'Cereais Fitness', 9.55, 250, 3)
+
+INSERT INTO produto (produto_titulo, produto_desc, produto_preco, produto_points, produto_categoria_id) 
+VALUES ('Jordan XXX', 'Tenis Jordan para corrida', 120.25, 65000, 5)
+
+INSERT INTO ementa (ementa_titulo, ementa_descricao, ementa_tipo_aprovacao_id, ementa_base_id, ementa_categoriaa_id, ementa_utilizador_id, aprovacao_nutricionista)
+VALUES ('Almoço com Peixe', 'Almoço com prato principal à base de peixe', 2, 2, 3, 5, '0')
+
+INSERT INTO ementa (ementa_titulo, ementa_descricao, ementa_tipo_aprovacao_id, ementa_base_id, ementa_categoriaa_id, ementa_utilizador_id, aprovacao_nutricionista)
+VALUES ('Pequeno-Almoço Fruit', 'Pequeno-Almoço com mix de frutas', 1, 5, 1, 4, '1')
+
+INSERT INTO ementa (ementa_titulo, ementa_descricao, ementa_tipo_aprovacao_id, ementa_base_id, ementa_categoriaa_id, ementa_utilizador_id, aprovacao_nutricionista)
+VALUES ('Jantar com bife', 'Jantar com bife e batatas', 2, 1, 4, 5, '0')
+
+DELETE FROM ementa
+WHERE ementa_id = 4
+
+
+
+SELECT * FROM ementa
+
+SELECT * FROM item_aprovacao
+
+SELECT * FROM item_base
+
+SELECT * FROM ementa_categoria
+
+SELECT * FROM receita_categoria
+
+SELECT * FROM utilizador
+
+SELECT * FROM receita_base
+
+SELECT * FROM receita
+
+SELECT * FROM receita_ingrediente
+
+INSERT INTO receita(receita_titulo, receita_desc, receita_tipo_aprovacao_id, receita_base_id, receita_categoriaa_id, receita_utilizador_id, aprovacao_nutricionista)
+VALUES ('Salmão com salada grega', 'Salmão cozido com salada grega', 1, 2, 1, 6, '1')
+
+INSERT INTO receita (receita_titulo, receita_desc, receita_tipo_aprovacao_id, receita_base_id, receita_categoriaa_id, receita_utilizador_id, aprovacao_nutricionista)
+VALUES ('Salada de frutas tropicais', 'Salada de frutas tropicais e sumo de laranja', 2, 5, 3, 5, '0')
+
+INSERT INTO receita (receita_titulo, receita_desc, receita_tipo_aprovacao_id, receita_base_id, receita_categoriaa_id, receita_utilizador_id, aprovacao_nutricionista)
+VALUES ('Smoothie de frutos vermelhos', 'Smoothie de frutos vermelhos com gengibre', 2, 5, 4, 4, '1')
+
+INSERT INTO receita_ingrediente (recipe_id, ingredient_id, ingrediente_qnt)
+VALUES (1, 2, 1)
+
+INSERT INTO receita_ingrediente (recipe_id, ingredient_id, ingrediente_qnt)
+VALUES (1, 3, 4)
+
+INSERT INTO receita_ingrediente (recipe_id, ingredient_id, ingrediente_qnt)
+VALUES (3, 1, 6)
+
+INSERT INTO ingrediente (ingrediente_nome, ingrediente_cal, ingrediente_carbohidratos, ingrediente_proteina, ingrediente_fibra, ingrediente_acucares)
+VALUES ('Morango', 33, 1.3, 1.1, 21.45, 45.52)
+
+INSERT INTO ingrediente (ingrediente_nome, ingrediente_cal, ingrediente_carbohidratos, ingrediente_proteina, ingrediente_fibra, ingrediente_acucares)
+VALUES ('Salmão', 220, 3.5, 2.1, 31.45, 35.52)
+
+INSERT INTO ingrediente (ingrediente_nome, ingrediente_cal, ingrediente_carbohidratos, ingrediente_proteina, ingrediente_fibra, ingrediente_acucares)
+VALUES ('Queijo', 402, 2.6, 5.1, 72.45, 25.52)
+
+INSERT INTO ingrediente (ingrediente_nome, ingrediente_cal, ingrediente_carbohidratos, ingrediente_proteina, ingrediente_fibra, ingrediente_acucares)
+VALUES ('Bife', 271, 55.6, 121.1, 62.45, 29.52)
+
+INSERT INTO ingrediente (ingrediente_nome, ingrediente_cal, ingrediente_carbohidratos, ingrediente_proteina, ingrediente_fibra, ingrediente_acucares)
+VALUES ('Batatas Cozidas', 80, 145.6, 51.1, 67.45, 14.52)
+
+INSERT INTO marcacao_favorito_receita (utilizador_id, receita_id, is_receita_favorito)
+VALUES (6, 2, '1')
+
+INSERT INTO marcacao_favorito_receita (utilizador_id, receita_id, is_receita_favorito)
+VALUES (3, 1, '0')
+
+INSERT INTO marcacao_favorito_receita (utilizador_id, receita_id, is_receita_favorito)
+VALUES (4, 3, '1')
+
+INSERT INTO marcacao_favorito_receita (utilizador_id, receita_id, is_receita_favorito)
+VALUES (6, 1, '0')
+
+ALTER TABLE receita
+DROP COLUMN receita_ingrediente_id
+
+
+INSERT INTO productsgetlist (isget, product_id, utilizador_id) VALUES ('1', 4, 3)
+
+INSERT INTO productsgetlist (isget, product_id, utilizador_id) VALUES ('0', 5, 2)
+
+INSERT INTO productsgetlist (isget, product_id, utilizador_id) VALUES ('1', 4, 3)
+
+SELECT * FROM productsgetlist
+
+SELECT * FROM produto_category
+
+SELECT * FROM produto
+
+ALTER TABLE produto
+ADD CONSTRAINT fk_produto_categoria_id FOREIGN KEY (produto_categoria_id) REFERENCES produto_categoria (produto_categoria_id);
+
+DROP TABLE produto
+
+CREATE TABLE produto(
+
+produto_id SERIAL primary key,
+produto_titulo varchar(80) NOT NULL,
+produto_desc varchar(300) NOT NULL,
+produto_preco real NOT NULL,
+produto_points int NOT NULL,
+produto_categoria_id int --PODERÁ SER ALTERADO O CAMPO 'produto_categoria_id' DEVIDO Á API DA AMAZON
+
+);
+
+CREATE TABLE productsgetlist(
+
+get_product_position_id SERIAL primary key,
+isget bit,
+product_id int,
+utilizador_id int
+
+);
+
+ALTER TABLE productsgetlist
+ADD CONSTRAINT fk_product_id FOREIGN KEY(product_id) REFERENCES produto (produto_id);
+
+ALTER TABLE productsgetlist
+ADD CONSTRAINT fk_utilizador_id FOREIGN KEY(utilizador_id) REFERENCES utilizador (user_id);
+
+DROP TABLE productsgetlist
+
+DROP TABLE produto_category
+
+ALTER TABLE produto
+ADD CONSTRAINT fk_produto_categoria_id FOREIGN KEY (produto_categoria_id) REFERENCES produto_category (produto_category_id);
+
+ALTER TABLE produto
+DROP CONSTRAINT fk_produto_categoria_id
+
+CREATE TABLE produto_category(
+
+produto_category_id SERIAL primary key,
+prod_category varchar(200)
+
+);
+
+
+
+INSERT INTO produto_category (prod_category) VALUES ('Sports & Outdoors')
+INSERT INTO produto_category (prod_category) VALUES ('Health & Personal Care')
+INSERT INTO produto_category (prod_category) VALUES ('Grocery, Supplements & Food')
+INSERT INTO produto_category (prod_category) VALUES ('Clothing & Shoes')
+
+SELECT * FROM produto_category
+
+DELETE FROM produto_category WHERE produto_category_id = 4
+
+
+DELETE FROM dados_utilizador
+WHERE user_dados_id = 4
+
+
+SELECT * FROM dados_utilizador
+
+
