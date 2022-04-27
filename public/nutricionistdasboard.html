@@ -369,7 +369,7 @@
                                 class="fas fa-download fa-sm text-white-50"></i> <b>ATUALIZAR</b></a>
                                 <a href="aprovarementa.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style="position: absolute; margin-left: 920px; border-radius: 12px;"><i
                                     class="fas fa-download fa-sm text-white-50"></i> <b>APROVAR EMENTAS</b></a>
-                                    <a href="adicionarcliente.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style="position: absolute; margin-left: 723px; border-radius: 12px;"><i
+                                    <a href="#" onclick="openPopupAddClient()" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style="position: absolute; margin-left: 723px; border-radius: 12px;"><i
                                         class="fas fa-download fa-sm text-white-50"></i> <b>ADICIONAR CLIENTE</b></a>
                     </div>
 
@@ -489,7 +489,7 @@
                                             class="fas fa-download fa-sm text-white-50"></i> <b>VER MAIS</b></a>
 
                                             <!--MÉTODO DELETE-->
-                                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style=" border-radius: 12px; margin-top: -17px; margin-left: 10px; width: 140px; position: absolute; z-index: 1; background-color: salmon;"><i
+                                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="eliminar1" style=" border-radius: 12px; margin-top: -17px; margin-left: 10px; width: 140px; position: absolute; z-index: 1; background-color: salmon;"><i
                                                 class="fas fa-download fa-sm text-white-50"></i> <b>ELIMINAR</b></a>
 
                                       </div>
@@ -502,7 +502,7 @@
                                             class="fas fa-download fa-sm text-white-50"></i> <b>VER MAIS</b></a>
 
                                             <!--MÉTODO DELETE-->
-                                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style=" border-radius: 12px; margin-top: -17px; margin-left: 10px; width: 140px; position: absolute; z-index: 1; background-color: salmon;"><i
+                                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="eliminar2" style=" border-radius: 12px; margin-top: -17px; margin-left: 10px; width: 140px; position: absolute; z-index: 1; background-color: salmon;"><i
                                                 class="fas fa-download fa-sm text-white-50"></i> <b>ELIMINAR</b></a>
 
                                       </div>
@@ -514,7 +514,7 @@
                                             class="fas fa-download fa-sm text-white-50"></i> <b>VER MAIS</b></a>
 
                                             <!--MÉTODO DELETE-->
-                                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style=" border-radius: 12px; margin-top: -17px; margin-left: 10px; width: 140px; position: absolute; z-index: 1; background-color: salmon;"><i
+                                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" id="eliminar3" style=" border-radius: 12px; margin-top: -17px; margin-left: 10px; width: 140px; position: absolute; z-index: 1; background-color: salmon;"><i
                                                 class="fas fa-download fa-sm text-white-50"></i> <b>ELIMINAR</b></a>
 
                                       </div>
@@ -954,6 +954,175 @@
     <div class="rectangleitem13"></div>
     <div class="rectangleitem14"></div>
     <div class="rectangleitem15"></div>
+
+
+    <div class="bg-modal8" style="display: none;">
+
+       <div class="modal-content8">
+
+        
+
+          <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: #2d2e2d; margin-left: 196px; margin-top: 25px;"><b>ADICIONAR CLIENTE</b></h2>
+
+          <hr style="width: 90%">
+
+          <div style="position: absolute; cursor: pointer; font-size: 34px; margin-left: 710px; margin-top: -78px;" onclick="closePopupAddClient()">x</div>
+
+            <section style="border: 1px solid #2d2e2d;  width: 700px; height: 460px; position: absolute; z-index: 1; margin-left: 50px; border-radius: 9px;">
+
+                <div class="clsScroll3" style="height: 459px; overflow-y: scroll;">
+            
+              <section>
+
+                <div style="width:665px; height: 85px; border-radius: 15px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
+                
+                    <div style="">
+                    <button style=" width: 110px; height: 50px; border-radius: 10px; font-size: 11px; height: 38%; background-color: lime; color: white; margin-left: 540px; margin-top: 50px; border: 1px solid white;"><b>ADICIONAR</b></button>
+                    </div>
+                   <h3 style="margin-top: -53px; margin-left: 9px;">Nome do Utilizador</h3>
+                   <h3 style="margin-top: -5px; margin-left: 11px; font-size: 15px;">Número de pontos</h3>
+
+                </div>
+               
+
+              </section>
+
+              <section style="margin-top: 20px">
+
+                <div style="width: 665px; height: 85px; border-radius: 15px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
+                    
+                    <div style="">
+                        <button style=" width: 110px; height: 50px; border-radius: 10px; font-size: 11px; height: 38%; background-color: lime; color: white; margin-left: 540px; margin-top: 50px; border: 1px solid white;"><b>ADICIONAR</b></button>
+                        </div>
+                       <h3 style="margin-top: -53px; margin-left: 9px;">Nome do Utilizador</h3>
+                       <h3 style="margin-top: -5px; margin-left: 11px; font-size: 15px;">Número de pontos</h3>
+
+                </div>
+               
+
+              </section>
+
+              <section style="margin-top: 20px">
+
+                <div style="width: 665px; height: 85px; border-radius: 15px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
+                
+                    
+                    <div style="">
+                        <button style=" width: 110px; height: 50px; border-radius: 10px; font-size: 11px; height: 38%; background-color: lime; color: white; margin-left: 540px; margin-top: 50px; border: 1px solid white;"><b>ADICIONAR</b></button>
+                        </div>
+                       <h3 style="margin-top: -53px; margin-left: 9px;">Nome do Utilizador</h3>
+                       <h3 style="margin-top: -5px; margin-left: 11px; font-size: 15px;">Número de pontos</h3>
+
+
+                </div>
+               
+
+              </section>
+
+              <section style="margin-top: 20px">
+
+                <div style="width: 665px; height: 85px; border-radius: 15px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
+                
+                     
+                    <div style="">
+                        <button style=" width: 110px; height: 50px; border-radius: 10px; font-size: 11px; height: 38%; background-color: lime; color: white; margin-left: 540px; margin-top: 50px; border: 1px solid white;"><b>ADICIONAR</b></button>
+                        </div>
+                       <h3 style="margin-top: -53px; margin-left: 9px;">Nome do Utilizador</h3>
+                       <h3 style="margin-top: -5px; margin-left: 11px; font-size: 15px;">Número de pontos</h3>
+
+                </div>
+               
+
+              </section>
+
+              <section style="margin-top: 20px">
+
+                <div style="width: 665px; height: 85px; border-radius: 15px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
+                
+                     
+                    <div style="">
+                        <button style=" width: 110px; height: 50px; border-radius: 10px; font-size: 11px; height: 38%; background-color: lime; color: white; margin-left: 540px; margin-top: 50px; border: 1px solid white;"><b>ADICIONAR</b></button>
+                        </div>
+                       <h3 style="margin-top: -53px; margin-left: 9px;">Nome do Utilizador</h3>
+                       <h3 style="margin-top: -5px; margin-left: 11px; font-size: 15px;">Número de pontos</h3>
+
+                </div>
+               
+
+              </section>
+
+            </div>
+            
+            </section>
+
+            <h5 style="font-size: 11px; margin-top: 488px; margin-left: 50px;">Alternativamente, poderá <a onclick="openPopupPesquisarUtilizador()" style="cursor: pointer; color: lime;">pesquisar por um utilizador.</a></h5>
+
+       </div>
+
+
+    </div>
+
+    <div id="searchpopup" style="width: 400px; height: 100px; background-color: white; border: 1px solid #e8bf5c; border-radius: 14px; visibility: hidden; z-index: 3; margin-left: 540px; margin-top: 300px; position: absolute;">
+    
+        <div style="position: absolute; margin-left: 370px; font-size: 26px; cursor: pointer;" onclick="closePopupPesquisarUtilizador()">x</div>
+
+        <h4 style="font-size: 21px; margin-left: 10px; margin-top: 10px;">Pesquisar</h4>
+        <div style="width: 240px; height: 1px; margin-left: 12px; margin-top: -5px; background-color: #2d2e2d;"></div>
+
+        <form
+        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+        <div class="input-group" style="width: 380px; margin-top: 9px; margin-left: -4px;">
+            <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar Utilizador..."
+                aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                    <i class='bx bx-search-alt-2' style="font-size: 18px; position: absolute; margin-top: -7px; margin-left: -8px; color: white ;"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    
+    
+    </div>
+
+
+    <script>
+
+       function openPopupAddClient(){
+
+        document.querySelector('.bg-modal8').style.display = 'flex';
+        document.querySelector('#eliminar1').style.visibility = 'hidden';
+        document.querySelector('#eliminar2').style.visibility = 'hidden';
+        document.querySelector('#eliminar3').style.visibility = 'hidden';
+
+       }
+
+       function closePopupAddClient(){
+
+        document.querySelector('.bg-modal8').style.display = 'none';
+        document.querySelector('#eliminar1').style.visibility = 'visible';
+        document.querySelector('#eliminar2').style.visibility = 'visible';
+        document.querySelector('#eliminar3').style.visibility = 'visible';
+
+       }
+
+       function closePopupPesquisarUtilizador(){
+
+        document.querySelector('#searchpopup').style.visibility='hidden';
+        document.querySelector('#eliminar1').style.visibility = 'hidden';
+        document.querySelector('#eliminar2').style.visibility = 'hidden';
+        document.querySelector('#eliminar3').style.visibility = 'hidden';
+
+       }
+
+       function openPopupPesquisarUtilizador(){
+
+        document.querySelector('#searchpopup').style.visibility ='visible';
+
+       }
+
+    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

@@ -658,7 +658,7 @@
 
     <!--ESTRUTURA DO POP-UP PARA CRIAR RECEITAS-->
 
-    <div class="bg-modal">
+    <div class="bg-modal" style="display: flex;">
 
         <!--CONTEUDO DO POP-UP-->
         <div class="modal-content" style="position: relative;">
@@ -675,77 +675,119 @@
 
             <form>
 
-                <input class="inputvaluescreaterecipe" style="border: 1px solid black; border-radius: 7px; margin-left: 40px; margin-top: 30px; width: 350px;" type="text" placeholder="Título">
+                <input class="inputvaluescreaterecipe" style="border: 1px solid black; border-radius: 7px; margin-left: 40px; margin-top: 30px; width: 47%;" type="text" placeholder="Título">
 
                 <div class="rectanglenewdivider" style="width: 55%; height: 0.5%; background: #2d2e2d; position: absolute; transform: rotate(90deg); margin-left: 228px; margin-top: 190px;"></div>
 
-                <h3 style="font-size: 15px; color: #2d2e2d; margin-left: 525px; margin-top: -26px;">SELECIONAR INGREDIENTES</h3>
-
+                <h3 style="font-size: 15px; color: #2d2e2d; margin-left: 525px; margin-top: -26px;">DETALHES DO EXERCÍCIO</h3>
+                
                 <div class="clsScroll2">
 
-                <section style="border: 1px solid #2d2e2d; width: 310px; height: 360px; position: absolute; z-index: 1; margin-left: 470px; border-radius: 9px;">
+                <section style="border: 1px solid #2d2e2d; width: 310px; height: 360px; position: absolute; z-index: 1; margin-left: 470px; border-radius: 9px; visibility: visible;">
                 
-                  <section>
+                    <form>
+                    <h4 style="font-size: 15px; margin-left: 10px; margin-top: 10px;"><b>Séries</b></h4>
 
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
-                    
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
+                    <input type="number" required min="1"; max="99" style="margin-left: 11px; width: 200px;" placeholder="Séries...">
+
+                    <h4 style="font-size: 15px; margin-left: 10px; margin-top: 26px;"><b>Repetições (por série)</b></h4>
+
+                    <input type="number"  style="font-size: 15px; margin-left: 11px; margin-top: 3px; width: 200px;" placeholder="Repetições..." required min="1" max="200">
+
+                    <h4 style="margin-left: 10px; margin-top: 24px; font-size: 1vw;  z-index: 1;"><b>Tipo de Exercício</b></h4>
+
+                
+
+                    <div class="cardeee">
+
+                      <input type="radio" name="pricing" id="cardeee1" checked>
+                      <label for="cardeee1" id="carr">
+                        <h2 style=" font-size: 0.9vw;">Costas</h2>
+                      </label>
 
                     </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
+                    <div class="cardeee" style="margin-left: 80px; margin-top:-30px">
 
-                  </section>
+                        <input type="radio" name="pricing" id="cardeee1" checked>
+                        <label for="cardeee1" id="carr">
+                          <h2 style=" font-size: 0.9vw;">Cardio</h2>
+                        </label>
+  
+                      </div>
+                      <div class="cardeee" style="margin-left: 160px; margin-top: -30px;">
 
-                  <section style="margin-top: 20px">
+                        <input type="radio" name="pricing" id="cardeee1" checked>
+                        <label for="cardeee1" id="carr">
+                          <h2 style=" font-size: 0.9vw;">Peito</h2>
+                        </label>
+  
+                      </div>
+                      <div class="cardeee" style="">
 
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
+                        <input type="radio" name="pricing" id="cardeee1"  checked>
+                        <label for="cardeee1" id="carr">
+                          <h2 style=" font-size: 0.9vw;">A.Braço</h2>
+                        </label>
+  
+                      </div>
+                      <div class="cardeee" style="margin-left: 235px; margin-top: -60px;">
 
-                  </section>
+                        <input type="radio" name="pricing" id="cardeee1" checked>
+                        <label for="cardeee1" id="carr">
+                          <h2 style=" font-size: 0.9vw;">Braço</h2>
+                        </label>
+  
+                      </div>
+                      <div class="cardeee" style="margin-left: 80px; margin-top: 15px;">
 
-                  <section style="margin-top: 20px">
+                        <input type="radio" name="pricing" id="cardeee1" checked>
+                        <label for="cardeee1" id="carr">
+                          <h2 style=" font-size: 0.9vw;">Ombro</h2>
+                        </label>
+  
+                      </div>
+                      <div class="cardeee">
 
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 10px; margin-top: 10px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 112px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
-                    <div style="width: 85px; height: 85px; background: transparent; border: 1px solid #2d2e2d; margin-left: 209px; margin-top: -85px; cursor: pointer;">
-                        <i class='bx bxs-info-circle' style="font-size: 20px; margin-left: 5px; margin-top: 7px; color: #e8bf5c;"></i>
-                        <i class='bx bxs-message-square-add' style="margin-left: 28px; font-size: 20px; margin-top: 7px; color: lime;"></i>
-                        <h3 class="tituloingrediente">Titulo</h3>
-                    </div>
+                        <input type="radio" name="pricing" id="cardeee1" checked>
+                        <label for="cardeee1" id="carr">
+                          <h2 style=" font-size: 0.9vw;">Pescoço</h2>
+                        </label>
+  
+                      </div>
+                      <div class="cardeee">
 
-                  </section>
+                        <input type="radio" name="pricing" id="cardeee1" checked>
+                        <label for="cardeee1" id="carr">
+                          <h2 style=" font-size: 0.9vw;">Cintura</h2>
+                        </label>
+  
+                      </div>
+                      <div class="cardeee">
+
+                        <input type="radio" name="pricing" id="cardeee1" checked>
+                        <label for="cardeee1" id="carr">
+                          <h2 style=" font-size: 0.9vw;">Coxa</h2>
+                        </label>
+  
+                      </div>
+                      <div class="cardeee">
+
+                        <input type="radio" name="pricing" id="cardeee1" checked>
+                        <label for="cardeee1" id="carr">
+                          <h2 style=" font-size: 0.9vw;">Perna</h2>
+                        </label>
+  
+                      </div>
+
+                    <!--
+                    <input type="text" placeholder="Tipo de Exercício..." style="margin-top: 1px; margin-left: 10px;">
+
+                    <p><b>Nota: </b> Deverá introduzir uma das seguintes categorias ()</p>
+                    -->
+
+                    <!--DROPDOWN -->
+
+                    </form>
                 
                 </section>
 
@@ -753,44 +795,61 @@
 
             </form>
 
+
+
             <button class="buttontocreateeee" style="width: 150px; height: 40px; z-index: 2; margin-left: 608px; margin-top: 530px; border-radius: 10px; background-color: #e8bf5c; border: 1px solid gray; position: absolute;"><b>CRIAR</b></button>
 
 
-            <textarea style="border:1px solid #2d2e2d; border-radius: 7px; width: 350px; height: 130px; margin-left: 39px; margin-top: 153px; position: absolute;" placeholder="Descrição"></textarea>
+            <textarea style="border:1px solid #2d2e2d; border-radius: 7px; width: 47%; height: 34%; margin-left: 39px; margin-top: 153px; position: absolute;" placeholder="Descrição"></textarea>
 
-            <h2 style="position: absolute; font-size: 16px; margin-top: 320px; margin-left: 40px;"><b>Categoria</b></h2>
+            <h2 style="position: absolute; font-size: 16px; margin-top: 372px; margin-left: 40px;"><b>Dificuldade</b></h2>
 
-            <section class="radio-section">
+            <div class="whiterectangle" style="width: 0.4%; height: 34%; background-color: white; position: absolute; margin-top: 355px; margin-left: 244px;"></div>
+
+            <div class="divider" style="width: 0.4%; height: 28%; margin-left: 210px; margin-top: 378px; background-color: #2d2e2d; position: absolute;"></div>
+
+            <h2 style="position: absolute; font-size: 16px; margin-top: 372px; margin-left: 230px;"><b>Adicionar Foto</b></h2>
+
+            <!--BOTÃO PARA ADICIONAR IMAGEM-->
+
+            <input type="file" id="file" accept="image/*" style="z-index: 2;">
+            <label for="file" id="fileee">+</label>
+
+            <div class="imageborderspace" style="border-radius: 5px; width: 20%; height: 59%; margin-left: 230px; margin-top: 270px; border: 1px solid #2d2e2d; background-color: transparent;">
+            
+              <h3 style="font-size: 0.7vw; margin-left: 23px; margin-top: 55px;">A imagem surgirá aqui.</h3>
+
+            </div>
+
+
+            <section class="radio-section" style="margin-top: -187px;">
 
                <div class="radio-list">
 
-                  <div class="radio-item"><input name="radio" id="radio1" type="radio"><label for="radio1">Entrada</label></div>
-                  <div class="radio-item"><input name="radio" id="radio2" type="radio"><label for="radio2">Prato Principal</label></div>
-                  <div class="radio-item"><input name="radio" id="radio3" type="radio"><label for="radio3">Sobremesa</label></div>
-                  <div class="radio-item"><input name="radio" id="radio4" type="radio"><label for="radio4">Bebida</label></div>
-                  <div class="radio-item"><input name="radio" id="radio5" type="radio"><label for="radio5">Outros</label></div>
+                <!---
+                  <div class="radio-item"><input name="radio" id="radio1" type="radio"><label for="radio1">Todos</label></div>
+                  <div class="radio-item"><input name="radio" id="radio2" type="radio"><label for="radio2">Costas</label></div>
+                  <div class="radio-item"><input name="radio" id="radio3" type="radio"><label for="radio3">Cardio</label></div>
+                  <div class="radio-item"><input name="radio" id="radio4" type="radio"><label for="radio4">Peito</label></div>
+                  <div class="radio-item"><input name="radio" id="radio5" type="radio"><label for="radio5">Antebraço</label></div>
+                  <div class="radio-item"><input name="radio" id="radio5" type="radio"><label for="radio6">Braço</label></div>
+                  <div class="radio-item"><input name="radio" id="radio5" type="radio"><label for="radio7">Ombros</label></div>
+                  <div class="radio-item"><input name="radio" id="radio5" type="radio"><label for="radio8">Pescoço</label></div>
+                  <div class="radio-item"><input name="radio" id="radio5" type="radio"><label for="radio9">Cintura</label></div>
+                  <div class="radio-item"><input name="radio" id="radio5" type="radio"><label for="radio10">Coxa</label></div>
+                  <div class="radio-item"><input name="radio" id="radio5" type="radio"><label for="radio11">Perna</label></div>
+
+                -->
+
+                <div class="radio-item"><input name="radio" id="radio1" type="radio"><label for="radio1">Principiante</label></div>
+                <div class="radio-item"><input name="radio" id="radio2" type="radio"><label for="radio2">Amador</label></div>
+                <div class="radio-item"><input name="radio" id="radio3" type="radio"><label for="radio3">Experiente</label></div>
 
                </div>
 
 
             </section>
 
-            <h2 style="position: absolute; font-size: 16px; margin-top: 320px; margin-left: 290px;"><b>Base</b></h2>
-
-            <section class="radio-section2">
-
-                <div class="radio-list2">
- 
-                   <div class="radio-item2"><input name="radio2" id="radio6" type="radio"><label for="radio6">Carne</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio7" type="radio"><label for="radio7">Peixe</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio8" type="radio"><label for="radio8">Vegan</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio9" type="radio"><label for="radio9">Frutas</label></div>
-                   <div class="radio-item2"><input name="radio2" id="radio10" type="radio"><label for="radio10">Outros</label></div>
- 
-                </div>
- 
- 
-             </section>
 
             
         </div>
