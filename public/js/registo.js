@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 
     $('#btnSubmit').on('click', function(event) {
         
@@ -27,4 +27,4 @@ $(document).ready(function() {
 
     });
 
-}); 
+}); */

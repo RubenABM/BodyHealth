@@ -1,4 +1,4 @@
- $(document).ready(function () {
+ /*$(document).ready(function () {
      $("#btnSubmit").click(function (event) {
          //stop submit the form, we will post it manually.
          event.preventDefault();
@@ -93,4 +93,4 @@ $(document).ready(function() {
 
     });
 
-}); 
+}); */

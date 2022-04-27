@@ -1,4 +1,4 @@
-  $(document).ready(function() {
+ /* $(document).ready(function() {
 
     function change() {
       var x = document.getElementsByClassName("marker");
@@ -25,4 +25,4 @@
   
     }
 
-}); 
+}); */
