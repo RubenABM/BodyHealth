@@ -3,12 +3,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const port = process.env.PORT || 8080;
+
 var usersRouter = require('./routes/users');
 var placesRouter = require('./routes/places');
 
 var app = express();
-
-app.listen(8080);
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -18,5 +18,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', usersRouter);
 app.use('/places', placesRouter);
+
+app.listen(port, () => {
+    console.log("App is running on port " + port);
+  });
 
 module.exports = app;
