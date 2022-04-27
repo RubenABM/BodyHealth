@@ -27,7 +27,7 @@ router.post('/addplace', async function(req, res, next){
  
 });
 
-router.get('/:text(\\d+)', async function(req, res, next) {´
+router.get('/:text(\\d+)', async function(req, res, next) {
 
   let text = req.params.text;
   console.log("[placesRoutes] Retrieving point of place with name " + text);
