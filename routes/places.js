@@ -27,8 +27,11 @@ router.post('/addplace', async function(req, res, next){
  
 });
 
+<<<<<<< HEAD
 /* GET LOCAIS PELO NOME (EXTERNAL API)
 
+=======
+>>>>>>> 104733ec0498d3159cd5022fc1c3a6ad075d35dc
 router.get('/:text(\\d+)', async function(req, res, next) {
 
   let text = req.params.text;
