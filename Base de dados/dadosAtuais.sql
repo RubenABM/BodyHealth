@@ -825,3 +825,26 @@ SELECT * FROM place_category
 
 ALTER TABLE place DROP COLUMN local_ref_item_id
 
+SELECT * FROM place WHERE local_category_id = 3 
+
+SELECT receita.receita_id, receita.receita_titulo, receita.receita_desc, receita.receita_utilizador_id, utilizador.user_name FROM receita INNER JOIN utilizador ON utilizador.user_id = receita.receita_utilizador_id
+WHERE receita.receita_utilizador_id = 5 AND receita.receita_categoriaa_id = 3
+
+SELECT ementa.ementa_id, ementa.ementa_titulo, ementa.ementa_descricao, ementa.ementa_utilizador_id, utilizador.user_name FROM ementa INNER JOIN utilizador ON utilizador.user_id = ementa.ementa_utilizador_id
+WHERE ementa.ementa_utilizador_id = 5 AND ementa.ementa_categoriaa_id = 3
+
+SELECT * FROM ementa
+
+SELECT * FROM receita_ingrediente
+
+SELECT receita_ingrediente.receita_ingrediente_id, receita_ingrediente.recipe_id, receita.receita_titulo,receita_ingrediente.ingredient_id, receita_ingrediente.ingrediente_qnt,ingrediente.ingrediente_nome FROM receita_ingrediente
+INNER JOIN receita ON receita.receita_id = receita_ingrediente.recipe_id
+INNER JOIN ingrediente ON ingrediente.ingrediente_id = receita_ingrediente.ingredient_id
+WHERE receita.receita_id = 
+
+--FAZER
+SELECT * FROM ementa_receita
+
+--INGREDIENTES
+
+SELECT * FROM ingrediente
