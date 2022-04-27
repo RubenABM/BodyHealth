@@ -793,4 +793,35 @@ WHERE user_dados_id = 4
 
 SELECT * FROM dados_utilizador
 
+SELECT * FROM utilizador
+
+INSERT INTO utilizador (user_name, user_password, user_morada, user_email, user_points, user_admin, user_pt, user_nutri)
+VALUES ()
+
+SELECT * FROM place
+
+INSERT INTO place (local_morada, local_category_id, local_nome, ref_system_id, geometry_info_point)
+VALUES ('Rua FFFFFFF', 4, 'Ginasio Coachella', 4326, 'POINT(0 0)')
+
+INSERT INTO place (local_morada, local_category_id, local_nome, ref_system_id, geometry_info_point)
+VALUES ('Rua XXXXXXX', 3, 'JNCQuoi', 4326, 'POINT(38.71923 -9.14401)')
+
+INSERT INTO place (local_morada, local_category_id, local_nome, ref_system_id, geometry_info_point)
+VALUES ('Rua XXXXXXX', 2, 'Hard Rock Café', 4326, 'POINT(38.71661 -9.14176)')
+
+INSERT INTO place (local_morada, local_category_id, local_nome, ref_system_id, geometry_info_point)
+VALUES ('Rua YYYYYYY', 1, 'Solar do Duque', 4326, 'POINT(38.71344 -9.14171)')
+
+INSERT INTO place (local_morada, local_category_id, local_nome, ref_system_id, geometry_info_point)
+VALUES ('Rua ABCDEFG', 4, 'Kalorias', 4326, 'POINT(38.70895 -9.24568)')
+
+INSERT INTO place (local_morada, local_category_id, local_nome, ref_system_id, geometry_info_point)
+VALUES ('Rua HIJKLMNOP', 4, 'Holmes Place', 4326, 'POINT(38.73691 -9.14401)')
+
+DELETE FROM place WHERE local_id = 3
+
+
+SELECT * FROM place_category
+
+ALTER TABLE place DROP COLUMN local_ref_item_id
 
