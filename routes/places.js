@@ -24,6 +24,15 @@ router.post('/addplace', async function(req, res, next){
   console.log("[placesRoutes] Saving place " + JSON.stringify(newPlace));
   let result = await placesModel.savePlace(newPlace);
   res.status(result.status).send(result.data);
+ 
+});
+
+router.get('/:text(\\d+)', async function(req, res, next) {´
+
+  let text = req.params.text;
+  console.log("[placesRoutes] Retrieving point of place with name " + text);
+  let result = await placesModel.getPlacePoint(text);
+  res.status(result.status).send(result.data);
 
 });
 
