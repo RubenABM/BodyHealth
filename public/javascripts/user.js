@@ -22,7 +22,7 @@
 }
 */
 
-//DUVIDAS
+/*DUVIDAS
 
 window.onload = async function(){
 
@@ -48,4 +48,30 @@ async function loadValues(){
       console.log('error');
   }
 
+}*/
+
+
+window.onload = async function() {
+  userId = sessionStorage.getItem("userId");
+  console.log("setItem->userId = " + userId);
+  try {
+
+      let user = await $.ajax({
+          url: "/users/" + 5,
+          method: "get",
+          dataType: "json",
+          contentType: 'application/json'
+      });
+      console.log("[user] user = " + JSON.stringify(user));
+      document.getElementById("usernameee").innerHTML = user.user_name;
+
+  } catch (err) {
+      console.log(err);
+      let mainElem = document.getElementById("main");
+      if (err.status == 404)
+          mainElem.innerHTML =
+          "<h1>" + err.responseJSON.msg + "</h1>" + "<h2>Please select an existing product</h2>";
+      else mainElem.innerHTML =
+          "<h1>Server problems, please try later</h1>";
+  }
 }
