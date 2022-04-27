@@ -11411,7 +11411,7 @@ header.masthead {
   text-align: center;
   color: #fff;
  /* background-image: url("../assets/img/header-bg.jpg");*/
- background-image: url("/public/images/runningphoto.jpg");
+ background-image: url("../images/runningphoto.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11876,6 +11876,53 @@ section#contact form#contactForm :-ms-input-placeholder {
   margin-bottom:0;
   font-size:13px;
   opacity:0.6;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #2d2e2d;
+  overflow: hidden;
+  
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: Arial;
+}
+
+.topnav img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px;
+}
+
+#topnav-img2{
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px;
+  /*float: right;*/
+
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #e8bf5c;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: #e8bf5c;
 }
 
 
