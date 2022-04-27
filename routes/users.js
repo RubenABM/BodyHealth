@@ -18,19 +18,22 @@ router.get('/', async function(req, res, next) {
 
 });
 
-router.get('/:id(\\d+)', async function(req, res, next) {
+router.get('/:id(\\d+)', async function(req, res, next){
+
     let id = req.params.id;
     console.log("[usersRoutes] Retrieving user with id " + id);
     let result = await usersModel.getUser(id);
     res.status(result.status).send(result.data);
-});
-
+  
+  });
 /* POST a new product */
 router.post('/insertnewuser', async function(req, res, next) {
     let newUser = req.body;
     console.log("[usersRoutes] Saving user " + JSON.stringify(newUser));
     let result = await usersModel.saveUser(newUser);
-    res.status(result.status).send(result.data);
+    res.sendStatus(result.status).send(result.data);
 });
+
+
 
 module.exports = router;

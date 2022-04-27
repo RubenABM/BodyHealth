@@ -13,25 +13,35 @@ module.exports.getUsers = async function() {
     }
 }
 
-module.exports.getUser = async function(id) {
+module.exports.getUser = async function(id){
+
     console.log("[usersModel.getUser] id = " + JSON.stringify(id));
-    try {
+
+    try{
+
         let sql =
             "SELECT * " +
-            "FROM utilizador AS user " +
-            "WHERE user.user_id = $1;";
+            "FROM utilizador u " +
+            "WHERE u.user_id = $1;";
+
         let result = await pool.query(sql, [id]);
+
         let users = result.rows;
+
         if (users.length > 0) {
             console.log("[usersModel.getUser] user = " + JSON.stringify(users[0]));
             return { status: 200, data: users[0] };
         } else {
             return { status: 404, data: { msg: "User not found." } };
         }
-    } catch (err) {
-        console.log(err);
-        return { status: 500, data: err };
+
+    } catch (err){
+
+      console.log(err);
+      return {status: 500, data: err};
+
     }
+
 }
 
 

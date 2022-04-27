@@ -92,9 +92,10 @@
     var map = new mapboxgl.Map({
 
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11',
+     // style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/miguelcruz/cl25ywb6d000014mpgycvyq1w/draft',
       center: [-9.1522302, 38.7070926],
-      zoom: 16,
+      zoom: 16000
     });
 
     //https://codepen.io/stevebennett/pen/RpKVjy
@@ -104,21 +105,86 @@
     });*/
 
     const geojson = {
-      'type': 'FeatureCollection',
-      'features': [
-        {
-          'type': 'Feature',
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-9.1522302, 38.7070926]
-          },
-          'properties': {
-            'title': 'Ginásio',
-            'description': 'Ginásio Teste'
-          }
-        }
-      ]
-    };
+
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#00ff00",
+        "marker-size": "medium",
+        "marker-symbol": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.14401262998581,
+          38.719222970322235
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#00ff00",
+        "marker-size": "medium",
+        "marker-symbol": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.141755551099777,
+          38.716607029066886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#00ff00",
+        "marker-size": "medium",
+        "marker-symbol": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.14171,
+          38.71344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#00ff00",
+        "marker-size": "medium",
+        "marker-symbol": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.24568,
+          38.70895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#00ff00",
+        "marker-size": "medium",
+        "marker-symbol": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.14401,
+          38.73691
+        ]
+      }
+    }
+  ]
+};
 
     // add markers to map
     for (const feature of geojson.features) {
@@ -139,6 +205,15 @@
     }
 
   </script>
+
+  <!--STRING API GEOCODING
+
+  https://api.mapbox.com/geocoding/v5/mapbox.places -->
+
+  <!--LOGO...
+
+  https://api.mapbox.com/geocoding/v5/mapbox.places/San%20Francisco.json?accessToken=pk.eyJ1IjoibWlndWVsY3J1eiIsImEiOiJjbDI1djBzdmcwODhwM2RudTlleGRlZ2tpIn0.u31STaJqnZkr5QFGTgVD8w -->
+
 
 
 </body>
