@@ -15,6 +15,7 @@ module.exports.getPlaces = async function() {
 
 module.exports.getPlace = async function(id){
 
+
     console.log("[placesModel.getPlace] id = " + JSON.stringify(id));
 
     try{
@@ -43,6 +44,51 @@ module.exports.getPlace = async function(id){
     }
 
 }
+
+module.exports.getPlacesCategory = async function(cat_id) {
+    try {
+        let sql = "select * from place " + "where local_category_id = " + cat_id;
+        let result = await pool.query(sql);
+        let placesfound = result.rows;
+        console.log("[placesModel.getPlaces] places = " + JSON.stringify(placesfound));
+        return { status: 200, data: placesfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+/*
+module.exports.getTextPlace = async function(text){
+
+
+    console.log("[placesModel.getTextPlace] text = " + JSON.stringify(text));
+
+    try{
+
+        let sql =  "https://api.mapbox.com/geocoding/v5/mapbox.places/" + text +  "20%" + "/portugal.json?accessToken=pk.eyJ1IjoibWlndWVsY3J1eiIsImEiOiJjbDI1djBzdmcwODhwM2RudTlleGRlZ2tpIn0.u31STaJqnZkr5QFGTgVD8w";
+
+        let result = await pool.query(sql, [text]);
+
+        let placesfound = result.rows;
+
+        if (places.length > 0) {
+            console.log("[placesModel.getTextPlace] place = " + JSON.stringify(placesfound[0]));
+            return { status: 200, data: placesfound[0] };
+        } else {
+            return { status: 404, data: { msg: "Place not found." } };
+        }
+
+    } catch (err){
+
+      console.log(err);
+      return {status: 500, data: err};
+
+    }
+
+}*/
+
+//FILTRAR LOCAIS PELA SUA CATEGORIA (ATUALMENTE NA BASE DE DADOS)
 
 
 //POST METHOD

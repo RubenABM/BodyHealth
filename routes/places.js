@@ -27,13 +27,29 @@ router.post('/addplace', async function(req, res, next){
  
 });
 
-router.get('/:text(\\d+)', async function(req, res, next) {´
+/* GET LOCAIS PELO NOME (EXTERNAL API)
+
+router.get('/:text(\\d+)', async function(req, res, next) {
 
   let text = req.params.text;
   console.log("[placesRoutes] Retrieving point of place with name " + text);
   let result = await placesModel.getPlacePoint(text);
   res.status(result.status).send(result.data);
 
+});*/
+
+/*CLIQUES NO BOTÃO*/
+
+router.get('/categoryplace/:id', async function(req, res, next){
+
+  let cat_id = req.params.id;
+  console.log("[placesRoutes] Retrieving point of places with category " + cat_id);
+  let result = await placesModel.getPlacesCategory(cat_id);
+  res.status(result.status).send(result.data);
+
 });
+
+
+
 
 module.exports = router;

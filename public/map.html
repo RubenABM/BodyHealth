@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./stylesheets/mainpage.css">
   <link rel="icon" type="img/x-icon" href="https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png">
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
   <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
 
 </head>
@@ -47,7 +49,27 @@
     <div id='map' style='width: 782px; height: 500px; border: 1px solid #e8bf5c; margin-left: 240px; margin-top: 70px;'>
     </div>
 
-   
+   <div class="boxContainer">
+
+      <table class="elementsContainer">
+
+         <tr>
+            
+           <td>
+ 
+             <input type="text" placeholder="Pesquisar Local..." class="search" id="searchforplace">
+
+           </td>
+           <td>
+             <a href="#"><i class="material-icons">search</i></a>
+           </td>
+
+
+         </tr>
+
+      </table>
+
+   </div>
 
   </div>
 
@@ -97,7 +119,7 @@
      // style: 'mapbox://styles/mapbox/streets-v11',
       style: 'mapbox://styles/miguelcruz/cl25ywb6d000014mpgycvyq1w/draft',
       center: [-9.1522302, 38.7070926],
-      zoom: 16000
+      zoom: 15
     });
 
     //https://codepen.io/stevebennett/pen/RpKVjy
