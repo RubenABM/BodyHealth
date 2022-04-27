@@ -1,0 +1,563 @@
+body{
+
+    background-color: #2d2e2d; 
+}
+
+h1{
+    color: #f2f2f2;
+    font-family: Arial;
+    padding: 200px 500px;
+    text-decoration-line: underline;
+    text-decoration-color: white; 
+    text-decoration-style: solid;
+}
+
+p{
+    color: #f2f2f2;
+    font-family: Arial;
+    padding: 1px 600px;
+}
+ 
+ /* Add a black background color to the top navigation */
+ .topnav {
+     background-color: #2d2e2d;
+     overflow: hidden;
+     
+   }
+   
+   /* Style the links inside the navigation bar */
+   .topnav a {
+     float: right;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 25px;
+     font-family: Arial;
+   }
+ 
+   /*
+   .topnav img {
+     width: 60%;
+     height:10%;
+     border-radius: 50%;
+     overflow: hidden;
+     margin-top: 5%;
+     margin-left: -100%;
+   }*/
+
+   #topnav-img2{
+
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     overflow: hidden;
+     margin-top: -6px;
+     /*float: right;*/
+
+   }
+   
+   /* Change the color of links on hover */
+   .topnav a:hover {
+     color: #e8bf5c;
+   }
+   
+   /* Add a color to the active/current link */
+   .topnav a.active {
+     color: #e8bf5c;
+    }
+
+    
+    #createButton{
+        
+        margin-left: 10%;
+        font-size: 120%;
+        margin-top: 5%;
+        background: transparent;
+        border: 2px solid #e8bf5c;
+        width: 10%;
+        height: 6%;
+        color: #e8bf5c;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        z-index:1;
+        position: absolute;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 6%;
+     }
+
+     #selectxbox1{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 10%;
+        margin-top: 9%;
+        
+     
+     }
+     #selectxbox2{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 26%;
+        margin-top: 9%;
+        
+     
+     }
+     #selectxbox3{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 42%;
+        margin-top: 9%;
+        
+     
+     }
+     #selectxbox4{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 58%;
+        margin-top: 9%;
+        
+     
+     }
+     #selectxbox5{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 74%;
+        margin-top: 9%;
+        
+     
+     }
+     #selectxbox6{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 10%;
+        margin-top: 24.5%;
+        
+     
+     }
+     #selectxbox7{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 26%;
+        margin-top: 24.5%;
+        
+     
+     }
+     #selectxbox8{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 42%;
+        margin-top: 24.5%;
+        
+     
+     }
+     #selectxbox9{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 58%;
+        margin-top: 24.5%;
+        
+     
+     }
+     #selectxbox10{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 74%;
+        margin-top: 24.5%;
+        
+     
+     }
+
+     #createButton2{
+        
+        margin-left: 10%;
+        font-size: 120%;
+        margin-top: 45%;
+        background: transparent;
+        border: 2px solid #e8bf5c;
+        width: 10%;
+        height: 6%;
+        color: #e8bf5c;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        z-index:1;
+        position: absolute;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 6%;
+     }
+
+     #selectxbox11{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 10%;
+        margin-top: 49%;
+        
+     
+     }
+     #selectxbox12{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 26%;
+        margin-top: 49%;
+     
+     }
+     #selectxbox13{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 42%;
+        margin-top: 49%;
+        
+     
+     }
+     #selectxbox14{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 58%;
+        margin-top: 49%;
+        
+     
+     }
+     #selectxbox15{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 74%;
+        margin-top: 49%;
+        
+     
+     }
+     #selectxbox16{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 10%;
+        margin-top: 64.5%;
+        
+     
+     }
+     #selectxbox17{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 26%;
+        margin-top: 64.5%;
+        
+     
+     }
+     #selectxbox18{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 42%;
+        margin-top: 64.5%;
+        
+     
+     }
+     #selectxbox19{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 58%;
+        margin-top: 64.5%;
+        
+     
+     }
+     #selectxbox20{
+
+        height: 30%;
+        width: 15%;
+        background-color: transparent;
+        border: 1px solid white;
+        position: absolute;
+        border-radius: 6%;
+        margin-left: 74%;
+        margin-top: 64.5%;
+        
+     
+     }
+
+     #createButton{
+        
+        margin-left: 10%;
+        font-size: 120%;
+        margin-top: 5%;
+        background: transparent;
+        border: 2px solid #e8bf5c;
+        width: 10%;
+        height: 6%;
+        color: #e8bf5c;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        z-index:1;
+        position: absolute;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        border-radius: 6%;
+     }
+
+     .dropbtn {
+        margin-left: 28%;
+        font-size: 120%;
+        margin-top: 5%;
+        background: transparent;
+        border: 2px solid white;
+        width: 10%;
+        height: 7%;
+        color: white;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        z-index:1;
+        position: absolute;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 20%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-left: 28%;
+        margin-top: 7.9%;
+        border-radius: 10px;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #ddd; border-radius: 10px;}
+      
+      .dropdown:hover .dropdown-content {display: block;}
+      
+      .dropdown:hover .dropbtn {background-color: #3e8e41;}
+    
+      .dropbtn2 {
+        margin-left: 44.2%;
+        font-size: 120%;
+        margin-top: 5%;
+        background: transparent;
+        border: 2px solid white;
+        width: 10%;
+        height: 7%;
+        color: white;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        z-index:1;
+        position: absolute;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    
+      .dropdown-content2 {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 20%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-left: 44.2%;
+        margin-top: 7.9%;
+        border-radius: 10px;
+      }
+
+    
+      .dropdown-content2 a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content2 a:hover {background-color: #ddd; border-radius: 10px;}
+      
+      .dropdown2:hover .dropdown-content2 {display: block;}
+      
+      .dropdown2:hover .dropbtn2 {background-color: #3e8e41;}
+
+      .dropbtn3 {
+        margin-left: 28%;
+        font-size: 120%;
+        margin-top: 45%;
+        background: transparent;
+        border: 2px solid white;
+        width: 10%;
+        height: 7%;
+        color: white;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        z-index:1;
+        position: absolute;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      
+      
+      .dropdown-content3 {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 20%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-left: 28%;
+        margin-top: 48%;
+        border-radius: 10px;
+      }
+      
+      .dropdown-content3 a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content3 a:hover {background-color: #ddd; border-radius: 10px;}
+      
+      .dropdown3:hover .dropdown-content3 {display: block;}
+      
+      .dropdown3:hover .dropbtn3 {background-color: #3e8e41;}
+    
+      .dropbtn4 {
+        margin-left: 44.2%;
+        font-size: 120%;
+        margin-top: 45%;
+        background: transparent;
+        border: 2px solid white;
+        width: 10%;
+        height: 7%;
+        color: white;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        z-index:1;
+        position: absolute;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    
+      .dropdown-content4 {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 20%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin-left: 44.2%;
+        margin-top: 48%;
+        border-radius: 10px;
+      }
+    
+    
+      .dropdown-content4 a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content4 a:hover {background-color: #ddd; border-radius: 10px;}
+      
+      .dropdown4:hover .dropdown-content4 {display: block;}
+      
+      .dropdown4:hover .dropbtn4 {background-color: #3e8e41;}
+    
+      #search{
+        margin-left: 1090px;
+        margin-top: 108px;
+      }
+    
+      #search2{
+        margin-left: 1090px;
+        margin-top: 635px;
+      }
+    
