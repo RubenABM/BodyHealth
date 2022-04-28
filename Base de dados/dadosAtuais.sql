@@ -916,6 +916,8 @@ VALUES (3, 3)
 INSERT INTO exercicio_plano (exercise_id, p_treino_id)
 VALUES (4, 4)
 
+SELECT * FROM exercicio_plano
+
 INSERT INTO exercicio_plano ()
 
 
@@ -924,4 +926,122 @@ SELECT * FROM utilizador
 SELECT * FROM exercicio_tipo
 
 SELECT * FROM item_aprovacao
+
+
+SELECT * FROM produto_category
+
+INSERT INTO produto(produto_titulo, produto_desc, produto_preco, produto_points, produto_categoria_id)
+VALUES ('Ténis Nike L', 'Ténis da nike modelo L', 130, 17500, 5)
+
+INSERT INTO produto(produto_titulo, produto_desc, produto_preco, produto_points, produto_categoria_id)
+VALUES ('Raquetes de Ténis Reebok', 'Raquetes da reebok para jogar ténis', 40, 9250, 1)
+
+INSERT INTO produto(produto_titulo, produto_desc, produto_preco, produto_points, produto_categoria_id)
+VALUES ('Raquetes de Ténis Reebok', 'Raquetes da reebok para jogar ténis', 40, 9250, 1)
+
+INSERT INTO produto(produto_titulo, produto_desc, produto_preco, produto_points, produto_categoria_id)
+VALUES ('Suplementos Vitaminas I', 'Suplementos de vitamina C', 64, 12350, 3)
+
+INSERT INTO produto(produto_titulo, produto_desc, produto_preco, produto_points, produto_categoria_id)
+VALUES ('Pack de Pesos 5kg', 'Pack de 5 pesos de 5kg', 72 ,13452, 2)
+
+SELECT * FROM produto
+
+SELECT * FROM productsgetlist
+
+INSERT INTO productsgetlist (isget, product_id, utilizador_id)
+VALUES ('1', 11, 6)
+
+INSERT INTO productsgetlist (isget, product_id, utilizador_id)
+VALUES ('0', 9, 4)
+
+SELECT * FROM utilizador
+
+INSERT INTO turma (turma_titulo, turma_desc, criador_id)
+VALUES ('Kizomba Class', 'Turma de Kizomba no Kalorias', 3)
+
+
+INSERT INTO turma (turma_titulo, turma_desc, criador_id)
+VALUES ('Relaxing Zone', 'Turma de Alongamentos no Kalorias', 3)
+
+INSERT INTO turma (turma_titulo, turma_desc, criador_id)
+VALUES ('Crossfit Team', 'Turma de Crossfit no Holmes Place', 21)
+
+
+INSERT INTO utilizador_turma (utilizador_id, turma_identifier)
+VALUES (5, 1)
+
+INSERT INTO utilizador_turma (utilizador_id, turma_identifier)
+VALUES (6, 1)
+
+INSERT INTO utilizador_turma (utilizador_id, turma_identifier)
+VALUES (2, 3)
+
+INSERT INTO utilizador_turma (utilizador_id, turma_identifier)
+VALUES (5, 3)
+
+INSERT INTO utilizador_turma (utilizador_id, turma_identifier)
+VALUES (6, 2)
+
+INSERT INTO utilizador_turma (utilizador_id, turma_identifier)
+VALUES (2, 2)
+
+SELECT * FROM utilizador
+
+INSERT INTO utilizador (user_name, user_password, user_morada, user_email, user_points, user_admin, user_pt, user_nutri)
+VALUES ('José Albergaria', 'jose765', 'Rua Armindo Rodrigues', 'albergariajose65@gmail.com', 4599, '0', '1', '0')
+
+SELECT * FROM evento
+
+INSERT INTO evento (evento_titulo, evento_descricao, evento_local_id, evento_data, evento_criador_id, evento_terminado)
+VALUES ('Encontro de Crossfit', 'Encontro de amantes de crossfit', 4, '2022-05-29', 3, '0')
+
+
+INSERT INTO evento (evento_titulo, evento_descricao, evento_local_id, evento_data, evento_criador_id, evento_terminado)
+VALUES ('Gym Lovers Meeting', 'Encontro de amantes de ginásio', 4, '2022-04-01', 21, '1')
+
+ALTER TABLE pedido 
+DROP COLUMN pedido_encontro_data
+
+ALTER TABLE pedido
+ADD COLUMN pedido_profissional_id int 
+
+ALTER TABLE pedido 
+ADD CONSTRAINT fk_pedido_profissional_id FOREIGN KEY (pedido_profissional_id) REFERENCES utilizador (user_id)
+
+INSERT INTO pedido (pedido_titulo, pedido_desc, pedido_local_id, pedido_utilizador_id, pedido_terminada, pedido_data, pedido_tipo_id, pedido_estado_id, pedido_profissional_id)
+VALUES ('Consulta de Rotina', 'Consulta com Nutricionista para rotina', 4, 6, '0', '2022-04-29', 2, 4, 4)
+
+INSERT INTO pedido (pedido_titulo, pedido_desc, pedido_local_id, pedido_utilizador_id, pedido_terminada, pedido_data, pedido_tipo_id, pedido_estado_id, pedido_profissional_id)
+VALUES ('Treino com o PT', 'Sessão de yoga com o PT', 8, 5, '1', '2022-03-14', 1, 2, 21)
+
+SELECT * FROM utilizador
+
+SELECT * FROM pedido_estado
+
+SELECT * FROM pedido_tipo
+
+SELECT * FROM place
+
+SELECT * FROM pedido_estado
+
+SELECT * FROM comunidade
+
+INSERT INTO comunidade (comunidade_titulo, comunidade_desc)
+VALUES ('Comunidade de Crossfit', 'Comunidade de Crossfit da BodyHealth')
+
+INSERT INTO comunidade (comunidade_titulo, comunidade_desc)
+VALUES ('Comunidade de Crossfit', 'Comunidade de Crossfit da BodyHealth')
+
+ALTER TABLE comunidade
+ADD COLUMN comunidade_criador_id int
+
+ALTER TABLE comunidade
+ADD CONSTRAINT fk_comunidade_criador_id FOREIGN KEY (comunidade_criador_id) REFERENCES utilizador (user_id)
+
+
+SELECT * FROM artigo
+
+DELETE FROM comunidade WHERE comunidade_id = 1
+
 
