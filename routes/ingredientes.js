@@ -9,4 +9,13 @@ router.get('/', async function(req, res, next) {
 
 });
 
+router.get('/ingredientdetails/:id', async function(req, res, next){
+
+    let id_ing = req.params.id;
+    console.log("[ingredientesRoutes] Retrieving selected ingredient with id: " + id_ing);
+    let result = await ingredientesModel.getIngredient(id_ing);
+    res.status(result.status).send(result.data);
+
+});
+
 module.exports = router;

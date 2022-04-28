@@ -848,3 +848,80 @@ SELECT * FROM ementa_receita
 --INGREDIENTES
 
 SELECT * FROM ingrediente
+
+
+
+SELECT * FROM place WHERE local_category_id = 3 
+
+SELECT receita.receita_id, receita.receita_titulo, receita.receita_desc, receita.receita_utilizador_id, utilizador.user_name FROM receita INNER JOIN utilizador ON utilizador.user_id = receita.receita_utilizador_id
+WHERE receita.receita_utilizador_id = 5 AND receita.receita_categoriaa_id = 3
+
+SELECT ementa.ementa_id, ementa.ementa_titulo, ementa.ementa_descricao, ementa.ementa_utilizador_id, utilizador.user_name FROM ementa INNER JOIN utilizador ON utilizador.user_id = ementa.ementa_utilizador_id
+WHERE ementa.ementa_utilizador_id = 5 AND ementa.ementa_categoriaa_id = 3
+
+SELECT * FROM ementa
+
+SELECT * FROM receita_ingrediente
+
+SELECT receita_ingrediente.receita_ingrediente_id, receita_ingrediente.recipe_id, receita.receita_titulo,receita_ingrediente.ingredient_id, receita_ingrediente.ingrediente_qnt,ingrediente.ingrediente_nome FROM receita_ingrediente
+INNER JOIN receita ON receita.receita_id = receita_ingrediente.recipe_id
+INNER JOIN ingrediente ON ingrediente.ingrediente_id = receita_ingrediente.ingredient_id
+WHERE receita.receita_id = 
+
+--FAZER
+SELECT * FROM ementa_receita
+
+--INGREDIENTES
+
+SELECT * FROM ingrediente
+
+select * from ingrediente where ingrediente.ingrediente_id = 3
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+INSERT INTO exercicio (exercicio_titulo, exercicio_desc, exercicio_num_series, exercicio_num_repeticoes, exercicio_dificuldade_id, exercicio_tipo_id, exercicio_utilizador_id, aprovacao_pt)
+VALUES ('Push-ups', 'Pushups para treinar em casa', 10, 15, 2, 5, 3, '1')
+
+INSERT INTO exercicio (exercicio_titulo, exercicio_desc, exercicio_num_series, exercicio_num_repeticoes, exercicio_dificuldade_id, exercicio_tipo_id, exercicio_utilizador_id, aprovacao_pt)
+VALUES ('Bicicleta', 'Bicicleta treinar em casa', 5, 305, 2, 2, 6, '0')
+
+INSERT INTO exercicio (exercicio_titulo, exercicio_desc, exercicio_num_series, exercicio_num_repeticoes, exercicio_dificuldade_id, exercicio_tipo_id, exercicio_utilizador_id, aprovacao_pt)
+VALUES ('Jumps', 'Step-ups para praticar em casa', 6, 25, 1, 10, 2, '0')
+
+INSERT INTO exercicio (exercicio_titulo, exercicio_desc, exercicio_num_series, exercicio_num_repeticoes, exercicio_dificuldade_id, exercicio_tipo_id, exercicio_utilizador_id, aprovacao_pt)
+VALUES ('Alongamentos Ombros', 'Alongamentos de ombros para acordar da melhor forma possivel!', 3, 10, 1, 6, 6, '1')
+
+INSERT INTO plano (plano_titulo, plano_treino_desc, plano_utilizador_id, plano_treino_aprovacao_pt, plano_treino_tipo_aprovacao_id)
+VALUES ('Treino XL de Braços', 'Treino intensivo de braços para fazer em casa.', 3, '1', 1)
+
+
+INSERT INTO plano (plano_titulo, plano_treino_desc, plano_utilizador_id, plano_treino_aprovacao_pt, plano_treino_tipo_aprovacao_id)
+VALUES ('Treino simples de peito', 'Treino simples e eficaz de peito para fazer em casa.', 5, '0', 2)
+
+INSERT INTO plano (plano_titulo, plano_treino_desc, plano_utilizador_id, plano_treino_aprovacao_pt, plano_treino_tipo_aprovacao_id)
+VALUES ('Prova de resistência', 'Treino intensivo de resistência.', 2, '1', 1)
+
+INSERT INTO plano (plano_titulo, plano_treino_desc, plano_utilizador_id, plano_treino_aprovacao_pt, plano_treino_tipo_aprovacao_id)
+VALUES ('Relaxamento: Alongamentos', 'Conjunto de alongamentos para relaxamento.', 5, '1', 1)
+
+INSERT INTO exercicio_plano (exercise_id, p_treino_id)
+VALUES (1, 3)
+
+INSERT INTO exercicio_plano (exercise_id, p_treino_id)
+VALUES (3, 3)
+
+INSERT INTO exercicio_plano (exercise_id, p_treino_id)
+VALUES (4, 4)
+
+INSERT INTO exercicio_plano ()
+
+
+SELECT * FROM utilizador
+
+SELECT * FROM exercicio_tipo
+
+SELECT * FROM item_aprovacao
+
