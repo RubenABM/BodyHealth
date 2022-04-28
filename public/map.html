@@ -19,7 +19,7 @@
   <div class="topnav">
     <a href="index.html">
       <img src="./images/logobranconobg.png" class="img-fluid"
-      style="cursor: pointer; position: absolute; margin-left: -99%; width: 12%; margin-top: -1%; height: 10%;">
+        style="cursor: pointer; position: absolute; margin-left: -99%; width: 12%; margin-top: -1%; height: 10%;">
     </a>
     <a href="userdashboard.html">Perfil</a>
     <a href="jornalfit.html"> Jornal FIT</a>
@@ -39,36 +39,36 @@
     <button href="mainpage.html" id="filterplacesbtn3"><b>RESTAURANTES</b></button>
 
     <button type="button" onclick="change()" id="filterplacesbtn4"><b>GINÁSIOS</b></button>
-    
+
   </section>
 
-  
+
   <div class="container">
 
     <div id='map' style='width: 782px; height: 500px; border: 1px solid #e8bf5c; margin-left: 240px; margin-top: 70px;'>
     </div>
 
-   <div class="boxContainer">
+    <div class="boxContainer">
 
       <table class="elementsContainer">
 
-         <tr>
-            
-           <td>
- 
-             <input type="text" placeholder="Pesquisar Local..." class="search" id="searchforplace">
+        <tr>
 
-           </td>
-           <td>
-             <a href="#"><i class="material-icons">search</i></a>
-           </td>
+          <td>
+
+            <input type="text" placeholder="Pesquisar Local..." class="search" id="searchforplace">
+
+          </td>
+          <td>
+            <a href="#"><i class="material-icons">search</i></a>
+          </td>
 
 
-         </tr>
+        </tr>
 
       </table>
 
-   </div>
+    </div>
 
   </div>
 
@@ -115,11 +115,17 @@
     var map = new mapboxgl.Map({
 
       container: 'map',
-     // style: 'mapbox://styles/mapbox/streets-v11',
+      // style: 'mapbox://styles/mapbox/streets-v11',
       style: 'mapbox://styles/miguelcruz/cl25ywb6d000014mpgycvyq1w/draft',
       center: [-9.1522302, 38.7070926],
       zoom: 15
     });
+
+    /*const bounds = [
+      [-123.069003, 45.395273],
+      [-122.303707, 45.612333]
+    ];
+    map.setMaxBounds(bounds);*/
 
     //https://codepen.io/stevebennett/pen/RpKVjy
     /*map.on('load', () => {
@@ -129,85 +135,85 @@
 
     const geojson = {
 
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#00ff00",
-        "marker-size": "medium",
-        "marker-symbol": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.14401262998581,
-          38.719222970322235
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#00ff00",
-        "marker-size": "medium",
-        "marker-symbol": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.141755551099777,
-          38.716607029066886
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#00ff00",
-        "marker-size": "medium",
-        "marker-symbol": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.14171,
-          38.71344
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#00ff00",
-        "marker-size": "medium",
-        "marker-symbol": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.24568,
-          38.70895
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "marker-color": "#00ff00",
-        "marker-size": "medium",
-        "marker-symbol": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -9.14401,
-          38.73691
-        ]
-      }
-    }
-  ]
-};
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "marker-color": "#00ff00",
+            "marker-size": "medium",
+            "marker-symbol": ""
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -9.14401262998581,
+              38.719222970322235
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "marker-color": "#00ff00",
+            "marker-size": "medium",
+            "marker-symbol": ""
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -9.141755551099777,
+              38.716607029066886
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "marker-color": "#00ff00",
+            "marker-size": "medium",
+            "marker-symbol": ""
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -9.14171,
+              38.71344
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "marker-color": "#00ff00",
+            "marker-size": "medium",
+            "marker-symbol": ""
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -9.24568,
+              38.70895
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "marker-color": "#00ff00",
+            "marker-size": "medium",
+            "marker-symbol": ""
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -9.14401,
+              38.73691
+            ]
+          }
+        }
+      ]
+    };
 
     // add markers to map
     for (const feature of geojson.features) {
@@ -237,7 +243,7 @@
 
   https://api.mapbox.com/geocoding/v5/mapbox.places/San%20Francisco.json?accessToken=pk.eyJ1IjoibWlndWVsY3J1eiIsImEiOiJjbDI1djBzdmcwODhwM2RudTlleGRlZ2tpIn0.u31STaJqnZkr5QFGTgVD8w -->
 
-<h4>Username: <span id="usernameee"></span></h4>
+  <h4>Username: <span id="usernameee"></span></h4>
 
 </body>
 
