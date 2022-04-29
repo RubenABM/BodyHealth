@@ -10,6 +10,7 @@ var placesRouter = require('./routes/places');
 var recipesRouter = require('./routes/recipes');
 var ementasRouter = require('./routes/ementas');
 var ingredientesRouter = require('./routes/ingredientes');
+var turmasRouter = require('./routes/turmas');
 var indexRouter = require('./routes/index');
 
 var app = express();
@@ -24,7 +25,9 @@ app.use('/users', usersRouter);
 app.use('/places', placesRouter);
 app.use('/recipes', recipesRouter);
 app.use('/ementas', ementasRouter);
+app.use('/turmas', turmasRouter);
 app.use('/ingredientes', ingredientesRouter);
+
 app.use('/', indexRouter);
 
 app.listen(port, () => {

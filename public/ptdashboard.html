@@ -20,6 +20,7 @@
 
     <!-- Custom styles for this template-->
     <link href="stylesheets/sb-personaltrainer-2.min.css" rel="stylesheet">
+    <script src="javascripts/turmas.js"></script>
 
 </head>
 
@@ -967,15 +968,17 @@
 
                   <!---  <input class="inputvaluescreaterecipe" style="border: 1px solid black; border-radius: 7px; margin-left: 40px; margin-top: 30px; width: 350px;" type="text" placeholder="Título"> -->
                      
-                     <input type="text" placeholder="Título" style="border: 1px solid black; border-radius: 7px; width: 86%; margin-left: 40px; margin-top: 10px; height: 37px;" required>
+                     <input type="text" placeholder="Título" id="ftituloturma" style="border: 1px solid black; border-radius: 7px; width: 86%; margin-left: 40px; margin-top: 10px; height: 37px;" required>
 
                    <!---  <textarea style="border:1px solid #2d2e2d; border-radius: 7px; width: 350px; height: 130px; margin-left: 39px; margin-top: 153px; position: absolute;" placeholder="Descrição"></textarea> -->
  
-                     <textarea placeholder="Descrição" style="border-radius: 7px; border: 1px solid black; width: 86%; height: 170px; margin-left: 40px; margin-top: 15px;" required></textarea>
+                     <textarea placeholder="Descrição" id="ftitulodescricao" style="border-radius: 7px; border: 1px solid black; width: 86%; height: 170px; margin-left: 40px; margin-top: 15px;" required></textarea>
 
                    </form>
 
-                   <button id="createturmabtn" class="createturmabutton" style="background-color: #e8bf5c; border-radius: 11px; width: 20%; letter-spacing: 0.5px; border: 1px solid #2d2e2d; margin-left: 230px; margin-top: 8px;"><b>CRIAR</b></button>
+                   <button type="submit" id="createturmabtn" class="createturmabutton" onclick="addturma()" style="background-color: #e8bf5c; border-radius: 11px; width: 20%; letter-spacing: 0.5px; border: 1px solid #2d2e2d; margin-left: 230px; margin-top: 8px;"><b>CRIAR</b></button>
+
+                   <input type="button" value="add" onclick="addturma()">
 
                 </div>
 
