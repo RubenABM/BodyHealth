@@ -1067,3 +1067,16 @@ WHERE receita.receita_id =
 SELECT ementa.ementa_
 
 SELECT * FROM receita
+
+SELECT * FROM utilizador
+
+IN
+
+------------- OBTER OS GRUPOS DE UM UTILIZADOR ------------------------
+
+SELECT turma.turma_id, turma.turma_titulo, turma.turma_desc, utilizador_turma.aluno_id, utilizador.user_name, utilizador.user_id FROM turma 
+INNER JOIN utilizador_turma ON utilizador_turma.turma_identifier = turma.turma_id  
+INNER JOIN utilizador ON utilizador.user_id = utilizador_turma.utilizador_id
+WHERE utilizador.user_id = 6
+
+
