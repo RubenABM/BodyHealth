@@ -1,11 +1,10 @@
-async function addturma() {
-    var criadorid = 21;
-    
+async function adicionarturma() {
+    var iddocriador = 21;
    
     let data = {
         turma_titulo: document.getElementById("ftituloturma").value,
         turma_desc: document.getElementById("ftitulodescricao").value,
-        criador_id: criadorid
+        criador_id: iddocriador
     }
     console.log("[ptdashboard] data = " + JSON.stringify(data));
     try {
@@ -22,7 +21,7 @@ async function addturma() {
         if (err.responseJSON) {
           console.log(err.responseJSON.msg);
         } else {
-            console.log("Was not able to add class");
+            console.log("Was not able to adde class");
         }
     }
 }

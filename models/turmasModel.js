@@ -1,9 +1,9 @@
-var pool = require("./database");
+var pool = require("./database")
 
-//MÉTODO POST 
+//MÉTODO POST DA TURMA
 
-module.exports.saveClass = async function(turma) {
-    console.log("[turmasModel.saveClass] turma = " + JSON.stringify(turma));
+module.exports.saveTurma = async function(turma) {
+    console.log("[turmasModel.saveTurma] turma = " + JSON.stringify(turma));
     /* checks all fields needed and ignores other fields
     if (typeof user != "object" || failUser(user)) {
         if (user.errMsg)
@@ -22,8 +22,8 @@ module.exports.saveClass = async function(turma) {
 
             console.log(turma.turma_titulo + "|" + turma.turma_desc + "|" + turma.criador_id);
         let result = await pool.query(sql, [turma.turma_titulo, turma.turma_desc, turma.criador_id]);
-        let classss = result.rows[0].turma_id;
-        return { status: 200, data: classss };
+        let turmaaaa = result.rows[0].turma_id;
+        return { status: 200, data: turmaaaa };
     } catch (err) {
         console.log(err);
         if (err.errno == 23503) // FK error
