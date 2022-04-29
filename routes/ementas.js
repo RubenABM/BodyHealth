@@ -31,3 +31,5 @@ router.get('/categoryementauser/:idutilizador/:idcategoriaementa', async functio
 module.exports = router;
 
 //GET RECEITAS DE UMA EMENTA
+
+

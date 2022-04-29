@@ -58,15 +58,17 @@ module.exports.saveUser = async function(user) {
             return { status: 400, data: { msg: "Malformed data" } };
     }*/
     try {
+
         let sql =
             "INSERT " +
             "INTO utilizador " +
             "(user_name, user_password, user_morada, user_email, user_points, user_admin, user_pt, user_nutri) " +
             "VALUES ($1, $2, $3, $4, $5, $6, $7, $8) " +
             "RETURNING user_id";
+
+            console.log(user.user_name + "|" + user.user_password + "|" + user.user_morada + "|" + user.user_email + "|" + user.user_points + "|" + user.user_admin + "|" + user.user_pt + "|" + user.user_nutri);
         let result = await pool.query(sql, [user.user_name, user.user_password, user.user_morada, user.user_email, user.user_points, user.user_admin, user.user_pt, user.user_nutri]);
         let utilizador = result.rows[0].user_id;
-        console.log("[usersModel.saveUser] utilizador = " + JSON.stringify(utilizador));
         return { status: 200, data: utilizador };
     } catch (err) {
         console.log(err);

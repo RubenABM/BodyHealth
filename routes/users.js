@@ -26,7 +26,9 @@ router.get('/:id(\\d+)', async function(req, res, next){
     res.status(result.status).send(result.data);
   
   });
-/* POST a new product */
+
+
+/* POST a new user */
 router.post('/insertnewuser', async function(req, res, next) {
     let newUser = req.body;
     console.log("[usersRoutes] Saving user " + JSON.stringify(newUser));

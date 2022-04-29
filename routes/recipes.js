@@ -11,6 +11,17 @@ router.get('/categoryrecipe/:id', async function(req, res, next){
   
   });
 
+//GET DE UMA RECEITA ESPECIFICA
+
+router.get('/:idreceita', async function(req, res, next){
+
+  let id_receita = req.params.idreceita;
+  console.log("[recipesRoutes] Retrieving recipe from with ID: " + id_receita);
+  let result = await recipesModel.getRecipeById(id_receita);
+  res.status(result.status).send(result.data);
+
+});
+
 
 //GET DE RECEITAS POR UTILIZADOR
 
@@ -50,5 +61,18 @@ router.get('/receitasingredientes/:idreceita', async function(req, res, next){
     res.status(result.status).send(result.data);
 
 });
+
+//POST RECIPE
+
+/* POST a new recipe */
+router.post('/insertnewrecipe', async function(req, res, next) {
+  let newRecipe = req.body;
+  console.log("[recipesRoutes] Saving recipe " + JSON.stringify(newRecipe));
+  let result = await recipesModel.saveRecipe(newRecipe);
+  res.sendStatus(result.status).send(result.data);
+});
+
+
+
 
 module.exports = router;
