@@ -1045,3 +1045,25 @@ SELECT * FROM artigo
 DELETE FROM comunidade WHERE comunidade_id = 1
 
 
+INSERT INTO marcacao_favorito_ementa (utilizador_id, ementa_id, is_ementa_favorito)
+VALUES (6, 2, '1')
+
+INSERT INTO marcacao_favorito_exercicio (utilizador_id, exercicio_id, is_exercicio_favorito)
+VALUES (21, 3, '0')
+
+INSERT INTO marcacao_favorito_plano (utilizador_id, plano_treino_id, is_plano_favorito)
+VALUES (5, 1, '0')
+
+INSERT INTO marcacao_favorito_receita (utilizador_id, receita_id, is_receita_favorito)
+VALUES (3, 3, '1')
+
+SELECT receita.receita_id, receita.receita_titulo, receita.receita_desc, receita.receita_utilizador_id, receita_ingrediente.receita_ingrediente_id, ingrediente.ingrediente_id, ingrediente.ingrediente_nome, utilizador.user_name, receita.receita_base_id, item_base.basee_nome ,receita.receita_categoriaa_id  FROM receita
+INNER JOIN receita_ingrediente ON receita_ingrediente.recipe_id = receita.receita_id
+INNER JOIN ingrediente ON ingrediente.ingrediente_id = receita_ingrediente.ingredient_id
+INNER JOIN utilizador ON receita.receita_utilizador_id = utilizador.user_id
+INNER JOIN item_base ON  item_base.basee_id = receita.receita_base_id
+WHERE receita.receita_id = 
+
+SELECT ementa.ementa_
+
+SELECT * FROM receita
