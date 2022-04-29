@@ -52,21 +52,20 @@ async function loadValues(){
 
 
 async function add() {
-    let defaultpoints = 0;
-    let defaultadmin = '0';
-    let defaultpt = '0';
-    let defaultnutri = '0';
+    var defaultpoints = 0;
+    var defaultadmin = 'f';
+    var defaultpt = 'f';
+    var defaultnutri = 'f';
    
     let data = {
-
         user_name: document.getElementById("fusername").value,
         user_password: document.getElementById("fpassword").value,
         user_morada: document.getElementById("fmorada").value,
         user_email: document.getElementById("femail").value,
-        user_points: parseInt(defaultpoints),
-        user_admin: parseFloat(defaultadmin),
-        user_pt: parseFloat(defaultpt),
-        user_nutri: parseFloat(defaultnutri)
+        user_points: parseInt(defaultpoints), //PROBLEMA: ALTERAR TIPO DE DADOS
+        user_admin: defaultadmin,
+        user_pt: defaultpt,
+        user_nutri: defaultnutri
     }
     console.log("[signupandlogin] data = " + JSON.stringify(data));
     try {
@@ -81,11 +80,9 @@ async function add() {
     } catch (err) {
         console.log(err);
         if (err.responseJSON) {
-            res.innerHTML = err.responseJSON.msg;
+          console.log(err.responseJSON.msg);
         } else {
-            res.innerHTML = "Was not able to add user";
+            console.log("Was not able to add user");
         }
     }
 }
-
-
