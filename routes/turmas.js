@@ -8,8 +8,40 @@ router.post('/insertnewturma', async function(req, res, next) {
     console.log("[turmasRoutes] Saving class " + JSON.stringify(newTurma));
     let result = await turmasModel.saveTurma(newTurma);
     res.sendStatus(result.status).send(result.data);
+
   });
   
+//OBTER AS TURMAS ONDE O UTILIZADOR SE ENCONTRA INSERIDO / POSSUI
+
+router.get('/turmasuser/:idutilizador', async function(req, res, next){
+
+    let id_utilizador = req.params.idutilizador;
+    console.log("[turmasRoutes] Retrieving classes from user " + id_utilizador);
+    let result = await turmasModel.getTurmasUser(id_utilizador);
+    res.status(result.status).send(result.data);
+  
+  });
+
+
+// VISUALIZAR RECEITAS E EMENTAS NUMA TURMA
+
+   //CÓDIGO//
+
+//VISUALIZAR PARTICIPANTES DE UMA TURMA
+
+   //CÓDIGO//
+
+//APAGAR UMA TURMA
+
+   //CÓDIGO//
+
+//REMOVER PARTICIPANTE DE UMA TURMA
+
+   //CÓDIGO//
+
+//ADICIONAR PARTICIPANTE A UMA TURMA
+
+   //CÓDIGO//
 
   module.exports = router;
 
