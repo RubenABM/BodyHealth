@@ -31,6 +31,15 @@ router.get('/turmasuser/:idutilizador', async function(req, res, next){
 
    //CÓDIGO//
 
+   router.get('/turmasuser/participantes/:idturma', async function(req, res, next){
+
+      let id_turma = req.params.idturma;
+      console.log("[turmasRoutes] Retrieving participantes from class with id: " + id_turma);
+      let result = await turmasModel.getPaticipantTurma(id_turma);
+      res.status(result.status).send(result.data);
+    
+    });
+
 //APAGAR UMA TURMA
 
    //CÓDIGO//

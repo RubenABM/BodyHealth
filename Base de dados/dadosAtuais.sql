@@ -1079,4 +1079,101 @@ INNER JOIN utilizador_turma ON utilizador_turma.turma_identifier = turma.turma_i
 INNER JOIN utilizador ON utilizador.user_id = utilizador_turma.utilizador_id
 WHERE utilizador.user_id = 6
 
+--OBTER PARTICIPANTES DE UM GRUPO (PARAMETRO -> ID DA TURMA)
+
+SELECT turma.turma_id, turma.turma_titulo, turma.turma_desc, utilizador_turma.aluno_id, utilizador_turma.utilizador_id, utilizador.user_name FROM turma
+INNER JOIN utilizador_turma ON utilizador_turma.turma_identifier = turma.turma_id
+INNER JOIN utilizador ON utilizador.user_id = utilizador_turma.turma_identifier 
+WHERE turma.turma_id = 
+
+
+
+-----------------------------------------------------------------
+
+--ADICIONAR UM PARTICIPANTE 
+
+INSERT INTO utilizador_turma (utilizador_id, turma_identifier)
+VALUES (x, x)
+
+
+-------------------------------------------------------------------
+
+DELETE FROM utilizador_turma
+WHERE utilizador_id = 'input do id do utilizador' AND turma_identifier = 'input do id da turma'
+
+
+-------------------------------------------------------------------
+
+--> ADICIONAR RECEITAS A UMA TURMA 
+
+     --CODIGO--
+
+--> ADICIONAR EMENTAS A UMA TURMA
+
+     --CODIGO--
+
+--> ADICIONAR EXERCICIOS A UMA TURMA
+
+
+     --CÓDIGO--
+
+--> ADICIONAR PLANOS DE TREINO A UMA TURMA
+
+     --CÓDIGO--
+
+
+---------------------------------------------------------------------------
+
+--MÉTODOS DE PRODUTOS DA LOJA
+
+
+--> OBTER OS PRODUTOS NA LOJA (POR CATEGORIA)
+
+SELECT * FROM produto
+WHERE produto_categoria_id = 3
+
+
+--> POST DE UM ELEMENTO PARA A GETLIST (ITEMS ADQUIRIDOS)
+
+INSERT INTO productsgetlist (isget, product_id, utilizador_id)
+VALUES ('1', 6, 3)
+
+SELECT * FROM productsgetlist
+
+DELETE FROM productsgetlist WHERE get_product_position_id = 12
+
+--> OBTER GETLIST DE UM UTILIZADOR (PRODUTOS ADQUIRIDOS)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--- FILTRAR EXERCICIOS POR CATEGORIA ---
+
+SELECT exercicio.exercicio_id, exercicio.exercicio_titulo, exercicio.exercicio_desc, exercicio.exercicio_utilizador_id, utilizador.user_name FROM exercicio 
+INNER JOIN utilizador ON utilizador.user_id = exercicio.exercicio_utilizador_id
+WHERE exercicio.exercicio_utilizador_id = 'input do id do utilizador' AND exercicio.exercicio_tipo_id = 'categoria id'
+
+
+---------------OBTER EXERCICIOS FAVORITOS DO UTILIZADOR -----------------------
+
+SELECT marcacao_favorito_exercicio.favorito_exercicio_id , utilizador.user_id, exercicio.exercicio_id, exercicio.exercicio_titulo ,marcacao_favorito_exercicio.is_exercicio_favorito FROM marcacao_favorito_exercicio
+INNER JOIN utilizador ON utilizador.user_id = marcacao_favorito_exercicio.utilizador_id
+INNER JOIN exercicio ON exercicio.exercicio_id = marcacao_favorito_exercicio.exercicio_id
+WHERE marcacao_favorito_exercicio.is_exercicio_favorito = '1' AND marcacao_favorito_exercicio.utilizador_id = 'valor do id'
+
+--------------- OBTER PLANOS FAVORITOS DO UTILIZADOR --------------------------
+
+SELECT marcacao_favorito_plano.favorito_plano_id , utilizador.user_id, plano.plano_treino_id, plano.plano_titulo ,marcacao_favorito_plano.is_plano_favorito FROM marcacao_favorito_plano
+INNER JOIN utilizador ON utilizador.user_id = marcacao_favorito_plano.utilizador_id
+INNER JOIN plano ON plano.plano_treino_id = marcacao_favorito_plano.plano_treino_id
+WHERE marcacao_favorito_plano.is_plano_favorito = '0' AND marcacao_favorito_plano.utilizador_id = 'valor do id'
+
+----------------------- CRIAR NOVO EXERCICIO ----------------------
+
+
+----------------------- CRIAR NOVO PLANO DE TREINO ----------------
+
+
+----------------------- OBTER DETALHES DE UM EXERCICIO -------------
+
+------------------- OBTER DETALHES DE UM PLANO DE TREINO ----------------
 
