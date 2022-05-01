@@ -1169,11 +1169,142 @@ WHERE marcacao_favorito_plano.is_plano_favorito = '0' AND marcacao_favorito_plan
 
 ----------------------- CRIAR NOVO EXERCICIO ----------------------
 
+INSERT INTO exercicio (exercicio_titulo, exercicio_desc, exercicio_num_series, exercicio_num_repeticoes, exercicio_dificuldade_id, exercicio_tipo_id, exercicio_utilizador_id, aprovacao_pt)
+VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+
+
 
 ----------------------- CRIAR NOVO PLANO DE TREINO ----------------
 
+INSERT INTO plano (plano_titulo, plano_treino_desc, plano_utilizador_id, plano_treino_aprovacao_pt, plano_treino_tipo_aprovacao_id)
+VALUES ($1, $2, $3, $4, $5)
 
 ----------------------- OBTER DETALHES DE UM EXERCICIO -------------
 
+SELECT exercicio.exercicio_id, exercicio.exercicio_titulo, exercicio.exercicio_desc, exercicio.exercicio_num_series, exercicio.exercicio_num_repeticoes, utilizador.user_id FROM exercicio
+INNER JOIN utilizador ON utilizador.user_id = exercicio.exercicio_utilizador_id 
+WHERE exercicio_id = 'id do exercicio'
+
+   --DUVIDA NESTE MÉTODO -> COMO MOSTRAR O TITULO DA DIFICULDADE E DO TIPO
+
 ------------------- OBTER DETALHES DE UM PLANO DE TREINO ----------------
+
+SELECT plano.plano_treino_id, plano.plano_titulo, plano.plano_treino_desc, plano.plano_treino_aprovacao_pt, plano.plano_treino_tipo_aprovacao_id, utilizador.user_id FROM plano
+INNER JOIN utilizador ON utilizador.user_id = plano.plano_utilizador_id 
+WHERE plano_treino_id = 'id do plano'
+
+--DUVIDA NESTE MÉTODO -> COMO MOSTRAR DETALHES DA APROVACAO
+
+--------------------------------------------------------------------- MÉTODOS DOS EVENTOS --------------------------------------------------------------------------------------------
+
+--OBTER OS EVENTOS DE UM UTILIZADOR 
+
+SELECT evento.evento_id, evento.evento_titulo, evento.evento_descricao, evento.evento_local_id, evento.evento_data, utilizador.user_id, evento.evento_terminado, place.local_id, place.local_nome, place.local_morada ,place.geometry_info_point FROM evento
+INNER JOIN utilizador ON utilizador.user_id = evento.evento_criador_id
+INNER JOIN place ON place.local_id = evento.evento_local_id
+WHERE utilizador.user_id = 'input do id do utilizador'
+
+--ORDENAR OS EVENTOS DE UM UTILIZADOR
+
+SELECT evento.evento_id, evento.evento_titulo, evento.evento_descricao, evento.evento_local_id, evento.evento_data, utilizador.user_id, evento.evento_terminado, place.local_id, place.local_nome, place.local_morada ,place.geometry_info_point FROM evento
+INNER JOIN utilizador ON utilizador.user_id = evento.evento_criador_id
+INNER JOIN place ON place.local_id = evento.evento_local_id
+WHERE utilizador.user_id = 'input do id do utilizador'
+ORDER BY evento.evento_data DESC
+
+--CRIAR NOVO EVENTO
+
+INSERT INTO evento (evento_titulo, evento_descricao, evento_local_id, evento_data, evento_criador_id, evento_terminado)
+VALUES ($1, $2, $3, $4, $5, $6)
+
+--APAGAR EVENTO
+
+DELETE FROM evento
+WHERE evento.evento_id = 'input do id do evento'
+
+--MARCAR EVENTO COMO TERMINADO
+
+UPDATE evento
+SET evento_terminado = '1'
+WHERE evento.evento_id = 'id do evento'
+
+--MARCAR EVENTO COMO NÃO-TERMINADO
+
+UPDATE evento
+SET evento_terminado = '0'
+WHERE evento.evento_id = 'id do evento'
+
+------------------------------------------------------------------- MÉTODOS DE PEDIDO --------------------------------------------------------------------------------------
+
+---OBTER TODOS OS PEDIDOS DO UTILIZADOR (AULAS E CONSULTAS)
+
+SELECT pedido.pedido_id, pedido.pedido_titulo, pedido.pedido_desc, pedido.pedido_local_id, pedido.pedido_data, utilizador.user_id, pedido.pedido_tipo_id, pedido.pedido_estado_id, pedido.pedido_profissional_id, place.local_id, place.local_nome, place.local_morada ,place.geometry_info_point FROM pedido
+INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_utilizador_id
+INNER JOIN place ON place.local_id = pedido.pedido_local_id
+WHERE utilizador.user_id = 'input do id do utilizador'
+
+---OBTER PEDIDOS COM CATEGORIA 'AULA' DO UTILIZADOR
+
+SELECT pedido.pedido_id, pedido.pedido_titulo, pedido.pedido_desc, pedido.pedido_local_id, pedido.pedido_data, utilizador.user_id, pedido.pedido_tipo_id, pedido.pedido_estado_id, pedido.pedido_profissional_id, place.local_id, place.local_nome, place.local_morada ,place.geometry_info_point FROM pedido
+INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_utilizador_id
+INNER JOIN place ON place.local_id = pedido.pedido_local_id
+WHERE utilizador.user_id = 'id do utilizador' AND pedido.pedido_tipo_id = 1
+
+---OBTER PEDIDOS COM CATEGORIA 'CONSULTA' DO UTILIZADOR
+
+SELECT pedido.pedido_id, pedido.pedido_titulo, pedido.pedido_desc, pedido.pedido_local_id, pedido.pedido_data, utilizador.user_id, pedido.pedido_tipo_id, pedido.pedido_estado_id, pedido.pedido_profissional_id, place.local_id, place.local_nome, place.local_morada ,place.geometry_info_point FROM pedido
+INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_utilizador_id
+INNER JOIN place ON place.local_id = pedido.pedido_local_id
+WHERE utilizador.user_id = 'id do utilizador' AND pedido.pedido_tipo_id = 2
+
+
+---ADICIONAR NOVO PEDIDO
+
+INSERT INTO pedido (pedido_titulo, pedido_desc, pedido_local_id, pedido_utilizador_id, pedido_terminada, pedido_data, pedido_tipo_id, pedido_estado_id, pedido_profissional_id)
+VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+
+---APAGAR PEDIDO
+
+DELETE FROM pedido
+WHERE pedido.pedido_id = 'input do id do pedido'
+
+---ORDENAR OS PEDIDOS (CONSULTA)
+
+SELECT pedido.pedido_id, pedido.pedido_titulo, pedido.pedido_desc, pedido.pedido_local_id, pedido.pedido_data, utilizador.user_id, pedido.pedido_tipo_id, pedido.pedido_estado_id, pedido.pedido_profissional_id, place.local_id, place.local_nome, place.local_morada ,place.geometry_info_point FROM pedido
+INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_utilizador_id
+INNER JOIN place ON place.local_id = pedido.pedido_local_id
+WHERE utilizador.user_id = 'id do utilizador' AND pedido.pedido_tipo_id = 2
+ORDER BY pedido.pedido_data DESC
+
+---ORDENAR OS PEDIDOS (AULA)
+
+SELECT pedido.pedido_id, pedido.pedido_titulo, pedido.pedido_desc, pedido.pedido_local_id, pedido.pedido_data, utilizador.user_id, pedido.pedido_tipo_id, pedido.pedido_estado_id, pedido.pedido_profissional_id, place.local_id, place.local_nome, place.local_morada ,place.geometry_info_point FROM pedido
+INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_utilizador_id
+INNER JOIN place ON place.local_id = pedido.pedido_local_id
+WHERE utilizador.user_id = 'id do utilizador' AND pedido.pedido_tipo_id = 1
+ORDER BY pedido.pedido_data DESC
+
+---ORDENAR OS PEDIDOS (TODOS)
+
+SELECT pedido.pedido_id, pedido.pedido_titulo, pedido.pedido_desc, pedido.pedido_local_id, pedido.pedido_data, utilizador.user_id, pedido.pedido_tipo_id, pedido.pedido_estado_id, pedido.pedido_profissional_id, place.local_id, place.local_nome, place.local_morada ,place.geometry_info_point FROM pedido
+INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_utilizador_id
+INNER JOIN place ON place.local_id = pedido.pedido_local_id
+WHERE utilizador.user_id = 'input do id do utilizador'
+ORDER BY pedido.pedido_data DESC
+
+---OBTER AULAS MARCADAS (OBTER AULAS DO UTILIZADOR) -------------------------**************************ACABAR MÉTODO********************************-----------------------------------
+
+SELECT pedido.pedido_id, pedido.pedido_titulo, pedido.pedido_desc, pedido.pedido_local_id, pedido.pedido_data, utilizador.user_id, pedido.pedido_tipo_id, pedido.pedido_estado_id, pedido.pedido_profissional_id, place.local_id, place.local_nome, place.local_morada ,place.geometry_info_point FROM pedido
+INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_utilizador_id
+INNER JOIN place ON place.local_id = pedido.pedido_local_id
+WHERE utilizador.user_id = 'id do utilizador' AND pedido.pedido_tipo_id = 1 AND pedido.pedido_estado_id = 'id do estado'
+ORDER BY pedido.pedido_data DESC
+
+---ACEITAR UMA AULA (EXCLUSIVO PT)
+
+   --CÓDIGO--
+
+---ACEITAR UMA CONSULTA (EXCLUSIVO NUTRICIONISTA)
+
+   --CÓDIGO--
 
