@@ -1130,7 +1130,7 @@ WHERE utilizador_id = 'input do id do utilizador' AND turma_identifier = 'input 
 --> OBTER OS PRODUTOS NA LOJA (POR CATEGORIA)
 
 SELECT * FROM produto
-WHERE produto_categoria_id = 3
+WHERE produto_categoria_id = 'id da categoria'
 
 
 --> POST DE UM ELEMENTO PARA A GETLIST (ITEMS ADQUIRIDOS)
@@ -1143,6 +1143,24 @@ SELECT * FROM productsgetlist
 DELETE FROM productsgetlist WHERE get_product_position_id = 12
 
 --> OBTER GETLIST DE UM UTILIZADOR (PRODUTOS ADQUIRIDOS)
+
+SELECT productsgetlist.get_product_position_id, produto.produto_id ,produto.produto_titulo, produto.produto_points , produto.produto_desc, utilizador.user_id FROM productsgetlist
+INNER JOIN produto ON produto.produto_id = productsgetlist.product_id
+INNER JOIN utilizador ON utilizador.user_id = productsgetlist.utilizador_id
+WHERE productsgetlist.utilizador_id = 'id do utilizador' AND productsgetlist.isget = '1'
+
+--> VOLTAR A ADICIONAR UM PRODUTO Á GETLIST QUE FOI REMOVIDO
+
+UPDATE productsgetlist
+SET isget = '1'
+WHERE product_id = 'id do produto' AND utilizador_id = 'id do utilizador'
+
+---> DESMARCAR / REMOVER PRODUTO DA GETLIST
+
+UPDATE productsgetlist
+SET isget = '0'
+WHERE product_id = 'id do produto' AND utilizador_id = 'id do utilizador'
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1302,9 +1320,142 @@ ORDER BY pedido.pedido_data DESC
 
 ---ACEITAR UMA AULA (EXCLUSIVO PT)
 
-   --CÓDIGO--
+
+UPDATE pedido
+SET pedido_estado_id = 2
+WHERE pedido_utilizador_id = 'input do utilizador' AND pedido_tipo_id = 1
+
+---RECUSAR UMA AULA (EXCLUSIVO PT)
+
+UPDATE pedido
+SET pedido_estado_id = 3
+WHERE pedido_utilizador_id = 'input do utilizador' AND pedido_tipo_id = 1
 
 ---ACEITAR UMA CONSULTA (EXCLUSIVO NUTRICIONISTA)
 
+UPDATE pedido
+SET pedido_estado_id = 2
+WHERE pedido_utilizador_id = 'input do utilizador' AND pedido_tipo_id = 1
+
    --CÓDIGO--
 
+---RECUSAR UMA CONSULTA (EXCLUSIVO NUTRICIONISTA)
+
+UPDATE pedido
+SET pedido_estado_id = 3
+WHERE pedido_utilizador_id = 'input do utilizador' AND pedido_tipo_id = 1
+
+---MARCACAO DE RECEITA FAVORITO
+
+INSERT INTO marcacao_favorito_receita (utilizador_id, receita_id, is_receita_favorito)
+VALUES ($1, $2, $3)
+
+--DESMARCAR APÓS A PRIMEIRA MARCACAO
+
+UPDATE marcacao_favorito_receita
+SET is_receita_favorito = '0'
+WHERE utilizador_id = 'id do utilizador' AND receita_id = 'id da receita'
+
+--REMARCAR
+
+UPDATE marcacao_favorito_receita
+SET is_receita_favorito = '1'
+WHERE utilizador_id = 'id do utilizador' AND receita_id = 'id da receita'
+
+---MARCACAO DE EMENTA FAVORITO
+
+INSERT INTO marcacao_favorito_ementa (utilizador_id, ementa_id, is_ementa_favorito)
+VALUES ($1, $2, $3)
+
+---DESMARCAR APOS A PRIMEIRA MARCACAO
+
+UPDATE marcacao_favorito_ementa
+SET is_ementa_favorito = '0'
+WHERE utilizador_id = 'id do utilizador' AND ementa_id = 'id da ementa'
+
+---REMARCAR
+
+UPDATE marcacao_favorito_ementa
+SET is_ementa_favorito = '1'
+WHERE utilizador_id = 'id do utilizador' AND ementa_id = 'id da ementa'
+
+
+---MARCACAO DE EXERCICIO FAVORITO
+
+INSERT INTO marcacao_favorito_exercicio (utilizador_id, exercicio_id, is_exercicio_favorito)
+VALUES ($1, $2, $3)
+
+--DESMARCAR APÓS A PRIMEIRA MARCACAO
+
+UPDATE marcacao_favorito_exercicio
+SET is_exercicio_favorito = '0'
+WHERE utilizador_id = 'id do utilizador' AND exercicio_id = 'id do exercicio'
+
+--REMARCAR
+
+UPDATE marcacao_favorito_exercicio
+SET is_exercicio_favorito = '1'
+WHERE utilizador_id = 'id do utilizador' AND exercicio_id = 'id do exercicio'
+
+
+
+---MARCACAO DE PLANO FAVORITO
+
+INSERT INTO marcacao_favorito_plano (utilizador_id, exercicio_id, is_exercicio_favorito)
+VALUES ($1, $2, $3)
+
+--DESMARCAR APÓS A PRIMEIRA MARCACAO
+
+UPDATE marcacao_favorito_plano
+SET is_plano_favorito = '0'
+WHERE utilizador_id = 'id do utilizador' AND plano_id = 'id do plano'
+
+--REMARCAR
+
+UPDATE marcacao_favorito_plano
+SET is_plano_favorito = '1'
+WHERE utilizador_id = 'id do utilizador' AND plano_id = 'id do plano'
+
+
+
+-----------------------OBTER OS DADOS FÍSICOS DE UM UTILIZADOR --------------------------
+
+SELECT * FROM dados_utilizador
+WHERE user_utilizador_id = 'id do utilizador'
+
+------------------------------- INSERIR NOVO IMC ----------------------------------------
+
+UPDATE dados_utilizador
+SET user_dados_imc = 'novo valor do imc'
+WHERE user_utilizador_id = 'id do utilizador'
+
+---O MESMO UPDATE OCORRE COM TODOS OS OUTROS DADOS FÍSICOS (SÓ ALTERA A COLUNA DO 'SET')
+
+-------------------------- ATUALIZAR DADOS DE UM UTILIZADOR ---------------------------
+
+
+
+-------------------------------------------MÉTODOS DE ARTIGOS E NOTICIAS --------------------------------------------
+
+
+--> OBTER ARTIGOS (CATEGORIA DE ARTIGOS)
+
+
+
+--> OBTER NOTICIAS (CATEGORIA DE NOTICIAS)
+
+
+
+--> CRIAR NOVO ARTIGO (NOTICIA OU ARTIGO DE LEITURA)
+
+INSERT INTO artigo (artigo_leitura_titulo, artigo_leitura_corpo, artigo_leitura_data, artigo_read_type_id, artigo_category_id, comunidade_utilizador_id)
+VALUES ($1, $2, $3, $4, $5, $6)
+
+
+----------------- ORDENAR ARTIGOS POR DATA -----------------------------NÃO TERMINADO---------------------------------------
+
+SELECT evento.evento_id, evento.evento_titulo, evento.evento_descricao, evento.evento_local_id, evento.evento_data, utilizador.user_id, evento.evento_terminado, place.local_id, place.local_nome, place.local_morada ,place.geometry_info_point FROM evento
+INNER JOIN utilizador ON utilizador.user_id = evento.evento_criador_id
+INNER JOIN place ON place.local_id = evento.evento_local_id
+WHERE utilizador.user_id = 'input do id do utilizador'
+ORDER BY evento.evento_data DESC
