@@ -11,6 +11,14 @@ router.get('/categoryrecipe/:id', async function(req, res, next){
   
   });
 
+  router.get('/allrecipes', async function (req, res, next){
+
+    console.log("[recipesRoutes] Retrieving all recipes");
+    let result = await recipesModel.getAllRecipes();
+    res.status(result.status).send(result.data);
+
+  });
+
 //GET DE UMA RECEITA ESPECIFICA
 
 router.get('/:idreceita', async function(req, res, next){

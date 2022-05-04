@@ -53,9 +53,9 @@ async function loadValues(){
 
 async function add() {
     var defaultpoints = 0;
-    var defaultadmin = 'f';
-    var defaultpt = 'f';
-    var defaultnutri = 'f';
+    var defaultadmin = 0;
+    var defaultpt = 0;
+    var defaultnutri = 0;
    
     let data = {
         user_name: document.getElementById("fusername").value,

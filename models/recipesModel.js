@@ -1,5 +1,18 @@
 var pool = require("./database");
 
+module.exports.getAllRecipes = async function() {
+    try {
+        let sql = "SELECT * FROM receita";
+        let result = await pool.query(sql);
+        let recipesfound = result.rows;
+        console.log("[recipesModel.getAllRecipes] recipes = " + JSON.stringify(recipesfound));
+        return { status: 200, data: recipesfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
 module.exports.getRecipesUser = async function(uti_id) {
     try {
         let sql = "SELECT receita.receita_id, receita.receita_titulo, receita.receita_desc, receita.receita_utilizador_id, utilizador.user_name FROM receita " + "INNER JOIN utilizador ON utilizador.user_id = receita.receita_utilizador_id " + "WHERE receita.receita_utilizador_id =  " + uti_id;
