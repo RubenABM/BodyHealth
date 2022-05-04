@@ -453,7 +453,7 @@
                 <h3>Calcular IMC</h3>
               </div>
               <ul class="top-cat-list">
-                <li>
+                <!--<li>
                   <a href="##">
                     <div class="top-cat-list__title">
                       Lifestyle <span>8.2k</span>
@@ -462,7 +462,23 @@
                       Dailiy lifestyle articles <span class="purple">+472</span>
                     </div>
                   </a>
-                </li>
+                </li>-->
+                <form style="text-align: center;" class="formcalculateimc">
+                  <h3 style="font-size: medium;"> Peso</h3><br>
+                  <input type="number" id="fpeso" name="fpeso" class="fieldpeso" placeholder="Peso"><br><br>
+
+                  <h3 style="font-size: medium;"> Altura</h3><br>
+                  <input type="number" id="faltura" name="faltura" class="fieldalturao" placeholder="Altura"><br><br>
+
+                  <h3 style="font-size: medium;"> Idade</h3><br>
+                  <input type="number" id="fidade" name="fidade" class="fieldidade" placeholder="Idade"><br><br>
+
+                  <button type="submit" class="buttoncalcularimc"><b>Calcular</b></button><br><br>
+
+                  <h3 id="fimc" name="fimc" style="font-size: medium;"> O teu IMC: X</h3><br><br>
+
+                  <button type="submit" class="buttoncalcularimc"><b>Adicionar ponto</b></button>
+                </form>
               </ul>
             </article>
           </div>
