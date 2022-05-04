@@ -46,5 +46,7 @@ module.exports.getTurmasUser = async function(uti_id) {
     }
 }
 
-//ESCREVER O GETPARTICIPANTTURMA
+//ESCREVER O GETPARTICIPANTTURMA PARA OBTER PARTICIPANTES DE UMA TURMA
+
+
 
