@@ -152,6 +152,12 @@
 
     });
 
+    /*O 'marker' SERÁ INICIADO NO MAPA E REPPRESENTARÁ A POSICAO ATUAL DO UTILIZADOR*/
+
+    const marker = new mapboxgl.Marker() // Initialize a new marker
+     .setLngLat([38.719222970322235, -9.14401262998581]) // Marker [lng, lat] coordinates
+     .addTo(map);
+
      map.addControl(geocoder);
 
     /*
