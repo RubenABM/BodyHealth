@@ -20,7 +20,7 @@ router.get('/', async function(req, res, next) {
 
 router.get('/:id(\\d+)', async function(req, res, next){
 
-    let id = req.params.id;
+    let id = req.params.id; 
     console.log("[usersRoutes] Retrieving user with id " + id);
     let result = await usersModel.getUser(id);
     res.status(result.status).send(result.data);
