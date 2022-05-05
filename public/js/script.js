@@ -333,24 +333,16 @@ document.addEventListener('DOMContentLoaded', function () {
       var myChart = new Chart(myCanvas, {
         type: 'line',
         data: {
-          labels: ['Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+          labels: ['Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Novembro'],
           datasets: [{
-            label: 'Last 6 months',
+            label: 'Últimos 6 meses',
             data: [35, 27, 40, 15, 30, 25, 45],
             cubicInterpolationMode: 'monotone',
             tension: 0.4,
             backgroundColor: ['rgba(95, 46, 234, 1)'],
             borderColor: ['rgba(95, 46, 234, 1)'],
             borderWidth: 2
-          }, {
-            label: 'Previous',
-            data: [20, 36, 16, 45, 29, 32, 10],
-            cubicInterpolationMode: 'monotone',
-            tension: 0.4,
-            backgroundColor: ['rgba(75, 222, 151, 1)'],
-            borderColor: ['rgba(75, 222, 151, 1)'],
-            borderWidth: 2
-          }]
+          },]
         },
         options: {
           scales: {
@@ -391,7 +383,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             title: {
               display: true,
-              text: ['Visitor statistics', 'Nov - July'],
+              text: ['Estatistica IMC', 'Maio-Novembro'],
               align: 'start',
               color: '#171717',
               font: {
