@@ -1459,3 +1459,7 @@ INNER JOIN utilizador ON utilizador.user_id = evento.evento_criador_id
 INNER JOIN place ON place.local_id = evento.evento_local_id
 WHERE utilizador.user_id = 'input do id do utilizador'
 ORDER BY evento.evento_data DESC
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
