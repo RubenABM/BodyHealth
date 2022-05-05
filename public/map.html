@@ -10,6 +10,10 @@
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+  <!--GEOCODER-->
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+
+
   <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
 
 </head>
@@ -48,7 +52,7 @@
     <div id='map' style='width: 782px; height: 500px; border: 1px solid #e8bf5c; margin-left: 240px; margin-top: 70px;'>
     </div>
 
-    <div class="boxContainer">
+    <div class="boxContainer" style="visibility: hidden;">
 
       <table class="elementsContainer">
 
@@ -107,9 +111,17 @@
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
   <script src="js/map.js"></script>
 
+  <!--GEOCODING - SCRIPT-->
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+
   <script>
 
     mapboxgl.accessToken = 'pk.eyJ1IjoibWlndWVsY3J1eiIsImEiOiJjbDI1djBzdmcwODhwM2RudTlleGRlZ2tpIn0.u31STaJqnZkr5QFGTgVD8w';
+
+    const bounds = [
+      [-9.897438169534817, 36.85191635338956],
+      [-6.076692250400515, 42.20107808455899]
+    ];
 
 
     var map = new mapboxgl.Map({
@@ -117,14 +129,30 @@
       container: 'map',
       // style: 'mapbox://styles/mapbox/streets-v11',
       style: 'mapbox://styles/miguelcruz/cl25ywb6d000014mpgycvyq1w/draft',
-      center: [-9.1522302, 38.7070926],
-      zoom: 15
+      center: [-9.166421750512969, 38.760943038193496],
+      zoom: 15,
+      maxBounds: bounds
     });
 
-    const bounds = [
-      [-123.069003, 45.395273],
-      [-122.303707, 45.612333]
-    ];
+     /*GEOCODING MAP*/
+
+     const geocoder = new MapboxGeocoder({
+
+       accessToken: mapboxgl.accessToken,
+       placeholder: 'Search nearby places..',
+       mapboxgl: mapboxgl,
+       marker: false,
+       bbox: [-9.897438169534817, 36.85191635338956, -6.076692250400515, 42.20107808455899],
+       proximity: {
+
+          longitude: 38.736946,
+          latitude: -9.142685
+
+       }
+
+    });
+
+     map.addControl(geocoder);
 
     /*
     map.setMaxBounds(bounds);
@@ -135,7 +163,7 @@
     marker.style.visibility = "hidden";
     });*/
 
-    const geojson = {
+    var geojson = {
 
       "type": "FeatureCollection",
       "features": [
@@ -214,7 +242,7 @@
             "marker-size": "medium",
             "marker-symbol": "",
             "title": "F. Sabores",
-            "description": "Fábrica dos Sabores"
+            "description": "Fábrica dos Sabore36s"
           },
           "geometry": {
             "type": "Point",
@@ -246,6 +274,7 @@
     }
 
   </script>
+
 
   <!--STRING API GEOCODING
 
