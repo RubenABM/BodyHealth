@@ -1,6 +1,301 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 @import url(../fonts/stylesheet.css);
 
+#selectxbox1, #selectxbox22{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 0px;
+ 
+ }
+
+ #selectxbox2, #selectxbox23{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 0px;
+    margin-left: 170px;
+ 
+ }
+
+ #selectxbox3, #selectxbox24{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 0px;
+    margin-left: 340px;
+ 
+ }
+
+ #selectxbox4, #selectxbox25{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 0px;
+    margin-left: 510px;
+ 
+ }
+
+ #selectxbox5, #selectxbox26{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 0px;
+    margin-left: 680px;
+ 
+ }
+
+ #selectxbox6, #selectxbox27{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 0px;
+    margin-left: 850px;
+ 
+ }
+
+ #selectxbox7, #selectxbox28{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 0px;
+    margin-left: 1020px;
+ 
+ }
+
+ #selectxbox8, #selectxbox29{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 162px;
+ 
+ }
+
+ #selectxbox9, #selectxbox30{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 162px;
+    margin-left: 170px;
+ 
+ }
+
+ #selectxbox10, #selectxbox31{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 162px;
+    margin-left: 340px;
+ 
+ }
+
+ #selectxbox11, #selectxbox32{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 162px;
+    margin-left: 510px;
+ 
+ }
+
+ #selectxbox12, #selectxbox33{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 162px;
+    margin-left: 680px;
+ 
+ }
+
+ #selectxbox13, #selectxbox34{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 162px;
+    margin-left: 850px;
+ 
+ }
+
+ #selectxbox14, #selectxbox35{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 162px;
+    margin-left: 1020px;
+ 
+ }
+
+ #selectxbox15, #selectxbox36{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 324px;
+ 
+ }
+
+ #selectxbox16, #selectxbox37{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 324px;
+    margin-left: 170px;
+ 
+ }
+
+ #selectxbox17, #selectxbox38{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 324px;
+    margin-left: 340px;
+ 
+ }
+
+ #selectxbox18, #selectxbox39{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 324px;
+    margin-left: 510px;
+ 
+ }
+
+ #selectxbox19, #selectxbox40{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 324px;
+    margin-left: 680px;
+ 
+ }
+
+ #selectxbox20, #selectxbox41{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 324px;
+    margin-left: 850px;
+ 
+ }
+
+ #selectxbox21, #selectxbox42{
+
+    height: 150px;
+    width: 160px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: absolute;
+    border-radius: 6%;
+    margin-top: 324px;
+    margin-left: 1020px;
+ 
+ }
+ 
+.buttoncalcularimc{
+
+    background-color: #e8bf5c;
+    color: #2D2E2D;
+    width: 140px;
+    height: 40px;
+    border: 1px solid #FFFFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.buttoncalcularimc:hover{
+
+    background-color: #2d2e2d;
+    color: white;
+    width: 140px;
+    height: 40px;
+    border:  1px solid #FFFFFFFF;
+    font-size: medium;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+
+}
 
 .footer {
     text-align: center;
@@ -1806,7 +2101,8 @@ label {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    background-color: #0061f7 !important;
+    /*background-color: #0061f7 !important;*/
+    background-color: #2d2e2d;
     width: 253px;
     padding: 20px 15px 37px 20px;
     -webkit-transition: .5s all;
