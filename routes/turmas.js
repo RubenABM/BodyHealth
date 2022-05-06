@@ -40,6 +40,15 @@ router.get('/turmasuser/:idutilizador', async function(req, res, next){
     
     });
 
+   /* POST a new participant */
+router.post('/insertnewparticipant/', async function(req, res, next) {
+   let newParticipant = req.body;
+   console.log("[turmasRoutes] Saving participant " + JSON.stringify(newParticipant));
+   let result = await turmasModel.saveParticipantTurma(newParticipant);
+   res.sendStatus(result.status).send(result.data);
+ });
+ 
+
 //APAGAR UMA TURMA
 
    //CÓDIGO//
