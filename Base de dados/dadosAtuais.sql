@@ -1129,7 +1129,8 @@ WHERE utilizador_id = 'input do id do utilizador' AND turma_identifier = 'input 
 
 --> OBTER OS PRODUTOS NA LOJA (POR CATEGORIA)
 
-SELECT * FROM produto
+SELECT produto.produto_titulo, produto.produto_desc, produto.produto_preco, produto.produto_points, produto_category.prod_category FROM produto
+INNER JOIN produto_category ON produto_category.produto_category_id = produto.produto_categoria_id
 WHERE produto_categoria_id = 'id da categoria'
 
 
@@ -1253,6 +1254,10 @@ SET evento_terminado = '0'
 WHERE evento.evento_id = 'id do evento'
 
 ------------------------------------------------------------------- MÉTODOS DE PEDIDO --------------------------------------------------------------------------------------
+
+---OBTER TODOS OS PEDIDOS
+
+
 
 ---OBTER TODOS OS PEDIDOS DO UTILIZADOR (AULAS E CONSULTAS)
 
