@@ -270,6 +270,12 @@
     margin-left: 1020px;
  
  }
+
+ #organize{
+    display: flex;
+    flex-wrap: wrap;
+}
+
  
 .buttoncalcularimc{
 
