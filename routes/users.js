@@ -27,6 +27,15 @@ router.get('/:id(\\d+)', async function(req, res, next){
   
   });
 
+  router.get('dadosfisicos/:idutilizador', async function(req, res, next){
+
+    let id = req.params.id; 
+    console.log("[usersRoutes] Retrieving user with id " + id);
+    let result = await usersModel.getUserDados(id);
+    res.status(result.status).send(result.data);
+  
+  });
+
 
 /* POST a new user */
 router.post('/insertnewuser', async function(req, res, next) {

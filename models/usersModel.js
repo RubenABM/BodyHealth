@@ -79,5 +79,17 @@ module.exports.saveUser = async function(user) {
     }
 }
 
+//OBTER DADOS FÍSICOS DE UM UTILIZADOR
 
-
+module.exports.getUserDados = async function(uti_id) {
+    try {
+        let sql = "SELECT * FROM dados_utilizador " + "WHERE user.utilizador_id = " + uti_id;
+        let result = await pool.query(sql);
+        let dadosfound = result.rows;
+        console.log("[usersModel.getUserDados] dados_utilizador = " + JSON.stringify(dadosfound));
+        return { status: 200, data: dadosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}

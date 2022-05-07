@@ -1200,7 +1200,7 @@ VALUES ($1, $2, $3, $4, $5)
 
 ----------------------- OBTER DETALHES DE UM EXERCICIO -------------
 
-SELECT exercicio.exercicio_id, exercicio.exercicio_titulo, exercicio.exercicio_desc, exercicio.exercicio_num_series, exercicio.exercicio_num_repeticoes, utilizador.user_id FROM exercicio
+SELECT exercicio.exercicio_id, exercicio.exercicio_titulo, exercicio.exercicio_desc, exercicio.exercicio_num_series, exercicio.exercicio_num_repeticoes, utilizador.user_id, utilizador.user_name FROM exercicio
 INNER JOIN utilizador ON utilizador.user_id = exercicio.exercicio_utilizador_id 
 WHERE exercicio_id = 'id do exercicio'
 
@@ -1445,16 +1445,29 @@ WHERE user_utilizador_id = 'id do utilizador'
 
 --> OBTER ARTIGOS (CATEGORIA DE ARTIGOS)
 
+SELECT artigo_leitura_titulo, artigo_leitura_corpo, artigo_leitura_data, artigo_read_type.artigo_reader_type, artigo_category.artigo_category, utilizador.user_name FROM artigo
+INNER JOIN artigo_read_type ON artigo_read_type.artigo_reader_type_id = artigo.artigo_read_type_id
+INNER JOIN artigo_category ON artigo_category.artigo_category_id = artigo.artigo_category_id
+INNER JOIN utilizador ON utilizador.user_id = artigo.comunidade_utilizador_id
+WHERE artigo.artigo_category_id = 'id da categoria do artigo'
 
 
 --> OBTER NOTICIAS (CATEGORIA DE NOTICIAS)
 
+SELECT artigo_leitura_titulo, artigo_leitura_corpo, artigo_leitura_data, artigo_read_type.artigo_reader_type, artigo_category.artigo_category, utilizador.user_name FROM artigo
+INNER JOIN artigo_read_type ON artigo_read_type.artigo_reader_type_id = artigo.artigo_read_type_id
+INNER JOIN artigo_category ON artigo_category.artigo_category_id = artigo.artigo_category_id
+INNER JOIN utilizador ON utilizador.user_id = artigo.comunidade_utilizador_id
+WHERE artigo.artigo_category_id = 'id da categoria do artigo'
 
 
 --> CRIAR NOVO ARTIGO (NOTICIA OU ARTIGO DE LEITURA)
 
 INSERT INTO artigo (artigo_leitura_titulo, artigo_leitura_corpo, artigo_leitura_data, artigo_read_type_id, artigo_category_id, comunidade_utilizador_id)
 VALUES ($1, $2, $3, $4, $5, $6)
+
+
+
 
 
 ----------------- ORDENAR ARTIGOS POR DATA -----------------------------NÃO TERMINADO---------------------------------------
@@ -1467,4 +1480,20 @@ ORDER BY evento.evento_data DESC
 
 ---------------------------------------------------------------------------------------------------------------------------------
 
+
+---------------------------------------------------------- OUTRAS QUERIES DE ARTIGOS E EXERCICIOS -----------------------------------------------------------
+
+
+SELECT artigo_leitura_titulo, artigo_leitura_corpo, artigo_leitura_data, artigo_read_type.artigo_reader_type, artigo_category.artigo_category, utilizador.user_name FROM artigo
+INNER JOIN artigo_read_type ON artigo_read_type.artigo_reader_type_id = artigo.artigo_read_type_id
+INNER JOIN artigo_category ON artigo_category.artigo_category_id = artigo.artigo_category_id
+INNER JOIN utilizador ON utilizador.user_id = artigo.comunidade_utilizador_id
+WHERE artigo.artigo_read_type_id = 'id da categoria do artigo'
+
+
+SELECT exercicio.exercicio_id, exercicio.exercicio_titulo, exercicio.exercicio_desc, exercicio.exercicio_utilizador_id,exercicio_tipo.exercicio_tipo_titulo, exercicio.exercicio_num_series, exercicio.exercicio_num_repeticoes,exercicio_dificuldade.exercicio_dificuldade, utilizador.user_name FROM exercicio
+INNER JOIN exercicio_dificuldade ON exercicio_dificuldade.exercicio_dificuldade_id = exercicio.exercicio_dificuldade_id
+INNER JOIN exercicio_tipo ON exercicio_tipo.exercicio_tipo_id = exercicio.exercicio_tipo_id
+INNER JOIN utilizador ON utilizador.user_id = exercicio.exercicio_utilizador_id
+WHERE exercicio.exercicio_utilizador_id = 'id do utilizador' AND exercicio.exercicio_tipo_id = 'categoria id'
 
