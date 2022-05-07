@@ -15,6 +15,9 @@ var produtoRouter = require('./routes/produto');
 var eventosRouter = require('./routes/eventos');
 var indexRouter = require('./routes/index');
 var pedidosRouter = require('./routes/pedidos');
+var artigosRouter = require('./routes/artigos');
+var exerciciosRouter = require('./routes/exercicios');
+var planosRouter = require('./routes/planostreino');
 
 var app = express();
 
@@ -33,6 +36,9 @@ app.use('/ingredientes', ingredientesRouter);
 app.use('/produtos', produtoRouter);
 app.use('/eventos', eventosRouter);
 app.use('/pedidos', pedidosRouter);
+app.use('/artigos', artigosRouter);
+app.use('/exercicios', exerciciosRouter);
+app.use('/planostreino', planosRouter);
 
 app.use('/', indexRouter);
 
