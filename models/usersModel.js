@@ -93,3 +93,16 @@ module.exports.getUserDados = async function(uti_id) {
         return { status: 500, data: err };
     }
 }
+
+module.exports.DeleteUser = async function(uti_id) {
+    try {
+        let sql = "DELETE FROM utilizador " + "WHERE utilizador.user_id = " + uti_id;
+        let result = await pool.query(sql);
+        let userfound = result.rows;
+        console.log("[usersModel.getUserDados] dados_utilizador = " + JSON.stringify(userfound));
+        return { status: 200, data: userfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}

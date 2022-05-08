@@ -45,6 +45,16 @@ router.post('/insertnewuser', async function(req, res, next) {
     res.sendStatus(result.status).send(result.data);
 });
 
+//POST DO LOGIN -- PEDIR AJUDA AO WESLEY E PROFESSOR
 
+
+router.delete('/deleteuser/:idutilizador', async function(req,res, next){
+
+    let id = req.params.idutilizador; 
+    console.log("[usersRoutes] Retrieving user with id " + id);
+    let result = await usersModel.DeleteUser(id);
+    res.status(result.status).send(result.data);
+
+});
 
 module.exports = router;
