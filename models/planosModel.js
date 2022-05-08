@@ -107,3 +107,17 @@ module.exports.savePlanoFavorite = async function(plano) {
             return { status: 500, data: err };
     }
 }
+
+
+module.exports.UpdateMarcacao = async function(plan_id, user_id) {
+    try {
+        let sql = "UPDATE marcacao_favorito_plano " + "SET is_plano_favorito = '1' " + "WHERE utilizador_id =  " + user_id + "AND plano_treino_id = " + plan_id;
+        let result = await pool.query(sql);
+        let planofound = result.rows;
+        console.log("[exercicioModel.getExercisesUser] planos = " + JSON.stringify(planofound));
+        return { status: 200, data: planofound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}

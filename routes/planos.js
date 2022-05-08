@@ -47,6 +47,15 @@ router.get('/:idplano', async function(req, res, next){
     res.sendStatus(result.status).send(result.data);
   });
 
-  
+  router.put('/updatemarcacao/:idutilizador/:idplano', async function(req, res, next){
+
+    let id = req.params.idplano; 
+    let id_user = req.params.idutilizador;
+    console.log("[usersRoutes] Retrieving user with id " + id);
+    let result = await planosModel.UpdateMarcacao(id, id_user);
+    res.status(result.status).send(result.data);
+
+
+  });
 
   module.exports = router;

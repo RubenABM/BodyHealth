@@ -17,7 +17,7 @@ var indexRouter = require('./routes/index');
 var pedidosRouter = require('./routes/pedidos');
 var artigosRouter = require('./routes/artigos');
 var exerciciosRouter = require('./routes/exercicios');
-var planosRouter = require('./routes/planostreino');
+var planosRouter = require('./routes/planos');
 
 var app = express();
 
