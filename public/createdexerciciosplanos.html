@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Favoritos</title>
+    <title>Dashboard Criação</title>
     <!-- Favicon -->
     <!--<link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">-->
     <!-- Custom styles -->
@@ -94,7 +94,7 @@
                             </a>
                             <ul class="cat-sub-menu">
                                 <li>
-                                    <a href="media-01.html">Aulas marcadas</a>
+                                    <a href="eventosmarcados.html">Eventos marcados</a>
                                 </li>
                                 <li>
                                     <a href="media-02.html">Turmas</a>
@@ -208,15 +208,31 @@
                     <h2 class="main-title">Minhas criações</h2>
                     <div class="row">
                         <div class="col-lg-9">
-                            <div>
+                            <div style="display:inline-block">
                                 <h2 style="margin-top: 40px;">Exercícios</h2>
-                                <div style="margin-top: 3%;">
-                                <button style="margin-left:0 px;" type="submit"
-                                    class="buttoncalcularimc"><b>Selecionar categoria</b></button>
-                                <button onclick="openForm()" style="margin-left: 35px;" type="submit"
+                                <div style="float: right;" style="margin-top: 3%; margin-left: -300px">
+                                    <div style="margin-top: 20%; margin-left:78%;" class="dropdown2">
+                                        <button type="submit"
+                                            class="buttoncalcularimc"><b>Selecionar categoria</b></button><br><br>
+    
+                                        <div class="dropdown2-content">
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos </a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Costas</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Cardio</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Peito</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">A.Braço</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Braço </a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Ombros</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Pescoço</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Cintura</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Coxa</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Perna</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button style="margin-top: 10%;float: left;" onclick="openForm()" style="margin-left: 35px;" type="submit"
                                     class="buttoncalcularimc"><b>Criar
                                         exercício</b></button><br><br>
-                                </div>
                             </div>
                             <div class="form-popup" id="myForm">
                                 <form style="height:500px" action="/action_page.php" class="form-container">
@@ -610,15 +626,27 @@
                             </div>
                         </div>
                         <div class="col-lg-9">
-                            <div>
+                            <div style="display:inline-block">
                                 <h2 style="margin-top: 40px;">Planos de treino</h2>
-                                <div style="margin-top: 3%;">
-                                <button style="margin-left:0 px;" type="submit"
-                                    class="buttoncalcularimc"><b>Selecionar categoria</b></button>
-                                <button onclick="openForm2()" style="margin-left: 35px;" type="submit"
+                                <div style="float: right;" style="margin-top: 3%; margin-left: -300px">
+                                    <div style="margin-top: 20%; margin-left:78%;" class="dropdown2">
+                                        <button type="submit"
+                                            class="buttoncalcularimc"><b>Selecionar categoria</b></button><br><br>
+    
+                                        <div class="dropdown2-content">
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos </a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Força</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Definição</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Hipertrofia</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Cardio</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Res. Muscular</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Terapêutico</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button style="margin-top: 10%;float: left;" onclick="openForm()" style="margin-left: 35px;" type="submit"
                                     class="buttoncalcularimc"><b>Criar
                                         plano</b></button><br><br>
-                                </div>
                             </div>
                             <div style="z-index: 10;" class="form-popup" id="myForm2">
                                 <form action="/action_page.php" class="form-container">
