@@ -223,10 +223,10 @@
                                     </h3>
                                     <div style="margin-top: 3%">
                                         <div style="float: left;">
-                                            <input class="inputvaluescreaterecipe"
+                                            <input id="tituloex" class="inputvaluescreaterecipe"
                                                 style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%; width: 50%;"
                                                 type="text" placeholder="Título">
-                                            <textarea
+                                            <textarea id="descricaoex"
                                                 style="border:1px solid #2d2e2d; border-radius: 7px; width: 50%; height: 150px; margin-left: 0%; margin-top: 0%;"
                                                 placeholder="Descrição"></textarea>
 
@@ -240,13 +240,13 @@
                                             <h4 style="font-size: 15px; margin-left: 10px; margin-top: 10px;">
                                                 <b>Séries</b></h4>
 
-                                            <input type="number" required min="1" ; max="99"
+                                            <input id="series" type="number" required min="1" ; max="99"
                                                 style="margin-left: 11px; width: 200px;" placeholder="Séries...">
 
                                             <h4 style="font-size: 15px; margin-left: 10px; margin-top: 26px;">
                                                 <b>Repetições (por série)</b></h4>
 
-                                            <input type="number"
+                                            <input id="reps" type="number"
                                                 style="font-size: 15px; margin-left: 11px; margin-top: 3px; width: 200px;"
                                                 placeholder="Repetições..." required min="1" max="200">
 
@@ -623,10 +623,10 @@
                                     </h3>
                                     <div style="margin-top: 3%">
                                         <div style="float: left;">
-                                            <input class="inputvaluescreaterecipe"
+                                            <input id="tituloplano" class="inputvaluescreaterecipe"
                                                 style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%; width: 50%;"
                                                 type="text" placeholder="Título">
-                                            <textarea
+                                            <textarea id="descricaoplano"
                                                 style="border:1px solid #2d2e2d; border-radius: 7px; width: 50%; height: 150px; margin-left: 0%; margin-top: 0%;"
                                                 placeholder="Descrição"></textarea>
 
@@ -725,6 +725,7 @@
 
                                         <div style="width: 22%; margin-top: -300px; margin-right:45%;float: right;" class="radio-list">
                                             <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Tipo de exercício</b>
+                                            
                                             </h2>
                                             <div class="radio-item2"><input name="radio2" id="radio6"
                                                     type="radio"><label for="radio6">Costas</label></div>
