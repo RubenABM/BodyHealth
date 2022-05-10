@@ -13,6 +13,8 @@ router.get('/:idplano', async function(req, res, next){
   
   });
 
+//OBTER PLANOS FAVORITOS
+
 
   router.get('/planouser/:idutilizador', async function(req, res, next){
 
@@ -47,7 +49,7 @@ router.get('/:idplano', async function(req, res, next){
     res.sendStatus(result.status).send(result.data);
   });
 
-  router.put('/updatemarcacao/:idutilizador/:idplano', async function(req, res, next){
+  router.put('/updatemarcacao/remarcar/:idutilizador/:idplano', async function(req, res, next){
 
     let id = req.params.idplano; 
     let id_user = req.params.idutilizador;
@@ -56,6 +58,28 @@ router.get('/:idplano', async function(req, res, next){
     res.status(result.status).send(result.data);
 
 
+  });
+
+  router.put('/updatemarcacao/desmarcar/:idutilizador/:idplano', async function(req, res, next){
+
+    let id = req.params.idplano; 
+    let id_user = req.params.idutilizador;
+    console.log("[usersRoutes] Retrieving user with id " + id);
+    let result = await planosModel.UpdateDesmarcacao(id, id_user);
+    res.status(result.status).send(result.data);
+
+
+  });
+
+
+
+  router.delete('/deleteplano/:idplano', async function(req, res, next){
+
+    let plano_id = req.params.idplano;
+    console.log("[artigosRoutes] Deleting plano with id: " + plano_id);
+    let result = await planosModel.DeletePlano(plano_id);
+    res.status(result.status).send(result.data);
+  
   });
 
   module.exports = router;

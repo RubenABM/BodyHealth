@@ -73,5 +73,80 @@ module.exports.saveExercise = async function(exercise) {
     }
 }
 
+module.exports.DeleteExercise = async function(exercicio_id){
+
+    try{
+        let sql = "DELETE FROM exercicio " + "WHERE exercicio_id = " + exercicio_id;
+        let result = await pool.query(sql);
+        let exerciciofound = result.rows;
+        console.log("[artigoModel.getArtigoCategory] exercise = " + JSON.stringify(exerciciofound));
+        return { status: 200, data: exerciciofound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+
+}
 
 
+module.exports.saveExerciseFavorito = async function(exercicio) {
+    console.log("[ementasModel.saveEmenta] ementa = " + JSON.stringify(exercicio));
+    /* checks all fields needed and ignores other fields
+    if (typeof user != "object" || failUser(user)) {
+        if (user.errMsg)
+            return { status: 400, data: { msg: user.errMsg } };
+        else
+            return { status: 400, data: { msg: "Malformed data" } };
+    }*/
+    try {
+
+
+        let sql =
+            "INSERT " +
+            "INTO marcacao_favorito_exercicio " +
+            "(utilizador_id, exercicio_id, is_exercicio_favorito) " +
+            "VALUES ($1, $2, '1') " +
+            "RETURNING favorito_exercicio_id";
+
+            console.log(exercicio.utilizador_id + "|" + exercicio.exercicio_id + "|" + exercicio.is_exercicio_favorito);
+        let result = await pool.query(sql, [exercicio.utilizador_id, exercicio.exercicio_id, exercicio.is_exercicio_favorito]);
+        let exercicioooo = result.rows[0].favorito_exercicio_id;
+        return { status: 200, data: exercicioooo };
+    } catch (err) {
+        console.log(err);
+        if (err.errno == 23503) // FK error
+            return { status: 400, data: { msg: "Type not found" } };
+        else
+            return { status: 500, data: err };
+    }
+}
+
+module.exports.UpdateFavorito = async function(exercicio_id, utilizador_id){
+
+    try {
+        let sql = "UPDATE marcacao_favorito_exercicio " + "SET is_exercicio_favorito = '0' " + "WHERE marcacao_favorito_exercicio.utilizador_id = " + utilizador_id + " AND marcacao_favorito_exercicio.exercicio_id = " + exercicio_id;
+        let result = await pool.query(sql);
+        let exerciciosfound = result.rows;
+        console.log("[ementasModel.getEmentasUser] recipes = " + JSON.stringify(exerciciosfound));
+        return { status: 200, data: exerciciosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+
+}
+
+module.exports.UpdateFavoritoRemarcar = async function(exercicio_id, utilizador_id){
+
+    try {
+        let sql = "UPDATE marcacao_favorito_exercicio " + "SET is_exercicio_favorito = '1' " + "WHERE marcacao_favorito_exercicio.utilizador_id = " + utilizador_id + " AND marcacao_favorito_exercicio.exercicio_id = " + exercicio_id;
+        let result = await pool.query(sql);
+        let exercisefound = result.rows;
+        console.log("[ementasModel.getEmentasUser] recipes = " + JSON.stringify(exercisefound));
+        return { status: 200, data: exercisefound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+
+}

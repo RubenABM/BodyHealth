@@ -1,4 +1,7 @@
+const { response } = require("express");
 var pool = require("./database");
+var brcypt = require('bcrypt');
+var salt = 10;
 
 module.exports.getUsers = async function() {
     try {
@@ -49,7 +52,7 @@ module.exports.getUser = async function(id){
 //MÉTODO POST 
 
 module.exports.saveUser = async function(user) {
-    console.log("[usersModel.saveUser] user = " + JSON.stringify(user));
+    //console.log("[usersModel.saveUser] user = " + JSON.stringify(user));
     /* checks all fields needed and ignores other fields
     if (typeof user != "object" || failUser(user)) {
         if (user.errMsg)
@@ -57,6 +60,7 @@ module.exports.saveUser = async function(user) {
         else
             return { status: 400, data: { msg: "Malformed data" } };
     }*/
+    let password = brcypt.hashSync(user.user_password, salt);
     try {
 
         let sql =
@@ -66,16 +70,14 @@ module.exports.saveUser = async function(user) {
             "VALUES ($1, $2, $3, $4, $5, $6, $7, $8) " +
             "RETURNING user_id";
 
-            console.log(user.user_name + "|" + user.user_password + "|" + user.user_morada + "|" + user.user_email + "|" + user.user_points + "|" + user.user_admin + "|" + user.user_pt + "|" + user.user_nutri);
-        let result = await pool.query(sql, [user.user_name, user.user_password, user.user_morada, user.user_email, user.user_points, user.user_admin, user.user_pt, user.user_nutri]);
-        let utilizador = result.rows[0].user_id;
-        return { status: 200, data: utilizador };
+            //console.log(user.user_name + "|" + user.user_password + "|" + user.user_morada + "|" + user.user_email + "|" + user.user_points + "|" + user.user_admin + "|" + user.user_pt + "|" + user.user_nutri);
+        let result = await pool.query(sql, [user.user_name, password, user.user_morada, user.user_email, user.user_points, user.user_admin, user.user_pt, user.user_nutri]);
+        
+        return { status: 200, result: result };
     } catch (err) {
+
         console.log(err);
-        if (err.errno == 23503) // FK error
-            return { status: 400, data: { msg: "Type not found" } };
-        else
-            return { status: 500, data: err };
+        return { status: 500, result: err };
     }
 }
 
@@ -105,4 +107,48 @@ module.exports.DeleteUser = async function(uti_id) {
         console.log(err);
         return { status: 500, data: err };
     }
+}
+
+
+module.exports.authUser = async function(uti_name){
+
+    try {
+        let sql = "SELECT * FROM utilizador where user_name = $1";
+
+        let result = await pool.query(sql,[uti_name.user_name]);
+
+        let passwordb = result.rows[0].password;
+
+        let valor = brcypt.compareSync(uti_name.user_password, passwordb);
+
+        //console.log("[usersModel.getUserDados] dados_utilizador = " + JSON.stringify(dadosfound));
+
+        if(result.rows.length > 0 && valor)
+            return { status: 200, result: result.rows[0]};
+        else return { status: 401, result: {msg:' wrong email or passsword'}};
+        
+    } catch (err) {
+        console.log(err);
+        return { status: 500, result: {msg: 'wrong email or passsword'}};
+    }
+
+    /*
+
+       let sql = "SELECT * FROM utilizador " + "WHERE utilizador.user_name = " + uti_name + " AND utilizador.user_password = " + uti_pass; 
+       let result = await pool.query(sql);
+
+       if(result.rows > 0){
+         
+        response.send('/mainpage.html');
+
+        response.end();
+
+       } else {
+           console.log("no");
+           response.end();
+       }
+       */
+
+    
+
 }

@@ -1497,3 +1497,20 @@ INNER JOIN exercicio_tipo ON exercicio_tipo.exercicio_tipo_id = exercicio.exerci
 INNER JOIN utilizador ON utilizador.user_id = exercicio.exercicio_utilizador_id
 WHERE exercicio.exercicio_utilizador_id = 'id do utilizador' AND exercicio.exercicio_tipo_id = 'categoria id'
 
+---OBTER DETALHES DE UM ARTIGO
+SELECT artigo.artigo_leitura_id , artigo.artigo_leitura_titulo , artigo.artigo_leitura_corpo , artigo.artigo_leitura_data , artigo_read_type.artigo_reader_type, artigo_category.artigo_category, utilizador.user_name FROM artigo
+INNER JOIN artigo_read_type ON artigo_read_type.artigo_reader_type_id = artigo.artigo_read_type_id 
+INNER JOIN artigo_category ON artigo_category.artigo_category_id = artigo.artigo_category_id
+INNER JOIN utilizador ON utilizador.user_id = artigo.artigo_utilizador_id
+WHERE artigo.artigo_id = 'id do artigo'
+
+
+--OBTER RECEITAS DE UMA EMENTA
+
+SELECT ementa_receita.ementa_receita_id, ementa_receita.receita_id, ementa_receita.ementa_id, ementa.ementa_id ,ementa.ementa_titulo, receita.receita_id, receita.receita_titulo, receita.receita_desc, item_aprovacao.tipoaprovacao_nome, item_base.basee_nome, receita_categoria.receita_categoria_nome FROM ementa_receita
+INNER JOIN ementa ON ementa.ementa_id = ementa_receita.ementa_id
+INNER JOIN receita ON receita.receita_id = ementa_receita.receita_id
+INNER JOIN item_aprovacao ON item_aprovacao.aprovacao_tipo_id = receita.receita_tipo_aprovacao_id
+INNER JOIN item_base ON item_base.basee_id = receita.receita_base_id
+INNER JOIN receita_categoria ON receita_categoria.receita_categoria_id = receita.receita_categoriaa_id
+WHERE ementa.ementa_id = 'id da ementa'

@@ -50,7 +50,45 @@ router.post('/insertnewexercise', async function(req, res, next) {
     let result = await exercicioModel.saveExercise(newExercise);
     res.sendStatus(result.status).send(result.data);
   });
+
+  
+  router.delete('/deleteexercise/:idexercise', async function(req, res, next){
+
+    let exercicio_id = req.params.idexercise;
+    console.log("[artigosRoutes] Deleting ementa with id: " + exercicio_id);
+    let result = await exercicioModel.DeleteExercise(exercicio_id);
+    res.status(result.status).send(result.data);
+  
+  });
+
+  router.post('/insertnewexercisefavorito', async function(req, res, next) {
+    let newExercise = req.body;
+    console.log("[recipesRoutes] Saving favorite " + JSON.stringify(newExercise));
+    let result = await exercicioModel.saveExerciseFavorito(newExercise);
+    res.sendStatus(result.status).send(result.data);
+  });
   
 
+  /*DESMARCAR EXERCICIO COMO FAVORITO*/
+
+router.put('/desmarcar/:idexercicio/:idutilizador', async function(req, res, next){
+
+  let utilizador_id = req.params.idutilizador;
+  let exercicio_id = req.params.idexercicio;
+  console.log("[artigosRoutes] Update favorite: " + utilizador_id + "|" + exercicio_id);
+  let result = await exercicioModel.UpdateFavorito(exercicio_id, utilizador_id);
+  res.status(result.status).send(result.data);
+
+});
+
+router.put('/remarcar/:idexercicio/:idutilizador', async function(req, res, next){
+
+  let utilizador_id = req.params.idutilizador;
+  let exercicio_id = req.params.idexercicio;
+  console.log("[artigosRoutes] Update favorite: " + utilizador_id + "|" + exercicio_id);
+  let result = await exercicioModel.UpdateFavoritoRemarcar(exercicio_id, utilizador_id);
+  res.status(result.status).send(result.data);
+
+});
 
 module.exports = router;

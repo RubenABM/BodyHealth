@@ -13,6 +13,20 @@ module.exports.getAllPedidos = async function(uti_id) {
     }
 }
 
+module.exports.getAllPedidosLimit = async function(uti_id) {
+    try {
+        let sql = "SELECT pedido.pedido_id, pedido.pedido_titulo, pedido.pedido_desc, pedido.pedido_local_id, pedido.pedido_data, utilizador.user_id, pedido.pedido_tipo_id, pedido.pedido_estado_id, pedido.pedido_profissional_id, place.local_id, place.local_nome, place.local_morada ,place.geometry_info_point FROM pedido LIMIT 20 " + "INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_utilizador_id " + "INNER JOIN place ON place.local_id = pedido.pedido_local_id " + "WHERE utilizador.user_id = " + uti_id + "ORDER BY pedido.pedido_data DESC";
+        let result = await pool.query(sql);
+        let pedidosfound = result.rows;
+        console.log("[pedidosModel.getAllPedidos] pedidos = " + JSON.stringify(pedidosfound));
+        return { status: 200, data: pedidosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+
 module.exports.getAllPedidosByCategory = async function(uti_id, cat_id) {
     try {
         let sql = "SELECT pedido.pedido_id, pedido.pedido_titulo, pedido.pedido_desc, pedido.pedido_local_id, pedido.pedido_data, utilizador.user_id, pedido.pedido_tipo_id, pedido.pedido_estado_id, pedido.pedido_profissional_id, place.local_id, place.local_nome, place.local_morada ,place.geometry_info_point FROM pedido " + "INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_utilizador_id " + "INNER JOIN place ON place.local_id = pedido.pedido_local_id " + "WHERE utilizador.user_id =  " + uti_id +  "AND pedido.pedido_tipo_id = " + cat_id;
@@ -39,7 +53,7 @@ module.exports.getAllPedidosByCategoryOrdered = async function(uti_id, cat_id) {
     }
 }
 
-//MÉTODO POST DA RECEITA
+//MÉTODO POST DO PEDIDO
 
 module.exports.savePedido = async function(pedido) {
     console.log("[pedidosModel.savePedido] pedido = " + JSON.stringify(pedido));
@@ -56,7 +70,7 @@ module.exports.savePedido = async function(pedido) {
             "INSERT " +
             "INTO pedido " +
             "(pedido_titulo, pedido_desc, pedido_local_id, pedido_utilizador_id, pedido_terminada, pedido_data, pedido_tipo_id, pedido_estado_id, pedido_profissional_id) " +
-            "VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) " +
+            "VALUES ($1, $2, $3, $4, $5, $6, $7, 4, $9) " +
             "RETURNING pedido_id";
 
             console.log(pedido.pedido_titulo + "|" + pedido.pedido_desc + "|" + pedido.pedido_local_id + "|" + pedido.pedido_utilizador_id + "|" + pedido.pedido.pedido_terminada + "|" + pedido.pedido_data + "|" + pedido.pedido_tipo_id + "|" + pedido.pedido_estado_id + "|" + pedido.pedido_profissional_id);
@@ -72,6 +86,51 @@ module.exports.savePedido = async function(pedido) {
     }
 }
 
+
+module.exports.DeletePedido = async function(pedido_id){
+
+    try{
+        let sql = "DELETE FROM pedido " + "WHERE pedido_id = " + pedido_id;
+        let result = await pool.query(sql);
+        let pedidofound = result.rows;
+        console.log("[artigoModel.getArtigoCategory] pedido = " + JSON.stringify(pedidofound));
+        return { status: 200, data: pedidofound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+
+}
+
+module.exports.UpdateAceitarPedido = async function(pedido_id){
+
+    try {
+        let sql = "UPDATE pedido " + "SET pedido.pedido_estado_id = 2 " + "WHERE pedido.pedido_id = " + pedido_id;
+        let result = await pool.query(sql);
+        let pedidofound = result.rows;
+        console.log("[ementasModel.getEmentasUser] pedido = " + JSON.stringify(pedidofound));
+        return { status: 200, data: pedidofound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+
+}
+
+module.exports.UpdateRecusarPedido = async function(pedido_id){
+
+    try {
+        let sql = "UPDATE pedido " + "SET pedido.pedido_estado_id = 3 " + "WHERE pedido.pedido_id = " + pedido_id;
+        let result = await pool.query(sql);
+        let pedidofound = result.rows;
+        console.log("[ementasModel.getEmentasUser] pedido = " + JSON.stringify(pedidofound));
+        return { status: 200, data: pedidofound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+
+}
 
 
 

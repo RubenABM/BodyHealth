@@ -40,9 +40,9 @@ router.get('/:id(\\d+)', async function(req, res, next){
 /* POST a new user */
 router.post('/insertnewuser', async function(req, res, next) {
     let newUser = req.body;
-    console.log("[usersRoutes] Saving user " + JSON.stringify(newUser));
+    //console.log("[usersRoutes] Saving user " + JSON.stringify(newUser));
     let result = await usersModel.saveUser(newUser);
-    res.sendStatus(result.status).send(result.data);
+    res.status(result.status).send(result.result);
 });
 
 //POST DO LOGIN -- PEDIR AJUDA AO WESLEY E PROFESSOR
@@ -57,4 +57,14 @@ router.delete('/deleteuser/:idutilizador', async function(req,res, next){
 
 });
 
+router.post('/loginuser', async function(req, res, next){
+
+    let username = req.body;
+    
+
+    let result = await usersModel.authUser(username);
+    res.status(result.status).send(result.result);
+
+
+});
 module.exports = router;

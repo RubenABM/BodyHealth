@@ -25,3 +25,33 @@ module.exports.getIngredient = async function(ing_id) {
         return { status: 500, data: err };
     }
 }
+
+module.exports.saveIngrediente = async function(ingrediente) {
+    console.log("[recipesModel.saveRecipe] exercise = " + JSON.stringify(ingrediente));
+    /* checks all fields needed and ignores other fields
+    if (typeof user != "object" || failUser(user)) {
+        if (user.errMsg)
+            return { status: 400, data: { msg: user.errMsg } };
+        else
+            return { status: 400, data: { msg: "Malformed data" } };
+    }*/
+    try {
+
+        let sql =
+            "INSERT " +
+            "INTO ingrediente " +
+            "(ingrediente_nome, ingrediente_cal, ingrediente_carbohidratos, ingrediente_proteina, ingrediente_fibra, ingrediente_acucares) " +
+            "VALUES ($1, $2, $3, $4, $5, $6) " +
+            "RETURNING ingrediente_id";
+
+        let result = await pool.query(sql, [ingrediente.ingrediente_nome, ingrediente.ingrediente_cal, ingrediente.ingrediente_carbohidratos, ingrediente.ingrediente_proteina, ingrediente.ingrediente_fibra, ingrediente.ingrediente_acucares]);
+        let ingredienteeee = result.rows[0].ingrediente_id;
+        return { status: 200, data: ingredienteeee };
+    } catch (err) {
+        console.log(err);
+        if (err.errno == 23503) // FK error
+            return { status: 400, data: { msg: "Type not found" } };
+        else
+            return { status: 500, data: err };
+    }
+}

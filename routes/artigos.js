@@ -20,7 +20,27 @@ router.get('/filterartigos/:artigo_categoria_id', async function(req, res, next)
 
   });
 
+/*OBTER OS DETALHES DE UM ARTIGO*/
 
+router.get('/detalheartigo/:idartigo', async function(req, res, next) {
+
+  let artigo_id = req.params.idartigo;
+  console.log("[artigosRoutes] Getting artigo with id: " + artigo_id);
+  let result = await artigoModel.getArtigoDetails(artigo_id);
+  res.status(result.status).send(result.data);
+
+
+});
+
+/*APAGAR UM ARTIGO*/
+router.delete('/deleteartigo/:idartigo', async function(req, res, next){
+
+  let artigo_id = req.params.idartigo;
+  console.log("[artigosRoutes] Deleting artigo with id: " + artigo_id);
+  let result = await artigoModel.DeleteArtigo(artigo_id);
+  res.status(result.status).send(result.data);
+
+});
 
 
 

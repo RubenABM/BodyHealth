@@ -52,23 +52,26 @@ async function loadValues(){
 
 
 async function add() {
-    var defaultpoints = 0;
-    var defaultadmin = 0;
-    var defaultpt = 0;
-    var defaultnutri = 0;
    
-    let data = {
-        user_name: document.getElementById("fusername").value,
-        user_password: document.getElementById("fpassword").value,
-        user_morada: document.getElementById("fmorada").value,
-        user_email: document.getElementById("femail").value,
-        user_points: parseInt(defaultpoints), //PROBLEMA: ALTERAR TIPO DE DADOS
-        user_admin: defaultadmin,
-        user_pt: defaultpt,
-        user_nutri: defaultnutri
-    }
-    console.log("[signupandlogin] data = " + JSON.stringify(data));
+   
+    //console.log("[signupandlogin] data = " + JSON.stringify(data));
     try {
+        var defaultpoints = 0;
+        var defaultadmin = 0;
+        var defaultpt = 0;
+        var defaultnutri = 0;
+
+        let data = {
+            user_name: document.getElementById("fusername").value,
+            user_password: document.getElementById("fpassword").value,
+            user_morada: document.getElementById("fmorada").value,
+            user_email: document.getElementById("femail").value,
+            user_points: parseInt(defaultpoints), //PROBLEMA: ALTERAR TIPO DE DADOS
+            user_admin: defaultadmin,
+            user_pt: defaultpt,
+            user_nutri: defaultnutri
+        }
+
         let newUser = await $.ajax({
             url: "/users/insertnewuser",
             method: "post",
@@ -76,13 +79,42 @@ async function add() {
             contentType: "application/json",
             dataType: "json"
         });
+
         console.log("Inserted new user with id: " + newUser.user_id)
+        window.alert('registration sucessful');
+
     } catch (err) {
         console.log(err);
-        if (err.responseJSON) {
-          console.log(err.responseJSON.msg);
-        } else {
-            console.log("Was not able to add user");
-        }
+        window.alert('just something wrong');
+        
     }
+}
+
+async function login(){
+
+   try{
+
+    let object = {
+
+         user_name: document.getElementById("fusernamelogin").value,
+         user_password: document.getElementById("fpasswordlogin").value,
+    };
+    let authUser = await $.ajax({
+
+        url: "/users/loginuser",
+        method: "post",
+        data: JSON.stringify(object),
+        contentType: "application/json",
+        dataType: "json",
+    });
+    //console.log("Verifying user with username: " + authUser.user_name + " and password: " + authUser.user_password);
+
+    sessionStorage.setItem('user_id', authUser.user_id);
+    window.alert('login sucessfull');
+    console.log(authUser.user_id);
+   }  catch (err) {
+    console.log(err);
+    window.alert('something wron;g')
+    }
+
 }

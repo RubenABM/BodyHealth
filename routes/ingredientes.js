@@ -18,4 +18,14 @@ router.get('/ingredientdetails/:id', async function(req, res, next){
 
 });
 
+router.post('/insertnewingrediente', async function(req, res, next) {
+    let newIngrediente = req.body;
+    console.log("[recipesRoutes] Saving ingredient " + JSON.stringify(newIngrediente));
+    let result = await ingredientesModel.saveIngrediente(newIngrediente);
+    res.sendStatus(result.status).send(result.data);
+  });
+
+ 
+
+
 module.exports = router;

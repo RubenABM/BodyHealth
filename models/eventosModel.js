@@ -71,4 +71,15 @@ module.exports.saveEvento = async function(evento) {
 }
 
 
-
+module.exports.getEventosOrdenados = async function() {
+    try {
+        let sql = "SELECT evento_titulo, evento_data, place.local_nome, place.local_morada, place.geometry_info_point ,utilizador.user_name FROM evento " + "INNER JOIN  place ON place.local_id = evento.evento_local_id " + "INNER JOIN  utilizador ON utilizador.user_id = evento.evento_criador_id  " + "ORDER BY evento.evento_data DESC";
+        let result = await pool.query(sql);
+        let eventosfound = result.rows;
+        console.log("[eventosModel.getEventosUser] eventos = " + JSON.stringify(eventosfound));
+        return { status: 200, data: eventosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}

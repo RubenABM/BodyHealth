@@ -11,6 +11,16 @@ router.get('/allpedidos/:idutilizador', async function (req, res, next){
 
 });
 
+router.get('/allpedidoslimit/:idutilizador', async function (req, res, next){
+
+    let id_utilizador = req.params.idutilizador;
+    console.log("[pedidosRoutes] Retrieving all pedidos from user id: " + id_utilizador);
+    let result = await pedidosModel.getAllPedidosLimit(id_utilizador);
+    res.status(result.status).send(result.data);
+
+});
+
+
 /*OBTER PEDIDOS POR CATEGORIA (AULA OU CONSULTA)*/ 
 
 router.get('/getpedidos/:idutilizador/:pedidocategoria', async function(req, res, next){
@@ -43,6 +53,37 @@ router.post('/insertnewpedido', async function(req, res, next) {
     console.log("[pedidosRoutes] Saving pedido " + JSON.stringify(newPedido));
     let result = await pedidosModel.savePedido(newPedido);
     res.sendStatus(result.status).send(result.data);
+  });
+
+
+  
+  router.delete('/deletepedido/:idpedido', async function(req, res, next){
+
+    let pedido_id = req.params.idpedido;
+    console.log("[artigosRoutes] Deleting pedido with id: " + pedido_id);
+    let result = await pedidosModel.DeletePedido(pedido_id);
+    res.status(result.status).send(result.data);
+  
+  });
+
+  
+router.put('/aceitar/:idpedido', async function(req, res, next){
+
+    let pedido_id = req.params.idpedido;
+    console.log("[artigosRoutes] Update pedido with id: " + pedido_id);
+    let result = await pedidosModel.UpdateAceitarPedido(pedido_id);
+    res.status(result.status).send(result.data);
+  
+  });
+
+  
+  router.put('/recusar/:idpedido', async function(req, res, next){
+
+    let pedido_id = req.params.idpedido;
+    console.log("[artigosRoutes] Update pedido with id: " + pedido_id);
+    let result = await pedidosModel.UpdateRecusarPedido(pedido_id);
+    res.status(result.status).send(result.data);
+  
   });
 
 

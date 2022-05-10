@@ -3,7 +3,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 var usersRouter = require('./routes/users');
 var placesRouter = require('./routes/places');

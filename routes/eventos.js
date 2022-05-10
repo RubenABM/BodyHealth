@@ -36,6 +36,15 @@ router.post('/insertnewevento', async function(req, res, next) {
     res.sendStatus(result.status).send(result.data);
   });
   
+  //ORDENAR TODOS OS EVENTOS EXISTENTES NA PLATAFORMA
+
+  router.get('/alleventos/ordenareventos/', async function(req, res, next){
+
+    console.log("[eventosRoutes] Retrieving eventos");
+    let result = await eventosModel.getEventosOrdenados();
+    res.status(result.status).send(result.data);
+  
+  });
 
 
 module.exports = router;

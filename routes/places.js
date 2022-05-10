@@ -51,7 +51,34 @@ router.get('/categoryplace/:id', async function(req, res, next){
 
 });
 
+router.get('/filtrar/cafes/1', async function(req, res, next){
 
+  let result = await placesModel.getPlacesCafes();
+    res.status(result.status).send(result.data);
+
+});
+
+router.get('/filtrar/bares/2', async function(req, res, next){
+
+  let result = await placesModel.getPlacesBares();
+    res.status(result.status).send(result.data);
+
+});
+
+router.get('/filtrar/restaurantes/3', async function(req, res, next){
+
+  let result = await placesModel.getPlacesRestaurantes();
+    res.status(result.status).send(result.data);
+
+});
+
+
+router.get('/filtrar/ginasios/4', async function(req, res, next){
+
+  let result = await placesModel.getPlacesGinasios();
+    res.status(result.status).send(result.data);
+
+});
 
 
 module.exports = router;

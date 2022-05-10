@@ -13,6 +13,58 @@ module.exports.getPlaces = async function() {
     }
 }
 
+module.exports.getPlacesCafes = async function() {
+    try {
+        let sql = "select * from place " + "where place.local_category_id = 1";
+        let result = await pool.query(sql);
+        let places = result.rows;
+        console.log("[placesModel.getPlaces] places = " + JSON.stringify(places));
+        return { status: 200, data: places };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+module.exports.getPlacesBares = async function() {
+    try {
+        let sql = "select * from place " + "where place.local_category_id = 2";
+        let result = await pool.query(sql);
+        let places = result.rows;
+        console.log("[placesModel.getPlaces] places = " + JSON.stringify(places));
+        return { status: 200, data: places };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+module.exports.getPlacesRestaurantes = async function() {
+    try {
+        let sql = "select * from place " + "where place.local_category_id = 3";
+        let result = await pool.query(sql);
+        let places = result.rows;
+        console.log("[placesModel.getPlaces] places = " + JSON.stringify(places));
+        return { status: 200, data: places };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+module.exports.getPlacesGinasios = async function() {
+    try {
+        let sql = "select * from place " + "where place.local_category_id = 4";
+        let result = await pool.query(sql);
+        let places = result.rows;
+        console.log("[placesModel.getPlaces] places = " + JSON.stringify(places));
+        return { status: 200, data: places };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
 module.exports.getPlace = async function(id){
 
 
