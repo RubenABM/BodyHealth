@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Favoritos</title>
+    <title>Dashboard Criação</title>
     <!-- Favicon -->
     <!--<link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">-->
     <!-- Custom styles -->
@@ -94,13 +94,13 @@
                             </a>
                             <ul class="cat-sub-menu">
                                 <li>
-                                    <a href="media-01.html">Aulas marcadas</a>
+                                    <a href="eventosmarcados.html">Eventos marcados</a>
                                 </li>
                                 <li>
-                                    <a href="media-02.html">Turmas</a>
+                                    <a href="turmasuser.html">Turmas</a>
                                 </li>
                                 <li>
-                                    <a href="media-02.html">Pedidos pendentes</a>
+                                    <a href="pedidospend.html">Pedidos pendentes</a>
                                 </li>
                             </ul>
                         </li>
@@ -208,12 +208,114 @@
                     <h2 class="main-title">Minhas criações</h2>
                     <div class="row">
                         <div class="col-lg-9">
-                            <div>
+                            <div style="display:inline-block">
                                 <h2 style="margin-top: 40px;">Exercícios</h2>
-                                <button style="margin-left: 855px;" type="submit"
-                                    class="buttoncalcularimc"><b>Selecionar categoria</b></button>
-                                <button style="margin-left: 1026px;" type="submit" class="buttoncalcularimc"><b>Criar
+                                <div style="float: right;" style="margin-top: 3%; margin-left: -300px">
+                                    <div style="margin-top: 20%; margin-left:78%;" class="dropdown2">
+                                        <button type="submit"
+                                            class="buttoncalcularimc"><b>Selecionar categoria</b></button><br><br>
+    
+                                        <div class="dropdown2-content">
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos </a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Costas</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Cardio</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Peito</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">A.Braço</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Braço </a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Ombros</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Pescoço</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Cintura</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Coxa</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Perna</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button style="margin-top: 10%;float: left;" onclick="openForm()" style="margin-left: 35px;" type="submit"
+                                    class="buttoncalcularimc"><b>Criar
                                         exercício</b></button><br><br>
+                            </div>
+                            <div class="form-popup" id="myForm">
+                                <form style="height:500px" action="/action_page.php" class="form-container">
+                                    <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                                        <b>CRIAR EXERCÍCIO</b>
+                                    </h3>
+                                    <div style="margin-top: 3%">
+                                        <div style="float: left;">
+                                            <input id="tituloex" class="inputvaluescreaterecipe"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%; width: 50%;"
+                                                type="text" placeholder="Título">
+                                            <textarea id="descricaoex"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; width: 50%; height: 150px; margin-left: 0%; margin-top: 0%;"
+                                                placeholder="Descrição"></textarea>
+
+                                        </div>
+
+                                        <h3
+                                            style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                                            Detalhes do exercício</h3>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right; margin-top: 10px; margin-right: 30px;"
+                                            id="items">
+                                            <h4 style="font-size: 15px; margin-left: 10px; margin-top: 10px;">
+                                                <b>Séries</b></h4>
+
+                                            <input id="series" type="number" required min="1" ; max="99"
+                                                style="margin-left: 11px; width: 200px;" placeholder="Séries...">
+
+                                            <h4 style="font-size: 15px; margin-left: 10px; margin-top: 26px;">
+                                                <b>Repetições (por série)</b></h4>
+
+                                            <input id="reps" type="number"
+                                                style="font-size: 15px; margin-left: 11px; margin-top: 3px; width: 200px;"
+                                                placeholder="Repetições..." required min="1" max="200">
+
+                                        </div>
+
+
+
+
+                                        <div style="width: 22%; margin-top: 5%;" class="radio-list">
+                                            <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Dificuldade</b></h2>
+
+                                            <div class="radio-item"><input name="radio" id="radio1" type="radio"><label
+                                                    for="radio1">Principiante</label></div>
+                                            <div class="radio-item"><input name="radio" id="radio2" type="radio"><label
+                                                    for="radio2">Amador</label></div>
+                                            <div class="radio-item"><input name="radio" id="radio3" type="radio"><label
+                                                    for="radio3">Experiente</label></div>
+                                        </div>
+
+                                        <div style="width: 22%; margin-top: -340px; margin-right:40%;float: right;" class="radio-list">
+                                            <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Tipo de exercício</b>
+                                            </h2>
+                                            <div class="radio-item2"><input name="radio2" id="radio4"
+                                                    type="radio"><label for="radio4">Costas</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio5"
+                                                    type="radio"><label for="radio5">Cardio</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio6"
+                                                    type="radio"><label for="radio6">Peito</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio7"
+                                                    type="radio"><label for="radio7">Braço</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio8"
+                                                    type="radio"><label for="radio8">A.Braço</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio9"
+                                                    type="radio"><label for="radio9">Ombro</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio10"
+                                                    type="radio"><label for="radio10">Cintura</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio11"
+                                                    type="radio"><label for="radio11">Pescoço</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio12"
+                                                    type="radio"><label for="radio12">Coxa</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio13"
+                                                    type="radio"><label for="radio13">Perna</label></div>
+
+                                        </div>
+
+                                    </div>
+                                    <button id="criarex"  style="margin-top:30px" type="button" class="buttoncalcularimc"> Criar</button>
+                                    <button style="margin-top:2%" type="button" class="buttoncalcularimc"
+                                        onclick="closeForm()"> Fechar</button>
+                                </form>
+
                             </div>
                             <div id="organize">
                                 <div class="selectbox">
@@ -524,12 +626,166 @@
                             </div>
                         </div>
                         <div class="col-lg-9">
-                            <div>
-                                <h2 style="margin-top: 10%;">Planos de treino</h2>
-                                <button style="margin-left: 855px;" type="submit"
-                                    class="buttoncalcularimc"><b>Selecionar categoria</b></button>
-                                <button style="margin-left: 1026px;" type="submit" class="buttoncalcularimc"><b>Criar
+                            <div style="display:inline-block">
+                                <h2 style="margin-top: 40px;">Planos de treino</h2>
+                                <div style="float: right;" style="margin-top: 3%; margin-left: -300px">
+                                    <div style="margin-top: 20%; margin-left:78%;" class="dropdown2">
+                                        <button type="submit"
+                                            class="buttoncalcularimc"><b>Selecionar categoria</b></button><br><br>
+    
+                                        <div class="dropdown2-content">
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos </a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Força</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Definição</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Hipertrofia</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Cardio</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Res. Muscular</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Terapêutico</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button style="margin-top: 10%;float: left;" onclick="openForm2()" style="margin-left: 35px;" type="submit"
+                                    class="buttoncalcularimc"><b>Criar
                                         plano</b></button><br><br>
+                            </div>
+                            <div style="z-index: 10;" class="form-popup" id="myForm2">
+                                <form action="/action_page.php" class="form-container">
+                                    <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                                        <b>CRIAR PLANO</b>
+                                    </h3>
+                                    <div style="margin-top: 3%">
+                                        <div style="float: left;">
+                                            <input id="tituloplano" class="inputvaluescreaterecipe"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%; width: 50%;"
+                                                type="text" placeholder="Título">
+                                            <textarea id="descricaoplano"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; width: 50%; height: 150px; margin-left: 0%; margin-top: 0%;"
+                                                placeholder="Descrição"></textarea>
+
+                                        </div>
+
+                                        <h3
+                                            style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                                            Selecionar exercícios</h3>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo10" id="titulo10"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo11" id="titulo11"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo12" id="titulo12"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo13" id="titulo13"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo14" id="titulo14"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo15" id="titulo15"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo16" id="titulo16"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo17" id="titulo17"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo18" id="titulo18"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div style="width: 22%; margin-top: 5%; float: left;" class="radio-list">
+                                            <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Categoria</b></h2>
+
+                                            <div class="radio-item"><input name="radio" id="radio14" type="radio"><label
+                                                    for="radio14">Principiante</label></div>
+                                            <div class="radio-item"><input name="radio" id="radio15" type="radio"><label
+                                                    for="radio15">Amador</label></div>
+                                            <div class="radio-item"><input name="radio" id="radio16" type="radio"><label
+                                                    for="radio16">Experiente</label></div>
+
+                                        </div>
+
+                                        <div style="width: 22%; margin-top: -300px; margin-right:45%;float: right;" class="radio-list">
+                                            <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Tipo de exercício</b>
+                                            
+                                            </h2>
+                                            <div class="radio-item2"><input name="radio2" id="radio17"
+                                                    type="radio"><label for="radio17">Costas</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio18"
+                                                    type="radio"><label for="radio18">Cardio</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio19"
+                                                    type="radio"><label for="radio19">Peito</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio20"
+                                                    type="radio"><label for="radio20">Braço</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio21"
+                                                    type="radio"><label for="radio21">A.Braço</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio22"
+                                                    type="radio"><label for="radio22">Ombro</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio23"
+                                                    type="radio"><label for="radio23">Cintura</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio24"
+                                                    type="radio"><label for="radio24">Pescoço</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio25"
+                                                    type="radio"><label for="radio25">Coxa</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio26"
+                                                    type="radio"><label for="radio26">Perna</label></div>
+
+                                        </div>
+
+                                    </div>
+                                    <button id="criarplano"  style="margin-top:50px" type="button" class="buttoncalcularimc"> Criar</button>
+                                        <button onclick="closeForm2()" style="margin-top:2%" type="button" class="buttoncalcularimc"> Fechar</button>
+                                </form>
                             </div>
                             <div id="organize">
                                 <div class="selectbox">
@@ -869,6 +1125,26 @@
     <script src="plugins/feather.min.js"></script>
     <!-- Custom scripts -->
     <script src="js/script.js"></script>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+        function openForm2() {
+            document.getElementById("myForm2").style.display = "block";
+        }
+
+        function closeForm2() {
+            document.getElementById("myForm2").style.display = "none";
+        }
+
+
+    </script>
 </body>
 
 </html>

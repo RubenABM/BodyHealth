@@ -3560,8 +3560,9 @@
     display: block;
     min-height: 1.5rem;
     padding-left: 1.5rem;
+    /*
     -webkit-print-color-adjust: exact;
-    color-adjust: exact;
+    color-adjust: exact;*/
   }
   
   .custom-control-inline {
@@ -11661,11 +11662,6 @@
    border: 3px solid #e8bf5c;
    position: absolute;
    
-}
-
-.item1{
-
-
 }
 
 .item2{

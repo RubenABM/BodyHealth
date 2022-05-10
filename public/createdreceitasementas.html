@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Favoritos</title>
+    <title>Dashboard Criação</title>
     <!-- Favicon -->
     <!--<link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">-->
     <!-- Custom styles -->
@@ -94,13 +94,13 @@
                             </a>
                             <ul class="cat-sub-menu">
                                 <li>
-                                    <a href="media-01.html">Aulas marcadas</a>
+                                    <a href="eventosmarcados.html">Eventos marcados</a>
                                 </li>
                                 <li>
-                                    <a href="media-02.html">Turmas</a>
+                                    <a href="turmasuser.html">Turmas</a>
                                 </li>
                                 <li>
-                                    <a href="media-02.html">Pedidos pendentes</a>
+                                    <a href="pedidospend.html">Pedidos pendentes</a>
                                 </li>
                             </ul>
                         </li>
@@ -208,15 +208,163 @@
                     <h2 class="main-title">Minhas criações</h2>
                     <div class="row">
                         <div class="col-lg-9">
-                            <div>
+                            <div style="display:inline-block">
                                 <h2 style="margin-top: 40px;">Receitas</h2>
-                                <button style="margin-left: 855px;" type="submit"
-                                    class="buttoncalcularimc"><b>Selecionar categoria</b></button>
-                                <button style="margin-left: 1026px;" type="submit" class="buttoncalcularimc"><b>Criar
+                                <div style="float: right;" style="margin-top: 3%; margin-left: -300px">
+                                    <div style="margin-top: 20%; margin-left:78%;" class="dropdown2">
+                                        <button type="submit"
+                                            class="buttoncalcularimc"><b>Selecionar categoria</b></button><br><br>
+    
+                                        <div class="dropdown2-content">
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos </a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Entrada</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Prato principal</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Sobremesa</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Bebida</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button style="margin-top: 10%;float: left;" onclick="openForm()" style="margin-left: 35px;" type="submit"
+                                    class="buttoncalcularimc"><b>Criar
                                         receita</b></button><br><br>
                             </div>
-                            <div id="organize">
-                                < <div class="selectbox">
+
+                            <div class="form-popup" id="myForm">
+                                <form action="/action_page.php" class="form-container">
+                                    <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                                        <b>CRIAR RECEITA</b>
+                                    </h3>
+                                    <div style="margin-top: 3%">
+                                        <div style="float: left;">
+                                            <input id="tituloreceita" class="inputvaluescreaterecipe"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%; width: 50%;"
+                                                type="text" placeholder="Título">
+                                            <textarea id="descricaoreceita"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; width: 50%; height: 150px; margin-left: 0%; margin-top: 0%;"
+                                                placeholder="Descrição"></textarea>
+
+                                        </div>
+
+                                        <h3
+                                            style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                                            Selecionar ingredientes</h3>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo1" id="titulo1"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo2" id="titulo2"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo3" id="titulo3"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo4" id="titulo4"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo5" id="titulo5"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo6" id="titulo6"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo7" id="titulo7"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo8" id="titulo8"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo9" id="titulo9"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div style="width: 22%; margin-top: 5%; float: left;" class="radio-list">
+                                            <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Categoria</b></h2>
+
+                                            <div class="radio-item"><input name="radio" id="radio1" type="radio"><label
+                                                    for="radio1">Entrada</label></div>
+                                            <div class="radio-item"><input name="radio" id="radio2" type="radio"><label
+                                                    for="radio2">Prato Principal</label></div>
+                                            <div class="radio-item"><input name="radio" id="radio3" type="radio"><label
+                                                    for="radio3">Sobremesa</label></div>
+                                            <div class="radio-item"><input name="radio" id="radio4" type="radio"><label
+                                                    for="radio4">Bebida</label></div>
+                                            <div class="radio-item"><input name="radio" id="radio5" type="radio"><label
+                                                    for="radio5">Outros</label></div>
+
+                                        </div>
+
+                                        <div style="width: 22%; margin-right: 100px; margin-top: 5%; float: right;" class="radio-list">
+                                            <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Base</b></h2>
+                                            <div class="radio-item2"><input name="radio2" id="radio6"
+                                                    type="radio"><label for="radio6">Carne</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio7"
+                                                    type="radio"><label for="radio7">Peixe</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio8"
+                                                    type="radio"><label for="radio8">Vegan</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio9"
+                                                    type="radio"><label for="radio9">Frutas</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio10"
+                                                    type="radio"><label for="radio10">Outros</label></div>
+
+                                        </div>
+
+                                    </div>
+                                    <button style="margin-top:2%" type="button" class="buttoncalcularimc"
+                                        onclick="closeForm()"> Fechar</button>
+                                    <button id="criarreceita" style="margin-top:2%" type="button" class="buttoncalcularimc"> Criar</button>
+                                </form>
+
+                            </div>
+
+                            <div style="margin-top: 2%;" id="organize">
+                                <div class="selectbox">
                                     <p name="criador1" id="criador1"
                                         style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
                                     </p>
@@ -228,198 +376,249 @@
                                     <p name="tipo1" id="tipo1" style="margin-left: 2%; font-size: 90%; margin-top: 2%">
                                         TIPO
                                         DA RECEITA</p>
-                            </div>
-                            <div class="selectbox">
-                                <p name="criador2" id="criador2"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome2" id="nome2 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base2" id="base2" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo2" id="tipo2" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">TIPO
-                                    DA RECEITA</p>
-                            </div>
-                            <div class="selectbox">
-                                <p name="criador3" id="criador3"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome3" id="nome3 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base3" id="base3" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo3" id="tipo3" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">TIPO
-                                    DA RECEITA</p>
-                            </div>
+                                </div>
+                                <div class="selectbox">
+                                    <p name="criador2" id="criador2"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome2" id="nome2 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base2" id="base2" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo2" id="tipo2" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
+                                <div class="selectbox">
+                                    <p name="criador3" id="criador3"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome3" id="nome3 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base3" id="base3" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo3" id="tipo3" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador4" id="criador4"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome4" id="nome4 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base4" id="base4" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo4" id="tipo4" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">TIPO
-                                    DA RECEITA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador4" id="criador4"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome4" id="nome4 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base4" id="base4" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo4" id="tipo4" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador5" id="criador5"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome5" id="nome5 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base5" id="base5" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo5" id="tipo5" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">TIPO
-                                    DA RECEITA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador5" id="criador5"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome5" id="nome5 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base5" id="base5" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo5" id="tipo5" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador6" id="criador6"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome6" id="nome6 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base6" id="base6" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo6" id="tipo6" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">TIPO
-                                    DA RECEITA</p>
-                            </div>
-                            <div class="selectbox">
-                                <p name="criador7" id="criador7"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome7" id="nome7 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base7" id="base7" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo7" id="tipo7" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">TIPO
-                                    DA RECEITA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador6" id="criador6"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome6" id="nome6 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base6" id="base6" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo6" id="tipo6" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
+                                <div class="selectbox">
+                                    <p name="criador7" id="criador7"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome7" id="nome7 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base7" id="base7" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo7" id="tipo7" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador8" id="criador8"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome8" id="nome8 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base8" id="base8" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo8" id="tipo8" style="margin-left: 2%; font-size: 90%; margin-top: 2%">TIPO
-                                    DA RECEITA</p>
-                            </div>
-                            <div class="selectbox">
-                                <p name="criador9" id="criador9"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome9" id="nome9 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base9" id="base9" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo9" id="tipo9" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">TIPO
-                                    DA RECEITA</p>
-                            </div>
-                            <div class="selectbox">
-                                <p name="criador10" id="criador10"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome10" id="nome10 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base10" id="base10" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo10" id="tipo10" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA RECEITA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador8" id="criador8"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome8" id="nome8 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base8" id="base8" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo8" id="tipo8" style="margin-left: 2%; font-size: 90%; margin-top: 2%">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
+                                <div class="selectbox">
+                                    <p name="criador9" id="criador9"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome9" id="nome9 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base9" id="base9" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo9" id="tipo9" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
+                                <div class="selectbox">
+                                    <p name="criador10" id="criador10"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome10" id="nome10 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base10" id="base10" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo10" id="tipo10"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador11" id="criador11"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome11" id="nome11 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base11" id="base11" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo11" id="tipo11" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA RECEITA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador11" id="criador11"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome11" id="nome11 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base11" id="base11" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo11" id="tipo11"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador12" id="criador12"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome12" id="nome12 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base12" id="base12" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo12" id="tipo12" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA RECEITA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador12" id="criador12"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome12" id="nome12 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base12" id="base12" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo12" id="tipo12"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador13" id="criador13"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome13" id="nome13 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base13" id="base13" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo13" id="tipo13" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA RECEITA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador13" id="criador13"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome13" id="nome13 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base13" id="base13" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo13" id="tipo13"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador14" id="criador7"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome14" id="nome14 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base14" id="base14" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo14" id="tipo14" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO DA RECEITA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador14" id="criador7"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome14" id="nome14 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base14" id="base14" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo14" id="tipo14"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO DA RECEITA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador15" id="criador15"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome15" id="nome15 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base15" id="base15" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo15" id="tipo15" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA RECEITA</p>
-                            </div>
-                            <div class="selectbox">
-                                <p name="criador10" id="criador16"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome16" id="nome16 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base16" id="base16" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo16" id="tipo16" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA RECEITA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador15" id="criador15"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome15" id="nome15 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base15" id="base15" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo15" id="tipo15"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
+                                <div class="selectbox">
+                                    <p name="criador10" id="criador16"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome16" id="nome16 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base16" id="base16" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo16" id="tipo16"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador17" id="criador17"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome17" id="nome17 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base17" id="base17" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo17" id="tipo17" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA RECEITA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador17" id="criador17"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome17" id="nome17 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base17" id="base17" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo17" id="tipo17"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador18" id="criador18"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
-                                <br><br><br>
-                                <p name="nome18" id="nome12 " style="margin-left: 2%;">NOME DA RECEITA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base18" id="base18" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
-                                <p name="tipo18" id="tipo18" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA RECEITA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador18" id="criador18"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                    </p>
+                                    <br><br><br>
+                                    <p name="nome18" id="nome12 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base18" id="base18" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    </p>
+                                    <p name="tipo18" id="tipo18"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA RECEITA</p>
+                                </div>
 
-                            <!--
+                                <!--
                                     <div class="selectbox">
                                         <p name="criador19" id="criador19"
                                             style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA</p>
@@ -444,225 +643,408 @@
                                             <hr id="divisorBoxes">
                                             <p name ="base21" id = "base21"style="margin-left: 2%;font-size: 90%">BASE DA RECEITA</p>
                                             <p name ="tipo21" id = "tipo21"style="margin-left: 2%; font-size: 90%; margin-top: 2%;" >TIPO DA RECEITA</p></div>-->
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div>
-                            <h2 style="margin-top: 10%;">Ementas</h2>
-                            <button style="margin-left: 855px;" type="submit" class="buttoncalcularimc"><b>Selecionar
-                                    categoria</b></button>
-                            <button style="margin-left: 1026px;" type="submit" class="buttoncalcularimc"><b>Criar
-                                    ementa</b></button><br><br>
-                        </div>
-                        <div id="organize">
-                            <div class="selectbox">
-                                <p name="criador22" id="criador22"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome22" id="nome22 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base22" id="base22" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo22" id="tipo22" style="margin-left: 2%; font-size: 90%; margin-top: 2%">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
-                            <div class="selectbox">
-                                <p name="criador23" id="criador23"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome23" id="nome23 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base23" id="base23" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo23" id="tipo23" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
-                            <div class="selectbox">
-                                <p name="criador24" id="criador24"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome24" id="nome24 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base24" id="base24" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo24" id="tipo24" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
+                        <div class="col-lg-9">
+                            <div style="display:inline-block">
+                                <h2 style="margin-top: 40px;">Ementas</h2>
+                                <div style="float: right;" style="margin-top: 3%; margin-left: -300px">
+                                    <div style="margin-top: 20%; margin-left:78%;" class="dropdown2">
+                                        <button type="submit"
+                                            class="buttoncalcularimc"><b>Selecionar categoria</b></button><br><br>
+    
+                                        <div class="dropdown2-content">
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos </a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Pequeno-almoco</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Lanche</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Almoço</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Jantar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button style="margin-top: 10%;float: left;" onclick="openForm2()" style="margin-left: 35px;" type="submit"
+                                    class="buttoncalcularimc"><b>Criar
+                                        ementa</b></button><br><br>
                             </div>
 
-                            <div class="selectbox">
-                                <p name="criador25" id="criador25"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome25" id="nome25 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base25" id="base25" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo25" id="tipo25" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
+                            <div style="z-index: 10;" class="form-popup" id="myForm2">
+                                <form action="/action_page.php" class="form-container">
+                                    <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                                        <b>CRIAR EMENTA</b>
+                                    </h3>
+                                    <div style="margin-top: 3%">
+                                        <div style="float: left;">
+                                            <input id="tituloementa" class="inputvaluescreaterecipe"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%; width: 50%;"
+                                                type="text" placeholder="Título">
+                                            <textarea id="descricaoementa"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; width: 50%; height: 150px; margin-left: 0%; margin-top: 0%;"
+                                                placeholder="Descrição"></textarea>
+
+                                        </div>
+
+                                        <h3
+                                            style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                                            Selecionar receitas</h3>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo10" id="titulo10"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo11" id="titulo11"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo12" id="titulo12"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo13" id="titulo13"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo14" id="titulo14"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo15" id="titulo15"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo16" id="titulo16"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo17" id="titulo17"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo18" id="titulo18"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div style="width: 22%; margin-top: 5%; float: left;" class="radio-list">
+                                            <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Categoria</b></h2>
+
+                                            <div class="radio-item"><input name="radio3" id="radio11" type="radio"><label
+                                                    for="radio11">Pequeno-Almoço</label></div>
+                                            <div class="radio-item"><input name="radio3" id="radio12" type="radio"><label
+                                                    for="radio12">Lanche</label></div>
+                                            <div class="radio-item"><input name="radio3" id="radio13" type="radio"><label
+                                                    for="radio13">Almoço</label></div>
+                                            <div class="radio-item"><input name="radio3" id="radio14" type="radio"><label
+                                                    for="radio14">Jantar</label></div>
+                                            <div class="radio-item"><input name="radio3" id="radio15" type="radio"><label
+                                                    for="radio15">Outros</label></div>
+
+                                        </div>
+
+                                        <div style="width: 22%;  margin-right: 100px;  margin-top: 5%; float: right;" class="radio-list">
+                                            <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Base</b></h2>
+                                            <div class="radio-item2"><input name="radio4" id="radio16"
+                                                    type="radio"><label for="radio16">Carne</label></div>
+                                            <div class="radio-item2"><input name="radio4" id="radio17"
+                                                    type="radio"><label for="radio17">Peixe</label></div>
+                                            <div class="radio-item2"><input name="radio4" id="radio18"
+                                                    type="radio"><label for="radio18">Vegan</label></div>
+                                            <div class="radio-item2"><input name="radio4" id="radio19"
+                                                    type="radio"><label for="radio19">Frutas</label></div>
+                                            <div class="radio-item2"><input name="radio4" id="radio20"
+                                                    type="radio"><label for="radio20">Outros</label></div>
+
+                                        </div>
+
+                                    </div>
+                                    <button style="margin-top:2%" type="button" class="buttoncalcularimc"
+                                        onclick="closeForm2()"> Fechar</button>
+                                        <button id="criarementa" style="margin-top:2%" type="button" class="buttoncalcularimc"> Criar</button>
+                                </form>
                             </div>
 
-                            <div class="selectbox">
-                                <p name="criador26" id="criador26"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome26" id="nome26 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base26" id="base26" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo26" id="tipo26" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
+                            <div style="margin-top: 2%;" id="organize">
+                                <div class="selectbox">
+                                    <p name="criador22" id="criador22"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome22" id="nome22 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base22" id="base22" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo22" id="tipo22"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
+                                <div class="selectbox">
+                                    <p name="criador23" id="criador23"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome23" id="nome23 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base23" id="base23" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo23" id="tipo23"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
+                                <div class="selectbox">
+                                    <p name="criador24" id="criador24"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome24" id="nome24 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base24" id="base24" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo24" id="tipo24"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador27" id="criador27"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome27" id="nome27 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base27" id="base27" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo27" id="tipo27" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
-                            <div class="selectbox">
-                                <p name="criador7" id="criador7"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome28" id="nome28 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base28" id="base28" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo28" id="tipo28" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO DA EMENTA</p>
-                            </div>
-                            <div class="selectbox">
-                                <p name="criador29" id="criador29"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome29" id="nome29 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base29" id="base29" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo29" id="tipo29" style="margin-left: 2%; font-size: 90%; margin-top: 2%">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
-                            <div class="selectbox">
-                                <p name="criador30" id="criador30"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome30" id="nome30 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base30" id="base30" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo30" id="tipo30" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
-                            <div class="selectbox">
-                                <p name="criador31" id="criador31"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome31" id="nome31 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base31" id="base31" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo31" id="tipo31" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador25" id="criador25"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome25" id="nome25 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base25" id="base25" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo25" id="tipo25"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador32" id="criador32"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome32" id="nome32 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base32" id="base32" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo32" id="tipo32" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador26" id="criador26"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome26" id="nome26 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base26" id="base26" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo26" id="tipo26"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador33" id="criador33"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome33" id="nome33" style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base33" id="base33" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo33" id="tipo33" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador27" id="criador27"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome27" id="nome27 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base27" id="base27" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo27" id="tipo27"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
+                                <div class="selectbox">
+                                    <p name="criador7" id="criador7"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome28" id="nome28 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base28" id="base28" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo28" id="tipo28"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO DA EMENTA</p>
+                                </div>
+                                <div class="selectbox">
+                                    <p name="criador29" id="criador29"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome29" id="nome29 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base29" id="base29" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo29" id="tipo29"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
+                                <div class="selectbox">
+                                    <p name="criador30" id="criador30"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome30" id="nome30 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base30" id="base30" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo30" id="tipo30"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
+                                <div class="selectbox">
+                                    <p name="criador31" id="criador31"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome31" id="nome31 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base31" id="base31" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo31" id="tipo31"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador34" id="criador34"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome34" id="nome34 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base34" id="base34" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo34" id="tipo34" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador32" id="criador32"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome32" id="nome32 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base32" id="base32" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo32" id="tipo32"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador14" id="criador7"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome35" id="nome35 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base35" id="base35" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo35" id="tipo35" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO DA EMENTA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador33" id="criador33"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome33" id="nome33" style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base33" id="base33" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo33" id="tipo33"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador36" id="criador36"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome36" id="nome36 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base36" id="base36" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo36" id="tipo36" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
-                            <div class="selectbox">
-                                <p name="criador37" id="criador37"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome37" id="nome37 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base37" id="base37" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo37" id="tipo37" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador34" id="criador34"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome34" id="nome34 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base34" id="base34" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo34" id="tipo34"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador38" id="criador38"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome38" id="nome38 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base38" id="base38" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo38" id="tipo38" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador35" id="criador35"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome35" id="nome35 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base35" id="base35" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo35" id="tipo35"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO DA EMENTA</p>
+                                </div>
 
-                            <div class="selectbox">
-                                <p name="criador39" id="criador39"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome39" id="nome39 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base39" id="base39" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo39" id="tipo39" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
+                                <div class="selectbox">
+                                    <p name="criador36" id="criador36"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome36" id="nome36 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base36" id="base36" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo36" id="tipo36"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
+                                <div class="selectbox">
+                                    <p name="criador37" id="criador37"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome37" id="nome37 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base37" id="base37" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo37" id="tipo37"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
 
-                            <!--
+                                <div class="selectbox">
+                                    <p name="criador38" id="criador38"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome38" id="nome38 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base38" id="base38" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo38" id="tipo38"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
+
+                                <div class="selectbox">
+                                    <p name="criador39" id="criador39"
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
+                                    <br><br><br>
+                                    <p name="nome39" id="nome39 " style="margin-left: 2%;">NOME DA EMENTA</p>
+                                    <hr id="divisorBoxes">
+                                    <p name="base39" id="base39" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
+                                    </p>
+                                    <p name="tipo39" id="tipo39"
+                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
+                                        TIPO
+                                        DA EMENTA</p>
+                                </div>
+
+                                <!--
                                     <div class="selectbox">
                                         <p name="criador40" id="criador40"
                                             style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
@@ -687,9 +1069,9 @@
                                             <hr id="divisorBoxes">
                                             <p name ="base42" id = "base42"style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
                                             <p name ="tipo42" id = "tipo42"style="margin-left: 2%; font-size: 90%; margin-top: 2%;" >TIPO DA EMENTA</p></div>-->
+                            </div>
                         </div>
                     </div>
-                </div>
             </main>
             <!-- ! Footer 
     <footer class="footer">
@@ -753,6 +1135,26 @@
     <script src="plugins/feather.min.js"></script>
     <!-- Custom scripts -->
     <script src="js/script.js"></script>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+        function openForm2() {
+            document.getElementById("myForm2").style.display = "block";
+        }
+
+        function closeForm2() {
+            document.getElementById("myForm2").style.display = "none";
+        }
+
+
+    </script>
 </body>
 
 </html>
