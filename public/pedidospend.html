@@ -100,7 +100,7 @@
                                     <a href="turmasuser.html">Turmas</a>
                                 </li>
                                 <li>
-                                    <a href="media-02.html">Pedidos pendentes</a>
+                                    <a href="pedidospend.html">Pedidos pendentes</a>
                                 </li>
                             </ul>
                         </li>
@@ -227,7 +227,7 @@
                                     class="buttoncalcularimc"><b>Criar
                                         pedido</b></button><br><br>
                                         <div style="margin-top: 2%;" class="form-popup" id="myForm">
-                                            <form style="height:565px" action="/action_page.php" class="form-container">
+                                            <form style="height:590px" action="/action_page.php" class="form-container">
                                                 <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
                                                     <b>CRIAR PEDIDO</b>
                                                 </h3>
@@ -243,14 +243,56 @@
                                                             style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 0%; width: 50%;"
                                                             type="text" placeholder="Rua">
 
-                                                            <input type="date" style="margin-right:100px; margin-top: 0%; width: 300px;border-radius: 10px; border: 1px solid #2d2e2d;" required>
+                                                            <input id="dataped" type="date" style="margin-right:100px; margin-top: 0%; width: 300px;border-radius: 10px; border: 1px solid #2d2e2d;" required>
 
-                                                            <input type="time" min="07:30" max="23:59" style="margin-right:100px; margin-top: 4%; width: 300px; border-radius: 10px; border: 1px solid #2d2e2d;" required>
+                                                            <input id="horaped" type="time" min="07:30" max="23:59" style="margin-right:100px; margin-top: 4%; width: 300px; border-radius: 10px; border: 1px solid #2d2e2d;" required>
                                                             
             
-                                                    </div>    
+                                                    </div>
+                                                    <div style="margin-top:3%; float: right;" id="organize" >
+                                                        <div style="margin-left: 450px; margin-top: -450px;" class="selectbox2">
+                                                            <p name="prof1" id="prof1"
+                                                                style="text-align: center;font-size: 70%; margin-top: 40%;">NOME DO PROFISSIONAL
+                                                            </p>
+                                                        </div><div style="margin-top: -450px;" class="selectbox2">
+                                                            <p name="prof2" id="prof2"
+                                                                style="text-align: center;font-size: 70%; margin-top: 40%;">NOME DO PROFISSIONAL
+                                                            </p>
+                                                        </div><div style="margin-top: -450px;" class="selectbox2">
+                                                            <p name="prof3" id="prof3"
+                                                                style="text-align: center;font-size: 70%; margin-top: 40%;">NOME DO PROFISSIONAL
+                                                            </p>
+                                                        </div>
+                                                        <div style="margin-left: 450px; margin-top: -350px;" class="selectbox2">
+                                                            <p name="prof4" id="prof4"
+                                                                style="text-align: center;font-size: 70%; margin-top: 40%;">NOME DO PROFISSIONAL
+                                                            </p>
+                                                        </div><div style="margin-top: -350px;" class="selectbox2">
+                                                            <p name="prof5" id="prof5"
+                                                                style="text-align: center;font-size: 70%; margin-top: 40%;">NOME DO PROFISSIONAL
+                                                            </p>
+                                                        </div><div style="margin-top: -350px;" class="selectbox2">
+                                                            <p name="prof6" id="prof6"
+                                                                style="text-align: center;font-size: 70%; margin-top: 40%;">NOME DO PROFISSIONAL
+                                                            </p>
+                                                        </div>
+                                                        <div style="margin-left: 450px; margin-top: -250px;" class="selectbox2">
+                                                            <p name="prof7" id="prof7"
+                                                                style="text-align: center;font-size: 70%; margin-top: 40%;">NOME DO PROFISSIONAL
+                                                            </p>
+                                                        </div><div style="margin-top: -250px;" class="selectbox2">
+                                                            <p name="prof8" id="prof8"
+                                                                style="text-align: center;font-size: 70%; margin-top: 40%;">NOME DO PROFISSIONAL
+                                                            </p>
+                                                        </div><div style="margin-top: -250px;" class="selectbox2">
+                                                            <p name="prof9" id="prof9"
+                                                                style="text-align: center;font-size: 70%; margin-top: 40%;">NOME DO PROFISSIONAL
+                                                            </p>
+                                                        </div>
+                                                        
+                                                    </div>  
                                                 </div>
-                                                <button id="criarex"  style="margin-top:30px" type="button" class="buttoncalcularimc"> Criar</button>
+                                                <button id="criarex"  style="margin-top:0px" type="button" class="buttoncalcularimc"> Criar</button>
                                                 <button style="margin-top:2%" type="button" class="buttoncalcularimc"
                                                     onclick="closeForm()"> Fechar</button>
                                             </form>
