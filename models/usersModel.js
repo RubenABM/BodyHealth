@@ -117,8 +117,7 @@ module.exports.authUser = async function(uti_name){
 
         let result = await pool.query(sql,[uti_name.user_name]);
 
-        let passwordb = result.rows[0].password;
-
+        let passwordb = result.rows[0].user_password;
         let valor = brcypt.compareSync(uti_name.user_password, passwordb);
 
         //console.log("[usersModel.getUserDados] dados_utilizador = " + JSON.stringify(dadosfound));

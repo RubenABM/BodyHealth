@@ -111,6 +111,7 @@ async function login(){
 
     sessionStorage.setItem('user_id', authUser.user_id);
     window.alert('login sucessfull');
+    
     console.log(authUser.user_id);
    }  catch (err) {
     console.log(err);
