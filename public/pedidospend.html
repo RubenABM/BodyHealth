@@ -100,7 +100,7 @@
                                     <a href="turmasuser.html">Turmas</a>
                                 </li>
                                 <li>
-                                    <a href="pedidospend.html">Pedidos pendentes</a>
+                                    <a href="media-02.html">Pedidos pendentes</a>
                                 </li>
                             </ul>
                         </li>
@@ -208,22 +208,59 @@
                     <h2 class="main-title">Eventos e aulas</h2>
                     <div class="row">
                         <div class="col-lg-9">
-                            <h2 style="margin-top: 40px;">Eventos marcados</h2>
-
-                                <div style="margin-top: 2%; margin-left:68%;" class="dropdown2">
-                                    <button type="submit"
-                                        class="buttoncalcularimc"><b>Categorias</b></button><br><br>
-
-                                    <div class="dropdown2-content">
-                                        <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos </a><br>
-                                        <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Aulas</a><br>
-                                        <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Consultas</a><br>
+                            <div style="display:inline-block">
+                                <h2 style="margin-top: 40px;">Pedidos pendentes</h2>
+                                <div style="float: right;" style="margin-top: 5%; margin-left: -300px">
+                                    <div style="margin-top: 20%; margin-left:78%;" class="dropdown2">
+                                        <button type="submit"
+                                            class="buttoncalcularimc"><b>Categoria</b></button><br><br>
+    
+                                        <div class="dropdown2-content">
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos </a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Pendentes</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Aprovados</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Recusados</a><br>
+                                        </div>
                                     </div>
                                 </div>
+                                <button style="margin-top: 10%;float: left;" onclick="openForm()" style="margin-left: 35px;" type="submit"
+                                    class="buttoncalcularimc"><b>Criar
+                                        pedido</b></button><br><br>
+                                        <div style="margin-top: 2%;" class="form-popup" id="myForm">
+                                            <form style="height:565px" action="/action_page.php" class="form-container">
+                                                <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                                                    <b>CRIAR PEDIDO</b>
+                                                </h3>
+                                                <div style="margin-top: 3%; display: inline-block;">
+                                                    <div style="float: left;">
+                                                        <input id="tituloped" class="inputvaluescreaterecipe"
+                                                            style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%; width: 50%;"
+                                                            type="text" placeholder="Título">
+                                                        <textarea id="descricaoped"
+                                                            style="border:1px solid #2d2e2d; border-radius: 7px; width: 50%; height: 150px; margin-left: 0%; margin-top: 0%;"
+                                                            placeholder="Descrição"></textarea>
+                                                            <input id="ruaped" class="inputvaluescreaterecipe"
+                                                            style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 0%; width: 50%;"
+                                                            type="text" placeholder="Rua">
+
+                                                            <input type="date" style="margin-right:100px; margin-top: 0%; width: 300px;border-radius: 10px; border: 1px solid #2d2e2d;" required>
+
+                                                            <input type="time" min="07:30" max="23:59" style="margin-right:100px; margin-top: 4%; width: 300px; border-radius: 10px; border: 1px solid #2d2e2d;" required>
+                                                            
+            
+                                                    </div>    
+                                                </div>
+                                                <button id="criarex"  style="margin-top:30px" type="button" class="buttoncalcularimc"> Criar</button>
+                                                <button style="margin-top:2%" type="button" class="buttoncalcularimc"
+                                                    onclick="closeForm()"> Fechar</button>
+                                            </form>
+            
+                                        </div>
+                            </div>
 
                                 <div id="organize">
                                     <div style="display:inline-block" class="selectbox3">
-                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título aula/consulta </h2>
+                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título do pedido </h2>
                                         </p>
                                         <br>
                                         <p name="nome1" id="nome1 " style="margin-left: 2%;">NOME DO PROFISSIONAL</p>
@@ -240,7 +277,7 @@
                                         </a>
                                     </div>
                                     <div style="display:inline-block" class="selectbox3">
-                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título aula/consulta </h2>
+                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título do pedido </h2>
                                         </p>
                                         <br>
                                         <p name="nome2" id="nome2 " style="margin-left: 2%;">NOME DO PROFISSIONAL</p>
@@ -257,7 +294,7 @@
                                         </a>
                                     </div>
                                     <div style="display:inline-block" class="selectbox3">
-                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título aula/consulta </h2>
+                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título do pedido </h2>
                                         </p>
                                         <br>
                                         <p name="nome3" id="nome3 " style="margin-left: 2%;">NOME DO PROFISSIONAL</p>
@@ -275,7 +312,7 @@
                                     </div>
 
                                     <div style="display:inline-block" class="selectbox3">
-                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título aula/consulta </h2>
+                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título do pedido </h2>
                                         </p>
                                         <br>
                                         <p name="nome4" id="nome4 " style="margin-left: 2%;">NOME DO PROFISSIONAL</p>
@@ -293,7 +330,7 @@
                                     </div>
 
                                     <div style="display:inline-block" class="selectbox3">
-                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título aula/consulta </h2>
+                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título do pedido </h2>
                                         </p>
                                         <br>
                                         <p name="nome5" id="nome5 " style="margin-left: 2%;">NOME DO PROFISSIONAL</p>
@@ -310,7 +347,7 @@
                                         </a>
                                     </div>
                                     <div style="display:inline-block" class="selectbox3">
-                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título aula/consulta </h2>
+                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título do pedido </h2>
                                         </p>
                                         <br>
                                         <p name="nome5" id="nome5 " style="margin-left: 2%;">NOME DO PROFISSIONAL</p>
@@ -392,6 +429,18 @@
     <script src="plugins/feather.min.js"></script>
     <!-- Custom scripts -->
     <script src="js/script.js"></script>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+
+    </script>
 </body>
 
 </html>
