@@ -16,6 +16,20 @@ module.exports.getUsers = async function() {
     }
 }
 
+//TERMINAR
+module.exports.getRanking = async function() {
+    try {
+        let sql = "select * from utilizador";
+        let result = await pool.query(sql);
+        let users = result.rows;
+        console.log("[usersModel.getUsers] users = " + JSON.stringify(users));
+        return { status: 200, data: users };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
 module.exports.getUser = async function(id){
 
     console.log("[usersModel.getUser] id = " + JSON.stringify(id));
@@ -118,7 +132,7 @@ module.exports.authUser = async function(uti_name){
         let result = await pool.query(sql,[uti_name.user_name]);
 
         let passwordb = result.rows[0].user_password;
-        let valor = brcypt.compareSync(uti_name.user_password, passwordb);
+        let valor = brcypt.compareSync(uti_name.user_password, passwordb); //O uti_name REPRESENTA O OBJETO DO UTILIZADOR (objeto com os dados do input)
 
         //console.log("[usersModel.getUserDados] dados_utilizador = " + JSON.stringify(dadosfound));
 

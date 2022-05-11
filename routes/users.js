@@ -18,6 +18,18 @@ router.get('/', async function(req, res, next) {
 
 });
 
+//OBTER RANKING DE PONTOS
+
+router.get('/ranking', async function(req, res, next){
+
+    console.log("Ranking users....");
+    let result = await usersModel.getRanking();
+    res.status(result.status).send(result.data);
+
+});
+
+
+
 router.get('/:id(\\d+)', async function(req, res, next){
 
     let id = req.params.id; 
