@@ -16,6 +16,19 @@ module.exports.getUsers = async function() {
     }
 }
 
+module.exports.getUserById = async function(uti_id) {
+    try {
+        let sql = "select * from utilizador where utilizador.user_id = " + uti_id;
+        let result = await pool.query(sql);
+        let users = result.rows[0];
+        console.log("[usersModel.getUsers] users = " + JSON.stringify(users));
+        return { status: 200, data: users };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
 //TERMINAR
 module.exports.getRanking = async function() {
     try {
@@ -60,6 +73,7 @@ module.exports.getUser = async function(id){
     }
 
 }
+
 
 
 
@@ -131,8 +145,17 @@ module.exports.authUser = async function(uti_name){
 
         let result = await pool.query(sql,[uti_name.user_name]);
 
+        console.log("authUser.result.rows = " + JSON.stringify(result.rows));
+
         let passwordb = result.rows[0].user_password;
-        let valor = brcypt.compareSync(uti_name.user_password, passwordb); //O uti_name REPRESENTA O OBJETO DO UTILIZADOR (objeto com os dados do input)
+
+        console.log("authUser.passwordb = " + JSON.stringify(passwordb));
+        console.log("authUser.uti_name.user_password = " + JSON.stringify(uti_name.user_password));
+
+        //let valor = brcypt.compareSync(uti_name.user_password, passwordb); //O uti_name REPRESENTA O OBJETO DO UTILIZADOR (objeto com os dados do input)
+        let valor = (uti_name.user_password == passwordb);
+
+        console.log("authUser.valor = " + JSON.stringify(valor));
 
         //console.log("[usersModel.getUserDados] dados_utilizador = " + JSON.stringify(dadosfound));
 

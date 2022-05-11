@@ -21,9 +21,11 @@
         <nav>
             <!--Barra de navegação-->
             <div class="topnav">
-              <a style = "font-family: Verdana, Geneva, Tahoma, sans-serif;" href="userdashboard.html">Perfil</a>
-              <a style = "font-family: Verdana, Geneva, Tahoma, sans-serif;"  href="jornalfit.html"> Jornal FIT</a>
-              <a style = "font-family: Verdana, Geneva, Tahoma, sans-serif;" href="mainpage.html">Main Page</a>
+             <!--- <a style = "font-family: Verdana, Geneva, Tahoma, sans-serif;" href="dashboardTemplate.html">Perfil</a> -->
+
+              <a style = "font-family: Verdana, Geneva, Tahoma, sans-serif; color: white;" onclick="scrollaboutus()">Sobre Nós</a>
+              <a style = "font-family: Verdana, Geneva, Tahoma, sans-serif;"  href="jornalfit.html"> Jornal Fit</a>
+              <a style = "font-family: Verdana, Geneva, Tahoma, sans-serif;" href="mainpage.html">Home</a>
             </div>
           </nav>
         <!-- Masthead-->
@@ -395,5 +397,17 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+
+            function scrollaboutus(){
+
+                var aboutuselement = document.getElementById("about");
+                aboutuselement.scrollIntoView();
+
+            }
+
+
+        </script>
     </body>
 </html>

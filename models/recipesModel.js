@@ -28,9 +28,9 @@ module.exports.getRecipesUser = async function(uti_id) {
 
 module.exports.getRecipeById = async function(recipe_id) {
     try {
-        let sql = "SELECT receita.receita_id, receita.receita_titulo, receita.receita_desc, receita.receita_utilizador_id, receita_ingrediente.receita_ingrediente_id, ingrediente.ingrediente_id, ingrediente.ingrediente_nome, utilizador.user_name  FROM receita " + "INNER JOIN receita_ingrediente ON receita_ingrediente.recipe_id = receita.receita_id " + "INNER JOIN ingrediente ON ingrediente.ingrediente_id = receita_ingrediente.ingredient_id " + "INNER JOIN utilizador ON receita.receita_utilizador_id = utilizador.user_id " + "WHERE receita.receita_id = " + recipe_id;
+        let sql = "SELECT receita.receita_id, receita.receita_titulo, receita.receita_desc, receita.receita_utilizador_id, receita_ingrediente.receita_ingrediente_id, ingrediente.ingrediente_id, ingrediente.ingrediente_nome, utilizador.user_name, receita_categoria.receita_categoria_nome, item_base.basee_nome FROM receita " + "INNER JOIN receita_ingrediente ON receita_ingrediente.recipe_id = receita.receita_id " + "INNER JOIN ingrediente ON ingrediente.ingrediente_id = receita_ingrediente.ingredient_id " + "INNER JOIN utilizador ON receita.receita_utilizador_id = utilizador.user_id " + "INNER JOIN receita_categoria ON receita_categoria.receita_categoria_id = receita.receita_categoriaa_id " + "INNER JOIN item_base ON item_base.basee_id = receita.receita_base_id " + "WHERE receita.receita_id = "+ recipe_id;
         let result = await pool.query(sql);
-        let recipefound = result.rows;
+        let recipefound = result.rows[0];
         console.log("[recipesModel.getRecipeById] recipe = " + JSON.stringify(recipefound));
         return { status: 200, data: recipefound };
     } catch (err) {

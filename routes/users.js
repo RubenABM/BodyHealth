@@ -18,7 +18,7 @@ router.get('/', async function(req, res, next) {
 
 });
 
-//OBTER RANKING DE PONTOS
+//OBTER RANKING DE PONTOS - TERMINAR ***************************************************************
 
 router.get('/ranking', async function(req, res, next){
 
@@ -34,7 +34,7 @@ router.get('/:id(\\d+)', async function(req, res, next){
 
     let id = req.params.id; 
     console.log("[usersRoutes] Retrieving user with id " + id);
-    let result = await usersModel.getUser(id);
+    let result = await usersModel.getUserById(id);
     res.status(result.status).send(result.data);
   
   });
@@ -70,9 +70,8 @@ router.delete('/deleteuser/:idutilizador', async function(req,res, next){
 });
 
 router.post('/loginuser', async function(req, res, next){
-
     let username = req.body;
-    
+    console.log("username = " + JSON.stringify(username));
 
     let result = await usersModel.authUser(username);
     res.status(result.status).send(result.result);

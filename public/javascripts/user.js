@@ -91,7 +91,6 @@ async function add() {
 }
 
 async function login(){
-
    try{
 
     let object = {
@@ -99,15 +98,16 @@ async function login(){
          user_name: document.getElementById("fusernamelogin").value,
          user_password: document.getElementById("fpasswordlogin").value,
     };
-    let authUser = await $.ajax({
 
+    let authUser = await $.ajax({
         url: "/users/loginuser",
         method: "post",
         data: JSON.stringify(object),
         contentType: "application/json",
         dataType: "json",
     });
-    //console.log("Verifying user with username: " + authUser.user_name + " and password: " + authUser.user_password);
+    alert("Authenticate user: " + JSON.stringify(authUser));
+    console.log("Verifying user with username: " + authUser.user_name + " and password: " + authUser.user_password);
 
     sessionStorage.setItem('user_id', authUser.user_id);
     window.alert('login sucessfull');
@@ -117,6 +117,8 @@ async function login(){
     console.log(err);
     window.alert('something wron;g')
     }
+
+
 
 }
 
