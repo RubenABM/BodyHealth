@@ -25,7 +25,7 @@ window.onload = async function(){
 
         console.log("Utilizador Admin");
 
-
+        
 
       } else if (utilizador.user_admin == 0 && utilizador.user_pt == 0){
 
@@ -39,6 +39,9 @@ window.onload = async function(){
         //É PT (UTILIZADOR E PT)
 
         console.log("Utilizador Personal-Trainer");
+
+        document.getElementById("nutricionistasbarra").style.visibility = "hidden";
+        
 
      //TESTE DE ESCONDER (FUNCIONAL)   document.getElementById("nuser").style.visibility="hidden"; *********************************************
 
