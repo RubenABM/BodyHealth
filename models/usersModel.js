@@ -152,7 +152,6 @@ module.exports.authUser = async function(uti_name){
         console.log("authUser.passwordb = " + JSON.stringify(passwordb));
         console.log("authUser.uti_name.user_password = " + JSON.stringify(uti_name.user_password));
 
-        //let valor = brcypt.compareSync(uti_name.user_password, passwordb); //O uti_name REPRESENTA O OBJETO DO UTILIZADOR (objeto com os dados do input)
         let valor = (uti_name.user_password == passwordb);
 
         console.log("authUser.valor = " + JSON.stringify(valor));

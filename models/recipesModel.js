@@ -17,7 +17,7 @@ module.exports.getRecipesUser = async function(uti_id) {
     try {
         let sql = "SELECT receita.receita_id, receita.receita_titulo, receita.receita_desc, receita.receita_utilizador_id, utilizador.user_name FROM receita " + "INNER JOIN utilizador ON utilizador.user_id = receita.receita_utilizador_id " + "WHERE receita.receita_utilizador_id =  " + uti_id;
         let result = await pool.query(sql);
-        let recipesfound = result.rows;
+        let recipesfound = result.rows[0];
         console.log("[recipesModel.getRecipesUser] recipes = " + JSON.stringify(recipesfound));
         return { status: 200, data: recipesfound };
     } catch (err) {

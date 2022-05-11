@@ -99,6 +99,8 @@ async function login(){
          user_password: document.getElementById("fpasswordlogin").value,
     };
 
+    console.log("Sending the object with values: " + object);
+
     let authUser = await $.ajax({
         url: "/users/loginuser",
         method: "post",
@@ -117,8 +119,6 @@ async function login(){
     console.log(err);
     window.alert('something wron;g')
     }
-
-
 
 }
 

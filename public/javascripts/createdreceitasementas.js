@@ -21,7 +21,7 @@ window.onload = async function(){
        document.getElementById("nome1").innerHTML = "n";/////////////////////////////////PORQUE NÃO ESCREVE?
        document.getElementById("base1").innerHTML = receita.basee_nome;
        document.getElementById("tipo1").innerHTML = receita.receita_categoria_nome;
-
+    
  
       
     } catch(err){
