@@ -388,9 +388,10 @@
 .selectbox {
     width: 160px;
     height: 150px;
-    background-color: transparent;
+    background-color: white;
     border: 1px solid black;
     border-radius: 6%;
+    cursor: pointer;
 }
 
 .selectbox3 {

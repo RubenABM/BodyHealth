@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Eventos e Aulas</title>
+    <title>Dashboard</title>
     <!-- Favicon -->
     <!--<link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">-->
     <!-- Custom styles -->
@@ -18,7 +18,8 @@
     <a class="skip-link sr-only" href="#skip-target">Skip to content</a>
     <div class="page-flex">
         <!-- ! Sidebar -->
-        <aside style="height: 1400px;" class="sidebar">
+        <!-- ! Sidebar -->
+        <aside class="sidebar">
             <div class="sidebar-start">
                 <div class="sidebar-head">
                     <!--<a href="/" class="logo-wrapper" title="Home">-->
@@ -175,17 +176,17 @@
                 </div>
             </div>
             <!--
-    <div class="sidebar-footer">
-        <a href="##" class="sidebar-user">
-            <span class="sidebar-user-img">
-                <picture><source srcset="./img/avatar/avatar-illustrated-01.webp" type="image/webp"><img src="./img/avatar/avatar-illustrated-01.png" alt="User name"></picture>
-            </span>
-            <div class="sidebar-user-info">
-                <span class="sidebar-user__title">Nafisa Sh.</span>
-                <span class="sidebar-user__subtitle">Support manager</span>
-            </div>
-        </a>
-    </div>-->
+<div class="sidebar-footer">
+<a href="##" class="sidebar-user">
+    <span class="sidebar-user-img">
+        <picture><source srcset="./img/avatar/avatar-illustrated-01.webp" type="image/webp"><img src="./img/avatar/avatar-illustrated-01.png" alt="User name"></picture>
+    </span>
+    <div class="sidebar-user-info">
+        <span class="sidebar-user__title">Nafisa Sh.</span>
+        <span class="sidebar-user__subtitle">Support manager</span>
+    </div>
+</a>
+</div>-->
         </aside>
         <div class="main-wrapper">
             <!-- ! Main nav 
@@ -209,130 +210,116 @@
             <!-- ! Main -->
             <main class="main users chart-page" id="skip-target">
                 <div class="container">
-                    <h2 class="main-title">Eventos e aulas</h2>
+                    <h2 id="npt" class="main-title">Bem-vindo PT!</h2>
+                    <div class="row stat-cards">
+                        <div class="col-md-6 col-xl-3">
+                            <article class="stat-cards-item">
+                                <div class="stat-cards-icon primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-123" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.873 11.297V4.142H1.699L0 5.379v1.137l1.64-1.18h.06v5.961h1.174Zm3.213-5.09v-.063c0-.618.44-1.169 1.196-1.169.676 0 1.174.44 1.174 1.106 0 .624-.42 1.101-.807 1.526L4.99 10.553v.744h4.78v-.99H6.643v-.069L8.41 8.252c.65-.724 1.237-1.332 1.237-2.27C9.646 4.849 8.723 4 7.308 4c-1.573 0-2.36 1.064-2.36 2.15v.057h1.138Zm6.559 1.883h.786c.823 0 1.374.481 1.379 1.179.01.707-.55 1.216-1.421 1.21-.77-.005-1.326-.419-1.379-.953h-1.095c.042 1.053.938 1.918 2.464 1.918 1.478 0 2.642-.839 2.62-2.144-.02-1.143-.922-1.651-1.551-1.714v-.063c.535-.09 1.347-.66 1.326-1.678-.026-1.053-.933-1.855-2.359-1.845-1.5.005-2.317.88-2.348 1.898h1.116c.032-.498.498-.944 1.206-.944.703 0 1.206.435 1.206 1.07.005.64-.504 1.106-1.2 1.106h-.75v.96Z" />
+                                    </svg>
+                                </div>
+                                <div class="stat-cards-info">
+                                    <p class="stat-cards-info__num">Nº Turmas</p>
+                                    <p id="nturmas" class="stat-cards-info__title">12</p>
+
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="stat-cards-item">
+                                <div class="stat-cards-icon warning">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                        class="bi bi-check-lg" viewBox="0 0 16 16">
+                                        <path
+                                            d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                                    </svg>
+                                </div>
+                                <div class="stat-cards-info">
+                                    <p class="stat-cards-info__num">Aulas realizadas</p>
+                                    <p id="naulas" class="stat-cards-info__title">123</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="stat-cards-item">
+                                <div class="stat-cards-icon purple">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z" />
+                                    </svg>
+                                </div>
+                                <div class="stat-cards-info">
+                                    <p class="stat-cards-info__num">Pedidos pendentes</p>
+                                    <p id="npedidos" class="stat-cards-info__title">3</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="stat-cards-item">
+                                <div class="stat-cards-icon success">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                        class="bi bi-capslock-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1H1.654C.78 9.5.326 8.455.924 7.816L7.27 1.047zM4.5 13.5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1z" />
+                                    </svg>
+                                </div>
+                                <div class="stat-cards-info">
+                                    <p class="stat-cards-info__num">Posição no ranking</p>
+                                    <p id="nranking" class="stat-cards-info__title">#47568</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-lg-9">
-                            <h2 style="margin-top: 40px;">Eventos marcados</h2>
-
-                                <div style="margin-top: 2%; margin-left:68%;" class="dropdown2">
-                                    <button type="submit"
-                                        class="buttoncalcularimc"><b>Categorias</b></button><br><br>
-
-                                    <div class="dropdown2-content">
-                                        <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos </a><br>
-                                        <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Aulas</a><br>
-                                        <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Consultas</a><br>
-                                    </div>
-                                </div>
-
-                                <div id="organize">
-                                    <div style="display:inline-block" class="selectbox3">
-                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título aula/consulta </h2>
-                                        </p>
-                                        <br>
-                                        <p name="nome1" id="nome1 " style="margin-left: 2%;">NOME DO PROFISSIONAL</p>
-                                        <p name="data1" id="data1"
-                                            style="margin-left: 2%; font-size: 90%; margin-top: 2%">
-                                            DATA</p>
-                                        <p name="hora1" id="hora1"
-                                            style="margin-left: 2%; font-size: 90%; margin-top: 2%; float: left;">
-                                            HORA</p>
-                                        <a href="map.html">
-                                            <button style="float: right; margin-right: 2%;"
-                                                class="buttoncalcularimc"><b>IR
-                                                    PARA O MAPA</b></button>
-                                        </a>
-                                    </div>
-                                    <div style="display:inline-block" class="selectbox3">
-                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título aula/consulta </h2>
-                                        </p>
-                                        <br>
-                                        <p name="nome2" id="nome2 " style="margin-left: 2%;">NOME DO PROFISSIONAL</p>
-                                        <p name="data2" id="data2"
-                                            style="margin-left: 2%; font-size: 90%; margin-top: 2%">
-                                            DATA</p>
-                                        <p name="hora2" id="hora2"
-                                            style="margin-left: 2%; font-size: 90%; margin-top: 2%; float: left;">
-                                            HORA</p>
-                                        <a href="map.html">
-                                            <button style="float: right; margin-right: 2%;"
-                                                class="buttoncalcularimc"><b>IR
-                                                    PARA O MAPA</b></button>
-                                        </a>
-                                    </div>
-                                    <div style="display:inline-block" class="selectbox3">
-                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título aula/consulta </h2>
-                                        </p>
-                                        <br>
-                                        <p name="nome3" id="nome3 " style="margin-left: 2%;">NOME DO PROFISSIONAL</p>
-                                        <p name="data3" id="data3"
-                                            style="margin-left: 2%; font-size: 90%; margin-top: 2%">
-                                            DATA</p>
-                                        <p name="hora3" id="hora3"
-                                            style="margin-left: 2%; font-size: 90%; margin-top: 2%; float: left;">
-                                            HORA</p>
-                                        <a href="map.html">
-                                            <button style="float: right; margin-right: 2%;"
-                                                class="buttoncalcularimc"><b>IR
-                                                    PARA O MAPA</b></button>
-                                        </a>
-                                    </div>
-
-                                    <div style="display:inline-block" class="selectbox3">
-                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título aula/consulta </h2>
-                                        </p>
-                                        <br>
-                                        <p name="nome4" id="nome4 " style="margin-left: 2%;">NOME DO PROFISSIONAL</p>
-                                        <p name="data4" id="data4"
-                                            style="margin-left: 2%; font-size: 90%; margin-top: 2%">
-                                            DATA</p>
-                                        <p name="hora4" id="hora4"
-                                            style="margin-left: 2%; font-size: 90%; margin-top: 2%; float: left;">
-                                            HORA</p>
-                                        <a href="map.html">
-                                            <button style="float: right; margin-right: 2%;"
-                                                class="buttoncalcularimc"><b>IR
-                                                    PARA O MAPA</b></button>
-                                        </a>
-                                    </div>
-
-                                    <div style="display:inline-block" class="selectbox3">
-                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título aula/consulta </h2>
-                                        </p>
-                                        <br>
-                                        <p name="nome5" id="nome5 " style="margin-left: 2%;">NOME DO PROFISSIONAL</p>
-                                        <p name="data5" id="data5"
-                                            style="margin-left: 2%; font-size: 90%; margin-top: 2%">
-                                            DATA</p>
-                                        <p name="hora5" id="hora5"
-                                            style="margin-left: 2%; font-size: 90%; margin-top: 2%; float: left;">
-                                            HORA</p>
-                                        <a href="map.html">
-                                            <button style="float: right; margin-right: 2%;"
-                                                class="buttoncalcularimc"><b>IR
-                                                    PARA O MAPA</b></button>
-                                        </a>
-                                    </div>
-                                    <div style="display:inline-block" class="selectbox3">
-                                        <h2 style="margin-top: 2%; margin-left: 2%"> Título aula/consulta </h2>
-                                        </p>
-                                        <br>
-                                        <p name="nome5" id="nome5 " style="margin-left: 2%;">NOME DO PROFISSIONAL</p>
-                                        <p name="data5" id="data5"
-                                            style="margin-left: 2%; font-size: 90%; margin-top: 2%">
-                                            DATA</p>
-                                        <p name="hora5" id="hora5"
-                                            style="margin-left: 2%; font-size: 90%; margin-top: 2%; float: left;">
-                                            HORA</p>
-                                        <a href="map.html">
-                                            <button style="float: right; margin-right: 2%;"
-                                                class="buttoncalcularimc"><b>IR
-                                                    PARA O MAPA</b></button>
-                                        </a>
-                                    </div>
-                                </div>
+                            <div class="chart">
+                                <canvas id="myChart" aria-label="Site statistics" role="img"></canvas>
                             </div>
                         </div>
+                        <div class="col-lg-3">
+                            <article class="white-block">
+                                <div class="top-cat-title">
+                                    <h3>Calcular IMC</h3>
+                                </div>
+                                <ul class="top-cat-list">
+                                    <!--<li>
+                  <a href="##">
+                    <div class="top-cat-list__title">
+                      Lifestyle <span>8.2k</span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      Dailiy lifestyle articles <span class="purple">+472</span>
+                    </div>
+                  </a>
+                </li>-->
+                                    <form style="text-align: center;" class="formcalculateimc">
+                                        <h3 style="font-size: medium;"> Peso</h3><br>
+                                        <input type="number" id="fpeso" name="fpeso" class="fieldpeso"
+                                            placeholder="Peso"><br><br>
+
+                                        <h3 style="font-size: medium;"> Altura</h3><br>
+                                        <input type="number" id="faltura" name="faltura" class="fieldalturao"
+                                            placeholder="Altura"><br><br>
+
+                                        <h3 style="font-size: medium;"> Idade</h3><br>
+                                        <input type="number" id="fidade" name="fidade" class="fieldidade"
+                                            placeholder="Idade"><br><br>
+
+                                        <button type="submit" class="buttoncalcularimc"><b>Calcular</b></button><br><br>
+
+                                        <h3 id="fimc" name="fimc" style="font-size: medium;"> O teu IMC: X</h3><br><br>
+
+                                        <button type="submit" class="buttoncalcularimc"><b>Adicionar ponto</b></button>
+                                    </form>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </div>
             </main>
             <!-- ! Footer 
     <footer class="footer">
@@ -350,7 +337,7 @@
 </footer> -->
             <section id="move">
                 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-                <div style="margin-top: 10%;" class="footer-clean">
+                <div class="footer-clean">
                     <footer>
                         <div class="container">
                             <div class="row justify-content-center">
