@@ -8,11 +8,10 @@
   <link rel="stylesheet" href="./stylesheets/mainpage.css">
   <link rel="icon" type="img/x-icon" href="https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png">
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  <!--GEOCODER-->
-  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
-
+  
 
   <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
 
@@ -33,6 +32,36 @@
 
 <body>
 
+  <!--TERMINAR DE FAZER O BILLING DA CONTA-->
+  
+     <script>
+         //Função para iniciar o mapa
+        function initMap(){
+
+           var options = { //Customização do mapa
+
+              zoom: 8, //Zoom no mapa
+              center:{lat: 38.7223, lng: 9.1393} //Centro do mapa quando este é aberto (Lisboa)
+
+           }
+
+           var map = new google.maps.Map(document.getElementById('map'), options); //Preparar o mapa e colocá-lo dentro da variavel 'map', juntamente com as opções
+
+        }
+
+     </script>
+
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVH9zsDCTHoGTwNdw3tA6f1MtfW2s1n5Y&callback=initMap&v=weekly" 
+      defer
+    ></script>
+
+
+  <!--
+  GEOCODER
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>-->
+
   <!--PERGUNTAR COMO ATRIBUIR DIFERENTES DISTANCIAS SEM REPETIR CODIGO IGUAL DE CSS, EM QUE SÓ ALTERA A POSIÇÃO (POUPAR CÓDIGO)-->
 
   <section class="filterplaces">
@@ -52,27 +81,7 @@
     <div id='map' style='width: 782px; height: 500px; border: 1px solid #e8bf5c; margin-left: 240px; margin-top: 70px;'>
     </div>
 
-    <div class="boxContainer" style="visibility: hidden;">
-
-      <table class="elementsContainer">
-
-        <tr>
-
-          <td>
-
-            <input type="text" placeholder="Pesquisar Local..." class="search" id="searchforplace">
-
-          </td>
-          <td>
-            <a href="#"><i class="material-icons">search</i></a>
-          </td>
-
-
-        </tr>
-
-      </table>
-
-    </div>
+    <div id="map"></div>
 
   </div>
 
@@ -116,96 +125,81 @@
 
   <script>
 
+/*///////////////não é possivel enviar dados para a bd - abortar mapbox? //////////////////////////////////
+
+//TOKEN DO MAPA
     mapboxgl.accessToken = 'pk.eyJ1IjoibWlndWVsY3J1eiIsImEiOiJjbDI1djBzdmcwODhwM2RudTlleGRlZ2tpIn0.u31STaJqnZkr5QFGTgVD8w';
 
+    //LIMITES DO MAPA (PORTUGAL CONTINENTAL)
     const bounds = [
       [-9.897438169534817, 36.85191635338956],
       [-6.076692250400515, 42.20107808455899]
     ];
 
-
+//MAPA
     var map = new mapboxgl.Map({
 
       container: 'map',
       // style: 'mapbox://styles/mapbox/streets-v11',
-      style: 'mapbox://styles/miguelcruz/cl25ywb6d000014mpgycvyq1w/draft',
-      center: [-9.166421750512969, 38.760943038193496],
-      zoom: 15,
-      maxBounds: bounds
+      style: 'mapbox://styles/miguelcruz/cl25ywb6d000014mpgycvyq1w/draft', //URL DO ESTILO DO MAPA
+      center: [-9.166421750512969, 38.760943038193496], //CENTRO DO MAPA QUANDO ABERTO
+      zoom: 15, //ZOOM DO MAPA QUANDO ABERTO
+      maxBounds: bounds //LIMITES DO MAPA
     });
 
-     /*GEOCODING MAP*/
+     /*GEOCODING MAP
 
      const geocoder = new MapboxGeocoder({
 
        accessToken: mapboxgl.accessToken,
        placeholder: 'Search nearby places..',
-       mapboxgl: mapboxgl,
-       marker: false,
+       marker: {color: 'orange'},
        bbox: [-9.897438169534817, 36.85191635338956, -6.076692250400515, 42.20107808455899],
        proximity: {
 
           longitude: 38.736946,
           latitude: -9.142685
 
-       }
+       },
+       mapboxgl: mapboxgl
+
+      
 
     });
 
+
     //OBTER LOCALIZACAO ATUAL DO UTILIZADOR
 
-    // Add geolocate control to the map.
-map.addControl(
-new mapboxgl.GeolocateControl({
-positionOptions: {
-enableHighAccuracy: true
-},
-// When active the map will receive updates to the device's location as it changes.
-trackUserLocation: true,
-// Draw an arrow next to the location dot to indicate which direction the device is heading.
-showUserHeading: true
-})
-);
+   // Add geolocate control to the map.
+      map.addControl(
+        new mapboxgl.GeolocateControl({
+        positionOptions: {
+        enableHighAccuracy: true,
+      
+      },
+         // When active the map will receive updates to the device's location as it changes.
+         trackUserLocation: true,
+       // Draw an arrow next to the location dot to indicate which direction the device is heading.
+        showUserHeading: true
+
+
+      })
+     );
 
     //APÓS SELECIONAR UM LOCAL, COLOCAR UM MARCADOR NO MESMO (NECESSÁRIO PARA FAZER ESTILO DO MARCADOR APÓS O POST NA BD)
 
-    map.on('load', () => {
-      
-    map.addSource('single-point', {
-    type: 'geojson',
-    data: {
-      type: 'FeatureCollection',
-      features: []
-    }
-  });
+    
 
-  map.addLayer({
-    id: 'point',
-    source: 'single-point',
-    type: 'circle',
-    paint: {
-      'circle-radius': 10,
-      'circle-color': '#448ee4'
-    }
-  });
 
-  // Listen for the `result` event from the Geocoder
-  // `result` event is triggered when a user makes a selection
-  //  Add a marker at the result's coordinates
-  geocoder.on('result', (event) => {
-    map.getSource('single-point').setData(event.result.geometry);
-  });
-});
-
-    /*O 'marker' SERÁ INICIADO NO MAPA E REPPRESENTARÁ A POSICAO ATUAL DO UTILIZADOR*/
+    /*O 'marker' SERÁ INICIADO NO MAPA E REPPRESENTARÁ A POSICAO ATUAL DO UTILIZADOR
 
     const marker = new mapboxgl.Marker() // Initialize a new marker
      .setLngLat([38.719222970322235, -9.14401262998581]) // Marker [lng, lat] coordinates
      .addTo(map);
 
-     map.addControl(geocoder);
+     map.addControl(geocoder); //ADICIONAR O GEOCODING AO MAPA
 
-    
+    */
 
     var geojson = {
 
@@ -299,23 +293,25 @@ showUserHeading: true
       ]
     };
 
+    /*
     // add markers to map
-    for (const feature of geojson.features) {
+    for (const feature of geojson.features) { //percorrer a variavel 'geojson' e colocando marcadores
       // create a HTML element for each feature
       const el = document.createElement('div');
       el.className = 'marker';
 
       // make a marker for each feature and add it to the map
       new mapboxgl.Marker(el)
-        .setLngLat(feature.geometry.coordinates)
+        .setLngLat(feature.geometry.coordinates) // obter coordenadas vindas da variavel 'geojson' 
         .setPopup(
           new mapboxgl.Popup({ offset: 25 }) // add popups
             .setHTML(
               `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
             )
         )
-        .addTo(map);
+        .addTo(map); //adicionar ao mapa
     }
+    */
 
   </script>
 

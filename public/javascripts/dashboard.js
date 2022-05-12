@@ -21,10 +21,14 @@ window.onload = async function(){
       document.getElementById("npontos").innerHTML = utilizador.user_points;
 
       //VERIFICAR (ESCONDER E MOSTRAR) ELEMENTOS DE ACORDO COM O UTILIZADOR
-      if(utilizador.user_pt == 0 && utilizador.user_nutri == 0){
+      if(utilizador.user_pt == 0 && utilizador.user_nutri == 0 && utilizador.user_admin == 1){
 
         console.log("Utilizador Admin");
 
+
+        document.getElementById("eventoseaulasbarra").style.visibility = "hidden";
+
+        document.getElementById("perfiltext").innerHTML = "Gestão";
         
 
       } else if (utilizador.user_admin == 0 && utilizador.user_pt == 0){
@@ -34,20 +38,31 @@ window.onload = async function(){
         console.log("Utilizador Nutricionista");
 
 
+        document.getElementById("eventoseaulasbarra").innerHTML = "Eventos e Pedidos";
+
+
+        document.getElementById("turmaseconsultas").innerHTML = "Clientes";
+
+
+
       } else if(utilizador.user_admin == 0 && utilizador.user_nutri == 0){
 
         //É PT (UTILIZADOR E PT)
 
         console.log("Utilizador Personal-Trainer");
 
-        document.getElementById("nutricionistasbarra").style.visibility = "hidden";
+        document.getElementById("eventoseaulasbarra").innerHTML = "Eventos e Pedidos";
+
+        document.getElementById("turmaseconsultas").innerHTML = "Turmas";
         
 
      //TESTE DE ESCONDER (FUNCIONAL)   document.getElementById("nuser").style.visibility="hidden"; *********************************************
 
      
 
-      } else {
+      } else if(utilizador.user_pt == 0 && utilizador.user_nutri == 0 && utilizador.user_admin == 0){
+
+         
           console.log("Keep");
       }
 

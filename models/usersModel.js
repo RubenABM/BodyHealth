@@ -88,7 +88,7 @@ module.exports.saveUser = async function(user) {
         else
             return { status: 400, data: { msg: "Malformed data" } };
     }*/
-    let password = brcypt.hashSync(user.user_password, salt);
+    //let password = brcypt.hashSync(user.user_password, salt);
     try {
 
         let sql =
@@ -99,7 +99,7 @@ module.exports.saveUser = async function(user) {
             "RETURNING user_id";
 
             //console.log(user.user_name + "|" + user.user_password + "|" + user.user_morada + "|" + user.user_email + "|" + user.user_points + "|" + user.user_admin + "|" + user.user_pt + "|" + user.user_nutri);
-        let result = await pool.query(sql, [user.user_name, password, user.user_morada, user.user_email, user.user_points, user.user_admin, user.user_pt, user.user_nutri]);
+        let result = await pool.query(sql, [user.user_name, user.user_password, user.user_morada, user.user_email, user.user_points, user.user_admin, user.user_pt, user.user_nutri]);
         
         return { status: 200, result: result };
     } catch (err) {
@@ -137,7 +137,7 @@ module.exports.DeleteUser = async function(uti_id) {
     }
 }
 
-
+//PEDIR AJUDA
 module.exports.authUser = async function(uti_name){
 
     try {
@@ -159,7 +159,7 @@ module.exports.authUser = async function(uti_name){
         //console.log("[usersModel.getUserDados] dados_utilizador = " + JSON.stringify(dadosfound));
 
         if(result.rows.length > 0 && valor)
-        return { status: 200, result: result.rows};
+          return { status: 200, result: result.rows[0]};
             //return { status: 200, result: result.rows[0]};
         else return { status: 401, result: {msg:' wrong email or passsword'}};
         

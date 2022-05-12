@@ -789,6 +789,16 @@ cursor: pointer;
 
 }
 
+#map{
+
+  height: 400px;
+  width: 50%;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 200px;
+
+}
+
 .map{
 
    width: 100%;
