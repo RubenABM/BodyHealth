@@ -378,7 +378,7 @@
 .selectbox2 {
     width: 100px;
     height: 100px;
-    background-color: transparent;
+    background-color: white;
     border: 1px solid #2d2e2d;
     border-radius: 5%;
     margin-top: 0.5%;
@@ -400,6 +400,7 @@
     border: 3px solid #2d2e2d;
     border-radius: 15px;
     margin-left: 0%;
+    background-color: white;
 }
 
 #selectxbox1,
