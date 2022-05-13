@@ -37,6 +37,13 @@ window.onload = async function(){
     initMap();
 }
 
+//FUNCAO PARA FILTRAR LOCAIS 
+
+async function filterplacescoffee(){
+
+   
+
+}
 
 async function initMap(position){
 
@@ -99,6 +106,43 @@ async function initMap(position){
     };
 
     const autocomplete2 = new google.maps.places.Autocomplete(document.getElementById("input"), options2);
+
+    let marcadores = [];
+//COMO REMOVER O MARCADOR ANTIGO PARA MARCAR UM NOVO? ***********************************************************************
+
+    autocomplete2.addListener("place_changed", () => {
+
+        if(marcadores.length > 0){
+
+            marcadores.pop(markerplace);
+
+            const local = autocomplete2.getPlace();
+
+            const markerplace = new google.maps.Marker({
+
+              position: local.geometry.location,
+              title: local.name,
+              map: map,
+
+            });
+
+            marcadores.push(markerplace); 
+
+        } else {
+
+      const local = autocomplete2.getPlace();
+      const markerplace = new google.maps.Marker({
+
+        position: local.geometry.location,
+        title: local.name,
+        map: map,
+
+      });
+
+      marcadores.push(markerplace);
+    }
+
+    });
 
     
     
@@ -240,5 +284,8 @@ function sucess(position){
  }
  
  function failure(){}
+
+
+ 
 
    
