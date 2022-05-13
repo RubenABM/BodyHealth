@@ -1514,3 +1514,7 @@ INNER JOIN item_aprovacao ON item_aprovacao.aprovacao_tipo_id = receita.receita_
 INNER JOIN item_base ON item_base.basee_id = receita.receita_base_id
 INNER JOIN receita_categoria ON receita_categoria.receita_categoria_id = receita.receita_categoriaa_id
 WHERE ementa.ementa_id = 'id da ementa'
+
+-------------------- GET COORDINATES FROM GEOMETRY COLUMN ------------------------
+
+SELECT * ,ST_X(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Longitude, ST_Y(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Latitude FROM place
