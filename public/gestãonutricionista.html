@@ -234,19 +234,22 @@
                                     </h3>
                                     <div style="margin-top: 3%">
                                         <div>
-                                            <input id="tituloreceita" class="inputvaluescreaterecipe"
+                                            <input id="tituloaula" class="inputvaluescreaterecipe"
                                                 style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%;"
                                                 type="text" placeholder="Título">
-                                            <textarea id="descricaoreceita"
+                                            <textarea id="descricaoaula"
                                                 style="border:1px solid #2d2e2d; border-radius: 7px; height: 150px; margin-left: 0%; margin-top: 0%;width: 100%;"
                                                 placeholder="Descrição"></textarea>
-                                                <input id="ruaped" class="inputvaluescreaterecipe"
-                                                style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 4%; width: 100%;"
+                                                <input id="nomealuno" class="inputvaluescreaterecipe"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%;"
+                                                type="text" placeholder="Nome do aluno">
+                                                <input id="ruaaula" class="inputvaluescreaterecipe"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 0%; width: 100%;"
                                                 type="text" placeholder="Rua">
 
-                                                <input id="dataped" type="date" style="margin-right:100px; margin-top: 0%; width: 100%;border-radius: 10px; border: 1px solid #2d2e2d;" required>
+                                                <input id="dataaula" type="date" style="margin-right:100px; margin-top: 0%; width: 100%;border-radius: 10px; border: 1px solid #2d2e2d;" required>
 
-                                                <input id="horaped" type="time" min="07:30" max="23:59" style="margin-right:100px; margin-top: 4%;  width: 100%; border-radius: 10px; border: 1px solid #2d2e2d;" required>
+                                                <input id="horaaula" type="time" min="07:30" max="23:59" style="margin-right:100px; margin-top: 4%;  width: 100%; border-radius: 10px; border: 1px solid #2d2e2d;" required>
 
                                         </div>
                                     </div>
@@ -508,6 +511,48 @@
                                 <h2 style="margin-top: 60%;">Clientes</h2>
                                 <button style="margin-top: 20%;float: left;" onclick="openForm()" style="margin-left: 35px;" type="submit"
                                     class="buttoncalcularimc"><b>Adicionar cliente</b></button><br><br>
+                            </div>
+                            <div style="margin-top: 0%;" class="form-popup" id="myForm">
+                                <form  style="width: 50%; height: 50%;" action="/action_page.php" class="form-container">
+                                    <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                                        <b>ADICIONAR CLIENTE</b>
+                                    </h3>
+                                    <div style="margin-top:4%" id="organize">
+                                        <div style="display:inline-block" class="selectbox4">
+                                            <br>
+                                            <h2 id="nomet1" style="margin-top: 2%; margin-left: 2%"> Nome do utilizador </h2>
+                                            </p>
+                                            <a href="#">
+                                                <button
+                                                    style="background-color: green;float: right;margin-top: 4%; margin-right: 2%;"
+                                                    class="buttoncalcularimc"><b>Adicionar</b></button>
+                                            </a>
+                                        </div>
+                                        <div style="display:inline-block" class="selectbox4">
+                                            <br>
+                                            <h2 id="nomet2" style="margin-top: 2%; margin-left: 2%"> Nome do utilizador </h2>
+                                            </p>
+                                            <a href="#">
+                                                <button
+                                                    style="background-color: green; float: right;margin-top: 4%; margin-right: 2%;"
+                                                    class="buttoncalcularimc"><b>Adicionar</b></button>
+                                            </a>
+                                        </div>
+                                        <div style="display:inline-block" class="selectbox4">
+                                            <br>
+                                            <h2 id="nomet3" style="margin-top: 2%; margin-left: 2%"> Nome do utilizador </h2>
+                                            </p>
+                                            <a href="#">
+                                                <button
+                                                    style=" background-color: green; float: right;margin-top: 4%; margin-right: 2%;"
+                                                    class="buttoncalcularimc"><b>Adicionar</b></button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <button style="margin-top:2%" type="button" class="buttoncalcularimc"
+                                        onclick="closeForm()"> Fechar</button>
+                                </form>
+
                             </div>
                             <div style="margin-top:4%" id="organize">
                                 <div style="display:inline-block" class="selectbox3">
