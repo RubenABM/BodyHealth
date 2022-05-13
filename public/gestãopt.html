@@ -141,7 +141,11 @@
                             </a>
                             <ul class="cat-sub-menu">
                                 <li>
-                                    <a href="pages.html">Pedidos</a>
+                                    <a href="nutricionistaprofile.html">Perfil Nutricionista</a>
+                                </li>
+                                <li>
+                                    <a href="gestãonutricionista.html">Gestão
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -219,9 +223,41 @@
                                 <div style="float: right;" style="margin-top: 3%; margin-left: -300px">
 
                                 </div>
-                                <button style="margin-top: 10%;float: left;" onclick="openForm()"
+                                <button style="margin-top: 10%;float: left;" onclick="openForm2()"
                                     style="margin-left: 35px;" type="submit" class="buttoncalcularimc"><b>Criar
                                         aula</b></button><br><br>
+                            </div>
+                            <div style="margin-top: 0%;" class="form-popup" id="myForm2">
+                                <form  style="width: 80%; height: 50%;" action="/action_page.php" class="form-container">
+                                    <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
+                                        <b>CRIAR AULA</b>
+                                    </h3>
+                                    <div style="margin-top: 3%">
+                                        <div>
+                                            <input id="tituloaula" class="inputvaluescreaterecipe"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%;"
+                                                type="text" placeholder="Título">
+                                            <textarea id="descricaoaula"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; height: 150px; margin-left: 0%; margin-top: 0%;width: 100%;"
+                                                placeholder="Descrição"></textarea>
+                                                <input id="nomealuno" class="inputvaluescreaterecipe"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%;"
+                                                type="text" placeholder="Nome do aluno">
+                                                <input id="ruaaula" class="inputvaluescreaterecipe"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 0%; width: 100%;"
+                                                type="text" placeholder="Rua">
+
+                                                <input id="dataaula" type="date" style="margin-right:100px; margin-top: 0%; width: 100%;border-radius: 10px; border: 1px solid #2d2e2d;" required>
+
+                                                <input id="horaaula" type="time" min="07:30" max="23:59" style="margin-right:100px; margin-top: 4%;  width: 100%; border-radius: 10px; border: 1px solid #2d2e2d;" required>
+
+                                        </div>
+                                    </div>
+                                    <button style="margin-top:2%" type="button" class="buttoncalcularimc"
+                                        onclick="closeForm2()"> Fechar</button>
+                                    <button id="criarreceita" style="margin-top:2%" type="button" class="buttoncalcularimc"> Criar</button>
+                                </form>
+
                             </div>
                             <div style="margin-top:3%" id="organize">
                                 <div class="selectbox">
@@ -484,10 +520,10 @@
                                     </h3>
                                     <div style="margin-top: 3%">
                                         <div>
-                                            <input id="tituloreceita" class="inputvaluescreaterecipe"
+                                            <input id="tituloturma" class="inputvaluescreaterecipe"
                                                 style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%;"
                                                 type="text" placeholder="Título">
-                                            <textarea id="descricaoreceita"
+                                            <textarea id="descricaoturma"
                                                 style="border:1px solid #2d2e2d; border-radius: 7px; height: 150px; margin-left: 0%; margin-top: 0%;width: 100%;"
                                                 placeholder="Descrição"></textarea>
 
