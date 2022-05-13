@@ -37,11 +37,21 @@ window.onload = async function(){
     initMap();
 }
 
-//FUNCAO PARA FILTRAR LOCAIS 
+//FUNCAO PARA FILTRAR LOCAIS (DO PLACES API) - TERMINAR
 
 async function filterplacescoffee(){
 
-   
+   const urlforfilter = ""
+
+   let place = await $.ajax({
+
+            url: "/places/",   //URL DO GOOGLE PLACES API
+    //        url: "/users/" + user_id,
+           // url: "/users/" + user_id,
+            method: "get",
+            dataType: "json",
+    
+   })
 
 }
 
@@ -112,24 +122,7 @@ async function initMap(position){
 
     autocomplete2.addListener("place_changed", () => {
 
-        if(marcadores.length > 0){
-
-            marcadores.pop(markerplace);
-
-            const local = autocomplete2.getPlace();
-
-            const markerplace = new google.maps.Marker({
-
-              position: local.geometry.location,
-              title: local.name,
-              map: map,
-
-            });
-
-            marcadores.push(markerplace); 
-
-        } else {
-
+        
       const local = autocomplete2.getPlace();
       const markerplace = new google.maps.Marker({
 
@@ -139,10 +132,10 @@ async function initMap(position){
 
       });
 
-      marcadores.push(markerplace);
+      
     }
 
-    });
+    );
 
     
     
