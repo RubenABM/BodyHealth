@@ -313,7 +313,8 @@
                                         <input type="number" id="fidade" name="fidade" class="fieldidade"
                                             placeholder="Idade"><br><br>
 
-                                        <button type="button" onclick="calcularIMC()" class="buttoncalcularimc"><b>Calcular</b></button><br><br>
+                                        <button type="button" onclick="calcularIMC()"
+                                            class="buttoncalcularimc"><b>Calcular</b></button><br><br>
 
                                         <h3 id="fimc" name="fimc" style="font-size: medium;"> O teu IMC: </h3><br><br>
 
@@ -390,30 +391,29 @@
 
     <script>
         function calcularIMC() {
-    
-          peso = document.getElementById("fpeso").value;
-          altura = document.getElementById("faltura").value;
-          imc = peso / (altura/100 * altura/100);
-    
-          document.getElementById("fimc").innerHTML = "O teu IMC: " + imc.toFixed(2);
-    
-          if(imc<18.5 )
-          {
-            document.getElementById("nprogresso").innerHTML = "Magreza!"
-          }else if (imc<24.9 ) {
-            document.getElementById("nprogresso").innerHTML = "Peso normal"
-          }else if(imc<29.9 ) {
-            document.getElementById("nprogresso").innerHTML = "Sobrepeso!"
-          }else if(imc<34.9 ) {
-            document.getElementById("nprogresso").innerHTML = "	Obesidade grau I!"
-          }else if(imc<39.9 ) {
-            document.getElementById("nprogresso").innerHTML = "	Obesidade grau II!"
-          }else {
-            document.getElementById("nprogresso").innerHTML = "	Obesidade grau III!"
-          }
-    
+
+            peso = document.getElementById("fpeso").value;
+            altura = document.getElementById("faltura").value;
+            imc = peso / (altura / 100 * altura / 100);
+
+            document.getElementById("fimc").innerHTML = "O teu IMC: " + imc.toFixed(2);
+
+            if (imc < 18.5) {
+                document.getElementById("nprogresso").innerHTML = "Magreza!"
+            } else if (imc < 24.9) {
+                document.getElementById("nprogresso").innerHTML = "Peso normal"
+            } else if (imc < 29.9) {
+                document.getElementById("nprogresso").innerHTML = "Sobrepeso!"
+            } else if (imc < 34.9) {
+                document.getElementById("nprogresso").innerHTML = "	Obesidade grau I !"
+            } else if (imc < 39.9) {
+                document.getElementById("nprogresso").innerHTML = "	Obesidade grau II !"
+            } else {
+                document.getElementById("nprogresso").innerHTML = "	Obesidade grau III !"
+            }
+
         }
-      </script>
+    </script>
 
 </body>
 
