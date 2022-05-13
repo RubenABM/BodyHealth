@@ -5,13 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mapa Interativo</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!--ICONES PARA OS LOCAIS (DEPENDENDO DO TIPO DE LOCAL)-->
   <link rel="stylesheet" href="./stylesheets/mainpage.css">
   <link rel="icon" type="img/x-icon" href="https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png">
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVH9zsDCTHoGTwNdw3tA6f1MtfW2s1n5Y&callback=initMap&v=weekly" 
+      defer
+    ></script>
+
+  <script src="javascripts/map.js"></script>
 
   <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
 
@@ -33,28 +42,6 @@
 <body>
 
   <!--TERMINAR DE FAZER O BILLING DA CONTA-->
-  
-     <script>
-         //Função para iniciar o mapa
-        function initMap(){
-
-           var options = { //Customização do mapa
-
-              zoom: 8, //Zoom no mapa
-              center:{lat: 38.7223, lng: 9.1393} //Centro do mapa quando este é aberto (Lisboa)
-
-           }
-
-           var map = new google.maps.Map(document.getElementById('map'), options); //Preparar o mapa e colocá-lo dentro da variavel 'map', juntamente com as opções
-
-        }
-
-     </script>
-
-  <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVH9zsDCTHoGTwNdw3tA6f1MtfW2s1n5Y&callback=initMap&v=weekly" 
-      defer
-    ></script>
 
 
   <!--
@@ -65,24 +52,28 @@
   <!--PERGUNTAR COMO ATRIBUIR DIFERENTES DISTANCIAS SEM REPETIR CODIGO IGUAL DE CSS, EM QUE SÓ ALTERA A POSIÇÃO (POUPAR CÓDIGO)-->
 
   <section class="filterplaces">
-    <button id="filterplacesbtn"><b>CAFÉS</b></button>
+    <button id="filterplacesbtn" onclick="filterplacescoffee()"><b>CAFÉS</b></button>
 
-    <button id="filterplacesbtn2"><b>BARES</b></button>
+    <button id="filterplacesbtn2" onclick="filterplacesbares()"><b>BARES</b></button>
 
-    <button href="mainpage.html" id="filterplacesbtn3"><b>RESTAURANTES</b></button>
+    <button href="mainpage.html" id="filterplacesbtn3" onclick="filterplacesrestaurantes()"><b>RESTAURANTES</b></button>
 
-    <button type="button" onclick="change()" id="filterplacesbtn4"><b>GINÁSIOS</b></button>
+    <button type="button" onclick="filterplacesginasios()" id="filterplacesbtn4"><b>GINÁSIOS</b></button>
 
   </section>
 
 
   <div class="container">
 
-    <div id='map' style='width: 782px; height: 500px; border: 1px solid #e8bf5c; margin-left: 240px; margin-top: 70px;'>
+    <div id="mapa" style='width: 782px; height: 500px; border: 1px solid #e8bf5c; margin-left: 240px; margin-top: 70px;'>
+
+    
     </div>
 
     <!--MAPA DO GOOGLE MAPS-->
-    <div id="map"></div>
+    <div id="map" style="width: 100%; height: 100%;"></div>
+
+    <button onclick="execute()">EXECUTAR METODO</button>
 
   </div>
 
@@ -119,7 +110,6 @@
   </section>
 
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
-  <script src="js/map.js"></script>
 
   <!--GEOCODING - SCRIPT-->
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
@@ -326,6 +316,7 @@
   https://api.mapbox.com/geocoding/v5/mapbox.places/San%20Francisco.json?accessToken=pk.eyJ1IjoibWlndWVsY3J1eiIsImEiOiJjbDI1djBzdmcwODhwM2RudTlleGRlZ2tpIn0.u31STaJqnZkr5QFGTgVD8w -->
 
   <!--<h4 style="color: white;">Username: <span id="usernameee"></span></h4>-->
+
 
 </body>
 

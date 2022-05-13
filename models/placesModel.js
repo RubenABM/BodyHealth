@@ -2,7 +2,7 @@ var pool = require("./database");
 
 module.exports.getPlaces = async function() {
     try {
-        let sql = "select * from place";
+        let sql = "SELECT * ,ST_X(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Longitude, ST_Y(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Latitude FROM place";
         let result = await pool.query(sql);
         let places = result.rows;
         console.log("[placesModel.getPlaces] places = " + JSON.stringify(places));
