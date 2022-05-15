@@ -11,6 +11,11 @@
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
   <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+  <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script
@@ -69,18 +74,36 @@
 
     <div id="mapa" style='width: 782px; height: 500px; border: 1px solid #e8bf5c; margin-left: 240px; margin-top: 70px;'>
 
+
         <!--INPUT PARA O GEOCODER-->
 
   <input id="input" style="height: 45px; width: 500px; position: absolute; border-radius: 17px; margin-top: 10px; margin-left: 274px; z-index: 1;" placeholder="Inserir um local...">
     
     </div>
 
-    <!--MAPA DO GOOGLE MAPS-->
-    <div id="map" style="width: 780px; height: 100%; position: absolute; margin-top: -500px; margin-left: 243px;"></div>
+    <!--A VISIBILIDADE DOS BOTÕES É ALTERADA QUANDO UMA ROTA É RENDERIZADA-->
 
+      <button value="DRIVING" style="width: 12%; height: 5%; font-size: 14px; z-index: 1; position: absolute; margin-top: -15px; margin-left: 900px; visibility: hidden;" id="driving"><b>DRIVING</b></button>
+    
+      <button value="WALKING" style="width: 13%; height: 5%; font-size: 14px; margin-left: 540px; position: absolute; z-index: 1; margin-top: -15px; margin-left: 980px; visibility: hidden;" id="walking"><b>WALKING</b></button>
+    
+     
+
+    <!--MAPA DO GOOGLE MAPS-->
+    <div id="map" style="width: 780px; height: 100%; position: absolute; margin-top: -500px; margin-left: 243px;">
+    
+    
+    </div>
+
+
+  
    <!--- <button onclick="execute()">EXECUTAR METODO</button> -->
 
   </div>
+
+
+
+  
 
   <!--- <p><iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.461309133146!2d-9.15462138472065!3d38.707216579600434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1934838cfa1033%3A0x36de966c91888246!2sIADE%20-%20Creative%20University!5e0!3m2!1spt-PT!2spt!4v1648256962661!5m2!1spt-PT!2spt" width="900" height="550" style="border:0; position: absolute; margin-left: 290px; margin-top: 50px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe></p> -->
 

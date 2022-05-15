@@ -1,29 +1,4 @@
-/*async function execute(){
-
-    window.alert("GETTING");
-
-    try{
- 
-        let place = await $.ajax({
-  
-          url: "/places/",
-  //        url: "/users/" + user_id,
-         // url: "/users/" + user_id,
-          method: "get",
-          dataType: "json"
-  
-        });
-  
-        console.log("Receiving: " + JSON.stringify(place));
-
-     } catch(err){
-  
-        console.log(err);
-     
-     } 
-
-
-}*/
+///////////////////////////////////// VER LINHA 84 ////////////////////////////////////
 
 window.onload = async function(){
 
@@ -39,6 +14,12 @@ window.onload = async function(){
 
 
 async function initMap(position){
+
+    //PREPARAR OS SERVIÇOS DE DIRECTIONS
+
+    const directionsRenderer = new google.maps.DirectionsRenderer(); //CONSTANTE PARA RENDERIZAR A ROTA
+
+    const directionsService = new google.maps.DirectionsService(); //CONSTANTE DO SERVIÇO DE ROTAS PARA O MAPA
 
     var myLat = position.coords.latitude;
     var myLong = position.coords.longitude;
@@ -72,6 +53,39 @@ async function initMap(position){
     }
 
     var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
+
+    directionsRenderer.setMap(map); //Atribuir o serviço de renderização de rotas ao mapa
+    
+    ///////////////////////////////   SERÁ NECESSÁRIO MOVER O PROXIMO CODIGO PARA O LISTENER DO MARCADOR //////////////////////////
+    //FUNCAO PARA CALCULAR ROTAS QUANDO UM DETERMINADO MARCADOR É CLICADO
+
+    calculateAndDisplayRoute(directionsService, directionsRenderer); //CHAMAR A FUNCAO PARA CALCULAR A DISTANCIA E MOSTRAR A ROTA (SERÁ SOMENTE ATIVADA NUM LISTENER DE UM MARCADOR)
+
+    //FUNCAO PARA CALCULAR E EXIBIR UMA ROTA
+
+    function calculateAndDisplayRoute(directionsService, directionsRenderer){
+
+      const selectedMode = "DRIVING"; //EXEMPLO COM MODO ESTATICO
+
+      directionsService
+        .route({
+
+            //SUBSTITUIR ORIGEM E DESTINO (ORIGEM -> POSICAO ATUAL | DESTINO -> POSICAO DO MARCADOR SELECIONADO OU LOCAL DA CONSULTA/EVENTO QUANDO CLICADO)
+            origin: { lat: 38.769680, lng: -9.170248 },
+            destination: { lat: 38.767832, lng: -9.169247 },
+            // Note that Javascript allows us to access the constant
+            // using square brackets and a string value as its
+            // "property."
+            travelMode: google.maps.TravelMode[selectedMode],
+
+
+        })
+        .then((response) => {
+            directionsRenderer.setDirections(response);
+          })
+          .catch((e) => window.alert("Directions request failed due to " + status));
+
+    }
 
     //INPUT DO GEOCODER
 
@@ -261,7 +275,6 @@ function sucess(position){
  
  function failure(){}
 
- //O QUE FALTA? -> ADICIONAR INFOWINDOWS COM DETALHES DO LOCAL **************** AMANHÃ
 
  //IMPLEMENTAÇÃO DE ROTAS COM DIRECTIONS API -> AMANHÃ (1º PARTE)
 
@@ -332,7 +345,7 @@ function filterginasios(position){
 
            url: "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
 
-        }
+        },
    
       });
 
@@ -370,16 +383,38 @@ function callback(results, status){
 
     var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
 
+    console.log("Posting places");
 
   if(status == google.maps.places.PlacesServiceStatus.OK) {
 
     for(var i = 0; i < results.length; i++){
 
-         console.log(results[i].name);
+       //  console.log(results[i].name);
 
          const marker = new google.maps.Marker({
             map: map,
             position: results[i].geometry.location,
+            title: results[i].name,
+          });
+
+          const infotoshow = results[i].name;
+
+          const infowindow = new google.maps.InfoWindow({
+
+            content: infotoshow,
+
+          });
+
+          marker.addListener("click", () => {
+
+            infowindow.open({
+
+              anchor: marker,
+              map: map,
+              shouldFocus: false,
+
+            });
+            
           });
 
     }
@@ -498,12 +533,33 @@ function callback(results, status){
 
     for(var i = 0; i < results.length; i++){
 
-         console.log(results[i].name);
+       //  console.log(results[i].name);
 
          const marker = new google.maps.Marker({
             map: map,
             position: results[i].geometry.location,
           });
+
+          const infotoshow = results[i].name;
+
+          const infowindow = new google.maps.InfoWindow({
+
+            content: infotoshow,
+
+          });
+
+          marker.addListener("click", () => {
+
+            infowindow.open({
+
+              anchor: marker,
+              map: map,
+              shouldFocus: false,
+
+            });
+            
+          });
+
 
     }
 
@@ -621,11 +677,31 @@ function callback(results, status){
 
     for(var i = 0; i < results.length; i++){
 
-         console.log(results[i].name);
+        // console.log(results[i].name);
 
          const marker = new google.maps.Marker({
             map: map,
             position: results[i].geometry.location,
+          });
+
+          const infotoshow = results[i].name;
+
+          const infowindow = new google.maps.InfoWindow({
+
+            content: infotoshow,
+
+          });
+
+          marker.addListener("click", () => {
+
+            infowindow.open({
+
+              anchor: marker,
+              map: map,
+              shouldFocus: false,
+
+            });
+            
           });
 
     }
@@ -757,11 +833,31 @@ function callback(results, status){
 
     for(var i = 0; i < results.length; i++){
 
-         console.log(results[i].name);
+        // console.log(results[i].name);
 
          const marker = new google.maps.Marker({
             map: map,
             position: results[i].geometry.location,
+          });
+
+          const infotoshow = results[i].name;
+
+          const infowindow = new google.maps.InfoWindow({
+
+            content: infotoshow,
+
+          });
+
+          marker.addListener("click", () => {
+
+            infowindow.open({
+
+              anchor: marker,
+              map: map,
+              shouldFocus: false,
+
+            });
+            
           });
 
     }

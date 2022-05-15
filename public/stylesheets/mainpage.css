@@ -799,6 +799,24 @@ cursor: pointer;
 
 }
 
+#driving:hover{
+
+  background-color: #2D2E2D;
+  color: white;
+  transition: all 0.5s ease;
+  cursor: pointer;
+
+}
+
+#walking:hover{
+
+   background-color: #2D2E2D;
+   color: white;
+   transition: all 0.5s ease;
+   cursor: pointer;
+ 
+ }
+
 #mapa{
 
    width: 100%;
