@@ -99,6 +99,23 @@ p{
         border-radius: 6%;
      }
 
+     #organize {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+     .selectbox {
+      width: 160px;
+      height: 150px;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 6%;
+      cursor: pointer;
+  }
+
      #selectxbox1{
 
         height: 30%;
