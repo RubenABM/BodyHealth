@@ -1,4 +1,4 @@
-///////////////////////////////////// VER LINHA 84 ////////////////////////////////////
+///////////////////////////////////// VER LINHA 57 ////////////////////////////////////
 
 window.onload = async function(){
 
@@ -54,6 +54,8 @@ async function initMap(position){
 
     var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
 
+    //////////////////////////////////////////////// FALTA DINAMIZAR O CODIGO ///////////////////////////////////////////////////////////////////
+
     directionsRenderer.setMap(map); //Atribuir o serviço de renderização de rotas ao mapa
     
     ///////////////////////////////   SERÁ NECESSÁRIO MOVER O PROXIMO CODIGO PARA O LISTENER DO MARCADOR //////////////////////////
@@ -86,6 +88,17 @@ async function initMap(position){
           .catch((e) => window.alert("Directions request failed due to " + status));
 
     }
+
+    //FUNCAO PARA CALCULAR A DISTÂNCIA DA ROTA
+
+    var distancia = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(38.769680, -9.170248), new google.maps.LatLng(38.767832, -9.169247));
+
+    var distanciashorted = (Math.round(distancia, 8)) / 1000;    //Arredondar
+    console.log("Distancia: " + distanciashorted);
+     
+    document.getElementById("distanceshow").innerHTML = "DISTÂNCIA: " + distanciashorted + " km";
+
+    ////////////////////////////////////////////// TERMINA AQUI O CODIGO PARA DINAMIZAR //////////////////////////////////////////////////////////////////////
 
     //INPUT DO GEOCODER
 
@@ -865,6 +878,7 @@ function callback(results, status){
   }
 
 }
+
 
 
    

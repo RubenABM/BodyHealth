@@ -168,6 +168,9 @@ async function add() {
 }
 
 async function login(){
+
+    console.log("Função login chamada...")
+
    try{
 
     let object = {
