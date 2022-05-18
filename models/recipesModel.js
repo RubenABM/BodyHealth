@@ -13,6 +13,7 @@ module.exports.getAllRecipes = async function() {
     }
 }
 
+//TERMINAR A QUERY
 module.exports.getRecipesUser = async function(uti_id) {
     try {
         let sql = "SELECT receita.receita_id, receita.receita_titulo, receita.receita_desc, receita.receita_utilizador_id, utilizador.user_name FROM receita " + "INNER JOIN utilizador ON utilizador.user_id = receita.receita_utilizador_id " + "WHERE receita.receita_utilizador_id =  " + uti_id;
