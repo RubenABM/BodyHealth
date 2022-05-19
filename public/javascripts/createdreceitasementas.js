@@ -40,7 +40,12 @@ window.onload = async function(){
 
 function createrecipeHTML(recipe){
 
-  return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+  return "<div class='selectbox5' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 2%;'>" + recipe.receita_titulo +"</p>" + "</div>"
+ // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+  /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
+  RECEITA
+</p>*/
 
 }
 
