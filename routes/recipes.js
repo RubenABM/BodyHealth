@@ -57,6 +57,24 @@ router.get('/categoryrecipeuser/:idutilizador/:idcategoria', async function(req,
 
 });
 
+router.get('/allrecipes/:idcategoria', async function(req, res, next) {
+
+   let id_categoria = req.params.idcategoria;
+
+   let result = await recipesModel.getRecipesByCategory(id_categoria);
+   res.status(result.status).send(result.data);
+
+});
+
+router.get('/allrecipes/category/:idcategory', async function(req, res, next){
+
+  let id_categoria = req.params.idcategory;
+
+  let result = await recipesModel.getRecipesByCategory2(id_categoria);
+  res.status(result.status).send(result.data);
+
+});
+
 //OBTER OS INGREDIENTES DE UMA RECEITA ESPECIFICA
 
 router.get('/receitasingredientes/:idreceita', async function(req, res, next){
@@ -79,10 +97,6 @@ router.post('/insertnewrecipe', async function(req, res, next) {
   let result = await recipesModel.saveRecipe(newRecipe);
   res.sendStatus(result.status).send(result.data);
 });
-
-
-
-
 
 
 

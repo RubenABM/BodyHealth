@@ -1,8 +1,9 @@
 var pool = require("./database");
 
+//ALTERAR
 module.exports.getAllRecipes = async function() {
     try {
-        let sql = "SELECT * FROM receita";
+        let sql = "SELECT receita.receita_id, receita.receita_titulo, receita.receita_desc, item_aprovacao.tipoaprovacao_nome, item_base.basee_nome, receita_categoria.receita_categoria_nome, utilizador.user_name, receita.aprovacao_nutricionista FROM receita " + "INNER JOIN item_aprovacao ON item_aprovacao.aprovacao_tipo_id = receita.receita_tipo_aprovacao_id " + "INNER JOIN item_base ON item_base.basee_id = receita.receita_base_id " + "INNER JOIN receita_categoria ON receita_categoria.receita_categoria_id = receita.receita_categoriaa_id " + "INNER JOIN utilizador ON utilizador.user_id = receita.receita_utilizador_id "+ "LIMIT 6";
         let result = await pool.query(sql);
         let recipesfound = result.rows;
         console.log("[recipesModel.getAllRecipes] recipes = " + JSON.stringify(recipesfound));
@@ -69,6 +70,33 @@ module.exports.getRecipesIngredients = async function(recipe_id) {
     }
 }
 
+//OBTER RECEITAS (NO GERAL), COM DETERMINADA CATEGORIA
+
+module.exports.getRecipesByCategory = async function(cat_id) {
+    try {
+        let sql = "SELECT receita.receita_id, receita.receita_titulo, receita.receita_desc, item_aprovacao.tipoaprovacao_nome, item_base.basee_nome, receita_categoria.receita_categoria_nome, utilizador.user_name, receita.aprovacao_nutricionista FROM receita " + "INNER JOIN item_aprovacao ON item_aprovacao.aprovacao_tipo_id = receita.receita_tipo_aprovacao_id " + "INNER JOIN item_base ON item_base.basee_id = receita.receita_base_id " + "INNER JOIN receita_categoria ON receita_categoria.receita_categoria_id = receita.receita_categoriaa_id " + "INNER JOIN utilizador ON utilizador.user_id = receita.receita_utilizador_id "+ " WHERE receita.receita_base_id = " + cat_id + " LIMIT 6";
+        let result = await pool.query(sql);
+        let recipesfound = result.rows;
+        console.log("[recipesModel.getAllRecipes] recipes = " + JSON.stringify(recipesfound));
+        return { status: 200, data: recipesfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+module.exports.getRecipesByCategory2 = async function(cat_id) {
+    try {
+        let sql = "SELECT receita.receita_id, receita.receita_titulo, receita.receita_desc, item_aprovacao.tipoaprovacao_nome, item_base.basee_nome, receita_categoria.receita_categoria_nome, utilizador.user_name, receita.aprovacao_nutricionista FROM receita " + "INNER JOIN item_aprovacao ON item_aprovacao.aprovacao_tipo_id = receita.receita_tipo_aprovacao_id " + "INNER JOIN item_base ON item_base.basee_id = receita.receita_base_id " + "INNER JOIN receita_categoria ON receita_categoria.receita_categoria_id = receita.receita_categoriaa_id " + "INNER JOIN utilizador ON utilizador.user_id = receita.receita_utilizador_id "+ " WHERE receita.receita_categoriaa_id = " + cat_id + " LIMIT 6";
+        let result = await pool.query(sql);
+        let recipesfound = result.rows;
+        console.log("[recipesModel.getAllRecipes] recipes = " + JSON.stringify(recipesfound));
+        return { status: 200, data: recipesfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
 
 //MÉTODO POST DA RECEITA
 
@@ -102,4 +130,6 @@ module.exports.saveRecipe = async function(recipe) {
             return { status: 500, data: err };
     }
 }
+
+
 

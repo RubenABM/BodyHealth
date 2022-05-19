@@ -2,6 +2,16 @@ var express = require('express');
 var router = express.Router();
 var ementasModel = require('../models/ementasModel');
 
+//OBTER TODAS AS EMENTAS
+
+router.get('/allementas', async function (req, res, next){
+
+  console.log("[recipesRoutes] Retrieving all meals");
+  let result = await ementasModel.getAllMeals();
+  res.status(result.status).send(result.data);
+
+});
+
 //GET DE EMENTAS POR UTILIZADOR
 
 router.get('/ementauser/:idutilizador', async function(req, res, next){
