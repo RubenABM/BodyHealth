@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registo de Utilizador</title>
+    <link rel="stylesheet" href="./stylesheets/sign.css">
+    <link rel="icon" type="img/x-icon" href="https://seeklogo.com/images/S/spring-logo-9A2BC78AAF-seeklogo.com.png">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+    <script src="javascripts/user.js"></script>
+
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+    type="text/javascript"
+  ></script>
+</head>
+
+<nav>
+  <div class="topnav">
+    <img src="./images/logobranconobg.png" class="img-fluid" style="cursor: pointer; position: absolute; margin-left: -1%; width: 12%; margin-top: -0.1%"> 
+    <a href="jornalfit.html">Jornal FIT</a>
+    <a href="mainpage.html"> FitHub</a>
+  </div>
+
+</nav>
+<body class="bodysignup">
+
+   
+
+      <hr></hr>
+
+      <div class="register" style="margin-top: -50px;">
+
+      
+
+      <h1 class="registertitle">REGISTO</h1>
+
+      <form class="formsignupuser">
+
+        <label for="fusername" class="titleinput">Username</label><br>
+        <input type="text" id="fusername" name="fusername" class="field" placeholder="Username" required><br>
+        <br>
+        <br>
+        <label for="fpassword" class="titleinput">Password</label><br>
+        <input type="password" id="fpassword" name="fpassword" class="field" placeholder="Password" required><br>
+        <br>
+        <br>
+        <label for="femail" class="titleinput">Email</label><br>
+        <input type="email" id="femail" name="femail" class="field" placeholder="Email" required><br>
+        <br>
+        <br>
+        <label for="fmorada" class="titleinput">Morada (Rua, Cidade)</label><br>
+        <input type="text" id="fmorada" name="fmorada" class="field" placeholder="Morada" required><br>
+        
+        <!--
+        <input type="submit" value="Submit" id="btnSubmit"/>-->
+        
+      </form> 
+
+      <div class="wrapper">
+
+         <div class="btn">
+
+         <!--- <input type="button" value="REGISTAR" onclick="add()" style="background-color: #e8bf5c; border: 1px solid white; width: 9%; height: 5%; border-radius: 7px;  cursor:pointer;"> -->
+
+          <!--BOTÃO 'ANTIGO' DE REGISTAR-->
+          <a href="login.html">
+           <button type="submit" value="Submit" id="btnSubmit" onclick="add()"><b>REGISTAR</b></button>
+          </a>
+
+         </div>
+
+      </div>
+
+      <h1 class="ortitle">OU</h1>
+
+      <section>
+
+        <a href="registerNutritionist.html" class="registernutritionist"></a>
+        <a href="registerPT.html" class="registerpt"></a>
+  
+
+      <span class="circleforicons"></span> 
+      <span class="circleforicons2"></span>
+
+      <img src="images/3968526-200 (1).png" width="70px" height="70px" class="iconnutritionist">
+      <img src="images/1926483-200.png" width="70px" height="70px" class="iconpersonaltrainer">
+
+      </section>
+
+      <section class="alreadyhaveaccount">
+
+        <h3 id="trylogin">Já possui uma conta? <a href="login.html" class="loginlinkword">Login</a></h3>
+
+      </section>
+
+      </div> <!--REGISTER-->
+
+      <h1 id="beingauser">SENDO UM UTILIZADOR PODES:</h1>
+      
+      <section class="whatcanyoudo">
+
+        <div class="whatusercando" style="margin-left: -160px;">
+
+        <img src="images/icon1.png" width="60px" height="60px" id="icon1" >
+        <h3 id="discovernewrecipestext">DESCOBRIR NOVAS RECEITAS</h3>
+
+        <img src="images/icon1.png" width="60px" height="60px" id="icon2">
+        <h3 id="practicenewexercisestext">PRATICAR NOVOS EXERCÍCIOS</h3>
+
+        <img src="images/icon1.png" width="60px" height="60px" id="icon3">
+        <h3 id="findpersonaltrainertext">ENCONTRAR PERSONAL TRAINER'S</h3>
+
+        <img src="images/icon1.png" width="60px" height="60px" id="icon4">
+        <h3 id="descobrirnovoslocaistext">DESCOBRIR NOVOS LOCAIS E PERCURSOS</h3>
+
+        <img src="images/icon1.png" width="60px" height="60px" id="icon5">
+        <h3 id="andmoretext">E MAIS!</h3>
+
+        </div>
+
+
+      </section>
+
+      <script>
+     
+      </script>
+     
+
+</body>
+</html>

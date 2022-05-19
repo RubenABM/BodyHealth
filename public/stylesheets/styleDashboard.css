@@ -1,6 +1,147 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 @import url(../fonts/stylesheet.css);
 
+.loginlinkword{
+
+    text-decoration: none;
+    color: aquamarine;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+
+}
+
+
+#discovernewrecipestext{
+
+   color: white;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+#practicenewexercisestext{
+
+   color: white;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+
+}
+
+#findpersonaltrainertext{
+
+   color: white;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+
+}
+
+#descobrirnovoslocaistext{
+
+   color: white;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+
+}
+
+#andmoretext{
+
+   color: white;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+#trylogin{
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 12px;
+    
+}
+
+.formsignupuser{
+ 
+    margin-left: 60%;
+    margin-top: 10%;
+
+}
+
+.circleforicons{
+
+    height: 95px;
+    width: 95px;
+    background-color: #FFFFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 315px;
+    margin-top: 260px;
+ 
+ }
+ 
+ .circleforicons2{
+ 
+     height: 95px;
+     width: 95px;
+     background-color: #FFFFFFFF;
+     border-radius: 50%;
+     display: inline-block;
+     margin-left: 76px;
+ 
+ }
+
+#logintitle
+{
+    
+    margin-left: 60%;
+    margin-top: 50%;
+}
+
+.ortitle{
+
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin-left: 100%;
+    margin-top: 10%;
+ 
+ }
+
+.field{
+ 
+    background-color:white;
+    width: 290px;
+    height: 40px;
+    border-radius: 10px;
+ 
+ }
+
+.logowhite{
+
+    margin-left: 40%;
+    margin-top: -20%;
+
+}
+
+#divisor{
+ 
+    width: 390px;
+    transform: rotate(90deg);
+    margin-top: 42%;
+    margin-left: 0%;
+ 
+ 
+ }
+
+ #divisor2{
+ 
+    width: 500px;
+    transform: rotate(90deg);
+    margin-top: 70%;
+    margin-left: -25%;
+ 
+ 
+ }
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #1e1f1e;
