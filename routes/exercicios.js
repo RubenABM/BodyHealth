@@ -19,6 +19,15 @@ router.get('/allexercicios/category/:idcategoria', async function (req, res, nex
 
 });
 
+router.get('/allexercicios/categoryy/:idcategoria', async function (req, res, next){
+
+  let id_categoria = req.params.idcategoria;
+  console.log("[recipesRoutes] Retrieving all meals");
+  let result = await exercicioModel.getExerciseByCategoryy(id_categoria);
+  res.status(result.status).send(result.data);
+
+});
+
 //OBTER (DETALHES) EXERCICIO ESPECIFICO PELO SEU ID
 
 //GET DE UM EXERCICIO ESPECIFICO

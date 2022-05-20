@@ -137,6 +137,8 @@ async function login(){
         data: JSON.stringify(object),
         contentType: "application/json",
         dataType: "json",
+
+
     });
     alert("Authenticate user: " + JSON.stringify(authUser));
     console.log("Verifying user with username: " + authUser.user_name + " and password: " + authUser.user_password);
@@ -144,10 +146,15 @@ async function login(){
     sessionStorage.setItem('user_id', authUser.user_id);
     window.alert('login sucessfull');
     
+    window.location.assign("http://localhost:3000/dashboardTemplate.html");
+
+    
     console.log(authUser.user_id);
    }  catch (err) {
     console.log(err);
     window.alert('something wron;g')
+    window.location.assign("http://localhost:3000/login.html");
+
     }
 
 }

@@ -13,6 +13,13 @@ router.get('/:idplano', async function(req, res, next){
   
   });
 
+router.get('/allplanos/', async function(req, res, next){
+
+   let result = await planosModel.getAllPlanos();
+   res.status(result.status).send(result.data);
+
+});
+
 //OBTER PLANOS FAVORITOS
 
 
