@@ -13,6 +13,32 @@ module.exports.getAllMeals = async function() {
     }
 }
 
+module.exports.getMealsByCategory = async function(cat_id) {
+    try {
+        let sql = "SELECT ementa.ementa_id , ementa.ementa_titulo, ementa.ementa_descricao, item_aprovacao.tipoaprovacao_nome, item_base.basee_nome, ementa_categoria.ementa_categoria_nome , utilizador.user_name, ementa.aprovacao_nutricionista FROM ementa " + "INNER JOIN item_aprovacao ON item_aprovacao.aprovacao_tipo_id = ementa.ementa_tipo_aprovacao_id " + "INNER JOIN item_base ON item_base.basee_id = ementa.ementa_base_id " + "INNER JOIN ementa_categoria ON ementa_categoria.ementa_categoria_id = ementa.ementa_categoriaa_id " + "INNER JOIN utilizador ON utilizador.user_Id = ementa.ementa_utilizador_id " + "WHERE ementa.ementa_categoriaa_id = " + cat_id + " LIMIT 6";
+        let result = await pool.query(sql);
+        let ementasfound = result.rows;
+        console.log("[recipesModel.getAllRecipes] recipes = " + JSON.stringify(ementasfound));
+        return { status: 200, data: ementasfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+module.exports.getMealsByBase = async function(cat_id) {
+    try {
+        let sql = "SELECT ementa.ementa_id , ementa.ementa_titulo, ementa.ementa_descricao, item_aprovacao.tipoaprovacao_nome, item_base.basee_nome, ementa_categoria.ementa_categoria_nome , utilizador.user_name, ementa.aprovacao_nutricionista FROM ementa " + "INNER JOIN item_aprovacao ON item_aprovacao.aprovacao_tipo_id = ementa.ementa_tipo_aprovacao_id " + "INNER JOIN item_base ON item_base.basee_id = ementa.ementa_base_id " + "INNER JOIN ementa_categoria ON ementa_categoria.ementa_categoria_id = ementa.ementa_categoriaa_id " + "INNER JOIN utilizador ON utilizador.user_Id = ementa.ementa_utilizador_id " + "WHERE ementa.ementa_base_id = " + cat_id + " LIMIT 6";
+        let result = await pool.query(sql);
+        let ementasfound = result.rows;
+        console.log("[recipesModel.getAllRecipes] recipes = " + JSON.stringify(ementasfound));
+        return { status: 200, data: ementasfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
 module.exports.getEmentasUserByCategory = async function(uti_id, cat_id) {
     try {
         let sql = "SELECT ementa.ementa_id, ementa.ementa_titulo, ementa.ementa_descricao, ementa.ementa_utilizador_id, utilizador.user_name FROM ementa " + "INNER JOIN utilizador ON utilizador.user_id = ementa.ementa_utilizador_id " + " WHERE ementa.ementa_utilizador_id =  " + uti_id + " AND ementa.ementa_categoriaa_id =  " + cat_id;

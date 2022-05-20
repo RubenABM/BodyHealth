@@ -2,6 +2,23 @@ var express = require('express');
 var router = express.Router();
 var exercicioModel = require('../models/exercicioModel');
 
+router.get('/allexercicios', async function (req, res, next){
+
+  console.log("[recipesRoutes] Retrieving all exercicios");
+  let result = await exercicioModel.getAllExercise();
+  res.status(result.status).send(result.data);
+
+});
+
+router.get('/allexercicios/category/:idcategoria', async function (req, res, next){
+
+  let id_categoria = req.params.idcategoria;
+  console.log("[recipesRoutes] Retrieving all meals");
+  let result = await exercicioModel.getExerciseByCategory(id_categoria);
+  res.status(result.status).send(result.data);
+
+});
+
 //OBTER (DETALHES) EXERCICIO ESPECIFICO PELO SEU ID
 
 //GET DE UM EXERCICIO ESPECIFICO

@@ -1,6 +1,6 @@
 //LOAD DE EMENTAS
 
-window.onload = async function(){
+async function getEmentas(){
 
   let recipeName = document.getElementById("nome1")
   let mealElem = document.getElementById("organize2");
@@ -42,7 +42,6 @@ window.onload = async function(){
 function createementaHTML(meal){
   
   return "<div class='selectbox5' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + meal.user_name +"</p>" + "<h2 style='color: white; font-size: 90%; margin-top: 1%; position: absolute;'>" + meal.ementa_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='color: white; font-size: 90%;'>" + meal.basee_nome + "</h2>" + "<h2 style='color: white; font-size: 90%;'>" + meal.ementa_categoria_nome + "</h2>" + "</div>"
- // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
 
   /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
   RECEITA
@@ -88,6 +87,7 @@ window.onload = async function(){
      console.log(err);
    }
 
+   getEmentas();
 
 }
 
@@ -100,6 +100,69 @@ function createrecipeHTML(recipe){
   /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
   RECEITA
 </p>*/
+
+}
+
+async function filterEmentasBase(type){
+
+  let ementaElem = document.getElementById("organize2");
+  let categoria_base = 4;
+
+  try{
+ 
+    let ementasbase = await $.ajax({
+
+      url: "/ementas/allementas/base/" + type,
+      method: "get",
+      dataType: "json",
+
+    });
+
+    let html = "";
+
+    for(let ementa of ementasbase){
+      console.log("Recipe: " + ementa);
+      html += createementaHTML(ementa);
+    }
+
+    ementaElem.innerHTML = html;
+
+  } catch(err){
+    console.log(err);
+  }
+
+}
+
+
+//FUNCAO DE FILTRAGEM POR CATEGORIA DE EMENTA
+
+async function filterEmentasCategory(type){
+
+  let ementaElem = document.getElementById("organize2");
+  let categoria_base = 4;
+
+  try{
+ 
+    let ementascategory = await $.ajax({
+
+      url: "/ementas/allementas/category/" + type,
+      method: "get",
+      dataType: "json",
+
+    });
+
+    let html = "";
+
+    for(let ementa of ementascategory){
+      console.log("Ementa: " + ementa);
+      html += createementaHTML(ementa);
+    }
+
+    ementaElem.innerHTML = html;
+
+  } catch(err){
+    console.log(err);
+  }
 
 }
 

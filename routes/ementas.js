@@ -12,6 +12,25 @@ router.get('/allementas', async function (req, res, next){
 
 });
 
+router.get('/allementas/category/:idcategoria', async function (req, res, next){
+
+  let id_categoria = req.params.idcategoria;
+  console.log("[recipesRoutes] Retrieving all meals");
+  let result = await ementasModel.getMealsByCategory(id_categoria);
+  res.status(result.status).send(result.data);
+
+});
+
+router.get('/allementas/base/:idbase', async function (req, res, next){
+
+  let id_base = req.params.idbase;
+  console.log("[recipesRoutes] Retrieving all meals");
+  let result = await ementasModel.getMealsByBase(id_base);
+  res.status(result.status).send(result.data);
+
+});
+
+
 //GET DE EMENTAS POR UTILIZADOR
 
 router.get('/ementauser/:idutilizador', async function(req, res, next){
@@ -37,6 +56,8 @@ router.get('/categoryementauser/:idutilizador/:idcategoriaementa', async functio
   
 
 });
+
+
 
 /*OBTER DETALHES DE UMA EMENTA*/
 
