@@ -9,9 +9,9 @@ async function getPlanos(){
 
   try{
 
-     let planos= await $.ajax({
+     let planos = await $.ajax({
 
-       url: "/planostreino/allplanos/",
+       url: "/planostreino/allplanostreino",
        method: "get",
        dataType: "json",
 

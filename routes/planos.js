@@ -13,12 +13,14 @@ router.get('/:idplano', async function(req, res, next){
   
   });
 
-router.get('/allplanos/', async function(req, res, next){
+  router.get('/allplanostreino', async function (req, res, next){
 
-   let result = await planosModel.getAllPlanos();
-   res.status(result.status).send(result.data);
-
-});
+    console.log("[recipesRoutes] Retrieving all planos");
+    let result = await planosModel.getAllPlano();
+    res.status(result.status).send(result.data);
+  
+  });
+  
 
 //OBTER PLANOS FAVORITOS
 
