@@ -834,6 +834,7 @@ cursor: pointer;
 #organize4 {
    width: 130%;
    display: flex;
+   margin-left: -120px;
    flex-direction: column;
    flex-wrap: wrap;
    position: absolute;
@@ -844,7 +845,7 @@ cursor: pointer;
 
 .selectbox6 {
    width: 235px;
-   height: 235px;
+   height: 85px;
    border: 1px solid white;
    border-radius: 6%;
    cursor: pointer;
