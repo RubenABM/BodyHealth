@@ -11,6 +11,13 @@ router.get('/hello', function(req, res, next) {
     res.send('hello');
 });
 
+router.get('/leaderboard', async function(req, res, next) {
+
+   let result = await usersModel.getLeaderboard();
+   res.status(result.status).send(result.data);
+
+});
+
 router.get('/', async function(req, res, next) {
     console.log("[usersRoutes] Retrieving all users");
     let result = await usersModel.getUsers();

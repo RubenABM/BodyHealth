@@ -799,6 +799,61 @@ cursor: pointer;
 
 }
 
+.selectbox5 {
+   width: 235px;
+   height: 235px;
+   border: 1px solid white;
+   border-radius: 6%;
+   cursor: pointer;
+   color: white;
+   background-color: #404040;
+   padding: 5px;
+}
+
+#organize {
+   width: 130%;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 10px;
+   margin-top: 690px;
+   margin-left: 25px;
+}
+
+
+#organize2 {
+   width: 130%;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 10px;
+   margin-top: 690px;
+   margin-left: 25px;
+}
+
+#organize4 {
+   width: 130%;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   position: absolute;
+   gap: 10px;
+   margin-top: 690px;
+   margin-left: 25px;
+}
+
+.selectbox6 {
+   width: 235px;
+   height: 235px;
+   border: 1px solid white;
+   border-radius: 6%;
+   cursor: pointer;
+   color: white;
+   background-color: #404040;
+   padding: 5px;
+}
+
+
 #driving:hover{
 
   background-color: #2D2E2D;

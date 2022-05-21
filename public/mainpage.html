@@ -10,7 +10,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
 
-    <script src="xxxxxx"></script> <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
+    <script src="javascripts/mainpage.js"></script> <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
 </head>
 
 
@@ -93,11 +93,11 @@
 
     <hr id="divisorproducts">
 
-    <section class="selectboxesproducts">
+    <div class="selectboxesproducts" id="organize">
 
-    <a href="productdetails.html">
+   
 
-      <div id="selectxbox5">
+   <!---   <div id="selectxbox5">
 
           <h2 style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px; margin-left: 40px; margin-top: 25px;">NOME DO PRODUTO</h2>
 
@@ -158,10 +158,10 @@
 
       </div>
 
-    </a>
+    -->
 
     <i class='bx bxs-right-arrow-circle' style="color: white; position: absolute; font-size: 80px; margin-top: 746px; margin-left: 1083px; cursor: pointer;" onclick="loadMore()"></i>
-    </section>
+  </div>
 
   </section>
 
@@ -175,12 +175,13 @@
 
   <section class="fitlastchallenges">
 
-    <h2 id="newproductstitle">NOVOS 'CHALLENGES'</h2>
+    <h2 id="newproductstitle">NOVOS EXERCICIOS</h2>
 
     <hr id="divisorproducts">
 
-    <section class="selectboxesproducts">
+    <div class="selectboxesproducts" id="organize2">
 
+  <!---
     <a href="productdetails.html">
 
       <div id="selectxbox5"><h2 style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px;text-align: center; margin-top: 25px;">CRIADOR DO DESAFIO</h2>
@@ -220,9 +221,10 @@
         <h4 style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif;text-align: center; font-size: 10px; margin-top: 5px;">PONTOS:</h4></div>
 
     </a>
+  -->
 
     <i class='bx bxs-right-arrow-circle' style="color: white; position: absolute; font-size: 80px; margin-top: 746px; margin-left: 1083px; cursor: pointer;" onclick="loadMore()"></i>
-    </section>
+  </div>
 
   </section>
 
@@ -332,6 +334,14 @@
 
     <hr style="background-color: #e8bf5c; transform: rotate(180deg); width: 170px; color: #e8bf5c; position: absolute; margin-left: 1257px; margin-top: 680px;">
 
+    <div class="leaderboard" id="organize4" >
+
+     
+
+
+
+    </div>
+    <!---
     <ol class="listofusersleaderboard">
 
       <li style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif;">username1 - 483718 <img src="images/pointsicon1-removebg-preview.png" style="width: 30px; height: 20px;"></li>
@@ -349,6 +359,7 @@
       <li style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif;">username13 - 483718 <img src="images/pointsicon1-removebg-preview.png" style="width: 30px; height: 20px;"></li>
 
     </ol>
+  -->
 
     
   </section>
@@ -363,6 +374,9 @@
 
   </section>
 </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

@@ -10,6 +10,13 @@ router.get('/store/allprodutos', async function (req, res, next){
 
   });
 
+  router.get('/store/someprodutos/', async function(req, res, next){
+
+     let result = await produtoModel.getSomeProdutos();
+     res.status(result.status).send(result.data);
+
+  });
+
   router.get('/store/filterproducts/:produto_categoria_id', async function(req, res, next) {
 
     let categoria_id = req.params.produto_categoria_id;

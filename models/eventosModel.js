@@ -2,7 +2,7 @@ var pool = require("./database");
 
 module.exports.getAllEventos = async function() {
     try {
-        let sql = "SELECT evento_titulo, evento_data, place.local_nome, place.local_morada, place.geometry_info_point ,utilizador.user_name FROM evento " + "INNER JOIN  place ON place.local_id = evento.evento_local_id " + "INNER JOIN  utilizador ON utilizador.user_id = evento.evento_criador_id";
+        let sql = "SELECT evento.evento_id, evento.evento_titulo, evento.evento_descricao, evento.evento_data, place.local_nome, place.local_morada, place.geometry_info_point , place_category.local_category_name, utilizador.user_name, evento.evento_terminado, ST_X(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Longitude, ST_Y(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Latitude FROM evento " + "INNER JOIN place ON place.local_id = evento.evento_local_id " + "INNER JOIN place_category ON place_category.local_category_id = place.local_category_id " + "INNER JOIN utilizador ON evento.evento_criador_id = utilizador.user_id ";
         let result = await pool.query(sql);
         let eventosfound = result.rows;
         console.log("[eventosModel.getAllEventos] eventos = " + JSON.stringify(eventosfound));

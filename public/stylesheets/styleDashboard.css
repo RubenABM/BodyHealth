@@ -1000,6 +1000,34 @@
 
 }
 
+.buttoncalcularb {
+
+    background-color: #e8bf5c;
+    color: #2D2E2D;
+    width: 150px;
+    height: 50px;
+    border: 1px solid #FFFFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: large;
+
+}
+
+.buttoncalcularb:hover {
+
+    background-color: white;
+    color: #2D2E2D;
+    width: 150px;
+    height: 50px;
+    border: 1px solid #FFFFFFFF;
+    font-size: medium;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    font-size: large;
+
+}
+
 .footer {
     text-align: center;
     font-size: 0.9rem;

@@ -52,6 +52,18 @@ module.exports.getAllExercise = async function() {
     }
 }
 
+module.exports.getSomeExercicios = async function() {
+    try {
+        let sql = "SELECT exercicio.exercicio_id, exercicio.exercicio_titulo, exercicio.exercicio_desc, exercicio.exercicio_num_series, exercicio.exercicio_num_repeticoes, exercicio_dificuldade.exercicio_dificuldade, exercicio_tipo.exercicio_tipo_titulo, utilizador.user_name, exercicio.aprovacao_pt FROM exercicio " + "INNER JOIN exercicio_dificuldade ON exercicio_dificuldade.exercicio_dificuldade_id = exercicio.exercicio_dificuldade_id " + "INNER JOIN exercicio_tipo ON exercicio_tipo.exercicio_tipo_id = exercicio.exercicio_tipo_id " + "INNER JOIN utilizador ON utilizador.user_id = exercicio.exercicio_utilizador_id " + "ORDER BY RANDOM() " + "LIMIT 4 ";
+        let result = await pool.query(sql);
+        let exerciciosfound = result.rows;
+        console.log("[recipesModel.getAllRecipes] recipes = " + JSON.stringify(exerciciosfound));
+        return { status: 200, data: exerciciosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
 
 module.exports.getExercisesUser = async function(uti_id) {
     try {

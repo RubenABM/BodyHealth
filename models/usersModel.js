@@ -124,6 +124,21 @@ module.exports.getUserDados = async function(uti_id) {
     }
 }
 
+module.exports.getLeaderboard = async function(){
+
+    try {
+        let sql = "SELECT utilizador.user_id, utilizador.user_name, utilizador.user_points FROM utilizador " + "ORDER BY user_points DESC " + "LIMIT 10 ";
+        let result = await pool.query(sql);
+        let users = result.rows;
+        console.log("[usersModel.getUsers] users = " + JSON.stringify(users));
+        return { status: 200, data: users };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+
+}
+
 module.exports.DeleteUser = async function(uti_id) {
     try {
         let sql = "DELETE FROM utilizador " + "WHERE utilizador.user_id = " + uti_id;
