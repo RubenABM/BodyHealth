@@ -127,7 +127,7 @@ module.exports.getUserDados = async function(uti_id) {
 module.exports.getLeaderboard = async function(){
 
     try {
-        let sql = "SELECT utilizador.user_id, utilizador.user_name, utilizador.user_points FROM utilizador " + "ORDER BY user_points DESC " + "LIMIT 10 ";
+        let sql = "SELECT utilizador.user_id, utilizador.user_name, utilizador.user_points FROM utilizador " + "ORDER BY user_points DESC " + "LIMIT 8 ";
         let result = await pool.query(sql);
         let users = result.rows;
         console.log("[usersModel.getUsers] users = " + JSON.stringify(users));

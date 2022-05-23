@@ -82,7 +82,7 @@ window.onload = async function(){
 
  function createuserHTML(utilizador){
   
-    return "<div class='selectbox6' id='selectbox66'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + utilizador.user_name +"</p>" +  "<h2 style='color: white; font-size: 90%;'> " + utilizador.user_points + "</h2>" + "</div>"
+    return "<div class='selectbox6' id='selectbox66'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + utilizador.user_name + ": " + utilizador.user_points + "</p>" + "</div>"
    // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
   
     /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
