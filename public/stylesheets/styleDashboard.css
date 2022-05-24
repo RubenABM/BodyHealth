@@ -646,6 +646,18 @@
     padding: 5px;
 }
 
+.selectbox555 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+    border-radius: 6%;
+    cursor: pointer;
+    color: white;
+    background-color: #404040;
+    padding: 5px;
+}
+
+
 #selectxbox1,
 #selectxbox22 {
 
@@ -945,6 +957,28 @@
     gap: 10px;
 }
 
+#organize2 {
+    width: 130%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#organize3 {
+    width: 130%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+#organize4 {
+    width: 130%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
 .buttoncalcularimc {
 

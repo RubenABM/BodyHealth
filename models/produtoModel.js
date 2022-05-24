@@ -13,6 +13,59 @@ module.exports.getAllProducts = async function() {
     }
 }
 
+module.exports.getAllCalcado = async function() {
+    try {
+        let sql = "SELECT produto.produto_id, produto.produto_titulo, produto.produto_desc, produto.produto_preco, produto.produto_points, produto_category.prod_category FROM produto " + "INNER JOIN produto_category ON produto_category.produto_category_id = produto.produto_categoria_id " + "WHERE produto.produto_categoria_id = 5";
+        let result = await pool.query(sql);
+        let produtosfound = result.rows;
+        console.log("[produtoModel.getAllProducts] produtos = " + JSON.stringify(produtosfound));
+        return { status: 200, data: produtosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+module.exports.getAllSportswear = async function() {
+    try {
+        let sql = "SELECT produto.produto_id, produto.produto_titulo, produto.produto_desc, produto.produto_preco, produto.produto_points, produto_category.prod_category FROM produto " + "INNER JOIN produto_category ON produto_category.produto_category_id = produto.produto_categoria_id " + "WHERE produto.produto_categoria_id = 1";
+        let result = await pool.query(sql);
+        let produtosfound = result.rows;
+        console.log("[produtoModel.getAllProducts] produtos = " + JSON.stringify(produtosfound));
+        return { status: 200, data: produtosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+module.exports.getAllEquipamento = async function() {
+    try {
+        let sql = "SELECT produto.produto_id, produto.produto_titulo, produto.produto_desc, produto.produto_preco, produto.produto_points, produto_category.prod_category FROM produto " + "INNER JOIN produto_category ON produto_category.produto_category_id = produto.produto_categoria_id " + "WHERE produto.produto_categoria_id = 2";
+        let result = await pool.query(sql);
+        let produtosfound = result.rows;
+        console.log("[produtoModel.getAllProducts] produtos = " + JSON.stringify(produtosfound));
+        return { status: 200, data: produtosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+module.exports.getAllSuplemento = async function() {
+    try {
+        let sql = "SELECT produto.produto_id, produto.produto_titulo, produto.produto_desc, produto.produto_preco, produto.produto_points, produto_category.prod_category FROM produto " + "INNER JOIN produto_category ON produto_category.produto_category_id = produto.produto_categoria_id " + "WHERE produto.produto_categoria_id = 3";
+        let result = await pool.query(sql);
+        let produtosfound = result.rows;
+        console.log("[produtoModel.getAllProducts] produtos = " + JSON.stringify(produtosfound));
+        return { status: 200, data: produtosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+
 module.exports.getSomeProdutos = async function() {
     try {
         let sql = "SELECT produto.produto_id, produto.produto_titulo, produto.produto_desc, produto.produto_preco, produto.produto_points, produto_category.prod_category FROM produto " + "INNER JOIN produto_category ON produto_category.produto_category_id = produto.produto_categoria_id " + "ORDER BY RANDOM() " + "LIMIT 4 ";

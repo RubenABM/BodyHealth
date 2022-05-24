@@ -10,6 +10,38 @@ router.get('/store/allprodutos', async function (req, res, next){
 
   });
 
+  router.get('/store/calcado', async function(req, res, next) {
+
+    let result = await produtoModel.getAllCalcado();
+    res.status(result.status).send(result.data);
+
+
+  });
+
+  router.get('/store/sportswear', async function(req, res, next) {
+
+    let result = await produtoModel.getAllSportswear();
+    res.status(result.status).send(result.data);
+
+
+  });
+
+  router.get('/store/equipamento', async function(req, res, next) {
+
+    let result = await produtoModel.getAllEquipamento();
+    res.status(result.status).send(result.data);
+
+
+  });
+
+  router.get('/store/suplemento', async function(req, res, next) {
+
+    let result = await produtoModel.getAllSuplemento();
+    res.status(result.status).send(result.data);
+
+
+  });
+
   router.get('/store/someprodutos/', async function(req, res, next){
 
      let result = await produtoModel.getSomeProdutos();
