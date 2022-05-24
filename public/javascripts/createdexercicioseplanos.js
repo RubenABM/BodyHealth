@@ -36,6 +36,58 @@ async function getPlanos(){
     console.log(err);
   }
 
+  getExerciciosForPlano();
+
+
+}
+
+async function getExerciciosForPlano(){
+
+  let recipeName = document.getElementById("nome1")
+  let exerciciostoselectElem = document.getElementById("organize6");
+  var user_id = sessionStorage.getItem("user_id");
+  console.log("setItem->userId = " + user_id);
+
+  try{
+
+     let exercicios = await $.ajax({
+
+       url: "/exercicios/allexercicios2",
+       method: "get",
+       dataType: "json",
+
+     });
+
+     console.log("[utilizador] utilizador = " + JSON.stringify(exercicios));
+
+     let html = "";
+
+     for(let exercicio of exercicios){
+       console.log("Recipe: " + exercicio);
+       html += createexerciciooHTML(exercicio); //FALTA CONSTRUIR A FUNCAO PARA MONTAR O HTML
+     }
+
+     console.log("OBTEVE");
+   //  recipeName.innerHTML = html;
+
+     exerciciostoselectElem.innerHTML = html;
+
+
+  } catch(err){
+    console.log(err);
+  }
+
+
+}
+
+function createexerciciooHTML(exercicio){
+  
+  return "<div class='selectbox57' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + exercicio.exercicio_titulo +"</p>" + "</div>"
+ // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+  /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
+  RECEITA
+</p>*/
 
 }
 
@@ -164,3 +216,76 @@ async function filterExerciseCategory(type){
     }
   
   }
+
+
+//CRIAR EXERCICIO
+
+async function addexercise(){
+
+  var exercicio_utilizador_id = sessionStorage.getItem("user_id");
+  var exercicio_dificuldade_id = 0;
+  var exercicio_tipo_id = 0;
+
+
+  var radioButtonSelected = document.querySelector('input[name="radio"]:checked');
+
+  var radioButton2Selected = document.querySelector('input[name="radio2"]:checked')
+
+  if(radioButtonSelected != null){
+
+    exercicio_dificuldade_id = radioButtonSelected.value;
+
+
+  } else {
+
+    console.log("no radio button selected");
+
+  }
+
+  if(radioButton2Selected != null){
+
+    exercicio_tipo_id = radioButton2Selected.value;
+
+  } else {
+
+     console.log("no radio button selected");
+
+  }
+
+
+
+ try {
+
+   let data = {
+
+     exercicio_titulo: document.getElementById("tituloex").value,
+     exercicio_desc: document.getElementById("descricaoex").value,
+     exercicio_num_series: document.getElementById("series").value,
+     exercicio_num_repeticoes: document.getElementById("reps").value,
+     exercicio_dificuldade_id: exercicio_dificuldade_id,
+     exercicio_tipo_id: exercicio_tipo_id,
+     exercicio_utilizador_id: exercicio_utilizador_id,
+     aprovacao_pt: 0,
+
+   }
+
+   //ENVIAR METODO
+   let newExercise = await $.ajax({
+    url: "/exercicios/insertnewexercise",
+    method: "post",
+    data: JSON.stringify(data),
+    contentType: "application/json",
+    dataType: "json"
+    });
+
+    window.alert("Created recipe with id: " + newExercise.exercicio_id);
+
+
+ } catch (err){
+
+  window.alert("failed to create the recipe");
+
+ }
+
+
+}

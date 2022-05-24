@@ -10,6 +10,15 @@ router.get('/allexercicios', async function (req, res, next){
 
 });
 
+
+router.get('/allexercicios2', async function (req, res, next){
+
+  console.log("[recipesRoutes] Retrieving all exercicios");
+  let result = await exercicioModel.getAllExercise2();
+  res.status(result.status).send(result.data);
+
+});
+
 router.get('/allexercicios/someexercicios/', async function(req, res, next) {
 
    let result = await exercicioModel.getSomeExercicios();
@@ -59,6 +68,13 @@ router.get('/exerciseuser/:idutilizador', async function(req, res, next){
   
   });
 
+router.get('/showexercicio', async function(req, res, next){
+
+  let result = await exercicioModel.getSomeExercicioo();
+  res.status(result.status).send(result.data);
+
+});
+
     //FILTRAGEM DE CATEGORIAS DOS EXERCICIOS DE UM UTILIZADOR
 
 router.get('/categoryexerciseuser/:idutilizador/:idcategoria', async function(req, res, next){
@@ -93,6 +109,8 @@ router.post('/insertnewexercise', async function(req, res, next) {
     res.status(result.status).send(result.data);
   
   });
+
+
 
   router.post('/insertnewexercisefavorito', async function(req, res, next) {
     let newExercise = req.body;

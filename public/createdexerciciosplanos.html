@@ -10,6 +10,8 @@
     <!--<link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">-->
     <!-- Custom styles -->
     <link rel="stylesheet" href="./stylesheets/styleDashboard.css">
+
+    <script src="javascripts/createdexercicioseplanos.js"></script>
 </head>
 
 <body>
@@ -284,11 +286,11 @@
                                         <div style="width: 22%; margin-top: 5%;" class="radio-list">
                                             <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Dificuldade</b></h2>
 
-                                            <div class="radio-item"><input name="radio" id="radio1" type="radio"><label
+                                            <div class="radio-item"><input name="radio" id="radio1" type="radio" value="1"><label
                                                     for="radio1">Principiante</label></div>
-                                            <div class="radio-item"><input name="radio" id="radio2" type="radio"><label
+                                            <div class="radio-item"><input name="radio" id="radio2" type="radio" value="2"><label
                                                     for="radio2">Amador</label></div>
-                                            <div class="radio-item"><input name="radio" id="radio3" type="radio"><label
+                                            <div class="radio-item"><input name="radio" id="radio3" type="radio" value="3"><label
                                                     for="radio3">Experiente</label></div>
                                         </div>
 
@@ -296,36 +298,37 @@
                                             <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Tipo de exercício</b>
                                             </h2>
                                             <div class="radio-item2"><input name="radio2" id="radio4"
-                                                    type="radio"><label for="radio4">Costas</label></div>
+                                                    type="radio" value="1"><label for="radio4">Costas</label></div>
                                             <div class="radio-item2"><input name="radio2" id="radio5"
-                                                    type="radio"><label for="radio5">Cardio</label></div>
+                                                    type="radio" value="2"><label for="radio5">Cardio</label></div>
                                             <div class="radio-item2"><input name="radio2" id="radio6"
-                                                    type="radio"><label for="radio6">Peito</label></div>
+                                                    type="radio" value="3"><label for="radio6">Peito</label></div>
                                             <div class="radio-item2"><input name="radio2" id="radio7"
-                                                    type="radio"><label for="radio7">Braço</label></div>
+                                                    type="radio" value="5"><label for="radio7">Braço</label></div>
                                             <div class="radio-item2"><input name="radio2" id="radio8"
-                                                    type="radio"><label for="radio8">A.Braço</label></div>
+                                                    type="radio" value="4"><label for="radio8">A.Braço</label></div>
                                             <div class="radio-item2"><input name="radio2" id="radio9"
-                                                    type="radio"><label for="radio9">Ombro</label></div>
+                                                    type="radio" value="6"><label for="radio9">Ombros</label></div>
                                             <div class="radio-item2"><input name="radio2" id="radio10"
-                                                    type="radio"><label for="radio10">Cintura</label></div>
+                                                    type="radio" value="8"><label for="radio10">Cintura</label></div>
                                             <div class="radio-item2"><input name="radio2" id="radio11"
-                                                    type="radio"><label for="radio11">Pescoço</label></div>
+                                                    type="radio" value="7"><label for="radio11">Pescoço</label></div>
                                             <div class="radio-item2"><input name="radio2" id="radio12"
-                                                    type="radio"><label for="radio12">Coxa</label></div>
+                                                    type="radio" value="9"><label for="radio12">Coxa</label></div>
                                             <div class="radio-item2"><input name="radio2" id="radio13"
-                                                    type="radio"><label for="radio13">Perna</label></div>
+                                                    type="radio" value="10"><label for="radio13">Perna</label></div>
 
                                         </div>
 
                                     </div>
-                                    <button id="criarex"  style="margin-top:30px" type="button" class="buttoncalcularimc"> Criar</button>
+                                    <button id="criarex"  style="margin-top:30px" type="button" class="buttoncalcularimc" onclick="addexercise()"> Criar</button>
                                     <button style="margin-top:2%" type="button" class="buttoncalcularimc"
                                         onclick="closeForm()"> Fechar</button>
                                 </form>
 
                             </div>
                             <div id="organize">
+                                <!---->
                                 <div class="selectbox">
                                     <p name="criador1" id="criador1"
                                         style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DO EXERCÍCIO
@@ -675,6 +678,8 @@
                                         <h3
                                             style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
                                             Selecionar exercícios</h3>
+                                        <div id="organize6">
+                                            <!---
                                         <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
                                             id="items">
                                             <div class="selectbox2">
@@ -748,10 +753,12 @@
                                                 </p>
                                             </div>
                                         </div>
+                                    -->
+                                        </div>
 
 
 
-                                        <div style="width: 22%; margin-top: 5%; float: left;" class="radio-list">
+                                        <div style="width: 22%; margin-top: 1%; float: left;" class="radio-list">
                                             <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Categoria</b></h2>
 
                                             <div class="radio-item"><input name="radio" id="radio14" type="radio"><label
