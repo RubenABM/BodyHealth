@@ -1,3 +1,5 @@
+//LOAD DE EXERCICIOS DE UM UTILIZADOR
+
 //LOAD DE PLANOS DE EXERCICIO
 
 async function getPlanos(){
@@ -82,7 +84,7 @@ async function getExerciciosForPlano(){
 
 function createexerciciooHTML(exercicio){
   
-  return "<div class='selectbox57' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + exercicio.exercicio_titulo +"</p>" + "</div>"
+  return "<div class='selectbox57' id='selectbox55' >" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + exercicio.exercicio_titulo +"</p>" + "</div>"
  // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
 
   /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
@@ -114,7 +116,7 @@ window.onload = async function(){
  
        let exercicios = await $.ajax({
  
-         url: "/exercicios/allexercicios",
+         url: "/exercicios/allexercicios/" + user_id,
          method: "get",
          dataType: "json",
  

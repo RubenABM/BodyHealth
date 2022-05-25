@@ -10,6 +10,15 @@ router.get('/allexercicios', async function (req, res, next){
 
 });
 
+router.get('/allexercicios/:idutilizador', async function(req, res, next) {
+
+   let id_utilizador = req.params.idutilizador;
+   let result = await exercicioModel.getAllExerciseUtilizador(id_utilizador);
+   res.status(result.status).send(result.data);
+
+
+});
+
 
 router.get('/allexercicios2', async function (req, res, next){
 

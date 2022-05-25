@@ -648,12 +648,12 @@
 
 .selectbox57{
 
-    width: 220px;
-    height: 40px;
-    background-color: tan;
-    border: 1px solid white;
-    margin-left: 500px;
-
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 .selectbox555 {
@@ -968,10 +968,11 @@
 }
 
 #organize6 {
-    width: 100%;
-    height: 130%;
+    width: 40%;
+    border-radius: 10px;
+    height: 40%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
     position: relative;
