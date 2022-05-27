@@ -29,6 +29,19 @@ module.exports.getAllPlano = async function(){
     }
 }
 
+module.exports.getAll = async function(){
+
+    try {
+        let sql = "SELECT plano.plano_treino_id, plano.plano_titulo, plano.plano_treino_desc, utilizador.user_name, item_aprovacao.tipoaprovacao_nome FROM plano " + "INNER JOIN utilizador ON utilizador.user_id = plano.plano_utilizador_id " + "INNER JOIN item_aprovacao ON item_aprovacao.aprovacao_tipo_id = plano.plano_treino_tipo_aprovacao_id" ;
+        let result = await pool.query(sql);
+        let planofound = result.rows;
+        console.log("[planosModel.getPlanoById] plano = " + JSON.stringify(planofound));
+        return { status: 200, data: planofound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
 
 
 module.exports.getPlanosUser = async function(uti_id) {

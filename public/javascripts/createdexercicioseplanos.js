@@ -142,7 +142,87 @@ window.onload = async function(){
     }
  
    getPlanos();
+
+   getAllexercicios();
+
+   getAllplanos();
  
+ }
+
+ async function getAllplanos(){
+
+  let recipeName = document.getElementById("nome1")
+  let exerciseElem = document.getElementById("organize9");
+  var user_id = sessionStorage.getItem("user_id");
+  console.log("setItem->userId = " + user_id);
+
+  try{
+
+     let exercicios = await $.ajax({
+
+       url: "/planostreino/all",
+       method: "get",
+       dataType: "json",
+
+     });
+
+     console.log("[utilizador] utilizador = " + JSON.stringify(exercicios));
+
+     let html = "";
+
+     for(let exercicio of exercicios){
+       console.log("Recipe: " + exercicio);
+       html += createexerciseHTML(exercicio);
+     }
+
+     console.log("OBTEVE");
+   //  recipeName.innerHTML = html;
+
+     exerciseElem.innerHTML = html;
+
+
+  } catch(err){
+    console.log(err);
+  }
+
+ }
+
+ async function getAllexercicios(){
+
+  let recipeName = document.getElementById("nome1")
+  let exerciseElem = document.getElementById("organize8");
+  var user_id = sessionStorage.getItem("user_id");
+  console.log("setItem->userId = " + user_id);
+
+  try{
+
+     let exercicios = await $.ajax({
+
+       url: "/exercicios/allexercicios/",
+       method: "get",
+       dataType: "json",
+
+     });
+
+     console.log("[utilizador] utilizador = " + JSON.stringify(exercicios));
+
+     let html = "";
+
+     for(let exercicio of exercicios){
+       console.log("Recipe: " + exercicio);
+       html += createexerciseHTML(exercicio);
+     }
+
+     console.log("OBTEVE");
+   //  recipeName.innerHTML = html;
+
+     exerciseElem.innerHTML = html;
+
+
+  } catch(err){
+    console.log(err);
+  }
+
  }
  
  function createexerciseHTML(exercicio){

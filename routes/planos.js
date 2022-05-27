@@ -20,6 +20,13 @@ router.get('/:idplano', async function(req, res, next){
     res.status(result.status).send(result.data);
   
   });
+
+  router.get('/all', async function(req, res, next) {
+
+    let result = await planosModel.getAll();
+    res.sendStatus(result.status).send(result.data);
+
+  });
   
 
 //OBTER PLANOS FAVORITOS
