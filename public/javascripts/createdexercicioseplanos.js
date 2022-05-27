@@ -5,7 +5,7 @@
 async function getPlanos(){
 
   let recipeName = document.getElementById("nome1")
-  let planosElem = document.getElementById("organize2");
+  let planosElem = document.getElementById("organize9");
   var user_id = sessionStorage.getItem("user_id");
   console.log("setItem->userId = " + user_id);
 
@@ -13,7 +13,7 @@ async function getPlanos(){
 
      let planos = await $.ajax({
 
-       url: "/planostreino/planouser/" + user_id,
+       url: "/planostreino/all/",
        method: "get",
        dataType: "json",
 
@@ -145,47 +145,12 @@ window.onload = async function(){
 
    getAllexercicios();
 
-   getAllplanos();
- 
+   //getAllPlanos();
+
+   
  }
 
- async function getAllplanos(){
 
-  let recipeName = document.getElementById("nome1")
-  let exerciseElem = document.getElementById("organize9");
-  var user_id = sessionStorage.getItem("user_id");
-  console.log("setItem->userId = " + user_id);
-
-  try{
-
-     let exercicios = await $.ajax({
-
-       url: "/planostreino/all",
-       method: "get",
-       dataType: "json",
-
-     });
-
-     console.log("[utilizador] utilizador = " + JSON.stringify(exercicios));
-
-     let html = "";
-
-     for(let exercicio of exercicios){
-       console.log("Recipe: " + exercicio);
-       html += createexerciseHTML(exercicio);
-     }
-
-     console.log("OBTEVE");
-   //  recipeName.innerHTML = html;
-
-     exerciseElem.innerHTML = html;
-
-
-  } catch(err){
-    console.log(err);
-  }
-
- }
 
  async function getAllexercicios(){
 

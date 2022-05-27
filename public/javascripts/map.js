@@ -105,318 +105,6 @@ async function initMap(lat, lng){
       position: local.geometry.location,
       title: local.name,
       map: map,
-<<<<<<< Updated upstream
-=======
-      position: coords
- 
-    });
- 
- }
- 
- function failure(){}
-
-
- //IMPLEMENTAÇÃO DE ROTAS COM DIRECTIONS API -> AMANHÃ (1º PARTE)
-
- //FUNCAO PARA FILTRAR GINÁSIOS
-
- async function filterplacesginasios(){
-
-    console.log("Working");
-
-    x = navigator.geolocation; //Criar variavel X para a geolocalização
-
-    x.getCurrentPosition(filterginasios, failure);
-
-    filterginasios();
-   
-}
-
-function filterginasios(position){
-
-    var myLatitude = position.coords.latitude;
-    var myLongitude = position.coords.longitude;
-
-    var coordinates = new google.maps.LatLng(myLatitude, myLongitude);
-    
-    const PORTUGAL5_MAPBOUNDS = {
-        //PONTO 1 -> NORTH E WEST
-        //PONTO 2 -> SOUTH E EAST
-        north:  42.138649,
-        south: 36.346396,
-        west: -10.031045,
-        east: -6.353972,
-
-    }
-
-    /*ESCONDER OUTROS MARCADORES DEFAULT (EXIBINDO SOMENTE OS FILTRADOS NO RAIO DEFINIDO)
-    var myStyles =[
-        {
-            featureType: "poi",
-            elementType: "labels",
-            stylers: [
-                  { visibility: "off" }
-            ]
-        }
-    ];*/
-
-    var options = { //Customização do mapa
-        
-        zoom: 15, //Zoom no mapa
-        center:{lat:  myLatitude, lng:  myLongitude}, //Centro do mapa quando este é aberto (Lisboa)
-        restriction: {
-
-            latLngBounds: PORTUGAL5_MAPBOUNDS,
-            strictBounds: false,
-
-        },
-        disableDefaultUI: true, //Remove os controles default de um mapa Google | Formatação
-        
-
-    }
-
-    var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
-
-    const marker = new google.maps.Marker({
- 
-        map: map,
-        position: coordinates,
-        icon: {
-
-           url: "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
-
-        },
-   
-      });
-
-    var request = {
-
-        location: coordinates,
-        radius: '5000',
-        type: ['gym']
-
-    };
-
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch(request, callback);
-
-
-}
-
-//CALLBACK JÁ FUNCIONA
-function callback(results, status){
-
-    window.alert("Getting places...")
-
-    var options = { //Customização do mapa
-        zoom: 15, //Zoom no mapa
-        center:{lat:  38.769653 ,  lng:  -9.170325}, //Centro do mapa quando este é aberto (Lisboa)
-        restriction: {
-
-            latLngBounds: PORTUGAL3_MAPBOUNDS,
-            strictBounds: false,
-
-        },
-        disableDefaultUI: true, //Remove os controles default de um mapa Google | Formatação
-
-    }
-
-    var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
-
-    console.log("Posting places");
-
-  if(status == google.maps.places.PlacesServiceStatus.OK) {
-
-    for(var i = 0; i < results.length; i++){
-
-       //  console.log(results[i].name);
-
-         const marker = new google.maps.Marker({
-            map: map,
-            position: results[i].geometry.location,
-            title: results[i].name,
-          });
-
-          const infotoshow = results[i].name;
-
-          const infowindow = new google.maps.InfoWindow({
-
-            content: infotoshow,
-
-          });
-
-          marker.addListener("click", () => {
-
-            infowindow.open({
-
-              anchor: marker,
-              map: map,
-              shouldFocus: false,
-
-            });
-            
-          });
-
-    }
-
-  }
-
-}
-
- //FUNCAO PARA FILTRAR RESTAURANTES
-
- async function filterplacesrestaurantes(){
-
-    console.log("Working");
-
-    x = navigator.geolocation; //Criar variavel X para a geolocalização
-
-    x.getCurrentPosition(filterrestaurantes, failure);
-
-    filterrestaurantes();
-   
-}
-
-function filterrestaurantes(position){
-
-    var myLatitude = position.coords.latitude;
-    var myLongitude = position.coords.longitude;
-
-    var coordinates = new google.maps.LatLng(myLatitude, myLongitude);
-    
-    const PORTUGAL4_MAPBOUNDS = {
-        //PONTO 1 -> NORTH E WEST
-        //PONTO 2 -> SOUTH E EAST
-        north:  42.138649,
-        south: 36.346396,
-        west: -10.031045,
-        east: -6.353972,
-
-    }
-
-    /*ESCONDER OUTROS MARCADORES DEFAULT (EXIBINDO SOMENTE OS FILTRADOS NO RAIO DEFINIDO)
-    var myStyles =[
-        {
-            featureType: "poi",
-            elementType: "labels",
-            stylers: [
-                  { visibility: "off" }
-            ]
-        }
-    ];*/
-
-    var options = { //Customização do mapa
-        
-        zoom: 15, //Zoom no mapa
-        center:{lat:  myLatitude, lng:  myLongitude}, //Centro do mapa quando este é aberto (Lisboa)
-        restriction: {
-
-            latLngBounds: PORTUGAL4_MAPBOUNDS,
-            strictBounds: false,
-
-        },
-        disableDefaultUI: true, //Remove os controles default de um mapa Google | Formatação
-        
-
-    }
-
-    var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
-
-    const marker = new google.maps.Marker({
- 
-        map: map,
-        position: coordinates,
-        icon: {
-
-           url: "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
-
-        }
-   
-      });
-
-    var request = {
-
-        location: coordinates,
-        radius: '5000',
-        type: ['restaurant']
-
-    };
-
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch(request, callback);
-
-
-}
-
-//CALLBACK JÁ FUNCIONA
-function callback(results, status){
-
-    window.alert("Getting places...")
-
-    var options = { //Customização do mapa
-        zoom: 15, //Zoom no mapa
-        center:{lat:  38.769653 ,  lng:  -9.170325}, //Centro do mapa quando este é aberto (Lisboa)
-        restriction: {
-
-            latLngBounds: PORTUGAL4_MAPBOUNDS,
-            strictBounds: false,
-
-        },
-        disableDefaultUI: true, //Remove os controles default de um mapa Google | Formatação
-
-    }
-
-    var map = new google.maps.Map(document.getElementById('map'), options); //VoARIAVEL QUE ARMAZENA O MAPA
-
-
-  if(status == google.maps.places.PlacesServiceStatus.OK) {
-
-    for(var i = 0; i < results.length; i++){
-
-       //  console.log(results[i].name);
-
-         const marker = new google.maps.Marker({
-            map: map,
-            position: results[i].geometry.location,
-          });
-
-          const infotoshow = results[i].name;
-
-          const infowindow = new google.maps.InfoWindow({
-
-            content: infotoshow,
-
-          });
-
-          marker.addListener("click", () => {
-
-            infowindow.open({
-
-              anchor: marker,
-              map: map,
-              shouldFocus: false,
-
-            });
-            
-          });
-
-
-    }
-
-  }
-
-}
-
- //FUNCAO PARA FILTRAR BARES
-
- async function filterplacesbares(){
-
-    console.log("Working");
-
-    x = navigator.geolocation; //Criar variavel X para a geolocalização
-
-    x.getCurrentPosition(filterbares, failure);
->>>>>>> Stashed changes
 
     });
 
@@ -429,9 +117,69 @@ function callback(results, status){
 
   
 
+   getEventosRecentesss();
+
+}
+
+async function getEventosRecentesss(){
+
+  let recipeName = document.getElementById("nome1")
+  let eventosrecentesElem = document.getElementById("organize99");
+  var user_id = sessionStorage.getItem("user_id");
+  console.log("setItem->userId = " + user_id);
+
+  try{
+
+     let someeventos = await $.ajax({
+
+       url: "/eventos/eventosrecentes/",
+       method: "get",
+       dataType: "json",
+
+     });
+
+     console.log("[utilizador] utilizador = " + JSON.stringify(someeventos));
+
+     let html = "";
+
+     for(let someuser of someeventos){
+       console.log("Recipe: " + someuser);
+       html += createeventoHTML(someuser);
+     }
+
+     console.log("OBTEVE");
+   //  recipeName.innerHTML = html;
+
+     eventosrecentesElem.innerHTML = html;
+
+
+  } catch(err){
+    console.log(err);
+  }
 
 
 }
+
+ function openmarker(){
+
+  console.log(clicked);
+
+
+
+}
+
+function createeventoHTML(evento){
+  
+  return "<div class='selectbox66' style='cursor: pointer' id='selectbox66' onclick='openmarker()'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + evento.evento_titulo + "Data: " + evento.evento_data + "</p>" + "</div>"
+ // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+  /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
+  RECEITA
+</p>*/
+
+}
+
+
 
 
    

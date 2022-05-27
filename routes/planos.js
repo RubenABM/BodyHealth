@@ -21,10 +21,10 @@ router.get('/:idplano', async function(req, res, next){
   
   });
 
-  router.get('/all', async function(req, res, next) {
+  router.get('/allplanos', async function(req, res, next) {
 
     let result = await planosModel.getAll();
-    res.sendStatus(result.status).send(result.data);
+    res.status(result.status).send(result.data);
 
   });
   
