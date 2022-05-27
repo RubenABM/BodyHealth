@@ -11,7 +11,7 @@ async function getEmentas(){
 
      let ementas = await $.ajax({
 
-       url: "/ementas/allementas/",
+       url: "/ementas/ementauser/" + user_id,
        method: "get",
        dataType: "json",
 
@@ -62,7 +62,7 @@ window.onload = async function(){
 
       let receitas = await $.ajax({
 
-        url: "/recipes/allrecipes",
+        url: "/recipes/user/" + user_id,
         method: "get",
         dataType: "json",
 
@@ -88,6 +88,39 @@ window.onload = async function(){
    }
 
    getEmentas();
+
+}
+
+async function filterEmentasCategory(type){
+
+
+  var user_id = sessionStorage.getItem("user_id");
+  let ementaElem = document.getElementById("organize2");
+  let categoria_base = 4;
+
+  try{
+ 
+    let exercisecategory = await $.ajax({
+
+      url: "/ementas/categoryementauser/" + user_id + "/" + type,
+      method: "get",
+      dataType: "json",
+
+    });
+
+    let html = "";
+
+    for(let exercise of exercisecategory){
+      console.log("Ementa: " + exercise);
+      html += createexerciseHTML(exercise);
+    }
+
+    exerciseElem.innerHTML = html;
+
+  } catch(err){
+    console.log(err);
+  }
+
 
 }
 

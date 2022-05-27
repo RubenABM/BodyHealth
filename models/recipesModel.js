@@ -28,6 +28,19 @@ module.exports.getRecipesUser = async function(uti_id) {
     }
 }
 
+module.exports.getRecipesUtilizador = async function(uti_id) {
+    try {
+        let sql = "SELECT receita.receita_id, receita.receita_titulo, receita.receita_desc, item_aprovacao.tipoaprovacao_nome, item_base.basee_nome, receita_categoria.receita_categoria_nome, utilizador.user_name FROM receita " + "INNER JOIN item_aprovacao ON item_aprovacao.aprovacao_tipo_id = receita.receita_tipo_aprovacao_id " + "INNER JOIN item_base ON item_base.basee_id = receita.receita_base_id " + "INNER JOIN receita_categoria ON receita_categoria.receita_categoria_id = receita.receita_categoriaa_id " + "INNER JOIN utilizador ON utilizador.user_id = receita.receita_utilizador_id " + "WHERE utilizador.user_id = " + uti_id;
+        let result = await pool.query(sql);
+        let recipesfound = result.rows[0];
+        console.log("[recipesModel.getRecipesUser] recipes = " + JSON.stringify(recipesfound));
+        return { status: 200, data: recipesfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
 module.exports.getRecipeById = async function(recipe_id) {
     try {
         let sql = "SELECT receita.receita_id, receita.receita_titulo, receita.receita_desc, receita.receita_utilizador_id, receita_ingrediente.receita_ingrediente_id, ingrediente.ingrediente_id, ingrediente.ingrediente_nome, utilizador.user_name, receita_categoria.receita_categoria_nome, item_base.basee_nome FROM receita " + "INNER JOIN receita_ingrediente ON receita_ingrediente.recipe_id = receita.receita_id " + "INNER JOIN ingrediente ON ingrediente.ingrediente_id = receita_ingrediente.ingredient_id " + "INNER JOIN utilizador ON receita.receita_utilizador_id = utilizador.user_id " + "INNER JOIN receita_categoria ON receita_categoria.receita_categoria_id = receita.receita_categoriaa_id " + "INNER JOIN item_base ON item_base.basee_id = receita.receita_base_id " + "WHERE receita.receita_id = "+ recipe_id;

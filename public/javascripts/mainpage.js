@@ -37,6 +37,8 @@ window.onload = async function(){
     getExercicios();
 
     getLeaderboard();
+
+    getEventosRecentes();
     
  
  }
@@ -80,6 +82,56 @@ window.onload = async function(){
 
  }
 
+ async function getEventosRecentes(){
+
+  let recipeName = document.getElementById("nome1")
+  let eventosrecentesElem = document.getElementById("organize5");
+  var user_id = sessionStorage.getItem("user_id");
+  console.log("setItem->userId = " + user_id);
+
+  try{
+
+     let someeventos = await $.ajax({
+
+       url: "/eventos/eventosrecentes/",
+       method: "get",
+       dataType: "json",
+
+     });
+
+     console.log("[utilizador] utilizador = " + JSON.stringify(someeventos));
+
+     let html = "";
+
+     for(let someuser of someeventos){
+       console.log("Recipe: " + someuser);
+       html += createeventoHTML(someuser);
+     }
+
+     console.log("OBTEVE");
+   //  recipeName.innerHTML = html;
+
+     eventosrecentesElem.innerHTML = html;
+
+
+  } catch(err){
+    console.log(err);
+  }
+
+
+}
+
+function createeventoHTML(evento){
+  
+  return "<div class='selectbox66' id='selectbox66'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + evento.evento_titulo + "Data: " + evento.evento_data + "</p>" + "</div>"
+ // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+  /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
+  RECEITA
+</p>*/
+
+}
+
  function createuserHTML(utilizador){
   
     return "<div class='selectbox6' id='selectbox66'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + utilizador.user_name + ": " + utilizador.user_points + "</p>" + "</div>"
@@ -105,7 +157,7 @@ async function getExercicios(){
  
        let someexercicios = await $.ajax({
  
-         url: "/exercicios/allexercicios/someexercicios/",
+         url: "/exercicios/someexercises/",
          method: "get",
          dataType: "json",
  
@@ -132,6 +184,8 @@ async function getExercicios(){
  
  
  }
+
+
 
  function createexercicioHTML(exercicio){
   

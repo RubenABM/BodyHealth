@@ -854,6 +854,17 @@ cursor: pointer;
    padding: 1px;
 }
 
+.selectbox66 {
+   width: 182px;
+   height: 145px;
+   border: 1px solid white;
+   border-radius: 6%;
+   cursor: pointer;
+   color: white;
+   background-color: #404040;
+   padding: 1px;
+}
+
 
 #driving:hover{
 

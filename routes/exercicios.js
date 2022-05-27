@@ -35,6 +35,13 @@ router.get('/allexercicios/someexercicios/', async function(req, res, next) {
 
 });
 
+router.get('/someexercises/', async function (req, res, next) {
+
+   let result = await exercicioModel.getSome();
+   res.status(result.status).send(result.data);
+
+});
+
 router.get('/allexercicios/category/:idcategoria', async function (req, res, next){
 
   let id_categoria = req.params.idcategoria;

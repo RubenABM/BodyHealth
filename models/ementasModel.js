@@ -54,7 +54,7 @@ module.exports.getEmentasUserByCategory = async function(uti_id, cat_id) {
 
 module.exports.getEmentasUser = async function(uti_id) {
     try {
-        let sql = "SELECT ementa.ementa_id, ementa.ementa_titulo, ementa.ementa_descricao, ementa.ementa_utilizador_id, utilizador.user_name FROM ementa " + "INNER JOIN utilizador ON utilizador.user_id = ementa.ementa_utilizador_id " + "WHERE ementa.ementa_utilizador_id =  " + uti_id;
+        let sql = "SELECT ementa.ementa_id, ementa.ementa_titulo, ementa.ementa_descricao, item_aprovacao.tipoaprovacao_nome, item_base.basee_nome, ementa_categoria.ementa_categoria_nome, utilizador.user_name FROM ementa " + "INNER JOIN item_aprovacao ON item_aprovacao.aprovacao_tipo_id = ementa.ementa_tipo_aprovacao_id " + "INNER JOIN item_base ON item_base.basee_id = ementa.ementa_base_id " + "INNER JOIN ementa_categoria ON ementa_categoria.ementa_categoria_id = ementa.ementa_categoriaa_id " + "INNER JOIN utilizador ON utilizador.user_id = ementa.ementa_utilizador_id " + "WHERE utilizador.user_id = " + uti_id;
         let result = await pool.query(sql);
         let ementasfound = result.rows;
         console.log("[ementasModel.getEmentasUser] recipes = " + JSON.stringify(ementasfound));

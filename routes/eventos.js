@@ -10,6 +10,13 @@ router.get('/alleventos', async function (req, res, next){
 
   });
 
+router.get('/eventosrecentes', async function(req, res, next) {
+
+    let result = await eventosModel.getEventosRecentes();
+    res.status(result.status).send(result.data); 
+
+});
+
   router.get('/alleventos/:idutilizador', async function(req, res, next){
 
     let id_utilizador = req.params.idutilizador;

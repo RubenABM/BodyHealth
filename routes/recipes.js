@@ -42,6 +42,17 @@ router.get('/recipeuser/:idutilizador', async function(req, res, next){
   
   });
 
+
+//RECEITAS DE UM UTILIZADOR 2
+
+router.get('/user/:idutilizador', async function(req, res, next){
+
+    let id_utilizador = req.params.idutilizador;
+    let result = await recipesModel.getRecipesUtilizador(id_utilizador);
+    res.status(result.status).send(result.data);
+
+});
+
   //FILTRAGEM DE CATEGORIAS DAS RECEITAS DE UM UTILIZADOR
 
 router.get('/categoryrecipeuser/:idutilizador/:idcategoria', async function(req, res, next){
@@ -97,6 +108,7 @@ router.post('/insertnewrecipe', async function(req, res, next) {
   let result = await recipesModel.saveRecipe(newRecipe);
   res.sendStatus(result.status).send(result.data);
 });
+
 
 
 
