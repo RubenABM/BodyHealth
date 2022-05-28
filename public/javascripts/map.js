@@ -14,22 +14,418 @@ window.onload = async function(){
 
    );
 
-  /*
-    console.log("Getting user location...");
+}
 
-    x = navigator.geolocation; //Criar variavel X para a geolocalização
+async function filterplacescoffee(){
 
-    x.getCurrentPosition(initMap, failure); //Obter localizacao atual
+  if(navigator.geolocation) {
 
-    //window.alert("CALLING INITMAP()")
-    */
+    navigator.geolocation.getCurrentPosition(showPositionForCoffees);
+
+  } else {
+
+    console.log("Erro");
+
+  }
+
+}
+
+function showPositionForCoffees(position){
+
+  console.log("Latitude: " + position.coords.latitude);
+
+  console.log("Longitude: " + position.coords.longitude);
+
+  var coordinates = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+  const PORTUGAL5_MAPBOUNDS = {
+    //PONTO 1 -> NORTH E WEST
+    //PONTO 2 -> SOUTH E EAST
+    north:  42.138649,
+    south: 36.346396,
+    west: -10.031045,
+    east: -6.353972,
+
+  }
+
+  var options = { //Customização do mapa
+        
+    zoom: 15, //Zoom no mapa
+    center:{lat:  position.coords.latitude, lng:  position.coords.longitude}, //Centro do mapa quando este é aberto (Lisboa)
+    restriction: {
+
+        latLngBounds: PORTUGAL5_MAPBOUNDS,
+        strictBounds: false,
+
+    },
+    disableDefaultUI: true, //Remove os controles default de um mapa Google | Formatação
+    
+
+  }
+
+  var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
+
+  var request = {
+
+    location: coordinates,
+    radius: '5000',
+    type: ['restaurant']
+
+};
+
+var service = new google.maps.places.PlacesService(map);
+service.nearbySearch(request, callback);
+
+}
+
+async function filterplacesrestaurantes(){
+
+  if(navigator.geolocation) {
+
+    navigator.geolocation.getCurrentPosition(showPositionForRestaurantes);
+
+  } else {
+
+    console.log("Erro");
+
+  }
+
+}
+
+function showPositionForRestaurantes(position){
+
+  console.log("Latitude: " + position.coords.latitude);
+
+  console.log("Longitude: " + position.coords.longitude);
+
+  var coordinates = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+  const PORTUGAL5_MAPBOUNDS = {
+    //PONTO 1 -> NORTH E WEST
+    //PONTO 2 -> SOUTH E EAST
+    north:  42.138649,
+    south: 36.346396,
+    west: -10.031045,
+    east: -6.353972,
+
+  }
+
+  var options = { //Customização do mapa
+        
+    zoom: 15, //Zoom no mapa
+    center:{lat:  position.coords.latitude, lng:  position.coords.longitude}, //Centro do mapa quando este é aberto (Lisboa)
+    restriction: {
+
+        latLngBounds: PORTUGAL5_MAPBOUNDS,
+        strictBounds: false,
+
+    },
+    disableDefaultUI: true, //Remove os controles default de um mapa Google | Formatação
+    
+
+  }
+
+  var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
+
+  var request = {
+
+    location: coordinates,
+    radius: '5000',
+    type: ['restaurant']
+
+};
+
+var service = new google.maps.places.PlacesService(map);
+service.nearbySearch(request, callback);
+
+}
+
+async function filterplacesbares(){
+
+  if(navigator.geolocation) {
+
+    navigator.geolocation.getCurrentPosition(showPositionForBares);
+
+  } else {
+
+    console.log("Erro");
+
+  }
+
+}
+
+function showPositionForBares(position){
+
+  console.log("Latitude: " + position.coords.latitude);
+
+  console.log("Longitude: " + position.coords.longitude);
+
+  var coordinates = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+  const PORTUGAL5_MAPBOUNDS = {
+    //PONTO 1 -> NORTH E WEST
+    //PONTO 2 -> SOUTH E EAST
+    north:  42.138649,
+    south: 36.346396,
+    west: -10.031045,
+    east: -6.353972,
+
+  }
+
+  var options = { //Customização do mapa
+        
+    zoom: 15, //Zoom no mapa
+    center:{lat:  position.coords.latitude, lng:  position.coords.longitude}, //Centro do mapa quando este é aberto (Lisboa)
+    restriction: {
+
+        latLngBounds: PORTUGAL5_MAPBOUNDS,
+        strictBounds: false,
+
+    },
+    disableDefaultUI: true, //Remove os controles default de um mapa Google | Formatação
+    
+
+  }
+
+  var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
+
+  var request = {
+
+    location: coordinates,
+    radius: '5000',
+    type: ['bar']
+
+};
+
+var service = new google.maps.places.PlacesService(map);
+service.nearbySearch(request, callback);
+
+}
+
+async function filterplacesginasios(){
+
+  if(navigator.geolocation) {
+
+    navigator.geolocation.getCurrentPosition(showPositionForGinasios);
+
+  } else {
+
+    console.log("Erro");
+
+  }
+
+}
+
+function showPositionForGinasios(position){
+
+  console.log("Latitude: " + position.coords.latitude);
+
+  console.log("Longitude: " + position.coords.longitude);
+
+  var coordinates = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+  const PORTUGAL5_MAPBOUNDS = {
+    //PONTO 1 -> NORTH E WEST
+    //PONTO 2 -> SOUTH E EAST
+    north:  42.138649,
+    south: 36.346396,
+    west: -10.031045,
+    east: -6.353972,
+
+  }
+
+  var options = { //Customização do mapa
+        
+    zoom: 15, //Zoom no mapa
+    center:{lat:  position.coords.latitude, lng:  position.coords.longitude}, //Centro do mapa quando este é aberto (Lisboa)
+    restriction: {
+
+        latLngBounds: PORTUGAL5_MAPBOUNDS,
+        strictBounds: false,
+
+    },
+    disableDefaultUI: true, //Remove os controles default de um mapa Google | Formatação
+    
+
+  }
+
+  var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
+
+  var request = {
+
+    location: coordinates,
+    radius: '5000',
+    type: ['gym']
+
+};
+
+var service = new google.maps.places.PlacesService(map);
+service.nearbySearch(request, callback);
+
+}
+
+function callback(results, status){
+
+  const directionsRenderer = new google.maps.DirectionsRenderer(); //CONSTANTE PARA RENDERIZAR A ROTA
+
+  const directionsService = new google.maps.DirectionsService(); //CONSTANTE DO SERVIÇO DE ROTAS PARA O MAPA
+
+  directionsRenderer.setMap(map);
+
+  const PORTUGAL3_MAPBOUNDS = {
+    //PONTO 1 -> NORTH E WEST
+    //PONTO 2 -> SOUTH E EAST
+    north:  42.138649,
+    south: 36.346396,
+    west: -10.031045,
+    east: -6.353972,
+
+  }
+
+  window.alert("Getting places...")
+
+  var options = { //Customização do mapa
+      zoom: 15, //Zoom no mapa
+      center:{lat:  38.769653 ,  lng:  -9.170325}, //Centro do mapa quando este é aberto (Lisboa)
+      restriction: {
+
+          latLngBounds: PORTUGAL3_MAPBOUNDS,
+          strictBounds: false,
+
+      },
+      disableDefaultUI: true, //Remove os controles default de um mapa Google | Formatação
+
+  }
+
+  var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
+
+  console.log("Posting places");
+
+if(status == google.maps.places.PlacesServiceStatus.OK) {
+
+  for(var i = 0; i < results.length; i++){
+
+     //  console.log(results[i].name);
+
+       const marker = new google.maps.Marker({
+          map: map,
+          position: results[i].geometry.location,
+          title: results[i].name,
+        });
+
+        const infotoshow = results[i].name;
+
+        const infowindow = new google.maps.InfoWindow({
+
+          content: infotoshow,
+
+        });
+        
+        //CRIAR A ROTA
+
+        marker.addListener("click", () => {
+
+          console.log("clicked");
+
+           //GET LOCATION
+             if(navigator.geolocation) {
+
+              navigator.geolocation.getCurrentPosition(showRotaForPlace);
+
+             } else {
+
+              console.log("Erro");
+
+             }
+          
+             });
+
+  }
+
+}
+
+}
+
+//TERMINAR MÉTODO DE CLIQUE PARA CADA MARCADOR
+
+function showRotaForPlace(position){
+
+  const directionsRenderer = new google.maps.DirectionsRenderer(); //CONSTANTE PARA RENDERIZAR A ROTA
+
+  const directionsService = new google.maps.DirectionsService(); //CONSTANTE DO SERVIÇO DE ROTAS PARA O MAPA
+
+  directionsRenderer.setMap(map);
+
+  console.log("Latitude: " + position.coords.latitude);
+
+  console.log("Longitude: " + position.coords.longitude);
+
+  var coordinates = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
 
-    //initMap();
+  const PORTUGAL5_MAPBOUNDS = {
+    //PONTO 1 -> NORTH E WEST
+    //PONTO 2 -> SOUTH E EAST
+    north:  42.138649,
+    south: 36.346396,
+    west: -10.031045,
+    east: -6.353972,
+
+  }
+
+  calculateAndDisplayRoute(directionsService, directionsRenderer);
+
+  var options = { //Customização do mapa
+        
+    zoom: 15, //Zoom no mapa
+    center:{lat:  position.coords.latitude, lng:  position.coords.longitude}, //Centro do mapa quando este é aberto (Lisboa)
+    restriction: {
+
+        latLngBounds: PORTUGAL5_MAPBOUNDS,
+        strictBounds: false,
+
+    },
+    disableDefaultUI: true, //Remove os controles default de um mapa Google | Formatação
+    
+
+  }
+
+  var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
+
+
+}
+
+function calculateAndDisplayRoute(directionsService, directionsRenderer){
+
+
+  const selectedMode = "DRIVING"; //EXEMPLO COM MODO ESTATICO
+
+  directionsService
+    .route({
+
+        //SUBSTITUIR ORIGEM E DESTINO (ORIGEM -> POSICAO ATUAL | DESTINO -> POSICAO DO MARCADOR SELECIONADO OU LOCAL DA CONSULTA/EVENTO QUANDO CLICADO)
+        origin: { lat: 38.7621624, lng: -9.1788412 },
+        destination: { lat: 38.767832, lng: -9.169247 },
+        // Note that Javascript allows us to access the constant
+        // using square brackets and a string value as its
+        // "property."
+        travelMode: google.maps.TravelMode[selectedMode],
+
+
+    })
+    .then((response) => {
+        directionsRenderer.setDirections(response);
+      })
+      .catch((e) => window.alert("Directions request failed due to " + status));
+
 }
 
 
 async function initMap(lat, lng){
+
+  const directionsRenderer = new google.maps.DirectionsRenderer(); //CONSTANTE PARA RENDERIZAR A ROTA
+
+  const directionsService = new google.maps.DirectionsService(); //CONSTANTE DO SERVIÇO DE ROTAS PARA O MAPA
 
   var myLatLng = {
     lat,
@@ -160,24 +556,47 @@ async function getEventosRecentesss(){
 
 }
 
- function openmarker(){
 
-  console.log(clicked);
-
-
-
-}
+//TERMINAR O ONCLICK NO EVENTO
 
 function createeventoHTML(evento){
   
-  return "<div class='selectbox66' style='cursor: pointer' id='selectbox66' onclick='openmarker()'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + evento.evento_titulo + "Data: " + evento.evento_data + "</p>" + "</div>"
- // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
-
-  /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
-  RECEITA
-</p>*/
+  return "<div class='selectbox66' style='cursor: pointer' id='selectbox66' onclick='openmarker('" + evento + "')'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + evento.evento_titulo + "Data: " + evento.evento_data + "</p>" + "</div>"
+  //return "<div class='selectbox66' style='cursor: pointer' id='selectbox66' onclick='openmarker( " + evento + " )'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + evento.evento_titulo + "Data: " + evento.evento_data + "</p>" + "</div>"
+ 
 
 }
+
+async function openmarker(evento){
+
+  console.log("funcao chamada");
+
+  console.log("" + evento);
+
+  //const myLatLng = { lat: evento.latitude, lng: evento.longitude };
+
+  //console.log("clicked");
+
+  /*const marker = new google.maps.Marker({
+ 
+    map: map,
+    position: myLatLng,
+    icon: {
+
+       url: "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
+
+    }
+
+  });*/
+
+
+
+}
+
+
+
+
+
 
 
 
