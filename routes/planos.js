@@ -4,6 +4,14 @@ var planosModel = require('../models/planosModel');
 
 //GET DE UM PLANO ESPECIFICO
 
+router.get('/allplanostreino', async function (req, res, next){
+
+  console.log("[recipesRoutes] Retrieving all planos");
+  let result = await planosModel.getAllPlano();
+  res.status(result.status).send(result.data);
+
+});
+
 router.get('/:idplano', async function(req, res, next){
 
     let id_plano = req.params.idplano;
@@ -13,6 +21,7 @@ router.get('/:idplano', async function(req, res, next){
   
   });
 
+<<<<<<< HEAD
   router.get('/allplanostreino', async function (req, res, next){
 
     console.log("[recipesRoutes] Retrieving all planos");
@@ -22,6 +31,9 @@ router.get('/:idplano', async function(req, res, next){
   });
 
   router.get('/allplanos', async function(req, res, next) {
+=======
+  router.get('/all', async function(req, res, next) {
+>>>>>>> 1568ac08902650741dd08a664ff9f7584ee515d2
 
     let result = await planosModel.getAll();
     res.status(result.status).send(result.data);

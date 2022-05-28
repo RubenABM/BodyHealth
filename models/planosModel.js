@@ -8,6 +8,7 @@ module.exports.getPlanoById = async function(plano_id) {
         let result = await pool.query(sql);
         let planofound = result.rows;
         console.log("[planosModel.getPlanoById] plano = " + JSON.stringify(planofound));
+        console.log("AQUI -> : " + planofound)
         return { status: 200, data: planofound };
     } catch (err) {
         console.log(err);
