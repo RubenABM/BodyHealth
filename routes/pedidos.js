@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var pedidosModel = require('../models/pedidosModel');
 
+/*
 router.get('/allpedidos/:idutilizador', async function (req, res, next){
 
     let id_utilizador = req.params.idutilizador;
@@ -10,6 +11,7 @@ router.get('/allpedidos/:idutilizador', async function (req, res, next){
     res.status(result.status).send(result.data);
 
 });
+*/
 
 router.get('/allpedidoslimit/:idutilizador', async function (req, res, next){
 
@@ -20,6 +22,44 @@ router.get('/allpedidoslimit/:idutilizador', async function (req, res, next){
 
 });
 
+router.get('/allpedidos/:idutilizador/', async function (req, res, next){
+
+  let id_utilizador = req.params.idutilizador;
+  console.log("[pedidosRoutes] Retrieving all pedidos from user id: " + id_utilizador);
+  let result = await pedidosModel.getAllPedidosList(id_utilizador);
+  res.status(result.status).send(result.data);
+
+});
+
+router.get('/alleventosmarcados/:idutilizador', async function(req, res, next) {
+
+  let id_utilizador = req.params.idutilizador;
+  console.log("[pedidosRoutes] Retrieving all pedidos from user id: " + id_utilizador);
+  let result = await pedidosModel.getAllEventosMarcados(id_utilizador);
+  res.status(result.status).send(result.data);
+
+});
+
+
+router.get('/alleventosmarcados/filtragem/:idutilizador/:idtipo', async function(req, res, next) {
+
+  let id_tipo = req.params.idtipo;
+  let id_utilizador = req.params.idutilizador;
+  console.log("[pedidosRoutes] Retrieving all pedidos from user id: " + id_utilizador);
+  let result = await pedidosModel.getAllEventosMarcadosCategory(id_utilizador, id_tipo);
+  res.status(result.status).send(result.data);
+
+});
+
+router.get('/alleventosmarcados/filtragemestado/:idutilizador/:idtipo', async function(req, res, next) {
+
+  let id_tipo = req.params.idtipo;
+  let id_utilizador = req.params.idutilizador;
+  console.log("[pedidosRoutes] Retrieving all pedidos from user id: " + id_utilizador);
+  let result = await pedidosModel.getAllEventosMarcadosEstado(id_utilizador, id_tipo);
+  res.status(result.status).send(result.data);
+
+});
 
 /*OBTER PEDIDOS POR CATEGORIA (AULA OU CONSULTA)*/ 
 

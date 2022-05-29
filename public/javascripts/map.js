@@ -515,6 +515,52 @@ async function initMap(lat, lng){
 
    getEventosRecentesss();
 
+   getAulasMarcadasRecentesss();
+
+}
+
+//OBTER AULAS MARCADAS RECENTES (ACABAR A FUNCAO)
+
+async function getAulasMarcadasRecentesss(){
+
+  var user_admin = sessionStorage.getItem("user_admin");
+  var user_pt = sessionStorage.getItem("user_pt");
+  var user_nutri = sessionStorage.getItem("user_nutri");
+  let recipeName = document.getElementById("nome1")
+  let eventosrecentesElem = document.getElementById("organize99");
+  var user_id = sessionStorage.getItem("user_id");
+  console.log("setItem->userId = " + user_id);
+
+  try{
+
+     let someeventos = await $.ajax({
+
+       url: "/eventos/eventosrecentes/",
+       method: "get",
+       dataType: "json",
+
+     });
+
+     console.log("[utilizador] utilizador = " + JSON.stringify(someeventos));
+
+     let html = "";
+
+     for(let someuser of someeventos){
+       console.log("Recipe: " + someuser);
+       html += createeventoHTML(someuser);
+     }
+
+     console.log("OBTEVE");
+   //  recipeName.innerHTML = html;
+
+     eventosrecentesElem.innerHTML = html;
+
+
+  } catch(err){
+    console.log(err);
+  }
+
+
 }
 
 async function getEventosRecentesss(){

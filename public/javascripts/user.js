@@ -144,6 +144,9 @@ async function login(){
     console.log("Verifying user with username: " + authUser.user_name + " and password: " + authUser.user_password);
 
     sessionStorage.setItem('user_id', authUser.user_id);
+    sessionStorage.setItem('user_admin', authUser.user_admin);
+    sessionStorage.setItem('user_pt', authUser.user_pt);
+    sessionStorage.setItem('user_nutri', authUser.user_nutri);
     window.alert('login sucessfull');
     
     window.location.assign("http://localhost:3000/dashboardTemplate.html");

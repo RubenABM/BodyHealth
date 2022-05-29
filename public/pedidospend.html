@@ -10,6 +10,8 @@
     <!--<link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">-->
     <!-- Custom styles -->
     <link rel="stylesheet" href="./stylesheets/styleDashboard.css">
+
+    <script src="javascripts/pedidoseeventos.js"></script>
 </head>
 
 <body>
@@ -225,14 +227,14 @@
     
                                         <div class="dropdown2-content">
                                             <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos </a><br>
-                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Pendentes</a><br>
-                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Aprovados</a><br>
-                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Recusados</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" onclick="filterEventosEstado(4)">Pendentes</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" onclick="filterEventosEstado(2)">Aprovados</a><br>
+                                            <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" onclick="filterEventosEstado(3)">Recusados</a><br>
                                         </div>
                                     </div>
                                 </div>
                                 <button style="margin-top: 10%;float: left;" onclick="openForm()" style="margin-left: 35px;" type="submit"
-                                    class="buttoncalcularimc"><b>Criar
+                                    class="buttoncalcularimc" id="tb"><b>Criar
                                         pedido</b></button><br><br>
                                         <div style="margin-top: 2%;" class="form-popup" id="myForm">
                                             <form style="height:590px" action="/action_page.php" class="form-container">
@@ -308,7 +310,7 @@
                                         </div>
                             </div>
 
-                                <div id="organize">
+                                <div id="organize3">
                                     <div style="display:inline-block" class="selectbox3">
                                         <h2 style="margin-top: 2%; margin-left: 2%"> Título do pedido </h2>
                                         </p>
