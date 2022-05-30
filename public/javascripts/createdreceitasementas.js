@@ -53,6 +53,9 @@ function createementaHTML(meal){
 //LOAD DE RECEITAS
 window.onload = async function(){
 
+  var user_admin = sessionStorage.getItem("user_admin");
+  var user_pt = sessionStorage.getItem("user_pt");
+  var user_nutri = sessionStorage.getItem("user_nutri");
    let recipeName = document.getElementById("nome1")
    let recipeElem = document.getElementById("organize");
    var user_id = sessionStorage.getItem("user_id");
@@ -89,7 +92,30 @@ window.onload = async function(){
 
    getEmentas();
 
+   if(user_pt == 1 && user_admin == 0 && user_nutri == 0) {
+
+     //CASO SEJA PT...
+
+     document.getElementById("createementa").style.visibility = "hidden";
+     document.getElementById("createreceita").style.visibility = "hidden";
+
+     document.getElementById("categoriadareceita").style.marginLeft = "-300px";
+     document.getElementById("categoriadareceita").style.marginTop = "31px";
+
+     document.getElementById("dropdownmenu").style.marginLeft = "-300px";
+     document.getElementById("dropdownmenu").style.marginTop = "-20px";
+
+     document.getElementById("tipodareceita").style.marginLeft = "1px";
+     document.getElementById("tipodareceita").style.textAlign = "center";
+
+   } else {
+     console.log("error");
+   }
+
 }
+
+
+// MOVER BOTÕES DE TIPO DE RECEITA E CATEGORIA -> margin-top: 7%;float: left;" style="margin-left: 35px;
 
 async function filterEmentasCategory(type){
 

@@ -23,27 +23,23 @@ window.onload = async function(){
       document.getElementById("nuser").innerHTML = "Bem-vindo " + utilizador.user_name;
       document.getElementById("npontos").innerHTML = utilizador.user_points;
 
-      if(user_admin == 0 && user_nutri == 0 && user_pt == 0){
+      if(user_pt == 1 && user_admin == 0 && user_nutri == 0) {
 
-         //ESCONDER ELEMENTOS CASO SEJA UTILIZADOR COMUM
-         
+         //CASO SEJA PT
 
-      } else if (user_admin == 0 && user_nutri == 0 && user_pt == 1){
+         document.getElementById("nutribarra").style.visibility = "hidden";
 
-         //ESCONDER ELEMENTOS CASO SEJA PT
+     
+       } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
 
-      } else if (user_admin == 0 && user_nutri == 1 && user_pt == 0){
+        document.getElementById("nutribarra").style.visibility = "hidden";
+        document.getElementById("ptbarra").style.visibility = "hidden";
 
-         //ESCONDER ELEMENTOS CASO SEJA NUTRICIONISTA
+       } else if (user_pt == 0 && user_admin == 0 && user == 1) {
 
+        document.getElementById("ptbarra").style.visibility = "hidden";
 
-      } else if (user_admin == 1 && user_nutri == 0 && user_pt == 0){
-
-         //ESCONDER ELEMENTOS CASO SEJA ADMIN
-
-      } else {
-         console.log("error");
-      }
+       }
 
 
 

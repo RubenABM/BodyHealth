@@ -33,11 +33,11 @@
         <div class="col-lg-9">
           <div style="display:inline-block">
             <h1 style="margin-top: 80px; color: white;">Receitas</h1>
-            <div style="float: right;" style="margin-top: 5%; margin-left: -300px">
-              <div style="margin-top: 21%; margin-left:235%;" class="dropdown2">
-                <button type="submit" class="buttoncalcular"><b>Categoria da receita</b></button><br><br>
+            <div style="float: right;" style="margin-top: 5%; margin-left: -100px">
+              <div style="margin-top: 21%; margin-left:205%;" class="dropdown2" id="menudropcategory">
+                <button type="submit" class="buttoncalcular" style="margin-left: -113px; margin-top: 23px;" id="categoriadareceita"><b>Categoria da receita</b></button><br><br>
 
-                <div class="dropdown2-content">
+                <div class="dropdown2-content" style="margin-left: -113px; margin-top: -20px;" id="dropdownmenu">
                   <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos </a><br>
                   <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" onclick="filterCategory(1)">Entrada</a><br>
                   <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" onclick="filterCategory(2)">Prato principal</a><br>
@@ -48,7 +48,7 @@
             </div>
             <div style="float: right;" style="margin-top: 5%; margin-left: -300px">
               <div style="margin-top: 21%; margin-left:195%;" class="dropdown2">
-                <button style="text-align: center;" type="submit" class="buttoncalcular"><b>Tipo da
+                <button style="text-align: center; margin-left: 1px;" type="submit" class="buttoncalcular" id="tipodareceita"><b>Tipo da
                     receita</b></button><br><br>
 
                 <div class="dropdown2-content">
@@ -62,7 +62,7 @@
             </div>
             <a href="createdreceitasementas.html">
             <button style="margin-top: 7%;float: left;" style="margin-left: 35px;" type="submit"
-              class="buttoncalcular"><b>Criar
+              class="buttoncalcular" id="createreceita"><b>Criar
                 receita</b></button><br><br></a>
           </div>
 
@@ -316,9 +316,9 @@
               <h1 style="margin-top: 80px; color: white;">Ementas</h1>
               <div style="float: right;" style="margin-top: 5%; margin-left: -300px">
                 <div style="margin-top: 21%; margin-left:235%;" class="dropdown2">
-                  <button type="submit" class="buttoncalcular"><b>Categoria da ementa</b></button><br><br>
+                  <button type="submit" class="buttoncalcular" style="margin-left: -113px; margin-top: 23px;"><b>Categoria da ementa</b></button><br><br>
   
-                  <div class="dropdown2-content">
+                  <div class="dropdown2-content" style="margin-left: -113px; margin-top: -20px;">
                     <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Todos </a><br>
                     <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" onclick="filterEmentasCategory(1)">Pequeno-almoço</a><br>
                     <a href="#" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" onclick="filterEmentasCategory(3)">Almoço</a><br>
@@ -343,7 +343,7 @@
               </div>
               <a href="createdreceitasementas.html">
               <button style="margin-top: 7%;float: left;" style="margin-left: 35px;" type="submit"
-                class="buttoncalcular"><b>Criar
+                class="buttoncalcular" id="createementa"><b>Criar
                   ementa</b></button><br><br></a>
             </div>
 
