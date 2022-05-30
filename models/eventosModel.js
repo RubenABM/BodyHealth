@@ -40,6 +40,19 @@ module.exports.getEventosUser = async function(uti_id) {
     }
 }
 
+module.exports.getUltimasAulas = async function(uti_id) {
+    try {
+        let sql = "SELECT pedido.pedido_id, pedido.pedido_titulo, pedido.pedido_desc, place.local_nome, place.local_morada, ST_X(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Longitude, ST_Y(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Latitude, utilizador.user_name, pedido.pedido_data, pedido.pedido_hora, pedido_tipo.pedido_type, pedido_estado.pedido_estado FROM pedido " + "INNER JOIN place ON place.local_id = pedido.pedido_local_id " + "INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_profissional_id " + "INNER JOIN pedido_tipo ON pedido_tipo.pedido_type_id = pedido.pedido_tipo_id " + "INNER JOIN pedido_estado ON pedido_estado.pedido_estado_id = pedido.pedido_estado_id " + "WHERE pedido.pedido_utilizador_id = " + uti_id + " ORDER BY pedido.pedido_data DESC " + " LIMIT 2";
+        let result = await pool.query(sql);
+        let eventosfound = result.rows;
+        console.log("[eventosModel.getEventosUser] eventos = " + JSON.stringify(eventosfound));
+        return { status: 200, data: eventosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
 module.exports.getEventosOrdenadosUser = async function(uti_id) {
     try {
         let sql = "SELECT evento_titulo, evento_data, place.local_nome, place.local_morada, place.geometry_info_point ,utilizador.user_name FROM evento " + "INNER JOIN  place ON place.local_id = evento.evento_local_id " + "INNER JOIN  utilizador ON utilizador.user_id = evento.evento_criador_id  " + "WHERE utilizador.user_id = " + uti_id + " ORDER BY evento.evento_data DESC";

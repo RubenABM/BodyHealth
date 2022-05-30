@@ -527,7 +527,7 @@ async function getAulasMarcadasRecentesss(){
   var user_pt = sessionStorage.getItem("user_pt");
   var user_nutri = sessionStorage.getItem("user_nutri");
   let recipeName = document.getElementById("nome1")
-  let eventosrecentesElem = document.getElementById("organize99");
+  let eventosrecentesElem = document.getElementById("organize109");
   var user_id = sessionStorage.getItem("user_id");
   console.log("setItem->userId = " + user_id);
 
@@ -535,7 +535,7 @@ async function getAulasMarcadasRecentesss(){
 
      let someeventos = await $.ajax({
 
-       url: "/eventos/eventosrecentes/",
+       url: "/eventos/alleventos/aulas/" + user_id,
        method: "get",
        dataType: "json",
 
@@ -547,7 +547,7 @@ async function getAulasMarcadasRecentesss(){
 
      for(let someuser of someeventos){
        console.log("Recipe: " + someuser);
-       html += createeventoHTML(someuser);
+       html += createaulaHTML(someuser);
      }
 
      console.log("OBTEVE");
@@ -560,6 +560,14 @@ async function getAulasMarcadasRecentesss(){
     console.log(err);
   }
 
+
+}
+
+function createaulaHTML(aula){
+  
+  return "<div class='selectbox66' style='cursor: pointer' id='selectbox66' onclick='openmarker('" + aula + "')'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + aula.pedido_titulo + "Data: " + aula.pedido_data + "</p>" + "</div>"
+  //return "<div class='selectbox66' style='cursor: pointer' id='selectbox66' onclick='openmarker( " + evento + " )'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + evento.evento_titulo + "Data: " + evento.evento_data + "</p>" + "</div>"
+ 
 
 }
 

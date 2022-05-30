@@ -53,5 +53,15 @@ router.post('/insertnewevento', async function(req, res, next) {
   
   });
 
+  //OBTER AS ULTIMAS AULAS MARCADAS
+
+  router.get('/alleventos/aulas/:idutilizador', async function(req, res, next) {
+
+    let id_utilizador = req.params.idutilizador;
+    console.log("[eventosRoutes] Retrieving eventos from user " + id_utilizador);
+    let result = await eventosModel.getUltimasAulas(id_utilizador);
+    res.status(result.status).send(result.data);
+
+  });
 
 module.exports = router;
