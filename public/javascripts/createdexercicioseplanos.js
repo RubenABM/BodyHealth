@@ -107,6 +107,9 @@ function createplanoHTML(plano){
 //LOAD DE EXERCICIO
 window.onload = async function(){
 
+  var user_admin = sessionStorage.getItem("user_admin");
+  var user_pt = sessionStorage.getItem("user_pt");
+  var user_nutri = sessionStorage.getItem("user_nutri");
     let recipeName = document.getElementById("nome1")
     let exerciseElem = document.getElementById("organize");
     var user_id = sessionStorage.getItem("user_id");
@@ -144,6 +147,32 @@ window.onload = async function(){
    getPlanos();
 
    getAllexercicios();
+
+   if(user_pt == 0 && user_admin == 0 && user_nutri == 1) {
+
+    //CASO SEJA NUTRICIONISTA...
+
+    document.getElementById("createexercise").style.visibility = "hidden";
+    document.getElementById("createplano").style.visibility = "hidden";
+
+    document.getElementById("categoriadoexercicio").style.marginLeft = "-300px";
+    document.getElementById("categoriadoexercicio").style.marginTop = "31px";
+
+    document.getElementById("categoriadoplano").style.marginLeft = "-300px";
+    document.getElementById("categoriadoplano").style.marginTop = "31px";
+
+    document.getElementById("dropdownmenu2").style.marginLeft = "-300px";
+    document.getElementById("dropdownmenu2").style.marginTop = "-20px";
+
+    document.getElementById("dropdownmenu").style.marginLeft = "-300px";
+    document.getElementById("dropdownmenu").style.marginTop = "-20px";
+
+    document.getElementById("tipodoexercicio").style.marginLeft = "1px";
+    document.getElementById("tipodoexercicio").style.textAlign = "center";
+
+  } else {
+    console.log("error");
+  }
 
    //getAllPlanos();
 
