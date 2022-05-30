@@ -541,6 +541,13 @@ user_admin,
 user_pt,
 user_nutri) values ('Ana Sousa', 'anasousa', 'Rua do Porto', 'anasousa@gmail.com', '0', '0', '0', '0');
 
+insert into utilizador(
+user_name ,
+user_password,
+user_morada,
+user_email,
+user_points) values ('AdminTeste', 'AdminTeste123', 'Rua Teste', 'AdminTeste@gmail.com', '9999');
+
 INSERT INTO item_aprovacao(tipoaprovacao_nome) VALUES ('Verificado');
 INSERT INTO item_aprovacao(tipoaprovacao_nome) VALUES ('Não Verificado');
 INSERT INTO item_aprovacao(tipoaprovacao_nome) VALUES ('Todos');
