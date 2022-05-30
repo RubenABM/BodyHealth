@@ -6,6 +6,8 @@ const connectionString = "postgres://zrznopdgddhzpb:c25ef89e544d07ff6382509ce1ec
 //heroku:
 //"postgres://zrznopdgddhzpb:c25ef89e544d07ff6382509ce1ec20a4535bffede8a2d96367c35ec1910e88b2@ec2-52-212-228-71.eu-west-1.compute.amazonaws.com:5432/d8sb04nd3dc7fk"
 //"postgres://NomeUtilizador:password@localhost:5432/students"
+
+//HEROKU NOVO: postgres://ztvljuubrwqlbj:6526b8c1fc57028302754761c52b50d7458c89db5987a09cbf74a5aefbe94573@ec2-52-30-67-143.eu-west-1.compute.amazonaws.com:5432/d5rohblj5db5qm
 console.log("connectionString = " + connectionString);
 
 
