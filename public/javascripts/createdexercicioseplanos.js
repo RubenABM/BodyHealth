@@ -13,7 +13,7 @@ async function getPlanos(){
 
      let planos = await $.ajax({
 
-       url: "/planostreino/all/",
+       url: "/planostreino/allplans/",
        method: "get",
        dataType: "json",
 
@@ -170,13 +170,29 @@ window.onload = async function(){
     document.getElementById("tipodoexercicio").style.marginLeft = "1px";
     document.getElementById("tipodoexercicio").style.textAlign = "center";
 
-  } else {
-    console.log("error");
+    document.getElementById("ptbarra").style.visibility = "hidden";
+    document.getElementById("nutribarra").style.visibility = "hidden";
+    document.getElementById("turmaseconsultas").innerHTML = "Clientes";
+    document.getElementById("criacoesexe").style.visibility = "hidden";
+
+  } else if(user_pt == 1 && user_admin == 0 && user_nutri == 0) {
+
+    document.getElementById("nutribarra").style.visibility = "hidden";
+ 
+    document.getElementById("ptbarra").style.visibility = "hidden";
+
+//    document.getElementById("criacoesalimentacao").style.visibility = "hidden";
+
+    document.getElementById("criacoesalim").style.visibility = "hidden";
+
+  } else if(user_pt == 0 && user_admin == 0 && user_nutri == 0) {
+
+    document.getElementById("nutribarra").style.visibility = "hidden";
+    document.getElementById("ptbarra").style.visibility = "hidden";
+
   }
 
    //getAllPlanos();
-
-   
  }
 
 

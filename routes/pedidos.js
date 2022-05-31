@@ -1,3 +1,5 @@
+///////////////////////VER LINHA 35//////////////////////////////////7
+
 var express = require('express');
 var router = express.Router();
 var pedidosModel = require('../models/pedidosModel');
@@ -27,6 +29,18 @@ router.get('/allpedidos/:idutilizador/', async function (req, res, next){
   let id_utilizador = req.params.idutilizador;
   console.log("[pedidosRoutes] Retrieving all pedidos from user id: " + id_utilizador);
   let result = await pedidosModel.getAllPedidosList(id_utilizador);
+  res.status(result.status).send(result.data);
+
+});
+
+
+//OBTER TODOS OS PEDIDOS PENDENTES DE UM NUTRICIONISTA --> TERMINAR /////////////////////////////////////////////
+
+router.get('/allpedidospendentess/:idutilizador/', async function (req, res, next){
+
+  let id_utilizador = req.params.idutilizador;
+  console.log("[pedidosRoutes] Retrieving all pedidos from user id: " + id_utilizador);
+  let result = await pedidosModel.getAllPedidosListPendentesFromNut(id_utilizador);
   res.status(result.status).send(result.data);
 
 });

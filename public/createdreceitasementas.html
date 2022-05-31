@@ -20,7 +20,7 @@
     <a class="skip-link sr-only" href="#skip-target">Skip to content</a>
     <div class="page-flex">
         <!-- ! Sidebar -->
-        <aside style="height: 1400px;" class="sidebar">
+        <aside class="sidebar">
             <div class="sidebar-start">
                 <div class="sidebar-head">
                     <!--<a href="/" class="logo-wrapper" title="Home">-->
@@ -74,16 +74,16 @@
                                 </span>
                             </a>
                             <ul class="cat-sub-menu">
-                                <li>
-                                    <a href="createdreceitasementas.html">Alimentação</a>
+                                <li id="criacoesalimentacao">
+                                    <a href="createdreceitasementas.html" id="criacoesalim">Alimentação</a>
                                 </li>
-                                <li>
-                                    <a href="createdexerciciosplanos.html">Exercício Físico</a>
+                                <li id="criacoesexerciciofisico">
+                                    <a href="createdexerciciosplanos.html" id="criacoesexe">Exercício Físico</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a class="show-cat-btn" href="##">
+                            <a class="show-cat-btn" href="##" id="eventoseaulasbarra">
                                 <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                     fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -96,18 +96,18 @@
                             </a>
                             <ul class="cat-sub-menu">
                                 <li>
-                                    <a href="eventosmarcados.html">Eventos marcados</a>
+                                    <a href="eventosmarcados.html" id="eventosmarcados">Eventos marcados</a>
+                                </li>
+                                <li id="turmaschoose">
+                                    <a href="turmasuser.html" id="turmaseconsultas">Turmas</a>
                                 </li>
                                 <li>
-                                    <a href="turmasuser.html">Turmas</a>
-                                </li>
-                                <li>
-                                    <a href="pedidospend.html">Pedidos pendentes</a>
+                                    <a href="pedidospend.html" id="pedidospendentes">Pedidos pendentes</a>
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a class="show-cat-btn" href="##">
+                        <li id="ptbarra">
+                            <a class="show-cat-btn" href="##" id="ptsbarra">
                                 <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                     fill="currentColor" class="bi bi-person-x-fill" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"
@@ -128,7 +128,15 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
+                        <li id="nutribarra">
+                            <li>
+                                <a href="gestãonutricionista.html"><svg style="margin-right: 8%;" id="perfiltext"
+                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                    class="bi bi-person-fill" viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                  </svg>Gestão</a>
+                              </li>
+                            <!---
                             <a class="show-cat-btn" href="##">
                                 <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                     fill="currentColor" class="bi bi-person-heart" viewBox="0 0 16 16">
@@ -140,6 +148,7 @@
                                     <span class="icon arrow-down" aria-hidden="true"></span>
                                 </span>
                             </a>
+                        -->
                             <ul class="cat-sub-menu">
                                 <li>
                                     <a href="nutricionistaprofile.html">Perfil Nutricionista</a>
@@ -181,17 +190,17 @@
                 </div>
             </div>
             <!--
-    <div class="sidebar-footer">
-        <a href="##" class="sidebar-user">
-            <span class="sidebar-user-img">
-                <picture><source srcset="./img/avatar/avatar-illustrated-01.webp" type="image/webp"><img src="./img/avatar/avatar-illustrated-01.png" alt="User name"></picture>
-            </span>
-            <div class="sidebar-user-info">
-                <span class="sidebar-user__title">Nafisa Sh.</span>
-                <span class="sidebar-user__subtitle">Support manager</span>
-            </div>
-        </a>
-    </div>-->
+<div class="sidebar-footer">
+<a href="##" class="sidebar-user">
+    <span class="sidebar-user-img">
+        <picture><source srcset="./img/avatar/avatar-illustrated-01.webp" type="image/webp"><img src="./img/avatar/avatar-illustrated-01.png" alt="User name"></picture>
+    </span>
+    <div class="sidebar-user-info">
+        <span class="sidebar-user__title">Nafisa Sh.</span>
+        <span class="sidebar-user__subtitle">Support manager</span>
+    </div>
+</a>
+</div>-->
         </aside>
         <div class="main-wrapper">
             <!-- ! Main nav 

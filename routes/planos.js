@@ -29,6 +29,14 @@ router.get('/:idplano', async function(req, res, next){
   
   });
 
+  router.get('/allplans', async function(req, res, next) {
+
+    console.log("[recipesRoutes] Retrieving all planos");
+    let result = await planosModel.getAllPlanoss();
+    res.status(result.status).send(result.data);
+
+  })
+
   router.get('/allplanos', async function(req, res, next) {
 
     let result = await planosModel.getAll();

@@ -1,5 +1,8 @@
 window.onload = async function(){
 
+  var user_admin = sessionStorage.getItem("user_admin");
+  var user_pt = sessionStorage.getItem("user_pt");
+  var user_nutri = sessionStorage.getItem("user_nutri");
     let recipeName = document.getElementById("nome1")
     let recipeElem = document.getElementById("organize");
     var user_id = sessionStorage.getItem("user_id");
@@ -32,6 +35,35 @@ window.onload = async function(){
  
     } catch(err){
       console.log(err);
+    }
+
+    if(user_pt == 1 && user_admin == 0 && user_nutri == 0) {
+
+      //CASO SEJA PT
+
+      document.getElementById("nutribarra").style.visibility = "hidden";
+
+      document.getElementById("ptbarra").style.visibility = "hidden";
+
+  //    document.getElementById("criacoesalimentacao").style.visibility = "hidden";
+
+      document.getElementById("criacoesalim").style.visibility = "hidden";
+      
+
+  
+    } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
+
+     document.getElementById("nutribarra").style.visibility = "hidden";
+     document.getElementById("ptbarra").style.visibility = "hidden";
+
+    } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
+
+     document.getElementById("ptbarra").style.visibility = "hidden";
+     document.getElementById("nutribarra").style.visibility = "hidden";
+     document.getElementById("criacoesexerciciofisico").style.visibility = "hidden";
+     document.getElementById("turmaseconsultas").innerHTML = "Clientes";
+     document.getElementById("criacoesexe").style.visibility = "hidden";
+
     }
  
  

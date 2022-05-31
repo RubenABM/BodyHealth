@@ -42,6 +42,34 @@ window.onload = async function(){
         document.getElementById("tb").style.visibility = "hidden";
     }*/
 
+    if(user_pt == 1 && user_admin == 0 && user_nutri == 0) {
+
+      //CASO SEJA PT
+
+      document.getElementById("nutribarra").style.visibility = "hidden";
+
+      document.getElementById("ptbarra").style.visibility = "hidden";
+
+  //    document.getElementById("criacoesalimentacao").style.visibility = "hidden";
+
+      document.getElementById("criacoesalim").style.visibility = "hidden";
+      
+
+  
+    } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
+
+     document.getElementById("nutribarra").style.visibility = "hidden";
+     document.getElementById("ptbarra").style.visibility = "hidden";
+
+    } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
+
+     document.getElementById("ptbarra").style.visibility = "hidden";
+     document.getElementById("nutribarra").style.visibility = "hidden";
+     document.getElementById("criacoesexerciciofisico").style.visibility = "hidden";
+     document.getElementById("turmaseconsultas").innerHTML = "Clientes";
+     document.getElementById("criacoesexe").style.visibility = "hidden";
+
+    }
     
 
  }

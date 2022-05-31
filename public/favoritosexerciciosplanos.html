@@ -10,6 +10,8 @@
     <!--<link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">-->
     <!-- Custom styles -->
     <link rel="stylesheet" href="./stylesheets/styleDashboard.css">
+
+    <script src="javascripts/favoritos.js"></script>
 </head>
 
 <body>
@@ -17,180 +19,189 @@
     <!-- ! Body -->
     <a class="skip-link sr-only" href="#skip-target">Skip to content</a>
     <div class="page-flex">
-        <!-- ! Sidebar -->
-        <aside style="height: 1400px;" class="sidebar">
-            <div class="sidebar-start">
-                <div class="sidebar-head">
-                    <!--<a href="/" class="logo-wrapper" title="Home">-->
-                    <a class="logo-wrapper" title="Home">
-                        <span class="sr-only">Home</span>
-                        <!-- <span class="icon logo" aria-hidden="true"></span>-->
-                        <div class="logo-text">
-                            <span class="logo-title">BodyHealth</span>
-                            <span class="logo-subtitle">Dashboard</span>
-                        </div>
+       <!-- ! Sidebar -->
+       <aside class="sidebar">
+        <div class="sidebar-start">
+            <div class="sidebar-head">
+                <!--<a href="/" class="logo-wrapper" title="Home">-->
+                <a class="logo-wrapper" title="Home">
+                    <span class="sr-only">Home</span>
+                    <!-- <span class="icon logo" aria-hidden="true"></span>-->
+                    <div class="logo-text">
+                        <span class="logo-title">BodyHealth</span>
+                        <span class="logo-subtitle">Dashboard</span>
+                    </div>
 
-                    </a>
-                    <button class="sidebar-toggle transparent-btn" title="Menu" type="button">
-                        <span class="sr-only">Toggle menu</span>
-                        <span class="icon menu-toggle" aria-hidden="true"></span>
-                    </button>
-                </div>
-                <div class="sidebar-body">
-                    <ul class="sidebar-body-menu">
-                        <li>
-                            <a class="show-cat-btn" href="##">
-                                <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                    fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                                </svg>Favoritos
-                                <span class="category__btn transparent-btn" title="Open list">
-                                    <span class="sr-only">Open list</span>
-                                    <span class="icon arrow-down" aria-hidden="true"></span>
-                                </span>
-                            </a>
-                            <ul class="cat-sub-menu">
-                                <li>
-                                    <a href="favoritosreceitasementas.html">Receitas e ementas</a>
-                                </li>
-                                <li>
-                                    <a href="favoritosexerciciosplanos.html">Exercícios e planos</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="show-cat-btn" href="##">
-                                <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                    fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
-                                </svg>Minhas Criações
-                                <span class="category__btn transparent-btn" title="Open list">
-                                    <span class="sr-only">Open list</span>
-                                    <span class="icon arrow-down" aria-hidden="true"></span>
-                                </span>
-                            </a>
-                            <ul class="cat-sub-menu">
-                                <li>
-                                    <a href="createdreceitasementas.html">Alimentação</a>
-                                </li>
-                                <li>
-                                    <a href="createdexerciciosplanos.html">Exercício Físico</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="show-cat-btn" href="##">
-                                <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                    fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z" />
-                                </svg>Eventos e aulas
-                                <span class="category__btn transparent-btn" title="Open list">
-                                    <span class="sr-only">Open list</span>
-                                    <span class="icon arrow-down" aria-hidden="true"></span>
-                                </span>
-                            </a>
-                            <ul class="cat-sub-menu">
-                                <li>
-                                    <a href="eventosmarcados.html">Eventos marcados</a>
-                                </li>
-                                <li>
-                                    <a href="turmasuser.html">Turmas</a>
-                                </li>
-                                <li>
-                                    <a href="pedidospend.html">Pedidos pendentes</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="show-cat-btn" href="##">
-                                <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                    fill="currentColor" class="bi bi-person-x-fill" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6.146-2.854a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z" />
-                                </svg></span>PTs
-                                <span class="category__btn transparent-btn" title="Open list">
-                                    <span class="sr-only">Open list</span>
-                                    <span class="icon arrow-down" aria-hidden="true"></span>
-                                </span>
-                            </a>
-                            <ul class="cat-sub-menu">
-                                <li>
-                                    <a href="ptprofile.html">Perfil PT</a>
-                                </li>
-                                <li>
-                                    <a href="gestãopt.html">Gestão
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="show-cat-btn" href="##">
-                                <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                    fill="currentColor" class="bi bi-person-heart" viewBox="0 0 16 16">
-                                    <path
-                                        d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z" />
-                                </svg>Nutricionistas
-                                <span class="category__btn transparent-btn" title="Open list">
-                                    <span class="sr-only">Open list</span>
-                                    <span class="icon arrow-down" aria-hidden="true"></span>
-                                </span>
-                            </a>
-                            <ul class="cat-sub-menu">
-                                <li>
-                                    <a href="nutricionistaprofile.html">Perfil Nutricionista</a>
-                                </li>
-                                <li>
-                                    <a href="gestãonutricionista.html">Gestão
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <span class="system-menu__title">Sobre mim</span>
-                    <ul class="sidebar-body-menu">
-                        <li>
-                            <a href="dashboardTemplate.html"><svg style="margin-right: 8%;"
-                                    xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                    class="bi bi-person-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                </svg>Perfil</a>
-                        </li>
-                        <li>
-                            <a href="map.html"> <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg"
-                                    width="18" height="18" fill="currentColor" class="bi bi-geo-alt-fill"
-                                    viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                                </svg> Mapa</a>
-                        </li>
-                        <li>
-                            <a href="index.html"><svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg"
-                                    width="18" height="18" fill="currentColor" class="bi bi-plug-fill"
-                                    viewBox="0 0 16 16">
-                                    <path
-                                        d="M6 0a.5.5 0 0 1 .5.5V3h3V.5a.5.5 0 0 1 1 0V3h1a.5.5 0 0 1 .5.5v3A3.5 3.5 0 0 1 8.5 10c-.002.434-.01.845-.04 1.22-.041.514-.126 1.003-.317 1.424a2.083 2.083 0 0 1-.97 1.028C6.725 13.9 6.169 14 5.5 14c-.998 0-1.61.33-1.974.718A1.922 1.922 0 0 0 3 16H2c0-.616.232-1.367.797-1.968C3.374 13.42 4.261 13 5.5 13c.581 0 .962-.088 1.218-.219.241-.123.4-.3.514-.55.121-.266.193-.621.23-1.09.027-.34.035-.718.037-1.141A3.5 3.5 0 0 1 4 6.5v-3a.5.5 0 0 1 .5-.5h1V.5A.5.5 0 0 1 6 0z" />
-                                </svg>Logout</a>
-                        </li>
-                    </ul>
-                </div>
+                </a>
+                <button class="sidebar-toggle transparent-btn" title="Menu" type="button">
+                    <span class="sr-only">Toggle menu</span>
+                    <span class="icon menu-toggle" aria-hidden="true"></span>
+                </button>
             </div>
-            <!--
-    <div class="sidebar-footer">
-        <a href="##" class="sidebar-user">
-            <span class="sidebar-user-img">
-                <picture><source srcset="./img/avatar/avatar-illustrated-01.webp" type="image/webp"><img src="./img/avatar/avatar-illustrated-01.png" alt="User name"></picture>
-            </span>
-            <div class="sidebar-user-info">
-                <span class="sidebar-user__title">Nafisa Sh.</span>
-                <span class="sidebar-user__subtitle">Support manager</span>
+            <div class="sidebar-body">
+                <ul class="sidebar-body-menu">
+                    <li>
+                        <a class="show-cat-btn" href="##">
+                            <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                            </svg>Favoritos
+                            <span class="category__btn transparent-btn" title="Open list">
+                                <span class="sr-only">Open list</span>
+                                <span class="icon arrow-down" aria-hidden="true"></span>
+                            </span>
+                        </a>
+                        <ul class="cat-sub-menu">
+                            <li>
+                                <a href="favoritosreceitasementas.html">Receitas e ementas</a>
+                            </li>
+                            <li>
+                                <a href="favoritosexerciciosplanos.html">Exercícios e planos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="show-cat-btn" href="##">
+                            <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+                            </svg>Minhas Criações
+                            <span class="category__btn transparent-btn" title="Open list">
+                                <span class="sr-only">Open list</span>
+                                <span class="icon arrow-down" aria-hidden="true"></span>
+                            </span>
+                        </a>
+                        <ul class="cat-sub-menu">
+                            <li id="criacoesalimentacao">
+                                <a href="createdreceitasementas.html" id="criacoesalim">Alimentação</a>
+                            </li>
+                            <li id="criacoesexerciciofisico">
+                                <a href="createdexerciciosplanos.html" id="criacoesexe">Exercício Físico</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="show-cat-btn" href="##" id="eventoseaulasbarra">
+                            <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z" />
+                            </svg>Eventos e aulas
+                            <span class="category__btn transparent-btn" title="Open list">
+                                <span class="sr-only">Open list</span>
+                                <span class="icon arrow-down" aria-hidden="true"></span>
+                            </span>
+                        </a>
+                        <ul class="cat-sub-menu">
+                            <li>
+                                <a href="eventosmarcados.html" id="eventosmarcados">Eventos marcados</a>
+                            </li>
+                            <li id="turmaschoose">
+                                <a href="turmasuser.html" id="turmaseconsultas">Turmas</a>
+                            </li>
+                            <li>
+                                <a href="pedidospend.html" id="pedidospendentes">Pedidos pendentes</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="ptbarra">
+                        <a class="show-cat-btn" href="##" id="ptsbarra">
+                            <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-person-x-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6.146-2.854a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z" />
+                            </svg></span>PTs
+                            <span class="category__btn transparent-btn" title="Open list">
+                                <span class="sr-only">Open list</span>
+                                <span class="icon arrow-down" aria-hidden="true"></span>
+                            </span>
+                        </a>
+                        <ul class="cat-sub-menu">
+                            <li>
+                                <a href="ptprofile.html">Perfil PT</a>
+                            </li>
+                            <li>
+                                <a href="gestãopt.html">Gestão
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="nutribarra">
+                        <li>
+                            <a href="gestãonutricionista.html"><svg style="margin-right: 8%;" id="perfiltext"
+                                xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                              </svg>Gestão</a>
+                          </li>
+                        <!---
+                        <a class="show-cat-btn" href="##">
+                            <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-person-heart" viewBox="0 0 16 16">
+                                <path
+                                    d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z" />
+                            </svg>Nutricionistas
+                            <span class="category__btn transparent-btn" title="Open list">
+                                <span class="sr-only">Open list</span>
+                                <span class="icon arrow-down" aria-hidden="true"></span>
+                            </span>
+                        </a>
+                    -->
+                        <ul class="cat-sub-menu">
+                            <li>
+                                <a href="nutricionistaprofile.html">Perfil Nutricionista</a>
+                            </li>
+                            <li>
+                                <a href="gestãonutricionista.html">Gestão
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <span class="system-menu__title">Sobre mim</span>
+                <ul class="sidebar-body-menu">
+                    <li>
+                        <a href="dashboardTemplate.html"><svg style="margin-right: 8%;"
+                                xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>Perfil</a>
+                    </li>
+                    <li>
+                        <a href="map.html"> <svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg"
+                                width="18" height="18" fill="currentColor" class="bi bi-geo-alt-fill"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                            </svg> Mapa</a>
+                    </li>
+                    <li>
+                        <a href="index.html"><svg style="margin-right: 8%;" xmlns="http://www.w3.org/2000/svg"
+                                width="18" height="18" fill="currentColor" class="bi bi-plug-fill"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M6 0a.5.5 0 0 1 .5.5V3h3V.5a.5.5 0 0 1 1 0V3h1a.5.5 0 0 1 .5.5v3A3.5 3.5 0 0 1 8.5 10c-.002.434-.01.845-.04 1.22-.041.514-.126 1.003-.317 1.424a2.083 2.083 0 0 1-.97 1.028C6.725 13.9 6.169 14 5.5 14c-.998 0-1.61.33-1.974.718A1.922 1.922 0 0 0 3 16H2c0-.616.232-1.367.797-1.968C3.374 13.42 4.261 13 5.5 13c.581 0 .962-.088 1.218-.219.241-.123.4-.3.514-.55.121-.266.193-.621.23-1.09.027-.34.035-.718.037-1.141A3.5 3.5 0 0 1 4 6.5v-3a.5.5 0 0 1 .5-.5h1V.5A.5.5 0 0 1 6 0z" />
+                            </svg>Logout</a>
+                    </li>
+                </ul>
             </div>
-        </a>
-    </div>-->
-        </aside>
+        </div>
+        <!--
+<div class="sidebar-footer">
+<a href="##" class="sidebar-user">
+<span class="sidebar-user-img">
+    <picture><source srcset="./img/avatar/avatar-illustrated-01.webp" type="image/webp"><img src="./img/avatar/avatar-illustrated-01.png" alt="User name"></picture>
+</span>
+<div class="sidebar-user-info">
+    <span class="sidebar-user__title">Nafisa Sh.</span>
+    <span class="sidebar-user__subtitle">Support manager</span>
+</div>
+</a>
+</div>-->
+    </aside>
         <div class="main-wrapper">
             <!-- ! Main nav 
     <nav class="main-nav--bg">

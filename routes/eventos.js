@@ -64,4 +64,29 @@ router.post('/insertnewevento', async function(req, res, next) {
 
   });
 
+
+  //OBTER 30 CONSULTAS MARCADAS DO LADO DO NUTRICIONISTA (GESTÃO DO NUTRICIONISTA)
+
+  router.get('/alleventos/consultas/nutricionista/:idprofissional', async function (req, res, next) {
+
+    let id_utilizador = req.params.idprofissional;
+    console.log("[eventosRoutes] Retrieving eventos from user " + id_utilizador);
+    let result = await eventosModel.getConsultFromNut(id_utilizador);
+    res.status(result.status).send(result.data);
+
+  });
+
+  //OBTER CLIENTES DO NUTRICIONISTA
+
+  router.get('/allclientes/:idprofissional', async function(req, res, next) {
+
+    let id_utilizador = req.params.idprofissional;
+    console.log("[eventosRoutes] Retrieving eventos from user " + id_utilizador);
+    let result = await eventosModel.getAllClientesFromNut(id_utilizador);
+    res.status(result.status).send(result.data);
+
+
+
+  });
+
 module.exports = router;
