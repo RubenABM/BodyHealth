@@ -54,6 +54,54 @@ module.exports.getRecipeById = async function(recipe_id) {
     }
 }
 
+module.exports.getMyFavoriteRecipes = async function(user_id) {
+    try {
+        let sql = "SELECT marcacao_favorito_receita.favorito_receita_id ,utilizador.user_name, receita.receita_titulo, item_base.basee_nome, receita_categoria.receita_categoria_nome FROM marcacao_favorito_receita " + "INNER JOIN receita ON receita.receita_id = marcacao_favorito_receita.receita_id " + "INNER JOIN utilizador ON utilizador.user_id = receita.receita_utilizador_id " + "INNER JOIN item_base ON item_base.basee_id = receita.receita_base_id " + "INNER JOIN receita_categoria ON receita_categoria.receita_categoria_id = receita.receita_categoriaa_id " + "WHERE marcacao_favorito_receita.utilizador_id = " + user_id;
+        let result = await pool.query(sql);
+        let recipefound = result.rows;
+        console.log("[recipesModel.getRecipeById] recipe = " + JSON.stringify(recipefound));
+        return { status: 200, data: recipefound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+//GETVERIFYRECIPES
+
+module.exports.getVerifyRecipes = async function(user_id, recipe_id) {
+    try {
+        let sql = "SELECT * FROM marcacao_favorito_receita " + "WHERE marcacao_favorito_receita.utilizador_id = " + user_id + " AND marcacao_favorito_receita.receita_id = " + recipe_id;
+        let result = await pool.query(sql);
+        let recipefound = result.rows;
+        console.log("[recipesModel.getRecipeById] recipe = " + JSON.stringify(recipefound));
+        return { status: 200, data: recipefound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+//APAGAR FAVORITO
+
+module.exports.deleteFavorite = async function(uti_id, recipe_id){
+
+   try {
+
+     let sql = "DELETE FROM marcacao_favorito_receita WHERE utilizador_id = " + uti_id + " AND receita_id = " + recipe_id;
+     let result = await pool.query(sql);
+     let recipesfoundcategory = result.rows;
+     console.log("[recipesModel.getRecipesUserByCategory] recipesbycategoryofuser = " + JSON.stringify(recipesfoundcategory));
+     return { status: 200, data: recipesfoundcategory };
+
+   } catch (err) {
+    console.log(err);
+    return { status: 500, data: err };
+} 
+
+
+}
+
 
 module.exports.getRecipesUserByCategory = async function(uti_id, cat_id) {
     try {

@@ -199,8 +199,59 @@ async function getEmentas(){
          is_receita_favorito: 1,
       
        }
+
+       //PREPARAR A VERIFICAÇÃO
+
+       let verifyRecipes = await $.ajax({
+  
+        url: "/recipes/verifyfavoritos/" + user_id + "/" + receita.receita_id,
+        method: "get",
+        dataType: "json",
+  
+      });
+
+      console.log(JSON.stringify(verifyRecipes));
+
+      let comprimento = verifyRecipes.length;
+
+      console.log("" + comprimento);
+
+      if(verifyRecipes.length == 0) {
+
+        let newExercise = await $.ajax({
+          url: "recipes/marcarfavorito/",
+          method: "post",
+          data: JSON.stringify(data),
+          contentType: "application/json",
+          dataType: "json"
+          });
+
+          window.alert("Created favorite with id: " + newExercise.favorito_receita_id);
+
+      } else {
+
+        let deleteRecipe = await $.ajax({
+
+           url: "recipes/deleterecipe/" + user_id + "/" + receita.receita_id,
+           method: "delete",
+           data: JSON.stringify(data),
+           contentType: "application/json",
+           dataType: "json"
+
+        });
+
+        window.alert("Recipe has been deleted!");
+
+
+      }
+     // if(verifyRecipes.length == 0)
+  
+     /* for(let exercise of verifyRecipes){
+        console.log("Ementa: " + exercise);
+        html += createexerciseHTML(exercise);
+      }*/
     
-       //ENVIAR METODO
+       /*ENVIAR METODO
        let newExercise = await $.ajax({
         url: "recipes/marcarfavorito/",
         method: "post",
@@ -211,7 +262,8 @@ async function getEmentas(){
     
         window.alert("Created favorite with id: " + newExercise.favorito_receita_id);
     
-       // document.getElementById("marcarrecipefav").style.backgroundColor = "red";
+       // document.getElementById("marcarrecipefav").style.backgroundColor = "red";*/
+      
     
      } catch (err){
     
@@ -221,6 +273,7 @@ async function getEmentas(){
     
     
     }
+  
 
 
 

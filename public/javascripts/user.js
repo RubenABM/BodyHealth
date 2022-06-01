@@ -147,6 +147,8 @@ async function login(){
     sessionStorage.setItem('user_admin', authUser.user_admin);
     sessionStorage.setItem('user_pt', authUser.user_pt);
     sessionStorage.setItem('user_nutri', authUser.user_nutri);
+    sessionStorage.setItem('user_name', authUser.user_name);
+    sessionStorage.setItem('user_points', authUser.user_points);
     window.alert('login sucessfull');
     
     window.location.assign("http://localhost:3000/dashboardTemplate.html");

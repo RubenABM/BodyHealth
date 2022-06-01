@@ -1,3 +1,14 @@
+function createfavoriteHTML(favoriterecipe){
+    
+  return "<div class='selectbox'><p name='criador1' id='criador1' style='text-align: center;font-size: 90%; margin-top: 2%;'>" + favoriterecipe.user_name + "</p><br><br><br>" + "<p name='nome1' id='nome1' style='margin-left: 2%;'>" + favoriterecipe.receita_titulo + "</p><hr id='divisorBoxes'>" + "<p name='base1' id='base1' style='margin-left: 2%;font-size: 90%'>" + favoriterecipe.basee_nome + "</p>" + "<p name='tipo1' id='tipo1' style='margin-left: 2%; font-size: 90%; margin-top: 2%'>" + favoriterecipe.receita_categoria_nome + "</p>" + "</div>" 
+ // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+  /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
+  RECEITA
+</p>*/
+
+}
+
 window.onload = async function(){
 
     var user_admin = sessionStorage.getItem("user_admin");
@@ -5,6 +16,32 @@ window.onload = async function(){
      var user_nutri = sessionStorage.getItem("user_nutri");
     var user_id = sessionStorage.getItem("user_id");
     console.log("setItem->prodId = " + user_id);
+    let ementaElem = document.getElementById("organize");
+
+    try {
+
+        let favoritosRecipes = await $.ajax({
+ 
+           url: "/recipes/myfavorites/" + user_id,
+           method: "get",
+           dataType: "json",      
+
+        });
+
+        let html = "";
+  
+      for(let favoriteRecipe of favoritosRecipes){
+        console.log("Ementa: " + favoriteRecipe);
+        html += createfavoriteHTML(favoriteRecipe);
+      }
+  
+      ementaElem.innerHTML = html;
+
+
+    }  catch(err){
+      console.log(err);
+    }
+
  /*
     try{
  
@@ -35,6 +72,7 @@ window.onload = async function(){
       //    document.getElementById("criacoesalimentacao").style.visibility = "hidden";
  
           document.getElementById("criacoesalim").style.visibility = "hidden";
+
           
  
       
@@ -51,6 +89,9 @@ window.onload = async function(){
          document.getElementById("criacoesexe").style.visibility = "hidden";
  
         }
+
+
+
  
  
  

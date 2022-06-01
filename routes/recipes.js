@@ -99,6 +99,43 @@ router.get('/receitasingredientes/:idreceita', async function(req, res, next){
 
 });
 
+router.get('/myfavorites/:idutilizador', async function(req, res, next){
+
+  let id_utilizador = req.params.idutilizador;
+
+  console.log("[recipesRoutes] Retrieving ingredients from recipe " + id_utilizador);
+
+  let result = await recipesModel.getMyFavoriteRecipes(id_utilizador);
+  res.status(result.status).send(result.data);
+
+});
+
+//REMOVER UM FAVORITO
+
+router.delete('/deleterecipe/:idutilizador/:idreceita', async function(req, res, next){
+
+    let id_utilizador = req.params.idutilizador;
+    let id_receita = req.params.idreceita;
+
+    let result = await recipesModel.deleteFavorite(id_utilizador, id_receita);
+    res.status(result.status).send(result.data);
+
+});
+
+//VERIFICAR RECEITAS FAVORITAS
+
+router.get('/verifyfavoritos/:idutilizador/:idreceita', async function(req, res, next){
+
+  let id_receita = req.params.idreceita;
+  let id_utilizador = req.params.idutilizador;
+
+  console.log("[recipesRoutes] Retrieving ingredients from recipe " + id_receita + "|" + id_utilizador);
+
+  let result = await recipesModel.getVerifyRecipes(id_utilizador, id_receita);
+  res.status(result.status).send(result.data);
+
+});
+
 //POST RECIPE
 
 /* POST a new recipe */
@@ -115,6 +152,8 @@ router.post('/marcarfavorito', async function(req, res, next) {
   let result = await recipesModel.saveRecipeFavorito(newRecipe);
   res.sendStatus(result.status).send(result.data);
 });
+
+
 
 
 module.exports = router;

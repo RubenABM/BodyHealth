@@ -3,6 +3,7 @@ window.onload = async function(){
     let recipeName = document.getElementById("nome1")
     let someprodutosElem = document.getElementById("organize");
     var user_id = sessionStorage.getItem("user_id");
+    var user_points = sessionStorage.getItem("user_points");
     console.log("setItem->userId = " + user_id);
  
     try{
@@ -33,6 +34,8 @@ window.onload = async function(){
     } catch(err){
       console.log(err);
     }
+
+    document.getElementById("pointsquantity").innerHTML = "PONTOS: " + user_points;
  
     getExercicios();
 
