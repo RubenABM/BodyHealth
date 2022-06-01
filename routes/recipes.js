@@ -109,7 +109,12 @@ router.post('/insertnewrecipe', async function(req, res, next) {
   res.sendStatus(result.status).send(result.data);
 });
 
-
+router.post('/marcarfavorito', async function(req, res, next) {
+  let newRecipe = req.body;
+  console.log("[recipesRoutes] Saving recipe " + JSON.stringify(newRecipe));
+  let result = await recipesModel.saveRecipeFavorito(newRecipe);
+  res.sendStatus(result.status).send(result.data);
+});
 
 
 module.exports = router;

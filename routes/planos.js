@@ -12,7 +12,7 @@ router.get('/allplanostreino', async function (req, res, next){
 
 });
 
-router.get('/:idplano', async function(req, res, next){
+router.get('/especificplano/:idplano', async function(req, res, next){
 
     let id_plano = req.params.idplano;
     console.log("[planosRoutes] Retrieving plan from with ID: " + id_plano);
@@ -35,7 +35,7 @@ router.get('/:idplano', async function(req, res, next){
     let result = await planosModel.getAllPlanoss();
     res.status(result.status).send(result.data);
 
-  })
+  });
 
   router.get('/allplanos', async function(req, res, next) {
 

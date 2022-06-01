@@ -62,6 +62,23 @@ module.exports.getParticipantTurma = async function(turma_id){
 
 }
 
+module.exports.getTurmasFromPT = async function(pt_id){
+
+    try{
+        let sql = "SELECT turma.turma_id, turma.turma_titulo, turma.turma_desc, utilizador.user_name FROM turma " + "INNER JOIN utilizador ON utilizador.user_id = turma.criador_id " + "WHERE turma.criador_id = " + pt_id;
+        let result = await pool.query(sql);
+        let participantesfound = result.rows;
+        console.log("[turmasModel.getParticipantTurma] participantes = " + JSON.stringify(participantesfound));
+        return {status: 200, data: participantesfound };
+
+    } catch(err){
+        console.log(err);
+        return { status: 500, data: err };
+    }
+
+}
+
+
 module.exports.saveParticipantTurma = async function(participante) {
     console.log("[turmasModel.saveParticipantTurma] turma = " + JSON.stringify(participante));
     /* checks all fields needed and ignores other fields

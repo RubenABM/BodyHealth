@@ -24,6 +24,30 @@ router.get('/allpedidoslimit/:idutilizador', async function (req, res, next){
 
 });
 
+//OBTER CONSULTAS MARCADAS DUM NUTRICIONISTA
+
+router.get('/allconsultas/:idutilizador/', async function (req, res, next){
+
+  let id_utilizador = req.params.idutilizador;
+  console.log("[pedidosRoutes] Retrieving all pedidos from user id: " + id_utilizador);
+  let result = await pedidosModel.getAllConsultasNut(id_utilizador);
+  res.status(result.status).send(result.data);
+
+});
+
+
+//OBTER AULAS MARCADAS DUM PT
+
+router.get('/allaulas/:idutilizador/', async function (req, res, next){
+
+  let id_utilizador = req.params.idutilizador;
+  console.log("[pedidosRoutes] Retrieving all pedidos from user id: " + id_utilizador);
+  let result = await pedidosModel.getAllAulasNut(id_utilizador);
+  res.status(result.status).send(result.data);
+
+});
+
+
 router.get('/allpedidos/:idutilizador/', async function (req, res, next){
 
   let id_utilizador = req.params.idutilizador;

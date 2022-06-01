@@ -26,6 +26,45 @@ module.exports.getAllPedidosLimit = async function(uti_id) {
     }
 }
 
+module.exports.getAllPedidosListPendentesFromNut = async function(uti_id) {
+    try {
+        let sql = "SELECT pedido.pedido_id , pedido.pedido_titulo, pedido.pedido_desc, pedido.pedido_hora, pedido.pedido_data, utilizador.user_name FROM pedido " + "INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_utilizador_id " + "WHERE pedido.pedido_profissional_id =  " + uti_id +  " AND pedido.pedido_estado_id = 4 " + " LIMIT 20";
+        let result = await pool.query(sql);
+        let pedidosfound = result.rows;
+        console.log("[pedidosModel.getAllPedidos] pedidos = " + JSON.stringify(pedidosfound));
+        return { status: 200, data: pedidosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+module.exports.getAllConsultasNut = async function(uti_id) {
+    try {
+        let sql = "SELECT pedido.pedido_id, pedido.pedido_titulo, pedido.pedido_desc, place.local_nome, place.local_morada, ST_X(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Longitude, ST_Y(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Latitude, utilizador.user_name, pedido.pedido_data, pedido.pedido_hora, pedido_tipo.pedido_type, pedido_estado.pedido_estado FROM pedido " + "INNER JOIN place ON place.local_id = pedido.pedido_local_id " + "INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_utilizador_id " + "INNER JOIN pedido_tipo ON pedido_tipo.pedido_type_id = pedido.pedido_tipo_id " + "INNER JOIN pedido_estado ON pedido_estado.pedido_estado_id = pedido.pedido_estado_id " + "WHERE pedido.pedido_tipo_id = 2 AND pedido.pedido_profissional_id = " + uti_id + " AND pedido.pedido_estado_id = 2";
+        let result = await pool.query(sql);
+        let pedidosfound = result.rows;
+        console.log("[pedidosModel.getAllPedidos] pedidos = " + JSON.stringify(pedidosfound));
+        return { status: 200, data: pedidosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+module.exports.getAllAulasNut = async function(uti_id) {
+    try {
+        let sql = "SELECT pedido.pedido_id, pedido.pedido_titulo, pedido.pedido_desc, place.local_nome, place.local_morada, ST_X(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Longitude, ST_Y(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Latitude, utilizador.user_name, pedido.pedido_data, pedido.pedido_hora, pedido_tipo.pedido_type, pedido_estado.pedido_estado FROM pedido " + "INNER JOIN place ON place.local_id = pedido.pedido_local_id " + "INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_utilizador_id " + "INNER JOIN pedido_tipo ON pedido_tipo.pedido_type_id = pedido.pedido_tipo_id " + "INNER JOIN pedido_estado ON pedido_estado.pedido_estado_id = pedido.pedido_estado_id " + "WHERE pedido.pedido_tipo_id = 1 AND pedido.pedido_profissional_id = " + uti_id + " AND pedido.pedido_estado_id = 2";
+        let result = await pool.query(sql);
+        let pedidosfound = result.rows;
+        console.log("[pedidosModel.getAllPedidos] pedidos = " + JSON.stringify(pedidosfound));
+        return { status: 200, data: pedidosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
 module.exports.getAllPedidosList = async function(uti_id) {
     try {
         let sql = "SELECT pedido.pedido_id, pedido.pedido_titulo, pedido.pedido_desc, place.local_nome, place.local_morada, place.geometry_info_point, ST_X(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Longitude, ST_Y(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Latitude, utilizador.user_name, utilizador.user_admin, utilizador.user_pt, utilizador.user_nutri, pedido.pedido_data, pedido_tipo.pedido_type, pedido_estado.pedido_estado, pedido.pedido_hora FROM pedido " + "INNER JOIN place ON place.local_id = pedido.pedido_local_id " + "INNER JOIN pedido_tipo ON pedido_tipo.pedido_type_id = pedido.pedido_tipo_id " + "INNER JOIN pedido_estado ON pedido_estado.pedido_estado_id = pedido.pedido_estado_id " + "INNER JOIN utilizador ON utilizador.user_id = pedido.pedido_profissional_id " + "WHERE pedido.pedido_utilizador_id = " + uti_id;

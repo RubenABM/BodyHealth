@@ -174,7 +174,7 @@ async function getEmentas(){
   
   function createrecipeHTML(recipe){
     
-    return "<div class='selectbox5' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + recipe.user_name +"</p>" + "<h2 style='color: white; font-size: 90%; margin-top: 1%; position: absolute;'>" + recipe.receita_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='color: white; font-size: 90%;'>" + recipe.basee_nome + "</h2>" + "<h2 style='color: white; font-size: 90%;'>" + recipe.receita_categoria_nome + "</h2>" + "</div>"
+    return "<div class='selectbox5' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + recipe.user_name +"</p>" + "<h2 style='color: white; font-size: 90%; margin-top: 1%; position: absolute;'>" + recipe.receita_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='color: white; font-size: 90%;'>" + recipe.basee_nome + "</h2>" + "<h2 style='color: white; font-size: 90%;'>" + recipe.receita_categoria_nome + "</h2>" + "<button style='background-color: #e8bf5c; color: white; font-size: small; margin-left: 140px; margin-top: -7px;' id='marcarrecipefav' onclick='addfavorito(" + JSON.stringify(recipe) + ")'><b>LIKE</b></button>" + "</div>"
    // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
   
     /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
@@ -182,6 +182,49 @@ async function getEmentas(){
   </p>*/
   
   }
+
+  ///////////////77777TERMINAR
+
+  async function addfavorito(receita) {
+
+    var user_id = sessionStorage.getItem("user_id");
+    console.log("Funcao Chamada");
+    
+     try {
+    
+       let data = {
+    
+         utilizador_id: user_id,
+         receita_id: receita.receita_id,
+         is_receita_favorito: 1,
+      
+       }
+    
+       //ENVIAR METODO
+       let newExercise = await $.ajax({
+        url: "recipes/marcarfavorito/",
+        method: "post",
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        dataType: "json"
+        });
+    
+        window.alert("Created favorite with id: " + newExercise.favorito_receita_id);
+    
+       // document.getElementById("marcarrecipefav").style.backgroundColor = "red";
+    
+     } catch (err){
+    
+      window.alert("failed to create the recipe");
+    
+     }
+    
+    
+    }
+
+
+
+  
   
   async function filterEmentasBase(type){
   

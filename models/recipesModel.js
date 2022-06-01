@@ -145,4 +145,34 @@ module.exports.saveRecipe = async function(recipe) {
 }
 
 
+module.exports.saveRecipeFavorito = async function(recipe) {
+    console.log("[recipesModel.saveRecipe] recipe = " + JSON.stringify(recipe));
+    /* checks all fields needed and ignores other fields
+    if (typeof user != "object" || failUser(user)) {
+        if (user.errMsg)
+            return { status: 400, data: { msg: user.errMsg } };
+        else
+            return { status: 400, data: { msg: "Malformed data" } };
+    }*/
+    try {
+
+        let sql =
+            "INSERT " +
+            "INTO marcacao_favorito_receita " +
+            "(utilizador_id, receita_id, is_receita_favorito) " +
+            "VALUES ($1, $2, $3) " +
+            "RETURNING receita_id";
+
+            console.log(recipe.utilizador_id + "|" + recipe.receita_id + "|" + recipe.is_receita_favorito);
+        let result = await pool.query(sql, [recipe.utilizador_id, recipe.receita_id, recipe.is_receita_favorito]);
+        let receitaaa = result.rows[0].favorito_receita_id;
+        return { status: 200, data: receitaaa };
+    } catch (err) {
+        console.log(err);
+        if (err.errno == 23503) // FK error
+            return { status: 400, data: { msg: "Type not found" } };
+        else
+            return { status: 500, data: err };
+    }
+}
 

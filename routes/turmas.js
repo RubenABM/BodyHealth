@@ -22,6 +22,18 @@ router.get('/turmasuser/:idutilizador', async function(req, res, next){
   
   });
 
+//OBTER AS TURMAS QUE UM PT POSSUI
+
+router.get('/allturmas/:idutilizador', async function (req, res, next) {
+
+   let id_utilizador = req.params.idutilizador;
+   console.log("[turmasRoutes] Retrieving classes from user " + id_utilizador);
+   let result = await turmasModel.getTurmasFromPT(id_utilizador);
+   res.status(result.status).send(result.data);
+
+
+});
+
 
 // VISUALIZAR RECEITAS E EMENTAS NUMA TURMA
 

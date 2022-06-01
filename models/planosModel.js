@@ -34,6 +34,7 @@ module.exports.getAllPlanoss = async function(){
 
     try {
         let sql = "SELECT plano.plano_treino_id, plano.plano_titulo, plano.plano_treino_desc, utilizador.user_name, item_aprovacao.tipoaprovacao_nome FROM plano " + "INNER JOIN utilizador ON utilizador.user_id = plano.plano_utilizador_id " + "INNER JOIN item_aprovacao ON item_aprovacao.aprovacao_tipo_id = plano.plano_treino_tipo_aprovacao_id " + "ORDER BY RANDOM() " + "LIMIT 20 ";
+        console.log(sql);
         let result = await pool.query(sql);
         let planofound = result.rows;
         console.log("[planosModel.getPlanoById] plano = " + JSON.stringify(planofound));

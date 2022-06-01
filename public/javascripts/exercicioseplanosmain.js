@@ -192,7 +192,6 @@ async function getPlanos(){
   
     }
   
-     //getAllPlanos();
    }
   
   
