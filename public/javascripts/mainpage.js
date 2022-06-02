@@ -256,9 +256,11 @@ async function getExercicios(){
   
   }
 
+  //ADICIONAR BOTÃO DE ADICIONAR Á LISTA DE PRODUTOS 'COMPRADOS'
+
  function createprodutoHTML(produto){
   
-    return "<div class='selectbox5' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + produto.produto_titulo +"</p>" +  "<h2 style='color: white; font-size: 90%;'> Pontos: " + produto.produto_points + "</h2>" + "<h2 style='color: white; font-size: 90%;'>" + produto.prod_category + "</h2>" + "</div>"
+    return "<div class='selectbox5' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top:10%;'>" + produto.produto_titulo +"</p>" +  "<h2 style='color: white; font-size: 90%;'> Pontos: " + produto.produto_points + "</h2>" + "<h2 style='color: white; font-size: 90%;'>" + produto.prod_category + "</h2>" + "<button class='adquirir' id='adquirirproduto' onclick='addprodutolist(" + JSON.stringify(produto) + ")'>ADQUIRIR" + "</button>" + "</div>"
    // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
   
     /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
@@ -266,3 +268,95 @@ async function getExercicios(){
   </p>*/
   
   }
+
+
+async function addprodutolist(produto){
+
+  var user_id = sessionStorage.getItem("user_id");
+  var user_points = sessionStorage.getItem("user_points");
+  console.log("Funcao Chamada");
+
+  try {
+
+    let data = {
+    
+      utilizador_id: user_id,
+      product_id: produto.produto_id,
+      isget: 1,
+   
+    }
+
+    //PREPARAR A VERIFICAÇÃO
+
+    let verifyProduto = await $.ajax({
+  
+      url: "/produtos/store/produtoslistcheck/" + user_id + "/" + produto.produto_id,
+      method: "get",
+      dataType: "json",
+
+    });
+
+    console.log(JSON.stringify(verifyProduto));
+
+    let comprimento = verifyProduto.length;
+
+    console.log("" + comprimento);
+
+    let numeroProdutosRetirar = user_points - produto.produto_points;
+
+    console.log("" + numeroProdutosRetirar);
+
+    if(verifyProduto.length == 0) {
+
+      let newExercise = await $.ajax({
+        url: "produtos/insertnewproducttolist/",
+        method: "post",
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        dataType: "json"
+        });
+
+        window.alert("Created favorite with id: " + newExercise.get_product_position_id);
+
+      let updatePontos = await $.ajax({
+
+        url: "produtos/updateuserpontos/" + user_id + "/" + numeroProdutosRetirar,
+        method: "update",
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        dataType: "json"
+
+      });
+
+      window.alert("Pontos updated");
+      
+
+      //REMOVER PONTOS APOS COMPRA (UPDATE AOS PONTOS)
+
+    } else {
+
+      let deleteProductOfList = await $.ajax({
+
+         url: "produtos/deleteprodutooflist/" + user_id + "/" + produto.produto_id,
+         method: "delete",
+         data: JSON.stringify(data),
+         contentType: "application/json",
+         dataType: "json"
+
+      });
+
+      window.alert("Produto has been deleted!");
+
+
+      
+    }
+
+  } catch(err){
+     window.alert("failed to create the produto");
+  }
+ 
+ 
+ }
+
+
+

@@ -241,8 +241,7 @@ async function getEmentas(){
         });
 
         window.alert("Recipe has been deleted!");
-
-
+        
       }
      // if(verifyRecipes.length == 0)
   

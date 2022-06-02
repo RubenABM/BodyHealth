@@ -65,6 +65,31 @@ module.exports.getAllSuplemento = async function() {
     }
 }
 
+module.exports.getVerifyListProdutos = async function(id_utilizador, id_produto) {
+    try {
+        let sql = "SELECT * FROM productsgetlist " + "WHERE productsgetlist.utilizador_id = " + id_utilizador + " AND productsgetlist.product_id = " + id_produto;
+        let result = await pool.query(sql);
+        let produtosfound = result.rows;
+        console.log("[produtoModel.getAllProducts] produtos = " + JSON.stringify(produtosfound));
+        return { status: 200, data: produtosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+module.exports.deleteProdutoFromList = async function(id_utilizador, id_produto) {
+    try {
+        let sql = "DELETE FROM productsgetlist WHERE productsgetlist.utilizador_id = " + id_utilizador + " AND productsgetlist.product_id = " + id_produto;
+        let result = await pool.query(sql);
+        let produtosfound = result.rows;
+        console.log("[produtoModel.getAllProducts] produtos = " + JSON.stringify(produtosfound));
+        return { status: 200, data: produtosfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
 
 module.exports.getSomeProdutos = async function() {
     try {
@@ -125,4 +150,21 @@ module.exports.saveProductList = async function(productList) {
         else
             return { status: 500, data: err };
     }
+}
+
+module.exports.updatePontosUtilizador = async function(uti_id, pontossobrantes){
+
+    try{
+        let sql = "UPDATE utilizador SET user_points = " + pontossobrantes + "WHERE user_id = " + uti_id;
+        let result = await pool.query(sql);
+        let productssfound = result.rows;
+        console.log("[produtoModel.getProductCategory] produtoscategoria = " + JSON.stringify(productssfound));
+        return {status: 200, data: productssfound };
+
+    } catch(err){
+        console.log(err);
+        return { status: 500, data: err };
+    }
+
+
 }

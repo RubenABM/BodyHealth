@@ -830,6 +830,7 @@ cursor: pointer;
    margin-left: 25px;
 }
 
+
 #organize2 {
    width: 130%;
    display: flex;
@@ -851,6 +852,19 @@ cursor: pointer;
    margin-top: 698px;
    margin-left: 1273px;
 }
+
+.adquirir {
+   background-color: #e8bf5c;
+   width: 90px;
+   height: 30px;
+   font-size: 14px;
+   margin-left: 120px;
+   margin-top: 100px;
+   position: relative;
+   z-index: 1;
+}
+
+
 
 .selectbox6 {
    width: 135px;

@@ -58,6 +58,15 @@ router.get('/store/allprodutos', async function (req, res, next){
 
   });
 
+  router.get('/store/produtoslistcheck/:idutilizador/:idproduto', async function(req, res, next){
+
+    let id_utilizador = req.params.idutilizador;
+    let id_produto = req.params.idproduto;
+    let result = await produtoModel.getVerifyListProdutos(id_utilizador, id_produto);
+    res.status(result.status).send(result.data);
+
+ });
+
   /* POST a new product to getlist */
 router.post('/insertnewproducttolist', async function(req, res, next) {
     let newProductList = req.body;
@@ -66,6 +75,27 @@ router.post('/insertnewproducttolist', async function(req, res, next) {
     res.sendStatus(result.status).send(result.data);
   });
 
+  //APAGAR PRODUTO DA LISTA DE PRODUTOS
+
+  router.delete('/deleteprodutooflist/:idutilizador/:idproduto', async function(req, res, next){
+
+    let id_utilizador = req.params.idutilizador;
+    let id_produto = req.params.idproduto;
+
+    let result = await produtoModel.deleteProdutoFromList(id_utilizador, id_produto);
+    res.status(result.status).send(result.data);
+
+});
+
+   router.put('/updateuserpontos/:idutilizador/:numeropontosretirar', async function(req, res, next) {
+
+      let id_utilizador = req.params.idutilizador;
+      let numeropontosretirar = req.params.numeropontosretirar;
+      
+      let result = await produtoModel.updatePontosUtilizador(id_utilizador, numeropontosretirar);
+      res.status(result.status).send(result.data);
+
+   });
 
   
   module.exports = router;
