@@ -351,8 +351,33 @@ window.onload = async function(){
          getAllClientes();
 
          getAllPedidosPendentes();
- 
+         
+         getSomePossibleClientes();
+
         }
+
+        //PREPARAR BARRA PARA A CRIACAO
+
+        const autocomplete2 = new google.maps.places.Autocomplete(document.getElementById("ruaaula"));
+
+        autocomplete2.addListener("place_changed", () => {
+
+        
+          const local = autocomplete2.getPlace();
+
+          var local_address = local.formatted_address;
+          var local_name = local.name;
+          sessionStorage.setItem("local_name", local_name);
+          sessionStorage.setItem("local_address", local_address);
+
+          const geometryinfopoint = "'POINT(" + local.geometry.location.lat() + " " + local.geometry.location.lng() + ")'";
+
+          sessionStorage.setItem("geometryinfopoint", geometryinfopoint);
+
+          insertplace();
+      
+          
+        })
  
 
         
@@ -362,6 +387,135 @@ window.onload = async function(){
         console.log(err);
  
     }*/
+ }
+
+ async function getSomePossibleClientes(){
+
+  let recipeName = document.getElementById("nome1")
+  let mealElem = document.getElementById("organize2");
+  var user_id = sessionStorage.getItem("user_id");
+  console.log("setItem->userId = " + user_id);
+
+  try{
+
+     let ementas = await $.ajax({
+
+       url: "/users/possibleclientes/",
+       method: "get",
+       dataType: "json",
+
+     });
+
+     console.log("[utilizador] utilizador = " + JSON.stringify(ementas));
+
+     let html = "";
+
+     for(let ementa of ementas){
+       console.log("Recipe: " + ementa);
+       html += createpossibleclienteHTML(ementa);
+     }
+
+     console.log("OBTEVE");
+   //  recipeName.innerHTML = html;
+
+     mealElem.innerHTML = html;
+
+
+  } catch(err){
+    console.log(err);
+  }
+
+
+
+ }
+
+ function createpossibleclienteHTML(cliente){
+  
+  return "<div style='display:inline-block' class='selectbox4'><br><h2 id='nomet1' style='margin-top: 2%; margin-left: 2%'>" + cliente.user_name + "</h2><a href='#'><button style='background-color: green;float: right;margin-top: 4%; margin-right: 2%;' class='buttoncalcularimc' onclick='adicionarcliente(" + JSON.stringify(cliente) + ")'><b>ADICIONAR</b></button>" + "</a></div>";
+
+  /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
+  RECEITA
+</p>*/
+
+}
+
+async function adicionarcliente(utilizador){
+
+  var myid = sessionStorage.getItem("user_id");
+  try {
+          
+    let data = {
+
+      utilizador_id: utilizador.user_id,
+      nutricionista_id: myid,
+      
+    }
+
+    let newExercise = await $.ajax({
+
+      url: "/users/addcliente",
+      method: "post",
+      data: JSON.stringify(data),
+      contentType: "application/json",
+      dataType: "json"
+
+    });
+
+    window.alert("Created cliente");
+
+  
+
+
+ } catch (err){
+
+  window.alert("failed to create the recipe");
+
+ }
+
+}
+
+
+ async function insertplace(){
+
+  var nome = sessionStorage.getItem("local_name");
+  const geometryinfo_point = sessionStorage.getItem("geometryinfopoint");
+
+  var address = sessionStorage.getItem("local_address");
+
+  try {
+          
+    let data = {
+
+      local_morada: address,
+      local_category_id: 1,
+      local_nome: nome,
+      ref_system_id: 4326,
+      geomtry_info_point: geometryinfo_point,
+      
+    }
+
+    let newExercise = await $.ajax({
+
+      url: "/places/addplace",
+      method: "post",
+      data: JSON.stringify(data),
+      contentType: "application/json",
+      dataType: "json"
+
+    });
+
+    window.alert("Created place");
+
+  
+
+
+ } catch (err){
+
+  window.alert("failed to create the recipe");
+
+ }
+
+
  }
 
  function createpedidoHTML(consulta){
@@ -385,3 +539,77 @@ window.onload = async function(){
  </p>*/
  
  }
+
+ function createuseroptionHTML(utilizador){
+  
+  // return "<div class='selectbox5' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + meal.user_name +"</p>" + "<h2 style='color: white; font-size: 90%; margin-top: 1%; position: absolute;'>" + meal.ementa_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='color: white; font-size: 90%;'>" + meal.basee_nome + "</h2>" + "<h2 style='color: white; font-size: 90%;'>" + meal.ementa_categoria_nome + "</h2>" + "</div>"
+ 
+  return "<";                                
+   /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
+   RECEITA
+ </p>*/
+ 
+ }
+
+
+ async function criarrrrconsulta(){
+
+  console.log("Funcao chamada");
+
+  var user_admin = sessionStorage.getItem("user_admin");
+
+  var user_pt = sessionStorage.getItem("user_pt");
+
+  var user_nutri = sessionStorage.getItem("user_nutri");
+
+  var user_id = sessionStorage.getItem("user_id");
+
+  var pedido_utilizador_id = sessionStorage.getItem("user_id");
+  var pedido_tipo_id = 0;
+  var pedido_estado_id = 0;
+  var aprovacao_nutricionista = 0;
+  var pedido_morada = sessionStorage.getItem("local_address");
+
+  console.log("funcionou ate aqui")
+
+  let getIdPlace = await $.ajax({
+
+    url: "/places/getplace/" + pedido_morada,
+    method: "get",
+    dataType: "json",
+
+  });
+
+  console.log("" + getIdPlace.local_id);
+
+  let place_id = getIdPlace.local_id;
+
+  
+      let data = {
+  
+        pedido_titulo: document.getElementById("tituloaula").value,
+        pedido_desc: document.getElementById("descricaoaula").value,
+        pedido_local_id: place_id,
+        pedido_utilizador_id: 8,
+        pedido_terminada: 0,
+        pedido_data: document.getElementById("dataaula").value,
+        pedido_tipo_id: 2,
+        pedido_estado_id: 4,
+        pedido_profissional_id: pedido_utilizador_id,
+        pedido_hora: document.getElementById("horaaula").value,
+    
+      }
+  
+      let newExercise = await $.ajax({
+  
+        url: "/pedidos/insertnewpedido",
+        method: "post",
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        dataType: "json"
+  
+      });
+  
+      window.alert("Created pedido");
+  
+}

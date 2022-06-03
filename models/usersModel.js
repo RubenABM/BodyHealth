@@ -29,6 +29,33 @@ module.exports.getUserById = async function(uti_id) {
     }
 }
 
+module.exports.getAllUsersComum = async function() {
+    try {
+        let sql = "SELECT * FROM utilizador WHERE user_admin = '0' AND user_pt = '0' AND user_nutri = '0'";
+        let result = await pool.query(sql);
+        let users = result.rows;
+        console.log("[usersModel.getUsers] users = " + JSON.stringify(users));
+        return { status: 200, data: users };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+module.exports.getSomeClientes = async function() {
+    try {
+        let sql = "SELECT * FROM utilizador WHERE user_admin = '0' AND user_pt = '0' AND user_nutri = '0' ORDER BY RANDOM() LIMIT 3";
+        let result = await pool.query(sql);
+        let users = result.rows;
+        console.log("[usersModel.getUsers] users = " + JSON.stringify(users));
+        return { status: 200, data: users };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+
 //TERMINAR
 module.exports.getRanking = async function() {
     try {
@@ -108,6 +135,37 @@ module.exports.saveUser = async function(user) {
         return { status: 500, result: err };
     }
 }
+
+module.exports.saveCliente = async function(user) {
+    //console.log("[usersModel.saveUser] user = " + JSON.stringify(user));
+    /* checks all fields needed and ignores other fields
+    if (typeof user != "object" || failUser(user)) {
+        if (user.errMsg)
+            return { status: 400, data: { msg: user.errMsg } };
+        else
+            return { status: 400, data: { msg: "Malformed data" } };
+    }*/
+    //let password = brcypt.hashSync(user.user_password, salt);
+    try {
+
+        let sql =
+            "INSERT " +
+            "INTO cliente " +
+            "(utilizador_id, nutricionista_id) " +
+            "VALUES ($1, $2) " +
+            "RETURNING cliente_id";
+
+            //console.log(user.user_name + "|" + user.user_password + "|" + user.user_morada + "|" + user.user_email + "|" + user.user_points + "|" + user.user_admin + "|" + user.user_pt + "|" + user.user_nutri);
+        let result = await pool.query(sql, [user.utilizador_id, user.nutricionista_id]);
+        
+        return { status: 200, result: result };
+    } catch (err) {
+
+        console.log(err);
+        return { status: 500, result: err };
+    }
+}
+
 
 //OBTER DADOS FÍSICOS DE UM UTILIZADOR
 

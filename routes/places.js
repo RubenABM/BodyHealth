@@ -9,6 +9,14 @@ router.get('/', async function(req, res, next) {
 
 });
 
+router.get('/getplace/:morada', async function(req, res, next) {
+  let moradaa = req.params.morada;
+  console.log("[placesRoutes] Retrieving all places");
+  let result = await placesModel.getOnlyOnePlace(moradaa);
+  res.status(result.status).send(result.data);
+
+});
+
 router.get('/:id(\\d+)', async function(req, res, next){
 
   let id = req.params.id;

@@ -165,6 +165,21 @@ module.exports.updatePontosUtilizador = async function(uti_id, pontossobrantes){
         console.log(err);
         return { status: 500, data: err };
     }
+}
 
+
+module.exports.getListaMyProdutos = async function(uti_id){
+
+    try{
+        let sql = "SELECT productsgetlist.get_product_position_id, produto.produto_titulo, produto.produto_desc, produto.produto_points, produto_category.prod_category, utilizador.user_name FROM productsgetlist " + "INNER JOIN utilizador ON utilizador.user_id = productsgetlist.utilizador_id " + "INNER JOIN produto ON produto.produto_id = productsgetlist.product_id " + "INNER JOIN produto_category ON produto_category.produto_category_id = produto.produto_categoria_id " + "WHERE productsgetlist.utilizador_id = " + uti_id;
+        let result = await pool.query(sql);
+        let productssfound = result.rows;
+        console.log("[produtoModel.getProductCategory] produtoscategoria = " + JSON.stringify(productssfound));
+        return {status: 200, data: productssfound };
+
+    } catch(err){
+        console.log(err);
+        return { status: 500, data: err };
+    }
 
 }

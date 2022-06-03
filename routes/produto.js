@@ -97,5 +97,15 @@ router.post('/insertnewproducttolist', async function(req, res, next) {
 
    });
 
+   //OBTER PRODUTOS COMPRADOS E OBTIDOS 
+
+   router.get('/store/meusprodutos/:id_utilizador', async function(req, res, next) {
+
+    let id_user = req.params.id_utilizador;
+    console.log("[produtosRoutes] Retrieving products from class with category id: " + id_user);
+    let result = await produtoModel.getListaMyProdutos(id_user);
+    res.status(result.status).send(result.data);
+
+  });
   
   module.exports = router;

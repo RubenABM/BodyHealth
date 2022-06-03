@@ -49,6 +49,117 @@ function createementaHTML(meal){
 
 }
 
+async function criarrrreceita(){
+
+  console.log("Funcao chamada");
+
+  var user_admin = sessionStorage.getItem("user_admin");
+
+  var user_pt = sessionStorage.getItem("user_pt");
+
+  var user_nutri = sessionStorage.getItem("user_nutri");
+
+  var user_id = sessionStorage.getItem("user_id");
+
+  var receita_utilizador_id = sessionStorage.getItem("user_id");
+  var receita_base_id = 0;
+  var receita_categoria_id = 0;
+  var aprovacao_nutricionista = 0;
+
+ 
+
+  var radioButtonSelected = document.querySelector('input[name="radio"]:checked');
+
+  var radioButton2Selected = document.querySelector('input[name="radio2"]:checked')
+
+  if(radioButtonSelected != null){
+
+    receita_categoria_id = radioButtonSelected.value;
+
+
+  } else {
+
+    console.log("no radio button selected");
+
+  }
+
+  if(radioButton2Selected != null){
+
+    receita_base_id = radioButton2Selected.value;
+
+  } else {
+
+     console.log("no radio button selected");
+
+  }
+
+
+
+ try {
+
+  if(user_admin == 0 && user_pt == 0 && user_nutri == 1){
+
+    let data = {
+
+      receita_titulo: document.getElementById("tituloreceita").value,
+      receita_desc: document.getElementById("descricaoreceita").value,
+      receita_tipo_aprovacao_id: 1,
+      receita_base_id: receita_base_id,
+      receita_categoriaa_id: receita_categoria_id,
+      receita_utilizador_id: user_id,
+      aprovacao_nutricionista: 1,
+  
+    }
+
+    let newExercise = await $.ajax({
+
+      url: "/recipes/insertnewrecipe",
+      method: "post",
+      data: JSON.stringify(data),
+      contentType: "application/json",
+      dataType: "json"
+
+    });
+
+    window.alert("Created recipe with id: " + newExercise.receita_id);
+
+  } else {
+
+    let data = {
+
+      receita_titulo: document.getElementById("tituloreceita").value,
+      receita_desc: document.getElementById("descricaoreceita").value,
+      receita_tipo_aprovacao_id: 2,
+      receita_base_id: receita_base_id,
+      receita_categoriaa_id: receita_categoria_id,
+      receita_utilizador_id: user_id,
+      aprovacao_nutricionista: 0,
+  
+    }
+
+    let newExercise = await $.ajax({
+
+      url: "/recipes/insertnewrecipe",
+      method: "post",
+      data: JSON.stringify(data),
+      contentType: "application/json",
+      dataType: "json"
+
+    });
+
+    window.alert("Created recipe with id: " + newExercise.receita_id);
+
+
+  }
+
+
+ } catch (err){
+
+  window.alert("failed to create the recipe");
+
+ }
+}
+
 
 //LOAD DE RECEITAS
 window.onload = async function(){

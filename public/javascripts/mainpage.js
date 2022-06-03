@@ -318,10 +318,12 @@ async function addprodutolist(produto){
 
         window.alert("Created favorite with id: " + newExercise.get_product_position_id);
 
+        window.alert("A chamar o updatePontos");
+
       let updatePontos = await $.ajax({
 
         url: "produtos/updateuserpontos/" + user_id + "/" + numeroProdutosRetirar,
-        method: "update",
+        method: "put",
         data: JSON.stringify(data),
         contentType: "application/json",
         dataType: "json"

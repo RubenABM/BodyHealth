@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Favoritos</title>
+    <title>Product List</title>
     <!-- Favicon -->
     <!--<link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">-->
     <!-- Custom styles -->
     <link rel="stylesheet" href="./stylesheets/styleDashboard.css">
 
-    <script src="javascripts/favoritos.js"></script>
+    <script src="javascripts/produtoslist.js"></script>
 </head>
 
 <body>
@@ -230,33 +230,30 @@
             <!-- ! Main -->
             <main class="main users chart-page" id="skip-target">
                 <div class="container">
-                    <h2 class="main-title">Meus favoritos</h2>
+                    <h2 class="main-title">Meus Produtos</h2>
                     <div class="row">
                         <div class="col-lg-9">
-                            <h2 style="margin-top: 40px;">Receitas</h2>
                             <div style="display:inline-block">
                                 <div style="float: right;" style="margin-top: 3%; margin-left: -300px">
 
                                 </div>
-                                <a href="receitasementass.html">
+                                <a href="shop.html">
                                 <button style="margin-top: 15%;float: left;"style="margin-left: 35px;" type="submit"
-                                    class="buttoncalcularimc"><b>Descobrir mais receitas</b></button><br><br>
+                                    class="buttoncalcularimc"><b>Descobrir mais produtos</b></button><br><br>
                                 </a>
                             </div>
                             <div style="margin-top:3%" id="organize">
                                 <div class="selectbox">
                                     <p name="criador1" id="criador1"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
+                                        style="text-align: center;font-size: 90%; margin-top: 2%;">TITULO DO PRODUTO
                                     </p>
                                     <br><br><br>
-                                    <p name="nome1" id="nome1 " style="margin-left: 2%;">NOME DA RECEITA</p>
+                                    <p name="nome1" id="nome1 " style="margin-left: 2%;">PONTOS</p>
                                     <hr id="divisorBoxes">
-                                    <p name="base1" id="base1" style="margin-left: 2%;font-size: 90%">BASE DA RECEITA
+                                    <p name="base1" id="base1" style="margin-left: 2%;font-size: 90%">CATEGORIA
                                     </p>
-                                    <p name="tipo1" id="tipo1" style="margin-left: 2%; font-size: 90%; margin-top: 2%">
-                                        TIPO
-                                        DA RECEITA</p>
                                 </div>
+                                <!---
                                 <div class="selectbox">
                                     <p name="criador2" id="criador2"
                                         style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
@@ -488,7 +485,7 @@
                                         DA RECEITA</p>
                                 </div>
 
-                                <!--
+                                
                                 <div class="selectbox">
                                     <p name="criador19" id="criador19"
                                         style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA RECEITA
@@ -528,298 +525,10 @@
                                     <p name="tipo21" id="tipo21"
                                         style="margin-left: 2%; font-size: 90%; margin-top: 2%;">TIPO DA RECEITA</p>
                                 </div>-->
+                            
                             </div>
                         </div>
-                        <div class="col-lg-9">
-                            <h2 style="margin-top: 10%;">Ementas</h2>
-                            <div style="display:inline-block">
-                                <div style="float: right;" style="margin-top: 3%; margin-left: -300px">
-
-                                </div>
-                                <a href="receitasementas.html">
-                                <button style="margin-top: 15%;float: left;"style="margin-left: 35px;" type="submit"
-                                    class="buttoncalcularimc"><b>Descobrir mais ementas</b></button><br><br>
-                                </a>
-                            </div>
-                            <div style="margin-top:3%" id="organize">
-                                <div class="selectbox">
-                                    <p name="criador22" id="criador22"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome22" id="nome22 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base22" id="base22" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo22" id="tipo22"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-                                <div class="selectbox">
-                                    <p name="criador23" id="criador23"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome23" id="nome23 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base23" id="base23" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo23" id="tipo23"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-                                <div class="selectbox">
-                                    <p name="criador24" id="criador24"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome24" id="nome24 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base24" id="base24" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo24" id="tipo24"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-
-                                <div class="selectbox">
-                                    <p name="criador25" id="criador25"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome25" id="nome25 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base25" id="base25" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo25" id="tipo25"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-
-                                <div class="selectbox">
-                                    <p name="criador26" id="criador26"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome26" id="nome26 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base26" id="base26" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo26" id="tipo26"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-
-                                <div class="selectbox">
-                                    <p name="criador27" id="criador27"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome27" id="nome27 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base27" id="base27" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo27" id="tipo27"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-                                <div class="selectbox">
-                                    <p name="criador7" id="criador7"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome28" id="nome28 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base28" id="base28" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo28" id="tipo28"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO DA EMENTA</p>
-                                </div>
-                                <div class="selectbox">
-                                    <p name="criador29" id="criador29"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome29" id="nome29 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base29" id="base29" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo29" id="tipo29"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-                                <div class="selectbox">
-                                    <p name="criador30" id="criador30"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome30" id="nome30 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base30" id="base30" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo30" id="tipo30"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-                                <div class="selectbox">
-                                    <p name="criador31" id="criador31"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome31" id="nome31 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base31" id="base31" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo31" id="tipo31"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-
-                                <div class="selectbox">
-                                    <p name="criador32" id="criador32"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome32" id="nome32 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base32" id="base32" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo32" id="tipo32"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-
-                                <div class="selectbox">
-                                    <p name="criador33" id="criador33"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome33" id="nome33" style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base33" id="base33" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo33" id="tipo33"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-
-                                <div class="selectbox">
-                                    <p name="criador34" id="criador34"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome34" id="nome34 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base34" id="base34" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo34" id="tipo34"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-
-                                <div class="selectbox">
-                                    <p name="criador14" id="criador7"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome35" id="nome35 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base35" id="base35" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo35" id="tipo35"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO DA EMENTA</p>
-                                </div>
-
-                                <div class="selectbox">
-                                    <p name="criador36" id="criador36"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome36" id="nome36 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base36" id="base36" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo36" id="tipo36"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-                                <div class="selectbox">
-                                    <p name="criador37" id="criador37"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome37" id="nome37 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base37" id="base37" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo37" id="tipo37"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-
-                                <div class="selectbox">
-                                    <p name="criador38" id="criador38"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome38" id="nome38 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base38" id="base38" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo38" id="tipo38"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-
-                                <div class="selectbox">
-                                    <p name="criador39" id="criador39"
-                                        style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                    <br><br><br>
-                                    <p name="nome39" id="nome39 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                    <hr id="divisorBoxes">
-                                    <p name="base39" id="base39" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA
-                                    </p>
-                                    <p name="tipo39" id="tipo39"
-                                        style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                        TIPO
-                                        DA EMENTA</p>
-                                </div>
-
-                                <!--
-                            <div class="selectbox">
-                                <p name="criador40" id="criador40"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome40" id="nome40 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base40" id="base40" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo40" id="tipo40" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO
-                                    DA EMENTA</p>
-                            </div>
-
-                            <div class="selectbox">
-                                <p name="criador41" id="criador41"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome41" id="nome41 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base41" id="base41" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo41" id="tipo41" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO DA EMENTA</p>
-                            </div>
-
-                            <div class="selectbox">
-                                <p name="criador42" id="criador42"
-                                    style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA EMENTA</p>
-                                <br><br><br>
-                                <p name="nome42" id="nome42 " style="margin-left: 2%;">NOME DA EMENTA</p>
-                                <hr id="divisorBoxes">
-                                <p name="base42" id="base42" style="margin-left: 2%;font-size: 90%">BASE DA EMENTA</p>
-                                <p name="tipo42" id="tipo42" style="margin-left: 2%; font-size: 90%; margin-top: 2%;">
-                                    TIPO DA EMENTA</p>
-                            </div>-->
-                            </div>
+                       
                         </div>
                     </div>
             </main>

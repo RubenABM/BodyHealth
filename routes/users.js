@@ -18,6 +18,21 @@ router.get('/leaderboard', async function(req, res, next) {
 
 });
 
+
+router.get('/possibleclientes', async function(req, res, next) {
+
+    let result = await usersModel.getSomeClientes();
+    res.status(result.status).send(result.data);
+ 
+ });
+
+router.get('/alluserscomum', async function(req, res, next) {
+
+    let result = await usersModel.getAllUsersComum();
+    res.status(result.status).send(result.data);
+ 
+ });
+
 router.get('/', async function(req, res, next) {
     console.log("[usersRoutes] Retrieving all users");
     let result = await usersModel.getUsers();
@@ -61,6 +76,13 @@ router.post('/insertnewuser', async function(req, res, next) {
     let newUser = req.body;
     //console.log("[usersRoutes] Saving user " + JSON.stringify(newUser));
     let result = await usersModel.saveUser(newUser);
+    res.status(result.status).send(result.result);
+});
+
+router.post('/addcliente', async function(req, res, next) {
+    let newUser = req.body;
+    //console.log("[usersRoutes] Saving user " + JSON.stringify(newUser));
+    let result = await usersModel.saveCliente(newUser);
     res.status(result.status).send(result.result);
 });
 
