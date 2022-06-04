@@ -57,6 +57,18 @@ router.get('/categoryementauser/:idutilizador/:idcategoriaementa', async functio
 
 });
 
+//GET FAVORITOS EMENTAS
+
+
+router.get('/myfavorites/:idutilizador', async function(req, res, next){
+
+  let id_utilizador = req.params.idutilizador;
+  console.log("[ementasRoutes] Retrieving meals from user " + id_utilizador);
+  let result = await ementasModel.getEmentasFavorites(id_utilizador);
+  res.status(result.status).send(result.data);
+
+});
+
 
 
 /*OBTER DETALHES DE UMA EMENTA*/

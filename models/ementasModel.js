@@ -65,6 +65,19 @@ module.exports.getEmentasUser = async function(uti_id) {
     }
 }
 
+module.exports.getEmentasFavorites = async function(user_id) {
+    try {
+        let sql = "SELECT marcacao_favorito_ementa.favorito_ementa_id ,utilizador.user_name, ementa.ementa_titulo, item_base.basee_nome, ementa_categoria.ementa_categoria_nome FROM marcacao_favorito_ementa " + "INNER JOIN ementa ON ementa.ementa_id = marcacao_favorito_ementa.ementa_id " + "INNER JOIN utilizador ON utilizador.user_id = ementa.ementa_utilizador_id " + "INNER JOIN item_base ON item_base.basee_id = ementa.ementa_base_id " + "INNER JOIN ementa_categoria ON ementa_categoria.ementa_categoria_id = ementa.ementa_categoriaa_id " + "WHERE marcacao_favorito_ementa.utilizador_id = " + user_id;
+        let result = await pool.query(sql);
+        let recipefound = result.rows;
+        console.log("[recipesModel.getRecipeById] recipe = " + JSON.stringify(recipefound));
+        return { status: 200, data: recipefound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
 /*CRIAR NOVA EMENTA*/
 
 module.exports.saveEmenta = async function(ementa) {

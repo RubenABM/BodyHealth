@@ -11,7 +11,7 @@ async function getEmentas(){
   
        let ementas = await $.ajax({
   
-         url: "/ementas/ementauser/" + user_id,
+         url: "/ementas/allementas/",
          method: "get",
          dataType: "json",
   
@@ -41,13 +41,53 @@ async function getEmentas(){
   
   function createementaHTML(meal){
     
-    return "<div class='selectbox5' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + meal.user_name +"</p>" + "<h2 style='color: white; font-size: 90%; margin-top: 1%; position: absolute;'>" + meal.ementa_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='color: white; font-size: 90%;'>" + meal.basee_nome + "</h2>" + "<h2 style='color: white; font-size: 90%;'>" + meal.ementa_categoria_nome + "</h2>" + "</div>"
+    return "<div class='selectbox5' id='selectbox55'  onclick='openmeal(" + JSON.stringify(meal) + ")'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + meal.user_name +"</p>" + "<h2 style='color: white; font-size: 90%; margin-top: 1%; position: absolute;'>" + meal.ementa_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='color: white; font-size: 90%;'>" + meal.basee_nome + "</h2>" + "<h2 style='color: white; font-size: 90%;'>" + meal.ementa_categoria_nome + "</h2>" + "</div>"
   
     /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
     RECEITA
   </p>*/
   
   }
+
+  async function openmeal(meal){
+
+    sessionStorage.setItem("meal_id", meal.ementa_id);
+
+    console.log("" + meal.ementa_titulo);
+
+    document.getElementById("popup-2").classList.toggle("active");
+
+    document.getElementById("ementatitulo").innerHTML = "" + meal.ementa_titulo;
+
+    document.getElementById("ementadescricao").innerHTML = "" + meal.ementa_descricao;
+ 
+    document.getElementById("ementabase").innerHTML = "" + meal.basee_nome;
+
+    document.getElementById("ementacategoria").innerHTML = "" + meal.ementa_categoria_nome;
+
+    document.getElementById("ementaaprovacao").innerHTML = "" + meal.tipoaprovacao_nome;
+
+    document.getElementById("ementacriador").innerHTML = "" + meal.user_name;
+
+    
+/*
+    document.getElementById("receitacategoria").innerHTML = "" + recipe.receita_categoria_nome;
+
+    document.getElementById("receitaaprovacao").innerHTML = "" + recipe.tipoaprovacao_nome;
+
+    document.getElementById("receitacriador").innerHTML = "" + recipe.user_name;
+    */
+
+ }
+
+ async function openrecipesofmeal(){
+
+   var ementa_id = sessionStorage.getItem("meal_id");
+
+   
+
+
+ }
   
   
   //LOAD DE RECEITAS
@@ -174,7 +214,7 @@ async function getEmentas(){
   
   function createrecipeHTML(recipe){
     
-    return "<div class='selectbox5' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + recipe.user_name +"</p>" + "<h2 style='color: white; font-size: 90%; margin-top: 1%; position: absolute;'>" + recipe.receita_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='color: white; font-size: 90%;'>" + recipe.basee_nome + "</h2>" + "<h2 style='color: white; font-size: 90%;'>" + recipe.receita_categoria_nome + "</h2>" + "<button style='background-color: #e8bf5c; color: white; font-size: small; margin-left: 140px; margin-top: -7px;' id='marcarrecipefav' onclick='addfavorito(" + JSON.stringify(recipe) + ")'><b>LIKE</b></button>" + "</div>"
+    return "<div class='selectbox5' id='selectbox55' onclick='openrecipe(" + JSON.stringify(recipe) + ")'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + recipe.user_name +"</p>" + "<h2 style='color: white; font-size: 90%; margin-top: 1%; position: absolute;'>" + recipe.receita_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='color: white; font-size: 90%;'>" + recipe.basee_nome + "</h2>" + "<h2 style='color: white; font-size: 90%;'>" + recipe.receita_categoria_nome + "</h2>" + "<button style='background-color: #e8bf5c; color: white; font-size: small; margin-left: 140px; margin-top: -7px;' id='marcarrecipefav' onclick='addfavorito(" + JSON.stringify(recipe) + ")'><b>LIKE</b></button>" + "</div>"
    // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
   
     /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
@@ -182,6 +222,27 @@ async function getEmentas(){
   </p>*/
   
   }
+
+  async function openrecipe(recipe){
+
+     console.log("" + recipe.receita_titulo);
+
+     document.getElementById("popup-1").classList.toggle("active");
+
+     document.getElementById("receitatitulo").innerHTML = "" + recipe.receita_titulo;
+
+     document.getElementById("receitadescricao").innerHTML = "" + recipe.receita_desc;
+  
+     document.getElementById("receitabase").innerHTML = "" + recipe.basee_nome;
+
+     document.getElementById("receitacategoria").innerHTML = "" + recipe.receita_categoria_nome;
+
+     document.getElementById("receitaaprovacao").innerHTML = "" + recipe.tipoaprovacao_nome;
+
+     document.getElementById("receitacriador").innerHTML = "" + recipe.user_name;
+
+  }
+
 
   ///////////////77777TERMINAR
 

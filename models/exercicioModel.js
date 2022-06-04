@@ -118,6 +118,19 @@ module.exports.getExercisesUser = async function(uti_id) {
     }
 }
 
+module.exports.getExerciciosFavorites = async function(user_id) {
+    try {
+        let sql = "SELECT marcacao_favorito_exercicio.favorito_exercicio_id ,utilizador.user_name, exercicio.exercicio_titulo, exercicio_tipo.exercicio_tipo_titulo, exercicio_dificuldade.exercicio_dificuldade FROM marcacao_favorito_exercicio " + "INNER JOIN exercicio ON exercicio.exercicio_id = marcacao_favorito_exercicio.exercicio_id " + "INNER JOIN utilizador ON utilizador.user_id = exercicio.exercicio_utilizador_id " + "INNER JOIN exercicio_tipo ON exercicio_tipo.exercicio_tipo_id = exercicio.exercicio_tipo_id " + "INNER JOIN exercicio_dificuldade ON exercicio_dificuldade.exercicio_dificuldade_id = exercicio.exercicio_dificuldade_id " + "WHERE marcacao_favorito_exercicio.utilizador_id = " + user_id;
+        let result = await pool.query(sql);
+        let recipefound = result.rows;
+        console.log("[recipesModel.getRecipeById] recipe = " + JSON.stringify(recipefound));
+        return { status: 200, data: recipefound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
 
 module.exports.getExercisesUserByCategory = async function(uti_id, cat_id) {
     try {

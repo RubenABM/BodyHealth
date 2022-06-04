@@ -45,6 +45,20 @@ module.exports.getAllPlanoss = async function(){
     }
 }
 
+module.exports.getPlanosFavorites = async function(user_id) {
+    try {
+        let sql = "SELECT marcacao_favorito_plano.favorito_plano_id, plano.plano_titulo, utilizador.user_name, item_aprovacao.aprovacao_tipo_id, item_aprovacao.tipoaprovacao_nome FROM marcacao_favorito_plano INNER JOIN plano ON plano.plano_treino_id = marcacao_favorito_plano.plano_treino_id INNER JOIN utilizador ON utilizador.user_id = plano.plano_utilizador_id INNER JOIN item_aprovacao ON aprovacao_tipo_id = plano.plano_treino_tipo_aprovacao_id WHERE marcacao_favorito_plano.utilizador_id = " + user_id;
+        let result = await pool.query(sql);
+        let recipefound = result.rows;
+        console.log("[recipesModel.getRecipeById] recipe = " + JSON.stringify(recipefound));
+        return { status: 200, data: recipefound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
+
 module.exports.getAll = async function(){
 
     try {

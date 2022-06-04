@@ -9,6 +9,53 @@ function createfavoriteHTML(favoriterecipe){
 
 }
 
+function createfavoriteementaHTML(favoriteementa){
+    
+  return "<div class='selectbox'><p name='criador1' id='criador1' style='text-align: center;font-size: 90%; margin-top: 2%;'>" + favoriteementa.user_name + "</p><br><br><br>" + "<p name='nome1' id='nome1' style='margin-left: 2%;'>" + favoriteementa.ementa_titulo + "</p><hr id='divisorBoxes'>" + "<p name='base1' id='base1' style='margin-left: 2%;font-size: 90%'>" + favoriteementa.basee_nome + "</p>" + "<p name='tipo1' id='tipo1' style='margin-left: 2%; font-size: 90%; margin-top: 2%'>" + favoriteementa.ementa_categoria_nome + "</p>" + "</div>" 
+ // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
+
+  /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
+  RECEITA
+</p>*/
+
+}
+
+async function getEmentasFavorito(){
+
+  var user_admin = sessionStorage.getItem("user_admin");
+  var user_pt = sessionStorage.getItem("user_pt");
+  var user_nutri = sessionStorage.getItem("user_nutri");
+ var user_id = sessionStorage.getItem("user_id");
+ console.log("setItem->prodId = " + user_id);
+ let ementaElem = document.getElementById("organize2");
+
+ try {
+
+     let favoritosEmentas = await $.ajax({
+
+        url: "/ementas/myfavorites/" + user_id,
+        method: "get",
+        dataType: "json",      
+
+     });
+
+     let html = "";
+
+   for(let favoriteEmenta of favoritosEmentas){
+     console.log("Ementa: " + favoriteEmenta);
+     html += createfavoriteementaHTML(favoriteEmenta);
+   }
+
+   ementaElem.innerHTML = html;
+
+
+ }  catch(err){
+   console.log(err);
+ }
+
+
+}
+
 window.onload = async function(){
 
     var user_admin = sessionStorage.getItem("user_admin");
@@ -41,6 +88,10 @@ window.onload = async function(){
     }  catch(err){
       console.log(err);
     }
+
+    getEmentasFavorito();
+
+    
 
  /*
     try{
