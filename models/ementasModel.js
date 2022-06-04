@@ -65,6 +65,19 @@ module.exports.getEmentasUser = async function(uti_id) {
     }
 }
 
+module.exports.getRecipesFromEmenta = async function(ementa_id) {
+    try {
+        let sql = "SELECT ementa_receita.ementa_receita_id, receita.receita_titulo, item_base.basee_nome, receita_categoria.receita_categoria_nome, utilizador.user_name FROM ementa_receita INNER JOIN receita ON receita.receita_id = ementa_receita.receita_id INNER JOIN item_base ON item_base.basee_id = receita.receita_base_id INNER JOIN receita_categoria ON receita_categoria.receita_categoria_id = receita.receita_categoriaa_id INNER JOIN utilizador ON utilizador.user_id = receita.receita_utilizador_id WHERE ementa_receita.ementa_id = " + ementa_id;
+        let result = await pool.query(sql);
+        let ementasfound = result.rows;
+        console.log("[ementasModel.getEmentasUser] recipes = " + JSON.stringify(ementasfound));
+        return { status: 200, data: ementasfound };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
 module.exports.getEmentasFavorites = async function(user_id) {
     try {
         let sql = "SELECT marcacao_favorito_ementa.favorito_ementa_id ,utilizador.user_name, ementa.ementa_titulo, item_base.basee_nome, ementa_categoria.ementa_categoria_nome FROM marcacao_favorito_ementa " + "INNER JOIN ementa ON ementa.ementa_id = marcacao_favorito_ementa.ementa_id " + "INNER JOIN utilizador ON utilizador.user_id = ementa.ementa_utilizador_id " + "INNER JOIN item_base ON item_base.basee_id = ementa.ementa_base_id " + "INNER JOIN ementa_categoria ON ementa_categoria.ementa_categoria_id = ementa.ementa_categoriaa_id " + "WHERE marcacao_favorito_ementa.utilizador_id = " + user_id;

@@ -30,6 +30,17 @@ router.get('/allementas/base/:idbase', async function (req, res, next){
 
 });
 
+//GET RECEITAS DUMA EMENTA
+
+
+router.get('/allreceitasfromementa/:idementa', async function(req, res, next){
+
+  let id_ementa = req.params.idementa;
+  console.log("[ementasRoutes] Retrieving meals from user " + id_ementa);
+  let result = await ementasModel.getRecipesFromEmenta(id_ementa);
+  res.status(result.status).send(result.data);
+
+});
 
 //GET DE EMENTAS POR UTILIZADOR
 

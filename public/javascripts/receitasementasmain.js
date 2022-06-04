@@ -82,12 +82,57 @@ async function getEmentas(){
 
  async function openrecipesofmeal(){
 
+  document.getElementById("popup-3").classList.toggle("active");
    var ementa_id = sessionStorage.getItem("meal_id");
 
-   
+   console.log("" + ementa_id);
+
+   let recipeName = document.getElementById("nome1")
+   let mealElem = document.getElementById("organize7");
+   var user_id = sessionStorage.getItem("user_id");
+   console.log("setItem->userId = " + user_id);
+ 
+   try{
+ 
+      let ementas = await $.ajax({
+ 
+        url: "/ementas/allreceitasfromementa/" + ementa_id,
+        method: "get",
+        dataType: "json",
+ 
+      });
+ 
+      console.log("[utilizador] utilizador = " + JSON.stringify(ementas));
+ 
+      let html = "";
+ 
+      for(let ementa of ementas){
+        console.log("Recipe: " + ementa);
+        html += createrecipefromementaHTML(ementa);
+      }
+ 
+      console.log("OBTEVE");
+    //  recipeName.innerHTML = html;
+ 
+      mealElem.innerHTML = html;
+ 
+ 
+   } catch(err){
+     console.log(err);
+   }
 
 
  }
+
+ function createrecipefromementaHTML(meal){
+    
+  return "<div id='selectbox88' style='background-color: white; width:500px; height: 150px; font-size: 15px; border: 1px solid black; border-radius: 5px; margin-left: -5px'>" + "<h2 style='margin-left: -120px; margin-top: 10px'>" + meal.receita_titulo + "</h2>" + "<h3 style='margin-left: -360px; margin-top: 15px;'>Base: " + meal.basee_nome + "</h3>" + "<h3 style='margin-left: -310px; margin-top: 15px;'>Categoria: " + meal.receita_categoria_nome + "</h3>" + "<h3 style='margin-left: -242px; margin-top: 15px;'>Criado por: " + meal.user_name + "</h3>" + "</div>"
+
+  /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
+  RECEITA
+</p>*/
+
+}
   
   
   //LOAD DE RECEITAS
