@@ -53,13 +53,176 @@ async function editarmeal(meal){
 
   sessionStorage.setItem("meal_id", meal.ementa_id);
 
-  
+  document.getElementById("popup-5").classList.toggle("active");
+
+  generateRandomRecipesForMeal();
+
+
 
 
 
 }
 
+async function generateRandomRecipesForMeal(){
 
+  var ementa_id = sessionStorage.getItem("meal_id");
+
+  console.log("" + ementa_id);
+
+  let recipeName = document.getElementById("nome1")
+  let mealElem = document.getElementById("organize22");
+  var user_id = sessionStorage.getItem("user_id");
+  console.log("setItem->userId = " + user_id);
+
+  try{
+
+     let ementas = await $.ajax({
+
+       url: "/recipes/allrecipes/",
+       method: "get",
+       dataType: "json",
+
+     });
+
+     console.log("[utilizador] utilizador = " + JSON.stringify(ementas));
+
+     let html = "";
+
+     for(let ementa of ementas){
+       console.log("Recipe: " + ementa);
+       html += createrecipesuggestionHTML(ementa);
+     }
+
+     console.log("OBTEVE");
+   //  recipeName.innerHTML = html;
+
+     mealElem.innerHTML = html;
+
+
+  } catch(err){
+    console.log(err);
+  }
+
+
+
+
+}
+
+function createrecipesuggestionHTML(receita){
+  
+  return "<div id='selectbox88' style='background-color: white; width:500px; height: 150px; font-size: 15px; border: 1px solid black; border-radius: 5px; margin-left: -5px'>" + "<h2 style='margin-left: -120px; margin-top: 10px'>" + receita.receita_titulo + "</h2>" + "<h3 style='margin-left: -360px; margin-top: 15px;'>Base: " + receita.basee_nome + "</h3>" + "<h3 style='margin-left: -310px; margin-top: 15px;'>Categoria: " + receita.receita_categoria_nome + "</h3>" + "<h3 style='margin-left: -242px; margin-top: 15px;'>Criado por: " + receita.user_name + "</h3>" + "<button style='background-color: lime; margin-left: 320px; margin-top: -20px; color: white;' onclick='adicionarreceita(" + JSON.stringify(receita) + ")' >ADICIONAR</button>" + "</div>"
+
+  /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
+  RECEITA
+</p>*/
+
+}
+
+async function adicionarreceita(recipe){
+
+  var ementaa_id = sessionStorage.getItem("meal_id");
+  var receitaa_id = recipe.receita_id;
+
+ try {
+
+   let data = {
+
+    receita_id: receitaa_id,
+    ementa_id: ementaa_id,
+
+   }
+
+   //ENVIAR METODO
+   let newExercise = await $.ajax({
+    url: "/recipes/insertnewrecipeforementa",
+    method: "post",
+    data: JSON.stringify(data),
+    contentType: "application/json",
+    dataType: "json"
+    });
+
+    window.alert("Created recipe with id: " + newExercise.ementa_receita_id);
+
+
+ } catch (err){
+
+  window.alert("failed to create the recipe");
+
+ }
+
+
+
+}
+
+async function criarrrementa(){
+
+  var uti_id = sessionStorage.getItem("user_id");
+
+  
+  var radioButtonSelected = document.querySelector('input[name="radio3"]:checked');
+
+  var radioButton2Selected = document.querySelector('input[name="radio4"]:checked');
+
+  var ementa_basee_id = 0;
+  var ementa_categoria_id = 0;
+
+  if(radioButtonSelected != null){
+
+    ementa_categoria_id = radioButtonSelected.value;
+
+
+  } else {
+
+    console.log("no radio button selected");
+
+  }
+
+  if(radioButton2Selected != null){
+
+    ementa_basee_id = radioButton2Selected.value;
+
+  } else {
+
+     console.log("no radio button selected");
+
+  }
+  
+
+ try {
+
+   let data = {
+
+    receita_titulo: document.getElementById("tituloementa").value,
+    ementa_descricao: document.getElementById("descricaoementa").value,
+    ementa_tipo_aprovacao_id: 2,
+    ementa_base_id: ementa_basee_id, 
+    ementa_categoriaa_id: ementa_categoria_id,
+    ementa_utilizador_id: uti_id,
+    aprovacao_nutricionista: 0,
+
+   }
+
+   //ENVIAR METODO
+   let newExercise = await $.ajax({
+    url: "/ementas/insertnewementa",
+    method: "post",
+    data: JSON.stringify(data),
+    contentType: "application/json",
+    dataType: "json"
+    });
+
+    window.alert("Created recipe with id: " + newExercise.ementa_id);
+
+
+ } catch (err){
+
+  window.alert("failed to create the recipe");
+
+ }
+
+
+
+}
 
 async function criarrrreceita(){
 

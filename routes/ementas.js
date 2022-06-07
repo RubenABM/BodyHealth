@@ -99,7 +99,7 @@ router.post('/insertnewementa', async function(req, res, next) {
   let newEmenta = req.body;
   console.log("[recipesRoutes] Saving recipe " + JSON.stringify(newEmenta));
   let result = await ementasModel.saveEmenta(newEmenta);
-  res.sendStatus(result.status).send(result.data);
+  res.status(result.status).send(result.data);
 });
 
 //GET RECEITAS DE UMA EMENTA

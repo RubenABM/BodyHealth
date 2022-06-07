@@ -224,3 +224,34 @@ module.exports.saveRecipeFavorito = async function(recipe) {
     }
 }
 
+
+module.exports.saveRecipeInEmenta = async function(recipe) {
+    console.log("[recipesModel.saveRecipe] recipe = " + JSON.stringify(recipe));
+    /* checks all fields needed and ignores other fields
+    if (typeof user != "object" || failUser(user)) {
+        if (user.errMsg)
+            return { status: 400, data: { msg: user.errMsg } };
+        else
+            return { status: 400, data: { msg: "Malformed data" } };
+    }*/
+    try {
+
+        let sql =
+            "INSERT " +
+            "INTO ementa_receita " +
+            "(receita_id, ementa_id) " +
+            "VALUES ($1, $2) " +
+            "RETURNING ementa_receita_id";
+
+            console.log(recipe.receita_id + "|" + recipe.ementa_id);
+        let result = await pool.query(sql, [recipe.receita_id, recipe.ementa_id]);
+        let receitaaa = result.rows[0].ementa_receita_id;
+        return { status: 200, data: receitaaa };
+    } catch (err) {
+        console.log(err);
+        if (err.errno == 23503) // FK error
+            return { status: 400, data: { msg: "Type not found" } };
+        else
+            return { status: 500, data: err };
+    }
+}
