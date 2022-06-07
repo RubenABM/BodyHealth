@@ -323,6 +323,7 @@ body{
    margin-top: 410px;
    cursor: pointer;
    transition: all 0.5s ease;
+   z-index: 3;
 
 }
 

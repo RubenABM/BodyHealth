@@ -467,10 +467,10 @@ async function showRotaForPlace(position){
       
       var distancia = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(parseFloat(myLatitude), parseFloat(myLongitude)), new google.maps.LatLng(parseFloat(latitude), parseFloat(longitude)));
  
-      var distanciashorted = (Math.round(distancia, 8)) / 1000;    //Arredondar
-      console.log("Distancia: " + distanciashorted);
+      var distanciashorted = (Math.round(distancia, 2)) / 1000;    //Arredondar
+      console.log("Distancia: " + distanciashorted.toFixed(2));
 
-      document.getElementById("distanceshow").innerHTML = "DISTÂNCIA: " + distanciashorted + " km";
+      document.getElementById("distanceshow").innerHTML = "DISTÂNCIA: " + distanciashorted.toFixed(2) + " km";
 
 
 }
@@ -823,8 +823,8 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer){
       
       var distancia = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(parseFloat(myLatitude), parseFloat(myLongitude)), new google.maps.LatLng(parseFloat(evento_latitude), parseFloat(evento_longitude)));
  
-      var distanciashorted = (Math.round(distancia, 8)) / 1000;    //Arredondar
-      console.log("Distancia: " + distanciashorted);
+      var distanciashorted = (Math.round(distancia, 2)) / 1000;    //Arredondar
+      console.log("Distancia: " + distanciashorted.toFixed(2));
 
       document.getElementById("distanceshow").innerHTML = "DISTÂNCIA: " + distanciashorted + " km";
 
