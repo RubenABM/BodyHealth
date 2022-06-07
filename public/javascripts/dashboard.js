@@ -41,7 +41,7 @@ window.onload = async function(){
 
         document.getElementById("nutribarra").style.display = "none";
         document.getElementById("ptbarra").style.display = "none";
-        document.getElementById("");
+        document.getElementById("nbarra").style.display = "none";
 
        } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
 
@@ -51,7 +51,7 @@ window.onload = async function(){
         document.getElementById("turmaseconsultas").innerHTML = "Clientes";
         document.getElementById("criacoesexe").style.visibility = "hidden";
 
-       }
+      }
 
 
 
