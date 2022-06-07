@@ -95,7 +95,7 @@ function createexerciciooHTML(exercicio){
 
 function createplanoHTML(plano){
   
-  return "<div class='selectbox5' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + plano.user_name +"</p>" + "<h2 style='color: white; font-size: 90%; margin-top: 1%; position: absolute;'>" + plano.plano_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='color: white; font-size: 90%;'>" + plano.tipoaprovacao_nome + "</h2>" + "</div>"
+  return "<div class='selectbox' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;color:black;'>" + plano.user_name +"</p>" + "<h2 style='font-size: 90%; margin-top: 1%; position: absolute; margin-left: 0.5%;'>" + plano.plano_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='font-size: 90%;margin-left: 1%'>" + plano.tipoaprovacao_nome + "</h2>" + "</div>"
  // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
 
   /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
@@ -187,8 +187,10 @@ window.onload = async function(){
 
   } else if(user_pt == 0 && user_admin == 0 && user_nutri == 0) {
 
-    document.getElementById("nutribarra").style.visibility = "hidden";
-    document.getElementById("ptbarra").style.visibility = "hidden";
+    document.getElementById("nutribarra").style.display = "none";
+    document.getElementById("ptbarra").style.display = "none";
+    document.getElementById("nbarra").style.display = "none";
+   
 
   }
 
@@ -237,7 +239,7 @@ window.onload = async function(){
  
  function createexerciseHTML(exercicio){
   
-    return "<div class='selectbox5' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + exercicio.user_name +"</p>" + "<h2 style='color: white; font-size: 90%; margin-top: 1%; position: absolute;'>" + exercicio.exercicio_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='color: white; font-size: 90%;'>" + exercicio.exercicio_tipo_titulo + "</h2>" + "<h2 style='color: white; font-size: 90%;'>" + exercicio.exercicio_dificuldade + "</h2>" + "</div>"
+    return "<div class='selectbox' id='selectbox6'>" + "<p name='criador1' id='criador1' style='text-align: center;color:black; font-size: 90%; margin-top: 10%;'>" + exercicio.user_name +"</p>" + "<h2 style='font-size: 90%; margin-top: 1%; position: absolute;  margin-left:0.5%'>" + exercicio.exercicio_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='font-size: 90%; margin-left:2%;'>" + exercicio.exercicio_tipo_titulo + "</h2>" + "<h2 style='font-size: 90%; margin-left:2%;'>" + exercicio.exercicio_dificuldade + "</h2>" + "</div>"
    // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
   
     /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
