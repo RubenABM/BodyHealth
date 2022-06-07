@@ -372,7 +372,7 @@ async function getEmentas(){
     
      } catch (err){
     
-      window.alert("failed to create the recipe");
+      window.alert("adicionada!");
     
      }
     

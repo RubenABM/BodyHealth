@@ -58,8 +58,10 @@ window.onload = async function(){
   
     } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
 
-     document.getElementById("nutribarra").style.visibility = "hidden";
-     document.getElementById("ptbarra").style.visibility = "hidden";
+      document.getElementById("nutribarra").style.display = "none";
+      document.getElementById("ptbarra").style.display = "none";
+      document.getElementById("nbarra").style.display = "none";
+     
 
     } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
 

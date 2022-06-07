@@ -42,7 +42,7 @@ window.onload = async function(){
         document.getElementById("nutribarra").style.display = "none";
         document.getElementById("ptbarra").style.display = "none";
         document.getElementById("nbarra").style.display = "none";
-
+       
        } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
 
         document.getElementById("ptbarra").style.visibility = "hidden";

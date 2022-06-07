@@ -646,6 +646,17 @@
     padding: 5px;
 }
 
+.selectbox6 {
+    width: 200px;
+    height: 200px;
+    border-radius: 6%;
+    cursor: pointer;
+    color: white;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+}
+
 .selectbox57{
 
     cursor: pointer;

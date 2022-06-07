@@ -405,8 +405,10 @@ window.onload = async function(){
 
         } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
 
-          document.getElementById("nutribarra").style.visibility = "hidden";
-          document.getElementById("ptbarra").style.visibility = "hidden";
+          document.getElementById("nutribarra").style.display = "none";
+        document.getElementById("ptbarra").style.display = "none";
+        document.getElementById("nbarra").style.display = "none";
+       
   
          } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
   
@@ -460,7 +462,7 @@ async function filterEmentasCategory(type){
 
 function createrecipeHTML(recipe){
   
-  return "<div class='selectbox5' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + recipe.user_name +"</p>" + "<h2 style='color: white; font-size: 90%; margin-top: 1%; position: absolute;'>" + recipe.receita_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='color: white; font-size: 90%;'>" + recipe.basee_nome + "</h2>" + "<h2 style='color: white; font-size: 90%;'>" + recipe.receita_categoria_nome + "</h2>" + "</div>"
+  return "<div class='selectbox6' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 5%; color:black;'>" + recipe.user_name +"</p>" + "<h2 style='font-size: 90%; margin-top: 1%; position: absolute;'>" + recipe.receita_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='font-size: 90%;'>" + recipe.basee_nome + "</h2>" + "<h2 style='font-size: 90%;'>" + recipe.receita_categoria_nome + "</h2>" + "</div>"
  // return "<div class='selectbox5' id='selectbox55'>" + recipe.receita_titulo + "</div>";
 
   /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
