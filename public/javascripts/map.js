@@ -22,6 +22,9 @@ async function filterplacescoffee(){
 
     navigator.geolocation.getCurrentPosition(showPositionForCoffees);
 
+
+
+
   } else {
 
     console.log("Erro");
@@ -312,6 +315,7 @@ if(status == google.maps.places.PlacesServiceStatus.OK) {
           position: results[i].geometry.location,
           title: results[i].name,
         });
+        
 
         const infotoshow = results[i].name;
 
@@ -330,6 +334,20 @@ if(status == google.maps.places.PlacesServiceStatus.OK) {
            //GET LOCATION
              if(navigator.geolocation) {
 
+              sessionStorage.setItem("marker_name", marker.title);
+      
+              sessionStorage.setItem("marker_latitude", marker.getPosition().lat());
+              sessionStorage.setItem("marker_longitude", marker.getPosition().lng());
+
+              var xxx = marker.getPosition().lat();
+
+
+
+              console.log("" + xxx);
+              
+
+              console.log("Coordenadas: " + marker.position);
+
               navigator.geolocation.getCurrentPosition(showRotaForPlace);
 
              } else {
@@ -346,6 +364,116 @@ if(status == google.maps.places.PlacesServiceStatus.OK) {
 
 }
 
+async function showRotaForPlace(position){
+
+  var latitude = sessionStorage.getItem("marker_latitude");
+  var longitude = sessionStorage.getItem("marker_longitude");
+
+  
+
+  console.log("" + latitude);
+
+  const directionsRenderer = new google.maps.DirectionsRenderer(); //CONSTANTE PARA RENDERIZAR A ROTA
+
+  const directionsService = new google.maps.DirectionsService(); //CONSTANTE DO SERVIÇO DE ROTAS PARA O MAPA
+
+  console.log("Atribuido");
+
+  var myLatitude = position.coords.latitude;
+  var myLongitude = position.coords.longitude;
+
+  sessionStorage.setItem("my_Latitude", myLatitude);
+  sessionStorage.setItem("my_Longitude", myLongitude);
+ // sessionStorage.setItem("place_title", placeTitle);
+
+  var coords = new google.maps.LatLng(myLatitude, myLongitude);
+
+  var newcoords = {lat: myLatitude, lng: myLongitude};
+
+  const marker1 = new google.maps.Marker({
+ 
+    map: map,
+    position: newcoords,
+    icon: {
+
+      url: "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
+
+    }
+
+  });
+
+  console.log("Atribuido novamente");
+
+  marker1.setMap(map);
+
+  console.log("Passou");
+
+  //RESTRICOES DE LIMITES DO MAPA
+
+  const PORTUGAL_MAPBOUNDS = {
+    //PONTO 1 -> NORTH E WEST
+    //PONTO 2 -> SOUTH E EAST
+    north:  42.138649,
+    south: 36.346396,
+    west: -10.031045,
+    east: -6.353972,
+
+  }
+
+  console.log("Passou denovo");
+
+  var options = { //Customização do mapa
+        
+    zoom: 15, //Zoom no mapa
+    center:{lat:  myLatitude, lng:  myLongitude}, //Centro do mapa quando este é aberto (Lisboa)
+    restriction: {
+
+        latLngBounds: PORTUGAL_MAPBOUNDS,
+        strictBounds: false,
+
+    },
+    disableDefaultUI: true, //Remove os controles default de um mapa Google | Formatação
+
+  }
+
+  console.log("Ja nao passou");
+
+  
+
+  var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
+
+  directionsRenderer.setMap(map);
+
+  console.log("A ir para o calculate");
+
+  
+  const selectedMode = "DRIVING"; //EXEMPLO COM MODO ESTATICO
+
+  console.log("DRIVING A CHEGAR!")
+
+  
+      directionsService.route({  
+        origin: {lat: parseFloat(myLatitude), lng: parseFloat(myLongitude)},  
+        destination: {lat: parseFloat(latitude), lng: parseFloat(longitude)},  
+        travelMode: google.maps.TravelMode.DRIVING  
+      }, function(response, status) {  
+        if (status === google.maps.DirectionsStatus.OK) {  
+          directionsRenderer.setDirections(response);  
+          console.log("Worked");
+        } else {  
+          window.alert('Directions request failed due to ' + status);  
+        }  
+      }); 
+      
+      var distancia = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(parseFloat(myLatitude), parseFloat(myLongitude)), new google.maps.LatLng(parseFloat(latitude), parseFloat(longitude)));
+ 
+      var distanciashorted = (Math.round(distancia, 8)) / 1000;    //Arredondar
+      console.log("Distancia: " + distanciashorted);
+
+      document.getElementById("distanceshow").innerHTML = "DISTÂNCIA: " + distanciashorted + " km";
+
+
+}
 
 
 async function initMap(lat, lng){
@@ -550,9 +678,11 @@ function createeventoHTML(evento){
 
 async function openmarker(evento){
 
-    sessionStorage.setItem("eventotitle",evento.evento_titulo);
-    sessionStorage.setItem("eventolatitude", evento.latitude);
+    sessionStorage.setItem("place_title",evento.evento_titulo);
+
+ sessionStorage.setItem("eventolatitude", evento.latitude);
     sessionStorage.setItem("eventolongitude", evento.longitude);
+
 
     console.log("Working");
 
@@ -566,7 +696,7 @@ async function openmarker(evento){
 
 function openmarcador(position) {
 
-  var evento_titulo = sessionStorage.getItem("eventotitle");
+  var evento_titulo = sessionStorage.getItem("place_title");
   var evento_latitude = sessionStorage.getItem("eventolatitude");
   var evento_longitude = sessionStorage.getItem("eventolongitude");
 
@@ -657,13 +787,15 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer){
 
   var myLatitude = sessionStorage.getItem("myLatitude");
   var myLongitude = sessionStorage.getItem("myLongitude");
+  var placetitle = sessionStorage.getItem("place_title");
+  
 
   console.log("Chegou"); ///CHEGA AQUI!
   console.log("" + myLatitude);
 
-  var evento_titulo = sessionStorage.getItem("eventotitle");
   var evento_latitude = sessionStorage.getItem("eventolatitude");
   var evento_longitude = sessionStorage.getItem("eventolongitude");
+  
 
   var eventocoords = new google.maps.LatLng(evento_latitude, evento_longitude);
   var neweventocoords = {lat: evento_latitude, lng: evento_longitude};
