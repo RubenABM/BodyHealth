@@ -617,6 +617,15 @@
     cursor: pointer;
 }
 
+.selectbox7 {
+    width: 160px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 6%;
+    cursor: pointer;
+}
+
 .selectbox3 {
     width: 900px;
     height: 160px;
