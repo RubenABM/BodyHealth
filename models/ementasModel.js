@@ -199,6 +199,38 @@ module.exports.saveEmentaFavorito = async function(ementa) {
     }
 }
 
+module.exports.saveNewEmenta = async function(ementa) {
+    console.log("[ementasModel.saveEmenta] ementa = " + JSON.stringify(ementa));
+    /* checks all fields needed and ignores other fields
+    if (typeof user != "object" || failUser(user)) {
+        if (user.errMsg)
+            return { status: 400, data: { msg: user.errMsg } };
+        else
+            return { status: 400, data: { msg: "Malformed data" } };
+    }*/
+    try {
+
+
+        let sql =
+            "INSERT " +
+            "INTO ementa " +
+            "(ementa_titulo, ementa_descricao, ementa_tipo_aprovacao_id, ementa_base_id, ementa_categoriaa_id, ementa_utilizador_id, aprovacao_nutricionista) " +
+            "VALUES ($1, $2, $3, $4, $5, $6, $7) " +
+            "RETURNING ementa_id";
+
+            console.log(ementa.ementa_titulo + "|" + ementa.ementa_descricao + "|" + ementa.ementa_tipo_aprovacao_id + "|" + ementa.ementa_base_id + "|" + ementa.ementa_categoriaa_id + "|" + ementa.ementa_utilizador_id + "|" + ementa.aprovacao_nutricionista);
+        let result = await pool.query(sql, [ementa.ementa_titulo, ementa.ementa_descricao, ementa.ementa_tipo_aprovacao_id,+ ementa.ementa_base_id, ementa.ementa_categoriaa_id, ementa.ementa_utilizador_id, ementa.aprovacao_nutricionista]);
+        let ementaaa = result.rows[0].ementa_id;
+        return { status: 200, data: ementaaa };
+    } catch (err) {
+        console.log(err);
+        if (err.errno == 23503) // FK error
+            return { status: 400, data: { msg: "Type not found" } };
+        else
+            return { status: 500, data: err };
+    }
+}
+
 
 module.exports.UpdateFavorito = async function(ementa_id, utilizador_id){
 

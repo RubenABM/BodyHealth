@@ -156,54 +156,94 @@ async function adicionarreceita(recipe){
 
 async function criarrrementa(){
 
-  var uti_id = sessionStorage.getItem("user_id");
+  console.log("Funcao chamada");
+
+  var user_admin = sessionStorage.getItem("user_admin");
+
+  var user_pt = sessionStorage.getItem("user_pt");
+
+  var user_nutri = sessionStorage.getItem("user_nutri");
+
+  var user_id = sessionStorage.getItem("user_id");
 
   
-  var radioButtonSelected = document.querySelector('input[name="radio3"]:checked');
-
-  var radioButton2Selected = document.querySelector('input[name="radio4"]:checked');
-
-  var ementa_basee_id = 0;
+  var ementa_base_id = 0;
   var ementa_categoria_id = 0;
 
- 
+  var aprovacao_nutricionista = 0;
+
+  var radioButton3Selected = document.querySelector('input[name="radio3"]:checked');
+
+  var radioButton4Selected = document.querySelector('input[name="radio4"]:checked');
+
+  try {
+
+    if(user_admin == 0 && user_pt == 0 && user_nutri == 1){
   
-
- try {
-
-   let data = {
-
-    receita_titulo: document.getElementById("tituloementa").value,
-    ementa_descricao: document.getElementById("descricaoementa").value,
-    ementa_tipo_aprovacao_id: 2,
-    ementa_base_id: radioButtonSelected.value, 
-    ementa_categoriaa_id: radioButton2Selected.value,
-    ementa_utilizador_id: uti_id,
-    aprovacao_nutricionista: 0,
-
+      let data = {
+  
+        ementa_titulo: document.getElementById("tituloementa").value,
+        ementa_desc: document.getElementById("descricaoementa").value,
+        ementa_tipo_aprovacao_id: 1,
+        ementa_base_id: radioButton4Selected,
+        ementa_categoriaa_id: radioButton3Selected.value,
+        ementa_utilizador_id: user_id,
+        aprovacao_nutricionista: 1,
+    
+      }
+  
+      let newExercise = await $.ajax({
+  
+        url: "/ementas/inserttttnnewementa",
+        method: "post",
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        dataType: "json"
+  
+      });
+  
+      window.alert("Created recipe with id: " + newExercise.receita_id);
+  
+    } else {
+  
+      let data = {
+  
+        ementa_titulo: document.getElementById("tituloementa").value,
+        ementa_desc: document.getElementById("descricaoementa").value,
+        ementa_tipo_aprovacao_id: 2,
+        ementa_base_id: radioButton4Selected,
+        ementa_categoriaa_id: radioButton3Selected.value,
+        ementa_utilizador_id: user_id,
+        aprovacao_nutricionista: 0,
+    
+      }
+  
+      let newExercise = await $.ajax({
+  
+        url: "/ementas/inserttttnnewementa",
+        method: "post",
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        dataType: "json"
+  
+      });
+  
+      window.alert("Created meal with id: " + newExercise.ementa_id);
+  
+  
+    }
+  
+  
+   } catch (err){
+  
+    window.alert("failed to create the recipe");
+  
    }
-
-   //ENVIAR METODO
-   let newExercise = await $.ajax({
-    url: "/ementas/insertnewementa",
-    method: "post",
-    data: JSON.stringify(data),
-    contentType: "application/json",
-    dataType: "json"
-    });
-
-    window.alert("Created recipe with id: " + newExercise.ementa_id);
-
-
- } catch (err){
-
-  window.alert("failed to create the recipe");
-
- }
-
 
 
 }
+
+
 
 async function criarrrreceita(){
 
