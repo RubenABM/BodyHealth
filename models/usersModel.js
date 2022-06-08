@@ -16,6 +16,19 @@ module.exports.getUsers = async function() {
     }
 }
 
+module.exports.getUserByUsername = async function(user_name) {
+    try {
+        let sql = "select * from utilizador where utilizador.user_name = '" +  user_name + "' ";
+        let result = await pool.query(sql);
+        let users = result.rows;
+        console.log("[usersModel.getUsers] users = " + JSON.stringify(users));
+        return { status: 200, data: users };
+    } catch (err) {
+        console.log(err);
+        return { status: 500, data: err };
+    }
+}
+
 module.exports.getUserById = async function(uti_id) {
     try {
         let sql = "select * from utilizador where utilizador.user_id = " + uti_id;

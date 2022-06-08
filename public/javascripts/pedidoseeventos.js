@@ -12,7 +12,7 @@ window.onload = async function(){
  
        let receitas = await $.ajax({
  
-         url: "/pedidos/alleventosmarcados/" + user_id,
+         url: "/pedidos/allpedidos/" + user_id,
          method: "get",
          dataType: "json",
  

@@ -171,7 +171,7 @@ module.exports.savePlace = async function(local){
             "VALUES ($1, $2, $3, $4, $5) " +
             "RETURNING local_id";
         let result = await pool.query(sql, [local.local_morada, local.local_category_id, local.local_nome, local.ref_system_id, local.geometry_info_point]);
-        let place = result.rows[0];
+        let place = result.rows;
         console.log("[placesModel.savePlace] place = " + JSON.stringify(place));
         return { status: 200, data: place };
     } catch (err) {

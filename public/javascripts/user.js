@@ -151,14 +151,14 @@ async function login(){
     sessionStorage.setItem('user_points', authUser.user_points);
     window.alert('login sucessfull');
     
-    window.location.assign("http://localhost:3000/dashboardTemplate.html");
+    window.location.assign("https://bodyhealthweb.herokuapp.com/dashboardTemplate.html");
 
     
     console.log(authUser.user_id);
    }  catch (err) {
     console.log(err);
     window.alert('something wron;g')
-    window.location.assign("http://localhost:3000/login.html");
+    window.location.assign("http://bodyhealthweb.herokuapp.com/login.html");
 
     }
 

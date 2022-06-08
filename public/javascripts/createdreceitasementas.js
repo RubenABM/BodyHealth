@@ -183,9 +183,9 @@ async function criarrrementa(){
       let data = {
   
         ementa_titulo: document.getElementById("tituloementa").value,
-        ementa_desc: document.getElementById("descricaoementa").value,
+        ementa_descricao: document.getElementById("descricaoementa").value,
         ementa_tipo_aprovacao_id: 1,
-        ementa_base_id: radioButton4Selected,
+        ementa_base_id: 2,
         ementa_categoriaa_id: radioButton3Selected.value,
         ementa_utilizador_id: user_id,
         aprovacao_nutricionista: 1,
@@ -209,7 +209,7 @@ async function criarrrementa(){
       let data = {
   
         ementa_titulo: document.getElementById("tituloementa").value,
-        ementa_desc: document.getElementById("descricaoementa").value,
+        ementa_descricao: document.getElementById("descricaoementa").value,
         ementa_tipo_aprovacao_id: 2,
         ementa_base_id: radioButton4Selected,
         ementa_categoriaa_id: radioButton3Selected.value,

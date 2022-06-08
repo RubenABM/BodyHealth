@@ -1,3 +1,4 @@
+
 async function getAllClientes(){
 
   let recipeName = document.getElementById("nome1")
@@ -76,15 +77,66 @@ async function getAllPedidosPendentes(){
 
 }
 
+
+//
+
 function createpedidopendenteHTML(pedido){
   
   // return "<div class='selectbox5' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + meal.user_name +"</p>" + "<h2 style='color: white; font-size: 90%; margin-top: 1%; position: absolute;'>" + meal.ementa_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 50%;'>" + "</hr>" + "<h2 style='color: white; font-size: 90%;'>" + meal.basee_nome + "</h2>" + "<h2 style='color: white; font-size: 90%;'>" + meal.ementa_categoria_nome + "</h2>" + "</div>"
  
-  return "<div style='height: 220px; width: 200px;' class='selectbox'> " + "<p name='titulopp1' id='titulopp1' style='text-align: center;font-size: 90%; margin-top: 2%;'> " + pedido.pedido_titulo + "</p>" + "<br><br>" + "<p name='nomepp1' id='nomepp1'  style='margin-top: 3%; text-align: center; font-size: small;'>" + pedido.user_name + "</p>" + "<p name='descpp1' id='descpp11'  style='margin-top: 3%; text-align: center; font-size: small;'>" + pedido.pedido_desc + "</p>" + "<p name='horapp1' id='horapp1' style='margin-top: 3%;text-align: center;font-size:small'>" + pedido.pedido_hora + "</p>" + "<p name='datapp1' id='datapp1' style='text-align: center; font-size: small; margin-top: 2%'>" + pedido.pedido_data + "</p>" + "<a href='map.html'>" + "<button style='margin-top: 3%; margin-left:32%; height: 35px;width: 70px;font-size: small;' class='buttoncalcularimc'><b>MAPA</b>" + "</button>" + "</a>" + "<button style='background-color: green ;margin-top: 3%;float: left ;margin-left:12%; height: 35px;width: 70px;font-size: small;' class='buttoncalcularimc'><b>Aceitar</b>" + "</button>" + "<button style='background-color:red;margin-top: 3%;margin-right:12%;float: right; height: 35px;width: 70px;font-size: small;' class='buttoncalcularimc'><b>Rejeitar</b>" + "</button>" + "</div>"                   
+  return "<div style='height: 220px; width: 200px;' class='selectbox'> " + "<p name='titulopp1' id='titulopp1' style='text-align: center;font-size: 90%; margin-top: 2%;'> " + pedido.pedido_titulo + "</p>" + "<br><br>" + "<p name='nomepp1' id='nomepp1'  style='margin-top: 3%; text-align: center; font-size: small;'>" + pedido.user_name + "</p>" + "<p name='descpp1' id='descpp11'  style='margin-top: 3%; text-align: center; font-size: small;'>" + pedido.pedido_desc + "</p>" + "<p name='horapp1' id='horapp1' style='margin-top: 3%;text-align: center;font-size:small'>" + pedido.pedido_hora + "</p>" + "<p name='datapp1' id='datapp1' style='text-align: center; font-size: small; margin-top: 2%'>" + pedido.pedido_data + "</p>" + "<a href='map.html'>" + "<button style='margin-top: 3%; margin-left:32%; height: 35px;width: 70px;font-size: small;' class='buttoncalcularimc'><b>MAPA</b>" + "</button>" + "</a>" + "<button style='background-color: green ;margin-top: 3%;float: left ;margin-left:12%; height: 35px;width: 70px;font-size: small;' class='buttoncalcularimc' onclick='updateEstado(" + JSON.stringify(pedido) + ")'><b>Aceitar</b>" + "</button>" + "<button style='background-color:red;margin-top: 3%;margin-right:12%;float: right; height: 35px;width: 70px;font-size: small;' class='buttoncalcularimc' onclick='updateEstado2(" + JSON.stringify(pedido) + ")'><b>Rejeitar</b>" + "</button>" + "</div>"                   
    /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
    RECEITA
  </p>*/
  
+ }
+
+ async function updateEstado(pedido){
+
+  try{
+
+    let ementas = await $.ajax({
+
+      url: "/pedidos/aceitar/" + pedido.pedido_id,
+      method: "put",
+      dataType: "json",
+
+    });
+
+    console.log("[utilizador] utilizador = " + JSON.stringify(ementas));
+
+    
+
+
+ } catch(err){
+   console.log(err);
+ }
+
+
+ }
+
+ async function updateEstado2(pedido){
+
+  try{
+
+    let ementas = await $.ajax({
+
+      url: "/pedidos/recusar/" + pedido.pedido_id,
+      method: "put",
+      dataType: "json",
+
+    });
+
+    console.log("[utilizador] utilizador = " + JSON.stringify(ementas));
+
+    
+
+
+ } catch(err){
+   console.log(err);
+ }
+
+
  }
 
  async function getAulasMarcadas(){
@@ -376,8 +428,10 @@ window.onload = async function(){
           sessionStorage.setItem("local_name", local_name);
           sessionStorage.setItem("local_address", local_address);
 
-          const geometryinfopoint = "'POINT(" + local.geometry.location.lat() + " " + local.geometry.location.lng() + ")'";
+          const geometryinfopoint = "POINT(" + local.geometry.location.lat() + " " + local.geometry.location.lng() + ")";
 
+          console.log("Geomtry info:" + geometryinfopoint);
+          console.log("" + ('POINT(-27.75 ,114.75)', 3857));
           sessionStorage.setItem("geometryinfopoint", geometryinfopoint);
 
           insertplace();
@@ -496,7 +550,7 @@ async function adicionarcliente(utilizador){
       local_category_id: 1,
       local_nome: nome,
       ref_system_id: 4326,
-      geomtry_info_point: geometryinfo_point,
+      geometry_info_point: geometryinfo_point,
       
     }
 
@@ -576,6 +630,21 @@ async function adicionarcliente(utilizador){
   var aprovacao_nutricionista = 0;
   var pedido_morada = sessionStorage.getItem("local_address");
 
+  let uti_idd = document.getElementById("nomealuno").value;
+  //OBTER ID DO UTILIZADOR
+
+  let getUserIdFromUsername = await $.ajax({
+
+    url: "/users/" + uti_idd,
+    method: "get",
+    dataType: "json",
+
+  });
+
+  console.log("[utilizador] utilizador = " + JSON.stringify(getUserIdFromUsername));
+
+  
+
   console.log("funcionou ate aqui")
 
   let getIdPlace = await $.ajax({
@@ -596,7 +665,7 @@ async function adicionarcliente(utilizador){
         pedido_titulo: document.getElementById("tituloaula").value,
         pedido_desc: document.getElementById("descricaoaula").value,
         pedido_local_id: place_id,
-        pedido_utilizador_id: 8,
+        pedido_utilizador_id: getUserIdFromUsername.user_id,
         pedido_terminada: 0,
         pedido_data: document.getElementById("dataaula").value,
         pedido_tipo_id: 2,

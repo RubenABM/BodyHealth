@@ -981,13 +981,15 @@
 
 }
 
-#organize {
+#organize, #organize5 {
     width: 130%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
 }
+
+
 
 #organize6 {
     width: 40%;

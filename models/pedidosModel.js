@@ -160,11 +160,11 @@ module.exports.savePedido = async function(pedido) {
             "INSERT " +
             "INTO pedido " +
             "(pedido_titulo, pedido_desc, pedido_local_id, pedido_utilizador_id, pedido_terminada, pedido_data, pedido_tipo_id, pedido_estado_id, pedido_profissional_id) " +
-            "VALUES ($1, $2, $3, $4, $5, $6, $7, 4, $9) " +
+            "VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) " +
             "RETURNING pedido_id";
 
-            console.log(pedido.pedido_titulo + "|" + pedido.pedido_desc + "|" + pedido.pedido_local_id + "|" + pedido.pedido_utilizador_id + "|" + pedido.pedido.pedido_terminada + "|" + pedido.pedido_data + "|" + pedido.pedido_tipo_id + "|" + pedido.pedido_estado_id + "|" + pedido.pedido_profissional_id);
-        let result = await pool.query(sql, [pedido.pedido_titulo, pedido.pedido_desc, pedido.pedido_local_id, pedido.pedido_utilizador_id, pedido.pedido.pedido_terminada, pedido.pedido_data, pedido.pedido_tipo_id, pedido.pedido_estado_id, pedido.pedido_profissional_id]);
+            console.log(pedido.pedido_titulo + "|" + pedido.pedido_desc + "|" + pedido.pedido_local_id + "|" + pedido.pedido_utilizador_id + "|" + pedido.pedido_terminada + "|" + pedido.pedido_data + "|" + pedido.pedido_tipo_id + "|" + pedido.pedido_estado_id + "|" + pedido.pedido_profissional_id);
+        let result = await pool.query(sql, [pedido.pedido_titulo, pedido.pedido_desc, pedido.pedido_local_id, pedido.pedido_utilizador_id, pedido.pedido_terminada, pedido.pedido_data, pedido.pedido_tipo_id, pedido.pedido_estado_id, pedido.pedido_profissional_id]);
         let pedidooo = result.rows[0].pedido_id;
         return { status: 200, data: pedidooo };
     } catch (err) {
@@ -197,7 +197,7 @@ module.exports.DeletePedido = async function(pedido_id){
 module.exports.UpdateAceitarPedido = async function(pedido_id){
 
     try {
-        let sql = "UPDATE pedido " + "SET pedido.pedido_estado_id = 2 " + "WHERE pedido.pedido_id = " + pedido_id;
+        let sql = "UPDATE pedido " + "SET pedido_estado_id = 2 " + "WHERE pedido_id = " + pedido_id;
         let result = await pool.query(sql);
         let pedidofound = result.rows;
         console.log("[ementasModel.getEmentasUser] pedido = " + JSON.stringify(pedidofound));
@@ -212,7 +212,7 @@ module.exports.UpdateAceitarPedido = async function(pedido_id){
 module.exports.UpdateRecusarPedido = async function(pedido_id){
 
     try {
-        let sql = "UPDATE pedido " + "SET pedido.pedido_estado_id = 3 " + "WHERE pedido.pedido_id = " + pedido_id;
+        let sql = "UPDATE pedido " + "SET pedido_estado_id = 3 " + "WHERE pedido_id = " + pedido_id;
         let result = await pool.query(sql);
         let pedidofound = result.rows;
         console.log("[ementasModel.getEmentasUser] pedido = " + JSON.stringify(pedidofound));

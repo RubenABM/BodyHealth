@@ -50,6 +50,16 @@ router.get('/ranking', async function(req, res, next){
 
 });
 
+//SEARCH USER BY USERNAME
+
+router.get('/getbyusername/:username', async function(req, res, next) {
+
+    let user_name = req.params.username; 
+    console.log("[usersRoutes] Retrieving user with username " + user_name);
+    let result = await usersModel.getUserByUsername(user_name);
+    res.status(result.status).send(result.data);
+
+});
 
 
 router.get('/:id(\\d+)', async function(req, res, next){
