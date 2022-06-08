@@ -166,26 +166,7 @@ async function criarrrementa(){
   var ementa_basee_id = 0;
   var ementa_categoria_id = 0;
 
-  if(radioButtonSelected != null){
-
-    ementa_categoria_id = radioButtonSelected.value;
-
-
-  } else {
-
-    console.log("no radio button selected");
-
-  }
-
-  if(radioButton2Selected != null){
-
-    ementa_basee_id = radioButton2Selected.value;
-
-  } else {
-
-     console.log("no radio button selected");
-
-  }
+ 
   
 
  try {
@@ -195,8 +176,8 @@ async function criarrrementa(){
     receita_titulo: document.getElementById("tituloementa").value,
     ementa_descricao: document.getElementById("descricaoementa").value,
     ementa_tipo_aprovacao_id: 2,
-    ementa_base_id: ementa_basee_id, 
-    ementa_categoriaa_id: ementa_categoria_id,
+    ementa_base_id: radioButtonSelected.value, 
+    ementa_categoriaa_id: radioButton2Selected.value,
     ementa_utilizador_id: uti_id,
     aprovacao_nutricionista: 0,
 

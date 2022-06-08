@@ -700,61 +700,145 @@
                             </div>
 
 
-                            <div style="z-index: 10; " class="form-popup" id="myForm2" >
+                            <div class="form-popup" id="myForm">
                                 <form action="/action_page.php" class="form-container">
                                     <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;">
-                                        <b>CRIAR EMENTA</b>
+                                        <b>CRIAR RECEITA</b>
                                     </h3>
                                     <div style="margin-top: 3%">
-                                        <div style="float: left; margin-left: 50px;">
-                                            <input id="tituloementa" class="inputvaluescreaterecipe"
-                                                style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%; width: 60%;"
+                                        <div style="float: left;">
+                                            <input id="tituloreceita" class="inputvaluescreaterecipe"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; margin-left: 0%; margin-top: 2%; width: 50%;"
                                                 type="text" placeholder="Título">
-                                            <textarea id="descricaoementa"
-                                                style="border:1px solid #2d2e2d; border-radius: 7px; width: 70px; height: 150px; margin-left: 0%; margin-top: 0%;"
+                                            <textarea id="descricaoreceita"
+                                                style="border:1px solid #2d2e2d; border-radius: 7px; width: 50%; height: 150px; margin-left: 0%; margin-top: 0%;"
                                                 placeholder="Descrição"></textarea>
 
                                         </div>
 
+                                      
+                                        <div id="ok" style="visibility: hidden;">
+                                        <h3
+                                            style="font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center; visibility: hidden;">
+                                            Selecionar ingredientes</h3>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo1" id="titulo1"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo2" id="titulo2"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
 
-
-                                        <div style="width: 22%; margin-top: 5%; float: left;" class="radio-list">
-                                            <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Categoria</b></h2>
-
-                                            <div class="radio-item"><input name="radio3" id="radio12" type="radio" value="1"><label
-                                                    for="radio11">Pequeno-Almoço</label></div>
-                                            <div class="radio-item"><input name="radio3" id="radio13" type="radio" value="2"><label
-                                                    for="radio12">Lanche</label></div>
-                                            <div class="radio-item"><input name="radio3" id="radio14" type="radio" value="3"><label
-                                                    for="radio13">Almoço</label></div>
-                                            <div class="radio-item"><input name="radio3" id="radio15" type="radio" value="4"><label
-                                                    for="radio14">Jantar</label></div>
-                                            <div class="radio-item"><input name="radio3" id="radio16" type="radio" value="5"><label
-                                                    for="radio15">Outros</label></div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo3" id="titulo3"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo4" id="titulo4"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo5" id="titulo5"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo6" id="titulo6"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo7" id="titulo7"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo8" id="titulo8"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div style="border:1px solid #2d2e2d; border-radius: 7px; float: right;"
+                                            id="items">
+                                            <div class="selectbox2">
+                                                <p name="titulo9" id="titulo9"
+                                                    style="text-align: center;font-size: 90%; margin-top: 40%;">Título
+                                                </p>
+                                            </div>
+                                        </div>
 
                                         </div>
 
-                                        <div style="width: 22%;  margin-right: 100px;  margin-top: 5%; float: right;" class="radio-list">
+
+                                        <div style="width: 22%; margin-top: -40%; margin-right: 36px; margin-left: 415px; float: left;" class="radio-list">
+                                            <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Categoria</b></h2>
+
+                                            <div class="radio-item"><input name="radio" id="radio1" type="radio" value="1"><label
+                                                    for="radio1">Entrada</label></div>
+                                            <div class="radio-item"><input name="radio" id="radio2" type="radio" value="2"><label
+                                                    for="radio2">Prato Principal</label></div>
+                                            <div class="radio-item"><input name="radio" id="radio3" type="radio" value="3"><label
+                                                    for="radio3">Sobremesa</label></div>
+                                            <div class="radio-item"><input name="radio" id="radio4" type="radio" value="4"><label
+                                                    for="radio4">Bebida</label></div>
+                                            <div class="radio-item"><input name="radio" id="radio5" type="radio" value="5"><label
+                                                    for="radio5">Outros</label></div>
+
+                                        </div>
+
+                                        <div style="width: 22%;  margin-top: -40%; float: right; margin-left: 500px;" class="radio-list">
                                             <h2 style="font-size: 16px; margin-bottom: 5%;"><b>Base</b></h2>
-                                            <div class="radio-item2"><input name="radio4" id="radio17"
-                                                    type="radio"><label for="radio16" value="1">Carne</label></div>
-                                            <div class="radio-item2"><input name="radio4" id="radio18"
-                                                    type="radio"><label for="radio17" value="2">Peixe</label></div>
-                                            <div class="radio-item2"><input name="radio4" id="radio19"
-                                                    type="radio"><label for="radio18" value="3">Vegan</label></div>
-                                            <div class="radio-item2"><input name="radio4" id="radio20"
-                                                    type="radio"><label for="radio19" value="5">Frutas</label></div>
-                                            <div class="radio-item2"><input name="radio4" id="radio21"
-                                                    type="radio"><label for="radio20">Outros</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio6"
+                                                    type="radio" value="1"><label for="radio6">Carne</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio7"
+                                                    type="radio" value="2"><label for="radio7">Peixe</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio8"
+                                                    type="radio" value="3"><label for="radio8">Vegan</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio9"
+                                                    type="radio" value="5"><label for="radio9">Frutas</label></div>
+                                                    <div class="radio-item2"><input name="radio2" id="radio10"
+                                                        type="radio" value="4"><label for="radio9">Snack</label></div>
+                                            <div class="radio-item2"><input name="radio2" id="radio11"
+                                                    type="radio" value="6"><label for="radio10">Outros</label></div>
 
                                         </div>
 
                                     </div>
                                     <button style="margin-top:2%" type="button" class="buttoncalcularimc"
-                                        onclick="closeForm2()"> Fechar</button>
-                                        <button id="criarementa" style="margin-top:2%" type="button" class="buttoncalcularimc" onclick="criarrrementa()"> Criar</button>
+                                        onclick="closeForm()"> Fechar</button>
+                                    <button id="criarreceita" style="margin-top:2%" type="button" class="buttoncalcularimc" onclick="criarrrreceita()"> Criar</button>
                                 </form>
+
                             </div>
+
 
                             <div class="popup" id="popup-5">
 
