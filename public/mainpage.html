@@ -1,16 +1,18 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Página Principal </title>
-    <link rel="stylesheet" href="./stylesheets/mainpage.css">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-   <!--- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Página Principal </title>
+  <link rel="stylesheet" href="./stylesheets/mainpage.css">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <!--- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
 
-    <script src="javascripts/mainpage.js"></script> <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
+  <script src="javascripts/mainpage.js"></script>
+  <!--Ligar o codigo JavaScript a um ficheiro JavaScript-->
 
 </head>
 
@@ -20,87 +22,90 @@
   <!--Barra de navegação-->
   <div style="background-color: #1e1f1e;" class="topnav">
     <a href="index.html">
-        <img src="./images/logobranconobg.png" class="img-fluid"
-            style="cursor: pointer; position: absolute; margin-left: -99%; width: 180px; margin-top: -1%; height: 65px;">
+      <img src="./images/logobranconobg.png" class="img-fluid"
+        style="cursor: pointer; position: absolute; margin-left: -99%; width: 180px; margin-top: -1%; height: 65px;">
     </a>
-    <a id="profilehide" href="dashboardTemplate.html">Perfil</a>
+    <a id="profilehide" style="display: none;" href="dashboardTemplate.html">Perfil</a>
     <a href="jornalfit.html"> Jornal FIT</a>
     <a href="mainpage.html">FitHub</a>
-</div>
+  </div>
 
 </nav>
+
 <body>
 
-<section id="space">
-  <section class="fast-acess-menu-for-normal-users">
+  <section id="space">
+    <section class="fast-acess-menu-for-normal-users">
 
-    <h2 id="whatdoyouwanttodiscovertitle">O QUE QUERES DESCOBRIR HOJE?</h2>
+      <h2 id="whatdoyouwanttodiscovertitle">O QUE QUERES DESCOBRIR HOJE?</h2>
 
-    <h3 id="pointsquantity" style="color: white; font-size: 28px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 1200px; margin-top: 30px; position: absolute;">PONTOS: xxxx</h3>
+      <h3 id="pointsquantity"
+        style="color: white; font-size: 28px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 1200px; margin-top: 30px; position: absolute;">
+        PONTOS: xxxx</h3>
 
-   <section id="fast-acess-menu">
+      <section id="fast-acess-menu">
 
-    <a href="receitasementass.html">
+        <a href="receitasementass.html">
 
-      <img src="./images/greeksalad.jpg" id="recipeseementasphoto">
+          <img src="./images/greeksalad.jpg" id="recipeseementasphoto">
 
-      <div class="selectbox1"></div>
+          <div class="selectbox1"></div>
 
-      <button id="receitaseementasbtn">RECEITAS E EMENTAS</button>
+          <button id="receitaseementasbtn">RECEITAS E EMENTAS</button>
 
-    </a>
+        </a>
 
-    <a href="exerciciosplanoss.html">
+        <a href="exerciciosplanoss.html">
 
-      <img src="./images/exercises2.png" id="exercicioseplanosphoto">
+          <img src="./images/exercises2.png" id="exercicioseplanosphoto">
 
-      <div class="selectbox2"></div>
+          <div class="selectbox2"></div>
 
-      <button id="exercicioseplanosbtn">PLANOS DE TREINO</button>
+          <button id="exercicioseplanosbtn">PLANOS DE TREINO</button>
 
-    </a>
+        </a>
 
-    <a href="eventos.html">
+        <a href="eventos.html">
 
-      <img src="./images/eventosimage.png" id="EventosPhoto">
+          <img src="./images/eventosimage.png" id="EventosPhoto">
 
-      <div class="selectbox3"></div>
+          <div class="selectbox3"></div>
 
-      <button id="eventosBtn">EVENTOS</button>
+          <button id="eventosBtn">EVENTOS</button>
 
-    </a>
+        </a>
 
-    <a href="shop.html">
+        <a href="shop.html">
 
-      <img src="./images/store.png" id="LojaPhoto">
+          <img src="./images/store.png" id="LojaPhoto">
 
-      <div class="selectbox4"></div>
+          <div class="selectbox4"></div>
 
-      <button id="lojaBtn">LOJA</button>
+          <button id="lojaBtn">LOJA</button>
 
-    </a>
+        </a>
 
-   </section>
-
-
-  </section>
-
-  <hr id="divisorpage">
+      </section>
 
 
-  <!--NOVOS PRODUTOS NA LOJA FIT-->
+    </section>
 
-  <section class="fitstorelastproducts">
+    <hr id="divisorpage">
 
-    <h2 id="newproductstitle">NOVOS PRODUTOS DA LOJA 'FIT'</h2>
 
-    <hr id="divisorproducts">
+    <!--NOVOS PRODUTOS NA LOJA FIT-->
 
-    <div class="selectboxesproducts" id="organize">
+    <section class="fitstorelastproducts">
 
-   
+      <h2 id="newproductstitle">NOVOS PRODUTOS DA LOJA 'FIT'</h2>
 
-   <!---   <div id="selectxbox5">
+      <hr id="divisorproducts">
+
+      <div class="selectboxesproducts" id="organize">
+
+
+
+        <!---   <div id="selectxbox5">
 
           <h2 style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px; margin-left: 40px; margin-top: 25px;">NOME DO PRODUTO</h2>
 
@@ -163,28 +168,30 @@
 
     -->
 
-    <i class='bx bxs-right-arrow-circle' style="color: white; position: absolute; font-size: 80px; margin-top: 746px; margin-left: 1083px; cursor: pointer;" onclick="loadMore()"></i>
-  </div>
+        <i class='bx bxs-right-arrow-circle'
+          style="color: white; position: absolute; font-size: 80px; margin-top: 746px; margin-left: 1083px; cursor: pointer;"
+          onclick="loadMore()"></i>
+      </div>
 
-  </section>
+    </section>
 
-  <a href="shop.html">
+    <a href="shop.html">
 
-    <button id="gotostorebtn"><b>IR PARA A LOJA</b></button>
+      <button id="gotostorebtn"><b>IR PARA A LOJA</b></button>
 
-  </a>
+    </a>
 
-  <hr id="divisorleaderboard">
+    <hr id="divisorleaderboard">
 
-  <section class="fitlastchallenges">
+    <section class="fitlastchallenges">
 
-    <h2 id="newproductstitle">NOVOS EXERCICIOS</h2>
+      <h2 id="newproductstitle">NOVOS EXERCICIOS</h2>
 
-    <hr id="divisorproducts">
+      <hr id="divisorproducts">
 
-    <div class="selectboxesproducts" id="organize2">
+      <div class="selectboxesproducts" id="organize2">
 
-  <!---
+        <!---
     <a href="productdetails.html">
 
       <div id="selectxbox5"><h2 style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 14px;text-align: center; margin-top: 25px;">CRIADOR DO DESAFIO</h2>
@@ -226,29 +233,31 @@
     </a>
   -->
 
-    <i class='bx bxs-right-arrow-circle' style="color: white; position: absolute; font-size: 80px; margin-top: 746px; margin-left: 1083px; cursor: pointer;" onclick="loadMore()"></i>
-  </div>
+        <i class='bx bxs-right-arrow-circle'
+          style="color: white; position: absolute; font-size: 80px; margin-top: 746px; margin-left: 1083px; cursor: pointer;"
+          onclick="loadMore()"></i>
+      </div>
 
-  </section>
+    </section>
 
-  <a href="exerciciosplanoss.html">
+    <a href="exerciciosplanoss.html">
 
-    <button id="seemorebtn"><b>VER MAIS</b></button>
+      <button id="seemorebtn"><b>VER MAIS</b></button>
 
-  </a>
+    </a>
 
-  <!--ARTIGOS E NOTICIAS-->
+    <!--ARTIGOS E NOTICIAS-->
 
-  <section class="articlesandnews">
+    <section class="articlesandnews">
 
-    <h2 id="newproductstitle">ARTIGOS E NOTÍCIAS</h2>
+      <h2 id="newproductstitle">ARTIGOS E NOTÍCIAS</h2>
 
-    <hr id="divisorproducts">
+      <hr id="divisorproducts">
 
-    <section class="selectboxesproducts">
+      <section class="selectboxesproducts">
 
-    <div class="organize77" id="organize77">
-      <!---
+        <div class="organize77" id="organize77">
+          <!---
 
       <div id="selectxbox5">
 
@@ -315,38 +324,46 @@
       </div> 
     -->
 
-    </div>
+        </div>
 
-    <i class='bx bxs-right-arrow-circle' style="color: white; position: absolute; font-size: 80px; margin-top: 746px; margin-left: 1083px; cursor: pointer;" onclick="loadMore()"></i>
+        <i class='bx bxs-right-arrow-circle'
+          style="color: white; position: absolute; font-size: 80px; margin-top: 746px; margin-left: 1083px; cursor: pointer;"
+          onclick="loadMore()"></i>
+      </section>
+
     </section>
 
-  </section>
+    <a href="jornalfit.html">
 
-  <a href="jornalfit.html">
+      <button id="gotojornalbtn"><b>IR PARA O JORNAL</b></button>
 
-    <button id="gotojornalbtn"><b>IR PARA O JORNAL</b></button>
-
-  </a>
+    </a>
 
 
-  <!--SECÇÃO DO LEADERBOARD-->
+    <!--SECÇÃO DO LEADERBOARD-->
 
-  <section class="sidepage">
+    <section class="sidepage">
 
-  <section class="globalleaderboard">
+      <section class="globalleaderboard">
 
-    <div id="rectangletotitle"><h2 style="text-align: center; color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 19px;"><b>GLOBAL<br>LEADERBOARD</b></h2></div>
+        <div id="rectangletotitle">
+          <h2
+            style="text-align: center; color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 19px;">
+            <b>GLOBAL<br>LEADERBOARD</b>
+          </h2>
+        </div>
 
-    <hr style="background-color: #e8bf5c; transform: rotate(180deg); width: 170px; color: #e8bf5c; position: absolute; margin-left: 1257px; margin-top: 680px;">
+        <hr
+          style="background-color: #e8bf5c; transform: rotate(180deg); width: 170px; color: #e8bf5c; position: absolute; margin-left: 1257px; margin-top: 680px;">
 
-    <div class="leaderboard" id="organize4" >
-
-     
-
+        <div class="leaderboard" id="organize4">
 
 
-    </div>
-    <!---
+
+
+
+        </div>
+        <!---
     <ol class="listofusersleaderboard">
 
       <li style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif;">username1 - 483718 <img src="images/pointsicon1-removebg-preview.png" style="width: 30px; height: 20px;"></li>
@@ -366,27 +383,65 @@
     </ol>
   -->
 
-    
-  </section>
 
-  <section class="eventosrecentes">
+      </section>
 
-    <div id="rectangletotitle2"><h2 style="text-align: center; color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 19px;"><b>EVENTOS<br>RECENTES</b></h2></div>
+      <section class="eventosrecentes">
 
-    <hr style="background-color: #e8bf5c; transform: rotate(180deg); width: 170px; color: #e8bf5c; position: absolute; margin-left: 1257px; margin-top: 1230px;">
+        <div id="rectangletotitle2">
+          <h2
+            style="text-align: center; color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 19px;">
+            <b>EVENTOS<br>RECENTES</b>
+          </h2>
+        </div>
 
-    <div id="organize5" style="margin-left: 1250px; margin-top: 1250px; position:absolute; gap: 10px;">
+        <hr
+          style="background-color: #e8bf5c; transform: rotate(180deg); width: 170px; color: #e8bf5c; position: absolute; margin-left: 1257px; margin-top: 1230px;">
+
+        <div id="organize5" style="margin-left: 1250px; margin-top: 1250px; position:absolute; gap: 10px;">
 
 
 
 
-    </div>
+        </div>
 
-  </section>
-</section>
+      </section>
+    </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
+    <script>
+
+      var user_admin = sessionStorage.getItem("user_admin");
+
+      var user_pt = sessionStorage.getItem("user_pt");
+
+      var user_nutri = sessionStorage.getItem("user_nutri");
+
+      var user_id = sessionStorage.getItem("user_id");
+
+      if (user_pt == 1 && user_admin == 0 && user_nutri == 0) {
+
+
+        document.getElementById("profilehide").style.display = "inline";
+
+
+      } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
+
+        document.getElementById("profilehide").style.display = "inline";
+
+
+      } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
+
+        document.getElementById("profilehide").style.display = "inline";
+
+      }
+
+
+
+    </script>
+
 </body>
+
 </html>

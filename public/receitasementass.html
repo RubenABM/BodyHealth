@@ -19,7 +19,7 @@
       <img src="./images/logobranconobg.png" class="img-fluid"
         style="cursor: pointer; position: absolute; margin-left: -99%; width: 180px; margin-top: -1%; height: 65px;">
     </a>
-    <a href="dashboardTemplate.html">Perfil</a>
+    <a id="profilehide" style="display: none;" href="dashboardTemplate.html">Perfil</a>
     <a href="jornalFit.html"> Jornal FIT</a>
     <a href="mainpage.html">FitHub</a>
   </div>
@@ -61,7 +61,7 @@
               </div>
             </div>
             <a href="createdreceitasementas.html">
-            <button style="margin-top: 7%;float: left;" style="margin-left: 35px;" type="submit"
+            <button style="margin-top: 8%;float: left; visibility: hidden;" style="margin-left: 35px;" type="submit"
               class="buttoncalcular" id="createreceita"><b>Criar
                 receita</b></button><br><br></a>
           </div>
@@ -433,7 +433,7 @@
                 </div>
               </div>
               <a href="createdreceitasementas.html">
-              <button style="margin-top: 7%;float: left;" style="margin-left: 35px;" type="submit"
+              <button style="margin-top: 8%;float: left; visibility: hidden;" style="margin-left: 35px;" type="submit"
                 class="buttoncalcular" id="createementa"><b>Criar
                   ementa</b></button><br><br></a>
             </div>
@@ -767,6 +767,40 @@ rel="noopener noreferrer">elegant-dashboard.com</a></p>
   <script src="plugins/feather.min.js"></script>
   <!-- Custom scripts -->
   <script src="js/script.js"></script>
+
+  <script>
+  var user_admin = sessionStorage.getItem("user_admin");
+  
+     var user_pt = sessionStorage.getItem("user_pt");
+
+     var user_nutri = sessionStorage.getItem("user_nutri");
+
+     var user_id = sessionStorage.getItem("user_id");
+
+     if (user_pt == 1 && user_admin == 0 && user_nutri == 0) {
+
+
+       document.getElementById("profilehide").style.display = "inline";
+       document.getElementById("createreceita").style.visibility = "visible";
+       document.getElementById("createementa").style.visibility = "visible";
+
+
+     } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
+
+       document.getElementById("profilehide").style.display = "inline";
+       document.getElementById("createreceita").style.visibility = "visible";
+       document.getElementById("createementa").style.visibility = "visible";
+
+
+     } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
+
+       document.getElementById("profilehide").style.display = "inline";
+       document.getElementById("createreceita").style.visibility = "visible";
+       document.getElementById("createementa").style.visibility = "visible";
+       createementa
+
+     }
+    </script>
 
 </body>
 
