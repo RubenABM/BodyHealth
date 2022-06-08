@@ -49,7 +49,7 @@ window.onload = async function(){
         document.getElementById("nutribarra").style.visibility = "hidden";
         document.getElementById("criacoesexerciciofisico").style.visibility = "hidden";
         document.getElementById("turmaseconsultas").innerHTML = "Clientes";
-        document.getElementById("criacoesexe").style.visibility = "hidden";
+        document.getElementById("criacoesexe").style.display = "none";
 
       }
 
