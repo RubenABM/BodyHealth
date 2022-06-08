@@ -620,9 +620,145 @@ async function getAulasMarcadasRecentesss(){
 
 function createaulaHTML(aula){
   
-  return "<div class='selectbox66' style='cursor: pointer' id='selectbox66' onclick='openmarker('" + aula + "')'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + aula.pedido_titulo + "Data: " + aula.pedido_data + "</p>" + "</div>"
+  return "<div class='selectbox66' style='cursor: pointer' id='selectbox66' onclick='openmarkeraula('" + aula + "')'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + aula.pedido_titulo + "Data: " + aula.pedido_data + "</p>" + "</div>"
   //return "<div class='selectbox66' style='cursor: pointer' id='selectbox66' onclick='openmarker( " + evento + " )'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 10%;'>" + evento.evento_titulo + "Data: " + evento.evento_data + "</p>" + "</div>"
  
+
+}
+
+///////////////////////////////////////
+
+async function openmarkeraula(aula){
+
+  sessionStorage.setItem("place_title",aula.pedido_titulo);
+
+
+
+sessionStorage.setItem("pedido_latitude", aula.latitude);
+  sessionStorage.setItem("pedidolongitude", aula.longitude);
+
+
+  console.log("Working");
+
+  x = navigator.geolocation; //Criar variavel X para a geolocalização
+
+  x.getCurrentPosition(openmarcadoraula);
+
+  openmarcadoraula();
+
+}
+
+function openmarcadoraula(position) {
+
+  var evento_titulo = sessionStorage.getItem("place_title");
+  var aula_latitude = sessionStorage.getItem("pedido_latitude");
+  var aula_longitude = sessionStorage.getItem("pedido_longitude");
+
+
+
+  console.log(evento_titulo);
+  console.log(aula_latitude);
+  console.log(aula_longitude);
+
+
+  const directionsRenderer = new google.maps.DirectionsRenderer(); //CONSTANTE PARA RENDERIZAR A ROTA
+
+  const directionsService = new google.maps.DirectionsService(); //CONSTANTE DO SERVIÇO DE ROTAS PARA O MAPA
+
+  console.log("Atribuido");
+
+  var myLatitude = position.coords.latitude;
+  var myLongitude = position.coords.longitude;
+
+  sessionStorage.setItem("myLatitude", myLatitude);
+  sessionStorage.setItem("myLongitude", myLongitude);
+
+  var coords = new google.maps.LatLng(myLatitude, myLongitude);
+
+  var newcoords = {lat: myLatitude, lng: myLongitude};
+
+  const marker1 = new google.maps.Marker({
+ 
+    map: map,
+    position: newcoords,
+    icon: {
+
+      url: "https://maps.google.com/mapfiles/ms/icons/green-dot.png"
+
+    }
+
+  });
+
+  console.log("Atribuido novamente");
+
+  marker1.setMap(map);
+
+  console.log("Passou");
+
+  //RESTRICOES DE LIMITES DO MAPA
+
+  const PORTUGAL_MAPBOUNDS = {
+    //PONTO 1 -> NORTH E WEST
+    //PONTO 2 -> SOUTH E EAST
+    north:  42.138649,
+    south: 36.346396,
+    west: -10.031045,
+    east: -6.353972,
+
+  }
+
+  console.log("Passou denovo");
+
+  var options = { //Customização do mapa
+        
+    zoom: 15, //Zoom no mapa
+    center:{lat:  myLatitude, lng:  myLongitude}, //Centro do mapa quando este é aberto (Lisboa)
+    restriction: {
+
+        latLngBounds: PORTUGAL_MAPBOUNDS,
+        strictBounds: false,
+
+    },
+    disableDefaultUI: true, //Remove os controles default de um mapa Google | Formatação
+
+  }
+
+  console.log("Ja nao passou");
+
+  
+
+  var map = new google.maps.Map(document.getElementById('map'), options); //VARIAVEL QUE ARMAZENA O MAPA
+
+  directionsRenderer.setMap(map);
+
+  console.log("A ir para o calculate");
+
+ //FUNCAO CALCULATE
+
+ const selectedMode = "DRIVING"; //EXEMPLO COM MODO ESTATICO
+
+  console.log("DRIVING A CHEGAR!")
+
+  
+      directionsService.route({  
+        origin: {lat: parseFloat(myLatitude), lng: parseFloat(myLongitude)},  
+        destination: {lat: parseFloat(aula_latitude), lng: parseFloat(aula_longitude)},  
+        travelMode: google.maps.TravelMode.DRIVING  
+      }, function(response, status) {  
+        if (status === google.maps.DirectionsStatus.OK) {  
+          directionsRenderer.setDirections(response);  
+          console.log("Worked");
+        } else {  
+          window.alert('Directions request failed due to ' + status);  
+        }  
+      }); 
+      
+      var distancia = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(parseFloat(myLatitude), parseFloat(myLongitude)), new google.maps.LatLng(parseFloat(aula_latitude), parseFloat(aula_longitude)));
+ 
+      var distanciashorted = (Math.round(distancia, 2)) / 1000;    //Arredondar
+      console.log("Distancia: " + distanciashorted.toFixed(2));
+
+      document.getElementById("distanceshow").innerHTML = "DISTÂNCIA: " + distanciashorted.toFixed(2) + " km";
 
 }
 

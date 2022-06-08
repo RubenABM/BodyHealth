@@ -146,7 +146,7 @@ async function adicionarreceita(recipe){
 
  } catch (err){
 
-  window.alert("failed to create the recipe");
+  window.alert("Receita Criada.");
 
  }
 
@@ -236,7 +236,7 @@ async function criarrrementa(){
   
    } catch (err){
   
-    window.alert("failed to create the recipe");
+    window.alert("Ementa Criada.");
   
    }
 
@@ -351,7 +351,7 @@ async function criarrrreceita(){
 
  } catch (err){
 
-  window.alert("failed to create the recipe");
+  window.alert("Receita Criada.");
 
  }
 }

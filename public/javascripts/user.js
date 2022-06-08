@@ -30,11 +30,11 @@ async function addnutricionist() {
         });
 
         console.log("Inserted new user with id: " + newUser.user_id)
-        window.alert('registration sucessful');
+     //   window.alert('registration sucessful');
 
     } catch (err) {
         console.log(err);
-        window.alert('just something wrong');
+     //   window.alert('just something wrong');
         
     }
 }
@@ -108,11 +108,11 @@ async function add() {
         });
 
         console.log("Inserted new user with id: " + newUser.user_id)
-        window.alert('registration sucessful');
+       // window.alert('registration sucessful');
 
     } catch (err) {
         console.log(err);
-        window.alert('just something wrong');
+       // window.alert('just something wrong');
         
     }
 }
@@ -140,8 +140,8 @@ async function login(){
 
 
     });
-    alert("Authenticate user: " + JSON.stringify(authUser));
-    console.log("Verifying user with username: " + authUser.user_name + " and password: " + authUser.user_password);
+   // alert("Authenticate user: " + JSON.stringify(authUser));
+   console.log("Verifying user with username: " + authUser.user_name + " and password: " + authUser.user_password);
 
     sessionStorage.setItem('user_id', authUser.user_id);
     sessionStorage.setItem('user_admin', authUser.user_admin);
@@ -149,7 +149,7 @@ async function login(){
     sessionStorage.setItem('user_nutri', authUser.user_nutri);
     sessionStorage.setItem('user_name', authUser.user_name);
     sessionStorage.setItem('user_points', authUser.user_points);
-    window.alert('login sucessfull');
+  //  window.alert('login sucessfull');
     
     window.location.assign("https://bodyhealthweb.herokuapp.com/dashboardTemplate.html");
 
@@ -157,7 +157,7 @@ async function login(){
     console.log(authUser.user_id);
    }  catch (err) {
     console.log(err);
-    window.alert('something wron;g')
+  //  window.alert('something wron;g')
     window.location.assign("http://bodyhealthweb.herokuapp.com/login.html");
 
     }

@@ -685,6 +685,6 @@ async function adicionarcliente(utilizador){
   
       });
   
-      window.alert("Created pedido");
+      window.alert("Consulta Criada.");
   
 }

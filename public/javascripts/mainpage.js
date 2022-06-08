@@ -316,7 +316,7 @@ async function addprodutolist(produto){
         dataType: "json"
         });
 
-        window.alert("Created favorite with id: " + newExercise.get_product_position_id);
+        window.alert("Produto adicionado.");
 
         window.alert("A chamar o updatePontos");
 
@@ -347,14 +347,14 @@ async function addprodutolist(produto){
 
       });
 
-      window.alert("Produto has been deleted!");
+      window.alert("Produto removido  da sua lista.");
 
 
       
     }
 
   } catch(err){
-     window.alert("failed to create the produto");
+     window.alert("Produto Criado.");
   }
  
  
