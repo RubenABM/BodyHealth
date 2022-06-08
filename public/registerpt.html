@@ -67,7 +67,8 @@
                                     <div style="float: left">
                                         <label for="fcertificado" class="titleinput">Certificado</label><br>
                                         <input type="file" id="real-file" hidden="hidden" />
-                                        <button style="width: 215px;" type="button" id="custom-button">ESCOLHER FICHEIRO</button>
+                                        <button style="width: 215px;" type="button" id="custom-button">ESCOLHER
+                                            FICHEIRO</button>
                                     </div>
                                     <div style="float: right">
                                         <p style="width: 205px;" id="custom-text">Nenhum ficheiro inserido.</p>
@@ -88,7 +89,8 @@
                                     class="iconnutritionist">
                             </a><a href="signupandlogin.html">
                                 <img style="margin-top: -19%; margin-left: 105%; background-color: white; border-radius: 80%;"
-                                    src="images/human-icon-1.png" width="80px" height="80px" class="iconpersonaltrainer">
+                                    src="images/human-icon-1.png" width="80px" height="80px"
+                                    class="iconpersonaltrainer">
                             </a>
                             <h3 style="width: 100%;margin-top: 10%; margin-left:75%" id="trylogin">Já possui uma conta?
                                 <a href="login.html" class="loginlinkword">Login</a>
@@ -216,29 +218,33 @@ rel="noopener noreferrer">elegant-dashboard.com</a></p>
         });
 
         var user_admin = sessionStorage.getItem("user_admin");
-  
-     var user_pt = sessionStorage.getItem("user_pt");
 
-     var user_nutri = sessionStorage.getItem("user_nutri");
+        var user_pt = sessionStorage.getItem("user_pt");
 
-     var user_id = sessionStorage.getItem("user_id");
+        var user_nutri = sessionStorage.getItem("user_nutri");
 
-     if (user_pt == 1 && user_admin == 0 && user_nutri == 0) {
+        var user_id = sessionStorage.getItem("user_id");
 
-
-       document.getElementById("profilehide").style.display = "inline";
+        if (user_pt == 1 && user_admin == 0 && user_nutri == 0) {
 
 
-     } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
-
-       document.getElementById("profilehide").style.display = "inline";
+            document.getElementById("profilehide").style.display = "inline";
 
 
-     } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
+        } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
 
-       document.getElementById("profilehide").style.display = "inline";
+            document.getElementById("profilehide").style.display = "inline";
 
-     }
+
+        } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
+
+            document.getElementById("profilehide").style.display = "inline";
+
+        } else if (user_admin == 1) {
+
+            document.getElementById("profilehide").style.display = "inline";
+
+        }
 
     </script>
 </body>

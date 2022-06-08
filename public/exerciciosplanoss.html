@@ -591,8 +591,8 @@
                             <p name="tipo1" id="tipo1" style="margin-left: 2%; font-size: 90%; margin-top: 2%">
                                 TIPO
                                 DO PLANO</p>
-                            -->
-                        </div>
+                        
+                        </div>-->
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -818,6 +818,13 @@ rel="noopener noreferrer">elegant-dashboard.com</a></p>
              document.getElementById("createplano").style.visibility = "visible";
       
            }
+           else if (user_admin == 1) {
+      
+      document.getElementById("profilehide").style.display = "inline";
+      document.getElementById("createexercise").style.visibility = "visible";
+      document.getElementById("createplano").style.visibility = "visible";
+
+    }
           </script>
 
 </body>

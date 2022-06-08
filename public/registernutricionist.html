@@ -67,7 +67,8 @@
                                     <div style="float: left">
                                         <label for="fcertificado" class="titleinput">Certificado</label><br>
                                         <input type="file" id="real-file" hidden="hidden" />
-                                        <button style="width: 215px;" type="button" id="custom-button">ESCOLHER FICHEIRO</button>
+                                        <button style="width: 215px;" type="button" id="custom-button">ESCOLHER
+                                            FICHEIRO</button>
                                     </div>
                                     <div style="float: right">
                                         <p style="width: 205px;" id="custom-text">Nenhum ficheiro inserido.</p>
@@ -84,8 +85,7 @@
                             <h1 style="margin-left: 95%;" class="ortitle">OU</h1>
                             <a href="signupandlogin.html">
                                 <img style="margin-left: 75%; margin-top: 5%;background-color: white; border-radius: 80%;"
-                                    src="images/human-icon-1.png" width="80px" height="80px"
-                                    class="iconnutritionist">
+                                    src="images/human-icon-1.png" width="80px" height="80px" class="iconnutritionist">
                             </a><a href="registerpt.html">
                                 <img style="margin-top: -19%; margin-left: 105%; background-color: white; border-radius: 80%;"
                                     src="images/1926483-200.png" width="80px" height="80px" class="iconpersonaltrainer">
@@ -129,8 +129,8 @@
                 </div>
             </div>
         </div>
-    </main>
-    <!-- ! Footer 
+        </main>
+        <!-- ! Footer 
 <footer class="footer">
 <div class="container footer--flex">
 <div class="footer-start">
@@ -144,104 +144,108 @@ rel="noopener noreferrer">elegant-dashboard.com</a></p>
 </ul>
 </div>
 </footer> -->
-    <section id="move">
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <div style="margin-top: 6%;" class="footer-clean">
-            <footer>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-sm-4 col-md-3 item">
-                            <h3 style="color: white;">Morada</h3>
-                            <ul>
-                                <li><a href="#">Av. Dom Carlos | 4</a></li>
-                                <li><a href="#">1200-649 Lisboa, Portugal</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-4 col-md-3 item">
-                            <h3 style="color: white;">Contactos</h3>
-                            <ul>
-                                <li><a href="#">Tel.: +351 213 939 600</a></li>
-                                <li><a href="#">E-mail: geral.iade@universidadeeuropeia.pt</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-4 col-md-3 item">
-                            <h3 style="color: white;">Menu</h3>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="mainpage.html">FitHub</a></li>
-                                <li><a href="jornalfit.html">Jornal FIT</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 item social">
-                            <p class="copyright">BodyHealth © 2022</p>
+        <section id="move">
+            <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+            <div style="margin-top: 6%;" class="footer-clean">
+                <footer>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-4 col-md-3 item">
+                                <h3 style="color: white;">Morada</h3>
+                                <ul>
+                                    <li><a href="#">Av. Dom Carlos | 4</a></li>
+                                    <li><a href="#">1200-649 Lisboa, Portugal</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4 col-md-3 item">
+                                <h3 style="color: white;">Contactos</h3>
+                                <ul>
+                                    <li><a href="#">Tel.: +351 213 939 600</a></li>
+                                    <li><a href="#">E-mail: geral.iade@universidadeeuropeia.pt</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4 col-md-3 item">
+                                <h3 style="color: white;">Menu</h3>
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="mainpage.html">FitHub</a></li>
+                                    <li><a href="jornalfit.html">Jornal FIT</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 item social">
+                                <p class="copyright">BodyHealth © 2022</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </footer>
+                </footer>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        </section>
+
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-    </section>
+        </div>
+        <!-- Chart library -->
+        <script src="./plugins/chart.min.js"></script>
+        <!-- Icons library -->
+        <script src="plugins/feather.min.js"></script>
+        <!-- Custom scripts -->
+        <script src="js/script.js"></script>
 
-    </div>
-    </div>
-    <!-- Chart library -->
-    <script src="./plugins/chart.min.js"></script>
-    <!-- Icons library -->
-    <script src="plugins/feather.min.js"></script>
-    <!-- Custom scripts -->
-    <script src="js/script.js"></script>
+        <script type="text/javascript">
 
-    <script type="text/javascript">
+            const realFileBtn = document.getElementById("real-file"); //Botão do botão 'verdadeiro' do tipo file.
+            const customBtn = document.getElementById("custom-button"); //Botão que irá ser exibido na página
+            const customTxt = document.getElementById("custom-text"); //Texto do lado do botão (será substituido pelo nome do ficheiro selecionado)
 
-        const realFileBtn = document.getElementById("real-file"); //Botão do botão 'verdadeiro' do tipo file.
-        const customBtn = document.getElementById("custom-button"); //Botão que irá ser exibido na página
-        const customTxt = document.getElementById("custom-text"); //Texto do lado do botão (será substituido pelo nome do ficheiro selecionado)
+            customBtn.addEventListener("click", function () {
 
-        customBtn.addEventListener("click", function () {
+                realFileBtn.click(); //Quando o botão exibido é clicado, o botão 'real' (escondido / hidden) também é clicado.
 
-            realFileBtn.click(); //Quando o botão exibido é clicado, o botão 'real' (escondido / hidden) também é clicado.
+            });
 
-        });
+            realFileBtn.addEventListener("change", function () {  //Quando é selecionado um ficheiro...
 
-        realFileBtn.addEventListener("change", function () {  //Quando é selecionado um ficheiro...
+                if (realFileBtn.value) {
+                    customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1]; //Se for selecionado um ficheiro, o texto ao lado do botão exibirá  nome do ficheiro (o value do realFileBtn). O 'match' formata e encurta o tamanho do nome do ficheiro a ser exibido.
+                } else {
+                    customTxt.innerHTML = "No file chosen, yet."; //Caso contrário, o texto default é exibido.
+                }
 
-            if (realFileBtn.value) {
-                customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1]; //Se for selecionado um ficheiro, o texto ao lado do botão exibirá  nome do ficheiro (o value do realFileBtn). O 'match' formata e encurta o tamanho do nome do ficheiro a ser exibido.
-            } else {
-                customTxt.innerHTML = "No file chosen, yet."; //Caso contrário, o texto default é exibido.
+            });
+
+            var user_admin = sessionStorage.getItem("user_admin");
+
+            var user_pt = sessionStorage.getItem("user_pt");
+
+            var user_nutri = sessionStorage.getItem("user_nutri");
+
+            var user_id = sessionStorage.getItem("user_id");
+
+            if (user_pt == 1 && user_admin == 0 && user_nutri == 0) {
+
+
+                document.getElementById("profilehide").style.display = "inline";
+
+
+            } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
+
+                document.getElementById("profilehide").style.display = "inline";
+
+
+            } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
+
+                document.getElementById("profilehide").style.display = "inline";
+
+            } else if (user_admin == 1) {
+
+                document.getElementById("profilehide").style.display = "inline";
+
             }
 
-        });
+        </script>
 
-        var user_admin = sessionStorage.getItem("user_admin");
-  
-  var user_pt = sessionStorage.getItem("user_pt");
-
-  var user_nutri = sessionStorage.getItem("user_nutri");
-
-  var user_id = sessionStorage.getItem("user_id");
-
-  if (user_pt == 1 && user_admin == 0 && user_nutri == 0) {
-
-
-    document.getElementById("profilehide").style.display = "inline";
-
-
-  } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
-
-    document.getElementById("profilehide").style.display = "inline";
-
-
-  } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
-
-    document.getElementById("profilehide").style.display = "inline";
-
-  }
-
-    </script>
-    
 </body>
 
 </html>

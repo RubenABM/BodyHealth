@@ -30,8 +30,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-9">
-                        <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 50.5%;margin-top: 120px; color: white;">Notícias</h1>
-                        
+                    <h1
+                        style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 50.5%;margin-top: 120px; color: white;">
+                        Notícias</h1>
+
 
                     <div style="margin-top: 4%;" id="organize">
 
@@ -147,8 +149,8 @@
                         </div>
                         
                     -->
+                    </div>
                 </div>
-            </div>
     </main>
     <!-- ! Footer 
 <footer class="footer">
@@ -216,33 +218,37 @@ rel="noopener noreferrer">elegant-dashboard.com</a></p>
     <script>
 
         var user_admin = sessionStorage.getItem("user_admin");
-  
+
         var user_pt = sessionStorage.getItem("user_pt");
-  
+
         var user_nutri = sessionStorage.getItem("user_nutri");
-  
+
         var user_id = sessionStorage.getItem("user_id");
-  
+
         if (user_pt == 1 && user_admin == 0 && user_nutri == 0) {
-  
-  
-          document.getElementById("profilehide").style.display = "inline";
-  
-  
+
+
+            document.getElementById("profilehide").style.display = "inline";
+
+
         } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
-  
-          document.getElementById("profilehide").style.display = "inline";
-  
-  
+
+            document.getElementById("profilehide").style.display = "inline";
+
+
         } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
-  
-          document.getElementById("profilehide").style.display = "inline";
-  
+
+            document.getElementById("profilehide").style.display = "inline";
+
+        } else if (user_admin == 1) {
+
+            document.getElementById("profilehide").style.display = "inline";
+
         }
-  
-  
-  
-      </script>
+
+
+
+    </script>
 </body>
 
 </html>

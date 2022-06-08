@@ -40,7 +40,7 @@
       <h2 id="whatdoyouwanttodiscovertitle">O QUE QUERES DESCOBRIR HOJE?</h2>
 
       <h3 id="pointsquantity"
-        style="color: white; font-size: 28px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 1200px; margin-top: 30px; position: absolute;">
+        style="color: white; font-size: 28px; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 1200px; margin-top: 30px; position: absolute; display: none;">
         PONTOS: xxxx</h3>
 
       <section id="fast-acess-menu">
@@ -425,16 +425,25 @@
 
 
         document.getElementById("profilehide").style.display = "inline";
+        document.getElementById("pointsquantity").style.display = "inline";
 
 
       } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
 
         document.getElementById("profilehide").style.display = "inline";
+        document.getElementById("pointsquantity").style.display = "inline";
 
 
       } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
 
         document.getElementById("profilehide").style.display = "inline";
+        document.getElementById("pointsquantity").style.display = "inline";
+
+      }
+      else if (user_admin == 1) {
+
+        document.getElementById("profilehide").style.display = "inline";
+        document.getElementById("pointsquantity").style.display = "inline";
 
       }
 

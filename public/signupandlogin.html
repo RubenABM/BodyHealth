@@ -38,22 +38,26 @@
                             <form class="formsignupuser">
 
 
-                                <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;" for="fusername" class="titleinput">Username</label><br>
+                                <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;"
+                                    for="fusername" class="titleinput">Username</label><br>
                                 <input type="text" id="fusername" name="fusername" class="field" placeholder="Username"
                                     required><br>
                                 <br>
                                 <br>
-                                <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;" for="fpassword" class="titleinput">Password</label><br>
+                                <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;"
+                                    for="fpassword" class="titleinput">Password</label><br>
                                 <input type="password" id="fpassword" name="fpassword" class="field"
                                     placeholder="Password" required><br>
                                 <br>
                                 <br>
-                                <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;" for="femail" class="titleinput">Email</label><br>
+                                <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;"
+                                    for="femail" class="titleinput">Email</label><br>
                                 <input type="email" id="femail" name="femail" class="field" placeholder="Email"
                                     required><br>
                                 <br>
                                 <br>
-                                <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;" for="fmorada" class="titleinput">Morada</label><br>
+                                <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;"
+                                    for="fmorada" class="titleinput">Morada</label><br>
                                 <input type="text" id="fmorada" name="fmorada" class="field" placeholder="Rua, Cidade"
                                     required><br>
                                 <br>
@@ -81,22 +85,28 @@
                         <div style="float:right">
                             <hr id="divisor2">
                             </hr>
-                            <h1 style="margin-top: -40%; margin-left: 50%;width: 100%; color:white;" id="beingauser">SENDO UM UTILIZADOR PODES:</h1>
+                            <h1 style="margin-top: -40%; margin-left: 50%;width: 100%; color:white;" id="beingauser">
+                                SENDO UM UTILIZADOR PODES:</h1>
 
                             <section class="whatcanyoudo">
 
                                 <div class="whatusercando" style="margin-left: 5%;">
 
-                                
-                                    <h3 style="margin-top: 10%; margin-left: 50%;width: 100%;" id="discovernewrecipestext"> - DESCOBRIR NOVAS RECEITAS</h3>
 
-                                    <h3 style="margin-top: 10%; margin-left: 50%;width: 100%;" id="practicenewexercisestext"> - PRATICAR NOVOS EXERCÍCIOS</h3>
+                                    <h3 style="margin-top: 10%; margin-left: 50%;width: 100%;"
+                                        id="discovernewrecipestext"> - DESCOBRIR NOVAS RECEITAS</h3>
 
-                                    <h3 style="margin-top: 10%; margin-left: 50%;width: 100%;" id="findpersonaltrainertext"> - ENCONTRAR PERSONAL TRAINER'S</h3>
+                                    <h3 style="margin-top: 10%; margin-left: 50%;width: 100%;"
+                                        id="practicenewexercisestext"> - PRATICAR NOVOS EXERCÍCIOS</h3>
 
-                                    <h3 style="margin-top: 10%; margin-left: 50%;width: 100%;" id="descobrirnovoslocaistext"> - DESCOBRIR NOVOS LOCAIS E PERCURSOS</h3>
+                                    <h3 style="margin-top: 10%; margin-left: 50%;width: 100%;"
+                                        id="findpersonaltrainertext"> - ENCONTRAR PERSONAL TRAINER'S</h3>
 
-                                    <h3 style="margin-top: 10%; margin-left: 50%;width: 100%;" id="andmoretext">E MAIS!</h3>
+                                    <h3 style="margin-top: 10%; margin-left: 50%;width: 100%;"
+                                        id="descobrirnovoslocaistext"> - DESCOBRIR NOVOS LOCAIS E PERCURSOS</h3>
+
+                                    <h3 style="margin-top: 10%; margin-left: 50%;width: 100%;" id="andmoretext">E MAIS!
+                                    </h3>
 
                                 </div>
 
@@ -174,33 +184,37 @@ rel="noopener noreferrer">elegant-dashboard.com</a></p>
     <script>
 
         var user_admin = sessionStorage.getItem("user_admin");
-  
+
         var user_pt = sessionStorage.getItem("user_pt");
-  
+
         var user_nutri = sessionStorage.getItem("user_nutri");
-  
+
         var user_id = sessionStorage.getItem("user_id");
-  
+
         if (user_pt == 1 && user_admin == 0 && user_nutri == 0) {
-  
-  
-          document.getElementById("profilehide").style.display = "inline";
-  
-  
+
+
+            document.getElementById("profilehide").style.display = "inline";
+
+
         } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
-  
-          document.getElementById("profilehide").style.display = "inline";
-  
-  
+
+            document.getElementById("profilehide").style.display = "inline";
+
+
         } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
-  
-          document.getElementById("profilehide").style.display = "inline";
-  
+
+            document.getElementById("profilehide").style.display = "inline";
+
+        } else if (user_admin == 1) {
+
+            document.getElementById("profilehide").style.display = "inline";
+
         }
-  
-  
-  
-      </script>
+
+
+
+    </script>
 
 </body>
 

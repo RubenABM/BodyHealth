@@ -30,37 +30,42 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-9" style="display:inline-block">
-                <div class="organize">
-                    <div style="float:left">
-                        <h1 id="logintitle" style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;">LOGIN</h1>
+                    <div class="organize">
+                        <div style="float:left">
+                            <h1 id="logintitle" style="color: white;font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                LOGIN</h1>
 
-                        <form class="formsignupuser">
-
-
-                            <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;" for="fusername" class="titleinput">Username</label><br>
-                            <input style="color: white;" type="text" id="fusernamelogin" name="fusername" class="field"
-                                placeholder="Username"><br>
-                            <br>
-                            <br>
-                            <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;" for="fpassword" class="titleinput">Password</label><br>
-                            <input type="text" id="fpasswordlogin" name="fpassword" class="field"
-                                placeholder="Password"><br>
-                            <!--<input type="submit" value="Submit" id="btnSubmit"/>-->
-                            <br>
-                            <br>
-                          <!---  <a href="mainpage.html"> -->
-                              
-                            <input class="buttoncalcular" type="button" onclick="login()" value="ENTRAR" style="margin-left: 50%; font-family: Verdana, Geneva, Tahoma, sans-serif;">
-                        
+                            <form class="formsignupuser">
 
 
-                        </form>
+                                <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;"
+                                    for="fusername" class="titleinput">Username</label><br>
+                                <input style="color: white;" type="text" id="fusernamelogin" name="fusername"
+                                    class="field" placeholder="Username"><br>
+                                <br>
+                                <br>
+                                <label style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;"
+                                    for="fpassword" class="titleinput">Password</label><br>
+                                <input type="text" id="fpasswordlogin" name="fpassword" class="field"
+                                    placeholder="Password"><br>
+                                <!--<input type="submit" value="Submit" id="btnSubmit"/>-->
+                                <br>
+                                <br>
+                                <!---  <a href="mainpage.html"> -->
+
+                                <input class="buttoncalcular" type="button" onclick="login()" value="ENTRAR"
+                                    style="margin-left: 50%; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+
+
+
+                            </form>
+                        </div>
+                        <div style="float:right">
+                            <hr id="divisor">
+                            </hr>
+                            <img src="./images/logobranconobg.png" class="logowhite">
+                        </div>
                     </div>
-                    <div style="float:right">
-                        <hr id="divisor"></hr>
-                        <img src="./images/logobranconobg.png" class="logowhite">
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
@@ -131,33 +136,37 @@ rel="noopener noreferrer">elegant-dashboard.com</a></p>
     <script>
 
         var user_admin = sessionStorage.getItem("user_admin");
-  
+
         var user_pt = sessionStorage.getItem("user_pt");
-  
+
         var user_nutri = sessionStorage.getItem("user_nutri");
-  
+
         var user_id = sessionStorage.getItem("user_id");
-  
+
         if (user_pt == 1 && user_admin == 0 && user_nutri == 0) {
-  
-  
-          document.getElementById("profilehide").style.display = "inline";
-  
-  
+
+
+            document.getElementById("profilehide").style.display = "inline";
+
+
         } else if (user_pt == 0 && user_admin == 0 && user_nutri == 0) {
-  
-          document.getElementById("profilehide").style.display = "inline";
-  
-  
+
+            document.getElementById("profilehide").style.display = "inline";
+
+
         } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
-  
-          document.getElementById("profilehide").style.display = "inline";
-  
+
+            document.getElementById("profilehide").style.display = "inline";
+
+        } else if (user_admin == 1) {
+
+            document.getElementById("profilehide").style.display = "inline";
+
         }
-  
-  
-  
-      </script>
+
+
+
+    </script>
 
 </body>
 

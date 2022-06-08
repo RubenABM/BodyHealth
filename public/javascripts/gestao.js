@@ -354,6 +354,12 @@ window.onload = async function(){
          
          getSomePossibleClientes();
 
+        } else if (user_admin == 1) {
+        
+          document.getElementById("ptbarra").style.display = "none";
+          document.getElementById("nutribarra").style.visibility = "hidden";
+          document.getElementById("turmaseconsultas").innerHTML = "Clientes";
+
         }
 
         //PREPARAR BARRA PARA A CRIACAO

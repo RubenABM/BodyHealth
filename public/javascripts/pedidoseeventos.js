@@ -72,6 +72,13 @@ window.onload = async function(){
      document.getElementById("turmaseconsultas").innerHTML = "Clientes";
      document.getElementById("criacoesexe").style.visibility = "hidden";
 
+    } else if (user_admin == 1) {
+        
+      document.getElementById("ptbarra").style.display = "none";
+      document.getElementById("nutribarra").style.visibility = "hidden";
+      document.getElementById("turmaseconsultas").innerHTML = "Clientes";
+      document.getElementById("ptbarra").style.display = "none";
+
     }
     
 
