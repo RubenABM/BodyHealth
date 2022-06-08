@@ -155,7 +155,7 @@ module.exports.saveProductList = async function(productList) {
 module.exports.updatePontosUtilizador = async function(uti_id, pontossobrantes){
 
     try{
-        let sql = "UPDATE utilizador SET user_points = " + pontossobrantes + "WHERE user_id = " + uti_id;
+        let sql = "UPDATE utilizador SET user_points = " + pontossobrantes + " WHERE user_id = " + uti_id;
         let result = await pool.query(sql);
         let productssfound = result.rows;
         console.log("[produtoModel.getProductCategory] produtoscategoria = " + JSON.stringify(productssfound));
