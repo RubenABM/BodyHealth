@@ -79,6 +79,10 @@ async function getEmentas(){
     */
 
  }
+ async function closerecipesofmeal()
+ {
+  document.getElementById("popup-3").style.display = "none";
+ }
 
  async function openrecipesofmeal(){
 
@@ -126,7 +130,7 @@ async function getEmentas(){
 
  function createrecipefromementaHTML(meal){
     
-  return "<div id='selectbox88' style='background-color: white; width:500px; height: 150px; font-size: 15px; border: 1px solid black; border-radius: 5px; margin-left: -5px'>" + "<h2 style='margin-left: -120px; margin-top: 10px'>" + meal.receita_titulo + "</h2>" + "<h3 style='margin-left: -360px; margin-top: 15px;'>Base: " + meal.basee_nome + "</h3>" + "<h3 style='margin-left: -310px; margin-top: 15px;'>Categoria: " + meal.receita_categoria_nome + "</h3>" + "<h3 style='margin-left: -242px; margin-top: 15px;'>Criado por: " + meal.user_name + "</h3>"  + "</div>"
+  return "<div id='selectbox88' style='background-color: white; width:500px; height: 150px; font-size: 15px; border: 1px solid black; border-radius: 5px; margin-left: -5px'>" + "<h2 style='margin-left: -120px; margin-top: 10px'>" + meal.receita_titulo + "</h2>" + "<h3 style='margin-left: -360px; margin-top: 15px;'>Base: " + meal.basee_nome + "</h3>" + "<h3 style='margin-left: -250px; margin-top: 15px;'>Categoria: " + meal.receita_categoria_nome + "</h3>" + "<h3 style='margin-left: -242px; margin-top: 15px;'>Criado por: " + meal.user_name + "</h3>"  + "</div>"
 
   /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
   RECEITA

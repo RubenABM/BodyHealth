@@ -41,7 +41,7 @@ async function getEmentas(){
 
 function createementaHTML(meal){
   
-  return "<div class='selectbox' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 5%; color:black'>" + meal.user_name +"</p>" + "<h2 style='font-size: 90%; margin-top: 5%;'>" + meal.ementa_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 15%;'>" + "</hr>" + "<h2 style='font-size: 90%;'>" + meal.basee_nome + "</h2>" + "<h2 style='font-size: 90%;'>" + meal.ementa_categoria_nome + "</h2>" + "<button style='background-color: #e8bf5c;' onclick='editarmeal(" + JSON.stringify(meal) + ")'>EDITAR</button>" + "</div>"
+  return "<div class='selectbox' id='selectbox55'>" + "<p name='criador1' id='criador1' style='text-align: center; font-size: 90%; margin-top: 5%; color:black;'>" + meal.user_name +"</p>" + "<h2 style='font-size: 90%; margin-top: 5%; margin-left: 2%;'>" + meal.ementa_titulo + "</h2>" + "<hr id ='divisorBoxes' style = 'margin-top: 15%;'>" + "</hr>" + "<h2 style='font-size: 90%; margin-left: 2%;'>" + meal.basee_nome + "</h2>" + "<h2 style='font-size: 90%; margin-left: 2%;'>" + meal.ementa_categoria_nome + "</h2>" + "<button style='background-color: #e8bf5c; margin-left: 2%;' onclick='editarmeal(" + JSON.stringify(meal) + ")'>EDITAR</button>" + "</div>"
 
   /*<p name="criador1" id="criador1" style="text-align: center;font-size: 90%; margin-top: 2%;">CRIADOR DA
   RECEITA
@@ -433,7 +433,7 @@ window.onload = async function(){
   
          } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
   
-          document.getElementById("ptbarra").style.visibility = "hidden";
+          document.getElementById("ptbarra").style.display = "none";
           document.getElementById("nutribarra").style.visibility = "hidden";
           document.getElementById("criacoesexerciciofisico").style.visibility = "hidden";
           document.getElementById("turmaseconsultas").innerHTML = "Clientes";
