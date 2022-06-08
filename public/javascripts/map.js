@@ -635,7 +635,7 @@ async function openmarkeraula(aula){
 
 
 sessionStorage.setItem("pedido_latitude", aula.latitude);
-  sessionStorage.setItem("pedidolongitude", aula.longitude);
+  sessionStorage.setItem("pedido_longitude", aula.longitude);
 
 
   console.log("Working");

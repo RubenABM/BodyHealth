@@ -15,7 +15,7 @@ module.exports.getAllEventos = async function() {
 
 module.exports.getEventosRecentes = async function() {
     try {
-        let sql = "SELECT evento.evento_id, evento.evento_titulo, evento.evento_descricao, evento.evento_data, place.local_id ,place.local_nome, place.local_morada, ST_X(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Longitude, ST_Y(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Latitude  FROM evento " + "INNER JOIN place ON place.local_id = evento.evento_local_id " + "ORDER BY evento.evento_data DESC " + "LIMIT 4";
+        let sql = "SELECT evento.evento_id, evento.evento_titulo, evento.evento_descricao, evento.evento_data, place.local_id ,place.local_nome, place.local_morada, ST_X(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Longitude, ST_Y(ST_Transform (ST_SetSRID(geometry_info_point, 4326), 4326)) AS Latitude  FROM evento " + "INNER JOIN place ON place.local_id = evento.evento_local_id " + "ORDER BY evento.evento_data DESC " + "LIMIT 2";
         let result = await pool.query(sql);
         let eventosfound = result.rows;
         console.log("[eventosModel.getAllEventos] eventos = " + JSON.stringify(eventosfound));
