@@ -79,6 +79,10 @@ async function getEmentas(){
     */
 
  }
+ async function closerecipesofmeal()
+ {
+  document.getElementById("popup-3").style.display = "none";
+ }
 
  async function openrecipesofmeal(){
 
