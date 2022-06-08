@@ -26,7 +26,6 @@ module.exports.getEventosRecentes = async function() {
     }
 }
 
-
 module.exports.getEventosUser = async function(uti_id) {
     try {
         let sql = "SELECT evento_titulo, evento_data, place.local_nome, place.local_morada, place.geometry_info_point ,utilizador.user_name FROM evento " + "INNER JOIN  place ON place.local_id = evento.evento_local_id " + "INNER JOIN  utilizador ON utilizador.user_id = evento.evento_criador_id  " + "WHERE utilizador.user_id = " + uti_id;
