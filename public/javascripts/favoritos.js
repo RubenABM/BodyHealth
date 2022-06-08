@@ -136,10 +136,11 @@ window.onload = async function(){
  
         } else if (user_pt == 0 && user_admin == 0 && user_nutri == 1) {
  
-         document.getElementById("ptbarra").style.visibility = "hidden";
+         document.getElementById("ptbarra").style.display = "none";
+         document.getElementById("criacoesexe").style.display = "none";
          document.getElementById("nutribarra").style.visibility = "hidden";
          document.getElementById("turmaseconsultas").innerHTML = "Clientes";
-         document.getElementById("criacoesexe").style.visibility = "hidden";
+         document.getElementById("ptbarra").style.display = "none";
  
         }
 
