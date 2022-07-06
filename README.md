@@ -1,4 +1,4 @@
-# BoduHealth
+# BodyHealth
 Projeto 4º Semestre de Engenharia Informática
 
 Alunos: 
